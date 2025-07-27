@@ -1,68 +1,128 @@
-# Descripcion del proyecto 
+# 🏥 Sistema de Información Hospitalario
 
-- El proyecto consiste en el diseño de una base de datos de un sistema horpitalario, buscando la mejora y gestion de los pacientes, medicos, tratamientos, medicamentos,  inventario, areas especializadas, personal administrativo, visitas medicas, Historiales clinicos y personal general, utlizando bases de datos NOSQL  (MongoDB), Realizando la documentación respectiva de la base de datos, la implementación de la base de datos en MongoDB y las inserciones de los datos planteadas con base en los requerimeintos del sistema y modelos E-R.
+## 📌 Descripción del Proyecto
 
+El proyecto consiste en el diseño de una base de datos para un sistema hospitalario, con el objetivo de optimizar la gestión de pacientes, médicos, tratamientos, medicamentos, inventario, áreas especializadas, personal administrativo, visitas médicas e historiales clínicos.
 
-<br>
-<br>
+Este sistema está basado en **bases de datos NoSQL** utilizando **MongoDB**, e incluye:
 
+- Modelado entidad-relación (E-R)
+- Documentación detallada
+- Implementación en MongoDB
+- Inserción de datos con base en requerimientos del sistema
 
-# 💻 Tecnologias utilizadas
+---
+
+## 💻 Tecnologías Utilizadas
+
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="100" alt="MongoDB"/>
-
-  <p>
-
-  ---
-
-<br>
-<br>
-<br>
+</p>
 
 
+---
 
-  # 📝 Requisitos del sistema
+## ⚙️ Requisitos del Sistema
 
+- Tener una cuenta y servidor activo en [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- Última versión de MongoDB instalada
+- MongoDB Compass
+- Visual Studio Code
 
-##  Poseer un servidor de mongoDB Atlas y la ultima version de MongoDB
+---
 
-Visitar el siguiente enlace para crear unacuenta y adquirir un  servidor de MongoDB Atlas: https://www.mongodb.com/cloud/atlas ( en caso de no poseer cuenta)
+## 🛠️ Instalación y Configuración
 
---- 
+### 1. Instalar MongoDB y MongoDB Compass
 
-<br>
-<br>
+Asegúrate de tener MongoDB y Compass instalados en tu equipo.
 
+### 2. Instalar Visual Studio Code
 
-# Instalación y configuración 
+Será útil para visualizar y editar los archivos JSON de manera clara y estructurada.
 
-<br>
+### 3. Conexión con MongoDB Atlas
 
-## 1. Tener instalado MongoDB Compass y MongoDB en el equipo donde se planean visualizar los datos
-<br>
-<br>
+Establece la conexión en Compass usando la siguiente cadena:
 
+```bash
+mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<nombre_base_datos>?retryWrites=true&w=majority&appName=<nombre_app>
+```
 
-## 2. Tener Instalado Visual Code en el pc para poder previsualizar la información
+### 4. Importar archivos JSON
 
-<br>
-<br>
+#### 📥 Importar estructura (`ddl.json`)
 
-## 3.Establecer la conexión en compas con el servidor de talas con la sigueinte ruta:
+Abre la terminal de MongoDB e ingresa el contenido del archivo `ddl.json` para crear las colecciones.
 
+#### 📥 Importar datos (`dml.json`)
 
- mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<nombre_base_datos>?retryWrites=true&w=majority&appName=<nombre_app>
+Ejecuta en terminal:
 
+```bash
+mongoimport --db NOMBRE_DB --collection NOMBRE_COLECCION --file RUTA/archivo.json --jsonArray
+```
 
-## 4. Descargar o leer el archivo ddl.json Para poder leer las instrucciones y abrir la terminal de MongoDB
+> También puedes hacerlo desde `mongosh`.
 
+#### 📑 Consultas (`dql_select.json`)
 
+Explora y prueba las consultas predefinidas que se encuentran en este archivo.
 
+### 5. Revisar la documentación
 
-## 5.  Descargar el archivo dml.json Hacer la inserción de datos en la terminal del pc:
+Consulta `Documentación.md` para entender la estructura y modelo lógico del sistema.
 
- usando, primeramente el comando mongosh e insertar la siguiente información mongoimport --db NOMBRE_DB --collection NOMBRE_COLECCION --file RUTA/archivo.json --jsonArray , o ingresar el siguiente comando en la terminal de Mongo db para la insercion de los datos.
+---
 
-## 6. Visualizar las diferentes consultas que se encuentran en el archivo dql_select.json y ejecutarlas para comprobarlas
+## 🗃️ Estructura de Datos
 
-## 7. Revisar la documentación (Documentación.md) para enetender mejor la estructura del proyecto.
+(🔽 Aquí puedes insertar el contenido en formato Markdown que resume las entidades y atributos del sistema)
+
+---
+
+## 🧾 Ejemplos de Consultas
+
+Aquí encontrarás consultas como:
+
+- Buscar pacientes por nombre
+- Listar medicamentos disponibles
+- Consultar tratamientos asignados a un paciente
+- Ver el historial clínico completo de un paciente
+
+📁 Ver archivo: `dql_select.json`
+
+---
+
+## 🔧 Funciones
+
+Aquí puedes definir o agregar funciones como:
+
+- Clasificación de pacientes
+- Cálculo de citas pendientes
+- Verificación de stock en inventario
+
+---
+
+## 👤 Roles de Usuario y Permisos
+
+- **Administrador**: Acceso total al sistema, gestión de usuarios y datos.
+- **Médico**: Acceso a pacientes asignados, tratamientos y diagnósticos.
+- **Recepción/Personal administrativo**: Gestión de citas, registros y documentación.
+- **Enfermero**: Visualización de pacientes y tratamientos asignados.
+
+---
+
+## 🤝 Contribuciones
+
+- 👨‍💻 Juan Fernando Umaña  
+- 👨‍💻 Omar Fernando Granados
+
+---
+
+## 📬 Licencia y Contacto
+
+📧 Correo de contacto: [juanferumanaa@gmail.com](mailto:juanferumanaa@gmail.com)
+
+---
+

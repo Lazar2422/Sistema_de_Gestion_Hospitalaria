@@ -316,7 +316,108 @@ En el modelo conceptual se pueden encontrar el siguiente tipo de cardinalidades 
 
 ## Gráfica
 
+![alt text](image.png)
+
 ### Descripción Técnica
 
 El modelo conceptual, se construyó en base a la estructura inicial y general de lo que buscaba el sistema hospitalario, por lo tanto, se crearon distintas entidades como, hospitales, Inventario, para que pueda gestionar los medicamentos, tratamientos, Proveedores de los productos del Hospital, las visitas médicas del mismo, historias clínicas, Pacientes, Personal administrativo, Médicos especialistas, Médicos y Enfermeras  . Finalmente, las distintas entidades contienen atributos como: id, fechas, direcciones, nombres, correos, teléfonos, salario, entre otros, dándonos una estructura 
 inicial y general del proyecto.
+
+
+# Entidades y Atributos del Sistema Hospitalario
+
+
+## 🏥 Hospitales
+- Nombre  
+- Dirección  
+- Teléfono  
+- Correo Electrónico  
+- Director General  
+
+---
+
+## 🧑‍⚕️ Pacientes
+- Nombre  
+- Teléfono  
+- Correo Electrónico  
+- Dirección  
+- Seguro  
+- Nutricionista  
+- Hospital  
+
+---
+
+## 🩺 Médicos
+- Nombre  
+- Número de cédula  
+- Especialidad  
+- Teléfono  
+- Correo Electrónico  
+- Salario  
+
+---
+
+## 🧑‍⚕️ Enfermeros
+- Id_enfermero  
+- Nombre  
+- Área  
+- Salario  
+
+---
+
+## 🧑‍💼 Personal Administrativo
+- Nombre  
+- Cargo  
+
+---
+
+## 📄 Historial Clínico
+- Id_historial_clinico  
+- Procedimientos realizados  
+- Creador  
+
+---
+
+## 📆 Fechas (asociadas al historial clínico)
+- Fecha  
+- Controles  
+
+---
+
+## 💊 Tratamientos
+- Id_tratamiento  
+- Tipo  
+
+---
+
+## 💉 Medicamentos
+- Id_medicamentos  
+- Nombre  
+- Fabricante  
+- Lote  
+- Tipo  
+- Disponibilidad Inventario  
+
+---
+
+## 📦 Inventario
+- Id_inventario  
+- Cantidad  
+
+---
+
+## 🚚 Proveedores
+- Id_proveedores  
+- Productos  
+
+---
+
+## 📋 Citas
+- Id_cita  
+- Fecha  
+- Hora  
+- Médico asignado  
+- Paciente citado  
+- Motivo médico  
+
+
