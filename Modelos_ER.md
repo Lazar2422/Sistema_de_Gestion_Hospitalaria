@@ -5,7 +5,7 @@
 <br>
 <br>
 
-# 1 Modelo Conceptual
+# 1 Modelo Conceptual Sin normalizar
 
 ```mermaid
 erDiagram
@@ -20,6 +20,7 @@ PACIENTES {
   string Seguro
   string Hospital
   string NumeroHistoria
+  string GrupoEdad
 }
 
 HISTORIA_CLINICA {
@@ -156,89 +157,550 @@ PACIENTES ||--o{ CUENTAS : genera
 <br>
 <br>
 
+## modelo primera forma normal
+✅ Objetivo:
+Eliminar repeticiones de datos (campos multivaluados o anidados) → que todo sea atómico.
+
+🛠️ Cambios hechos:
+Campos como seguros: [ { nombre, cobertura } ] se transforman en una tabla/colección aparte (SEGUROS).
+
+En lugar de tener productos: [...] dentro de inventario, se crea una relación explícita entre INVENTARIO y MEDICAMENTOS.
+
+Las visitas médicas dejan de estar como array dentro de HISTORIA_CLINICA y se relacionan mediante una tabla puente (DETALLE_HISTORIA o similar).
+``` mermaid
+erDiagram
+
+PACIENTES {
+  string DNI
+  string Nombre
+  string Telefono
+  string Direccion
+  string CorreoElectronico
+  string id_seguro
+  string id_hospital
+  string NumeroHistoria
+  string GrupoEdad
+}
+
+HISTORIA_CLINICA {
+  string id_historia_clinica
+  string id_paciente
+}
+
+DETALLE_HISTORIA {
+  string id_detalle
+  string id_historia_clinica
+  string id_visita
+  string Control
+  date Fecha
+  string Condicion
+  string Procedimiento
+}
+
+MEDICOS {
+  string NumColegiatura
+  string Nombre
+  string Telefono
+  string Especialidad
+  string CorreoElectronico
+  float Salario
+}
+
+VISITAS_MEDICAS {
+  string id_visita
+  date Fecha
+  string Hora
+  string Direccion
+  string id_medico
+  string id_paciente
+  string id_hospital
+}
+
+HOSPITALES {
+  string id_hospital
+  string Nombre
+  string Direccion
+  string DirectorGeneral
+  string Especialidad
+  string Sede
+}
+
+SEGUROS {
+  string id_seguro
+  string Nombre
+  string Cobertura
+}
+
+TRATAMIENTOS {
+  string id_tratamiento
+  string Tipo
+  string Duracion
+  float Valor
+  string id_medico
+  string id_paciente
+}
+
+MEDICAMENTOS {
+  string id_medicamento
+  string Nombre
+  string Tipo
+  string Fabricante
+  string Lote
+  boolean Disponible
+}
+
+INVENTARIO {
+  string id_inventario
+  string id_medicamento
+  int Cantidad
+}
+
+PROVEEDORES {
+  string id_proveedor
+  string Nombre
+}
+
+PROVEEDOR_PRODUCTO {
+  string id_proveedor
+  string id_medicamento
+  string Lote
+}
+
+AREAS {
+  string id_area
+  string Nombre
+  string Tipo
+}
+
+ENFERMERAS {
+  string id_enfermera
+  string id_area
+  float Salario
+}
+
+PERSONAL_MANTENIMIENTO {
+  string id_personal
+  string id_hospital
+  string Gestion
+  float Salario
+}
+
+PERSONAL_ADMINISTRATIVO {
+  string id_personal
+  string id_hospital
+  string Nombre
+  float Salario
+}
+
+CUENTAS {
+  string id_cuenta
+  string id_paciente
+  date Fecha
+  float Valor
+  string Facturacion
+  string id_administrativo
+}
+
+%% RELACIONES
+
+PACIENTES ||--|| HISTORIA_CLINICA : tiene
+HOSPITALES ||--o{ MEDICAMENTOS: tiene
+PERSONAL_ADMINISTRATIVO ||--o{ CUENTAS : Administra
+HISTORIA_CLINICA ||--o{ DETALLE_HISTORIA : contiene
+DETALLE_HISTORIA ||--|| VISITAS_MEDICAS : se_registra_en
+PACIENTES ||--o{ VISITAS_MEDICAS : realiza
+VISITAS_MEDICAS ||--|| HOSPITALES : se_realiza_en
+MEDICOS ||--o{ VISITAS_MEDICAS : atiende
+TRATAMIENTOS ||--|| PACIENTES : aplicado_a
+TRATAMIENTOS ||--|| MEDICOS : indicado_por
+MEDICAMENTOS ||--o{ INVENTARIO : stock_de
+PROVEEDORES ||--o{ PROVEEDOR_PRODUCTO : suministra
+PROVEEDOR_PRODUCTO ||--|| MEDICAMENTOS : contiene
+ENFERMERAS ||--|| AREAS : asignada_a
+MEDICOS ||--|| AREAS : asignado_a
+PERSONAL_ADMINISTRATIVO ||--|| HOSPITALES : trabaja_en
+PERSONAL_MANTENIMIENTO ||--|| HOSPITALES : trabaja_en
+ENFERMERAS ||--|| HOSPITALES : trabaja_en
+PACIENTES ||--o{ CUENTAS : genera
+PACIENTES ||--|| HOSPITALES : remitido_a
+PACIENTES ||--|| SEGUROS : cubierto_por
+
+```
+
+<br>
+<br>
+<br>
+
+## modelo segunda forma normal
+✅ Objetivo:
+Eliminar dependencias parciales: que ningún campo dependa solo de parte de una clave compuesta.
+
+Aplica solo si hay claves primarias compuestas.
+
+🛠️ Cambios hechos:
+En tablas como DETALLE_HISTORIA, si la clave primaria era compuesta (id_historia_clinica + id_visita), y un campo como procedimiento dependía solo de id_visita, se separa esa dependencia.
+
+Se creó la tabla VISITAS_MEDICAS con todos los detalles propios de la visita (fecha, hora, médico, hospital, etc).
+
+Se normalizó el inventario y proveedores: PROVEEDOR_PRODUCTO nace para evitar que la cantidad o lote dependa parcialmente del medicamento o proveedor.
+``` mermaid
+erDiagram
+
+PACIENTES {
+  string DNI
+  string Nombre
+  string Telefono
+  string Direccion
+  string CorreoElectronico
+  string id_seguro
+  string id_hospital
+  string NumeroHistoria
+  string GrupoEdad
+}
+
+HISTORIA_CLINICA {
+  string id_historia_clinica
+  string id_paciente
+}
+
+DETALLE_HISTORIA {
+  string id_detalle
+  string id_historia_clinica
+  string id_visita
+  string Control
+  date Fecha
+  string Condicion
+  string Procedimiento
+}
+
+MEDICOS {
+  string NumColegiatura
+  string Nombre
+  string Telefono
+  string Especialidad
+  string CorreoElectronico
+  float Salario
+}
+
+VISITAS_MEDICAS {
+  string id_visita
+  date Fecha
+  string Hora
+  string Direccion
+  string id_medico
+  string id_paciente
+  string id_hospital
+}
+
+HOSPITALES {
+  string id_hospital
+  string Nombre
+  string Direccion
+  string DirectorGeneral
+  string Especialidad
+  string Sede
+}
+
+SEGUROS {
+  string id_seguro
+  string Nombre
+  string Cobertura
+}
+
+TRATAMIENTOS {
+  string id_tratamiento
+  string Tipo
+  string Duracion
+  float Valor
+  string id_medico
+  string id_paciente
+}
+
+MEDICAMENTOS {
+  string id_medicamento
+  string Nombre
+  string Tipo
+  string Fabricante
+  string Lote
+  boolean Disponible
+}
+
+INVENTARIO {
+  string id_inventario
+  string id_medicamento
+  int Cantidad
+}
+
+PROVEEDORES {
+  string id_proveedor
+  string Nombre
+}
+
+PROVEEDOR_PRODUCTO {
+  string id_proveedor
+  string id_medicamento
+  string Lote
+}
+
+AREAS {
+  string id_area
+  string Nombre
+  string Tipo
+}
+
+ENFERMERAS {
+  string id_enfermera
+  string id_area
+  float Salario
+}
+
+PERSONAL_MANTENIMIENTO {
+  string id_personal
+  string id_hospital
+  string Gestion
+  float Salario
+}
+
+PERSONAL_ADMINISTRATIVO {
+  string id_personal
+  string id_hospital
+  string Nombre
+  float Salario
+}
+
+CUENTAS {
+  string id_cuenta
+  string id_paciente
+  date Fecha
+  float Valor
+  string Facturacion
+  string id_administrativo
+}
+
+%% RELACIONES
+
+PACIENTES ||--|| HISTORIA_CLINICA : tiene
+HOSPITALES ||--o{ MEDICAMENTOS: tiene
+PERSONAL_ADMINISTRATIVO ||--o{ CUENTAS : Administra
+HISTORIA_CLINICA ||--o{ DETALLE_HISTORIA : contiene
+DETALLE_HISTORIA ||--|| VISITAS_MEDICAS : se_registra_en
+PACIENTES ||--o{ VISITAS_MEDICAS : realiza
+VISITAS_MEDICAS ||--|| HOSPITALES : se_realiza_en
+MEDICOS ||--o{ VISITAS_MEDICAS : atiende
+TRATAMIENTOS ||--|| PACIENTES : aplicado_a
+TRATAMIENTOS ||--|| MEDICOS : indicado_por
+MEDICAMENTOS ||--o{ INVENTARIO : stock_de
+PROVEEDORES ||--o{ PROVEEDOR_PRODUCTO : suministra
+PROVEEDOR_PRODUCTO ||--|| MEDICAMENTOS : contiene
+ENFERMERAS ||--|| AREAS : asignada_a
+MEDICOS ||--|| AREAS : asignado_a
+PERSONAL_ADMINISTRATIVO ||--|| HOSPITALES : trabaja_en
+PERSONAL_MANTENIMIENTO ||--|| HOSPITALES : trabaja_en
+ENFERMERAS ||--|| HOSPITALES : trabaja_en
+PACIENTES ||--o{ CUENTAS : genera
+PACIENTES ||--|| HOSPITALES : remitido_a
+PACIENTES ||--|| SEGUROS : cubierto_por
+
+```
+<br>
+<br>
+<br>
 
 
-# 2 Modelo logico 
+#  Modelo tercera forma normal
+✅ Objetivo:
+Eliminar dependencias transitivas: que ningún campo no clave dependa de otro campo no clave.
 
+🛠️ Cambios hechos:
+En HOSPITALES, el campo DirectorGeneral (nombre y profesión) se trasladó a la tabla DIRECTORES.
+
+En MEDICOS, la especialidad ahora no está como texto, sino como id_especialidad relacionado con la tabla ESPECIALIDADES.
+
+En SEGUROS, cobertura se convirtió en una tabla aparte: COBERTURAS.
+
+En MEDICAMENTOS, el tipo se separa como tabla TIPO_MEDICAMENTO.
 ```mermaid
 erDiagram
-  PACIENTES {
-    ObjectId _id
-    string nombre
-    date fecha_nacimiento
-    string genero
-    string direccion
-    string telefono
-    string correo
-    string eps
-  }
 
-  HISTORIAS_CLINICAS {
-    ObjectId _id
-    ObjectId paciente_id
-    ObjectId medico_id
-    string diagnostico
-    list procedimientos
-    list tratamientos
-  }
+PACIENTES {
+  string DNI
+  string Nombre
+  string Telefono
+  string Direccion
+  string CorreoElectronico
+  string id_seguro
+  string id_hospital
+  string NumeroHistoria
+  string GrupoEdad
+}
 
-  PROCEDIMIENTOS {
-    string tipo
-    date fecha
-    string resultado
-    string observaciones
-    ObjectId medico_id
-  }
+HISTORIA_CLINICA {
+  string id_historia_clinica
+  string id_paciente
+}
 
-  TRATAMIENTOS {
-    ObjectId medicamento_id
-    string dosis
-    string frecuencia
-  }
+DETALLE_HISTORIA {
+  string id_detalle
+  string id_historia_clinica
+  string id_visita
+  string Control
+  date Fecha
+  string Condicion
+  string Procedimiento
+}
 
-  MEDICAMENTOS {
-    ObjectId _id
-    string nombre
-    string lote
-    ObjectId inventario_id
-  }
+MEDICOS {
+  string NumColegiatura
+  string Nombre
+  string Telefono
+  string id_especialidad
+  string CorreoElectronico
+  float Salario
+}
 
-  INVENTARIO {
-    ObjectId _id
-    string producto
-    int cantidad
-    bool disponibilidad
-  }
+ESPECIALIDADES {
+  string id_especialidad
+  string Nombre
+}
 
-  PRODUCTOS {
-    ObjectId _id
-    string nombre
-    string lote
-    ObjectId proveedor_id
-    ObjectId inventario_id
-  }
+VISITAS_MEDICAS {
+  string id_visita
+  date Fecha
+  string Hora
+  string Direccion
+  string id_medico
+  string id_paciente
+  string id_hospital
+}
 
-  PROVEEDORES {
-    ObjectId _id
-    string nombre
-    string contacto
-  }
+HOSPITALES {
+  string id_hospital
+  string Nombre
+  string Direccion
+  string id_director
+  string id_especialidad
+  string Sede
+}
 
-  PERSONAL {
-    ObjectId _id
-    string nombre
-    string tipo
-    string telefono
-    string especialidad
-    string descripcion
-  }
+DIRECTORES {
+  string id_director
+  string Nombre
+  string Profesion
+}
 
-  PACIENTES ||--o{ HISTORIAS_CLINICAS : tiene
-  HISTORIAS_CLINICAS ||--o{ PROCEDIMIENTOS : contiene
-  HISTORIAS_CLINICAS ||--o{ TRATAMIENTOS : recibe
-  PROCEDIMIENTOS }o--|| PERSONAL : realizado_por
-  TRATAMIENTOS }o--|| MEDICAMENTOS : usa
-  MEDICAMENTOS }o--|| INVENTARIO : almacenado_en
-  PRODUCTOS }o--|| INVENTARIO : registrado_en
-  PRODUCTOS }o--|| PROVEEDORES : provisto_por
+SEGUROS {
+  string id_seguro
+  string Nombre
+  string id_cobertura
+}
+
+COBERTURAS {
+  string id_cobertura
+  string Tipo
+  string Descripcion
+}
+
+TRATAMIENTOS {
+  string id_tratamiento
+  string Tipo
+  string Duracion
+  float Valor
+  string id_medico
+  string id_paciente
+}
+
+MEDICAMENTOS {
+  string id_medicamento
+  string Nombre
+  string id_tipo_medicamento
+  string Fabricante
+  string Lote
+  boolean Disponible
+}
+
+TIPO_MEDICAMENTO {
+  string id_tipo_medicamento
+  string Nombre
+}
+
+INVENTARIO {
+  string id_inventario
+  string id_medicamento
+  int Cantidad
+}
+
+PROVEEDORES {
+  string id_proveedor
+  string Nombre
+}
+
+PROVEEDOR_PRODUCTO {
+  string id_proveedor
+  string id_medicamento
+  string Lote
+}
+
+AREAS {
+  string id_area
+  string Nombre
+  string Tipo
+}
+
+ENFERMERAS {
+  string id_enfermera
+  string id_area
+  float Salario
+}
+
+PERSONAL_MANTENIMIENTO {
+  string id_personal
+  string id_hospital
+  string Gestion
+  float Salario
+}
+
+PERSONAL_ADMINISTRATIVO {
+  string id_personal
+  string id_hospital
+  string Nombre
+  float Salario
+}
+
+CUENTAS {
+  string id_cuenta
+  string id_paciente
+  date Fecha
+  float Valor
+  string Facturacion
+}
+
+%% RELACIONES
+
+HOSPITALES ||--o{ MEDICAMENTOS: tiene
+PERSONAL_ADMINISTRATIVO ||--o{ CUENTAS : Administra
+PACIENTES ||--|| HISTORIA_CLINICA : tiene
+HISTORIA_CLINICA ||--o{ DETALLE_HISTORIA : contiene
+DETALLE_HISTORIA ||--|| VISITAS_MEDICAS : se_registra_en
+PACIENTES ||--o{ VISITAS_MEDICAS : realiza
+VISITAS_MEDICAS ||--|| HOSPITALES : se_realiza_en
+MEDICOS ||--o{ VISITAS_MEDICAS : atiende
+MEDICOS ||--|| ESPECIALIDADES : tiene
+TRATAMIENTOS ||--|| PACIENTES : aplicado_a
+TRATAMIENTOS ||--|| MEDICOS : indicado_por
+MEDICAMENTOS ||--|| TIPO_MEDICAMENTO : clasificado_como
+MEDICAMENTOS ||--o{ INVENTARIO : stock_de
+PROVEEDORES ||--o{ PROVEEDOR_PRODUCTO : suministra
+PROVEEDOR_PRODUCTO ||--|| MEDICAMENTOS : contiene
+ENFERMERAS ||--|| AREAS : asignada_a
+MEDICOS ||--|| AREAS : asignado_a
+PERSONAL_ADMINISTRATIVO ||--|| HOSPITALES : trabaja_en
+PERSONAL_MANTENIMIENTO ||--|| HOSPITALES : trabaja_en
+ENFERMERAS ||--|| HOSPITALES : trabaja_en
+PACIENTES ||--o{ CUENTAS : genera
+PACIENTES ||--|| HOSPITALES : remitido_a
+PACIENTES ||--|| SEGUROS : cubierto_por
+SEGUROS ||--|| COBERTURAS : tiene
+HOSPITALES ||--|| DIRECTORES : dirigido_por
+HOSPITALES ||--|| ESPECIALIDADES : especializado_en
+
 ```
