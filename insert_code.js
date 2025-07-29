@@ -1,0 +1,22429 @@
+use SISTEMA_HOSPITALARIO;
+
+db.HOSPITALES.insertMany(
+[
+  {
+    "id_hospital": "H001",
+    "Nombre": "Clínica Santa Fe",
+    "Direccion": "Pasadizo de Enrique Barco 73\nMálaga, 42373",
+    "id_director": "D001",
+    "id_especialidad": "ESP001",
+    "Sede": "Bogotá"
+  },
+  {
+    "id_hospital": "H002",
+    "Nombre": "Hospital San José",
+    "Direccion": "Cuesta de Rufina Villa 6 Piso 1 \nValladolid, 57834",
+    "id_director": "D002",
+    "id_especialidad": "ESP002",
+    "Sede": "Medellín"
+  },
+  {
+    "id_hospital": "H003",
+    "Nombre": "Fundación Valle",
+    "Direccion": "C. Cipriano Quesada 828 Piso 0 \nTarragona, 91628",
+    "id_director": "D003",
+    "id_especialidad": "ESP003",
+    "Sede": "Cali"
+  },
+  {
+    "id_hospital": "H004",
+    "Nombre": "Clínica del Norte",
+    "Direccion": "Vial de Susana Pedrosa 74 Apt. 27 \nGuipúzcoa, 78867",
+    "id_director": "D004",
+    "id_especialidad": "ESP004",
+    "Sede": "Barranquilla"
+  },
+  {
+    "id_hospital": "H005",
+    "Nombre": "Hospital Universitario",
+    "Direccion": "Urbanización de Norberto Zamorano 97\nPalencia, 04293",
+    "id_director": "D005",
+    "id_especialidad": "ESP005",
+    "Sede": "Bucaramanga"
+  }
+]
+);
+
+db.DIRECTORES.insertMany(
+[
+  {
+    "id_director": "D001",
+    "Nombre": "Joan de Peñalver",
+    "Profesion": "Medicina General"
+  },
+  {
+    "id_director": "D002",
+    "Nombre": "Melchor Chaves Valero",
+    "Profesion": "Cirugía"
+  },
+  {
+    "id_director": "D003",
+    "Nombre": "Liliana María Dolores Escribano Hidalgo",
+    "Profesion": "Administración"
+  },
+  {
+    "id_director": "D004",
+    "Nombre": "Eliseo Becerra Maldonado",
+    "Profesion": "Administración"
+  },
+  {
+    "id_director": "D005",
+    "Nombre": "Begoña Ochoa-Iglesias",
+    "Profesion": "Ginecología"
+  }
+]
+);
+
+db.PERSONAL_ADMINISTRATIVO.insertMany(
+[
+  {
+    "id_personal": "ADM001",
+    "id_hospital": "H001",
+    "Nombre": "Leandra Ribera Barrios",
+    "Salario": 2709.01
+  },
+  {
+    "id_personal": "ADM002",
+    "id_hospital": "H001",
+    "Nombre": "Nazaret Exposito Somoza",
+    "Salario": 2760.17
+  },
+  {
+    "id_personal": "ADM003",
+    "id_hospital": "H001",
+    "Nombre": "Fortunata Jordá Albero",
+    "Salario": 2825.1
+  },
+  {
+    "id_personal": "ADM004",
+    "id_hospital": "H001",
+    "Nombre": "Valeria Abascal Cazorla",
+    "Salario": 2925.81
+  },
+  {
+    "id_personal": "ADM005",
+    "id_hospital": "H001",
+    "Nombre": "Luisa Diez Nieto",
+    "Salario": 2638.6
+  },
+  {
+    "id_personal": "ADM006",
+    "id_hospital": "H001",
+    "Nombre": "Sandra Rocha Navas",
+    "Salario": 2932.58
+  },
+  {
+    "id_personal": "ADM007",
+    "id_hospital": "H001",
+    "Nombre": "Cristian Asensio",
+    "Salario": 2262.18
+  },
+  {
+    "id_personal": "ADM008",
+    "id_hospital": "H001",
+    "Nombre": "Emelina Viviana Contreras Bonilla",
+    "Salario": 2457.06
+  },
+  {
+    "id_personal": "ADM009",
+    "id_hospital": "H001",
+    "Nombre": "Lorenza Rueda Company",
+    "Salario": 1752.9
+  },
+  {
+    "id_personal": "ADM010",
+    "id_hospital": "H001",
+    "Nombre": "Jose Angel Guijarro Ferrán",
+    "Salario": 2043.75
+  },
+  {
+    "id_personal": "ADM011",
+    "id_hospital": "H001",
+    "Nombre": "Aarón Becerra Codina",
+    "Salario": 1624.67
+  },
+  {
+    "id_personal": "ADM012",
+    "id_hospital": "H001",
+    "Nombre": "María Ángeles Romero Castell",
+    "Salario": 2938.93
+  },
+  {
+    "id_personal": "ADM013",
+    "id_hospital": "H001",
+    "Nombre": "Belén Febe Flores Ayala",
+    "Salario": 1542.31
+  },
+  {
+    "id_personal": "ADM014",
+    "id_hospital": "H001",
+    "Nombre": "Bernabé Amador Soler",
+    "Salario": 2730.4
+  },
+  {
+    "id_personal": "ADM015",
+    "id_hospital": "H001",
+    "Nombre": "Delfina Lozano Torrents",
+    "Salario": 1766.05
+  },
+  {
+    "id_personal": "ADM016",
+    "id_hospital": "H001",
+    "Nombre": "Ramiro Mendez Vara",
+    "Salario": 2607.7
+  },
+  {
+    "id_personal": "ADM017",
+    "id_hospital": "H001",
+    "Nombre": "Ricardo Valera-Miralles",
+    "Salario": 2948.99
+  },
+  {
+    "id_personal": "ADM018",
+    "id_hospital": "H001",
+    "Nombre": "Chus Bello Suárez",
+    "Salario": 2525.5
+  },
+  {
+    "id_personal": "ADM019",
+    "id_hospital": "H001",
+    "Nombre": "Micaela Guijarro Samper",
+    "Salario": 1844.38
+  },
+  {
+    "id_personal": "ADM020",
+    "id_hospital": "H001",
+    "Nombre": "Heraclio Echeverría",
+    "Salario": 2949.57
+  },
+  {
+    "id_personal": "ADM021",
+    "id_hospital": "H001",
+    "Nombre": "Emilia Borrell Vilar",
+    "Salario": 2361.99
+  },
+  {
+    "id_personal": "ADM022",
+    "id_hospital": "H001",
+    "Nombre": "Ligia Carranza Machado",
+    "Salario": 2739.1
+  },
+  {
+    "id_personal": "ADM023",
+    "id_hospital": "H001",
+    "Nombre": "Filomena Coca Vera",
+    "Salario": 1710.09
+  },
+  {
+    "id_personal": "ADM024",
+    "id_hospital": "H001",
+    "Nombre": "Margarita Tejedor Cortes",
+    "Salario": 2756.18
+  },
+  {
+    "id_personal": "ADM025",
+    "id_hospital": "H001",
+    "Nombre": "Teodoro Antón Guardiola",
+    "Salario": 1895.71
+  },
+  {
+    "id_personal": "ADM026",
+    "id_hospital": "H001",
+    "Nombre": "Graciana Cuadrado Valderrama",
+    "Salario": 1627.84
+  },
+  {
+    "id_personal": "ADM027",
+    "id_hospital": "H001",
+    "Nombre": "Abel Pinilla Arana",
+    "Salario": 2796.62
+  },
+  {
+    "id_personal": "ADM028",
+    "id_hospital": "H001",
+    "Nombre": "Adelaida Araujo-Velasco",
+    "Salario": 1876.08
+  },
+  {
+    "id_personal": "ADM029",
+    "id_hospital": "H001",
+    "Nombre": "Valeria del Riba",
+    "Salario": 2579.28
+  },
+  {
+    "id_personal": "ADM030",
+    "id_hospital": "H001",
+    "Nombre": "Calisto de Llorente",
+    "Salario": 1893.67
+  },
+  {
+    "id_personal": "ADM031",
+    "id_hospital": "H001",
+    "Nombre": "Aroa Cristina Olivares Cañete",
+    "Salario": 2508.69
+  },
+  {
+    "id_personal": "ADM032",
+    "id_hospital": "H001",
+    "Nombre": "Jennifer Boada Carrasco",
+    "Salario": 2909.87
+  },
+  {
+    "id_personal": "ADM033",
+    "id_hospital": "H001",
+    "Nombre": "Damián Lopez Portero",
+    "Salario": 1969.36
+  },
+  {
+    "id_personal": "ADM034",
+    "id_hospital": "H001",
+    "Nombre": "Dafne Ugarte Conde",
+    "Salario": 2678.93
+  },
+  {
+    "id_personal": "ADM035",
+    "id_hospital": "H001",
+    "Nombre": "Elías Sevillano Borrego",
+    "Salario": 1679.84
+  },
+  {
+    "id_personal": "ADM036",
+    "id_hospital": "H001",
+    "Nombre": "Pedro Macario Casal Frutos",
+    "Salario": 1897.16
+  },
+  {
+    "id_personal": "ADM037",
+    "id_hospital": "H001",
+    "Nombre": "Felipe Carrera-Gracia",
+    "Salario": 2659.21
+  },
+  {
+    "id_personal": "ADM038",
+    "id_hospital": "H001",
+    "Nombre": "Heraclio Peñas Rocamora",
+    "Salario": 2628.36
+  },
+  {
+    "id_personal": "ADM039",
+    "id_hospital": "H001",
+    "Nombre": "Alexandra Borrás Borrego",
+    "Salario": 2130.01
+  },
+  {
+    "id_personal": "ADM040",
+    "id_hospital": "H001",
+    "Nombre": "Blas de Checa",
+    "Salario": 1895.04
+  },
+  {
+    "id_personal": "ADM041",
+    "id_hospital": "H001",
+    "Nombre": "Carmelita Ripoll Vaquero",
+    "Salario": 2797.38
+  },
+  {
+    "id_personal": "ADM042",
+    "id_hospital": "H001",
+    "Nombre": "Fidel de Peñalver",
+    "Salario": 1554.87
+  },
+  {
+    "id_personal": "ADM043",
+    "id_hospital": "H001",
+    "Nombre": "Nayara Benítez Castañeda",
+    "Salario": 1875.8
+  },
+  {
+    "id_personal": "ADM044",
+    "id_hospital": "H001",
+    "Nombre": "Amancio Gilabert Redondo",
+    "Salario": 1644.27
+  },
+  {
+    "id_personal": "ADM045",
+    "id_hospital": "H001",
+    "Nombre": "Imelda Jaén Valero",
+    "Salario": 2838.22
+  },
+  {
+    "id_personal": "ADM046",
+    "id_hospital": "H001",
+    "Nombre": "Tristán Arribas Montenegro",
+    "Salario": 2444.99
+  },
+  {
+    "id_personal": "ADM047",
+    "id_hospital": "H001",
+    "Nombre": "Vanesa Rebeca Fabra Vallejo",
+    "Salario": 1959.73
+  },
+  {
+    "id_personal": "ADM048",
+    "id_hospital": "H001",
+    "Nombre": "Juan Bautista Giménez Camino",
+    "Salario": 2783.41
+  },
+  {
+    "id_personal": "ADM049",
+    "id_hospital": "H001",
+    "Nombre": "Palmira de Camino",
+    "Salario": 1640.43
+  },
+  {
+    "id_personal": "ADM050",
+    "id_hospital": "H001",
+    "Nombre": "Calixto Heras Hernández",
+    "Salario": 2937.5
+  },
+  {
+    "id_personal": "ADM051",
+    "id_hospital": "H002",
+    "Nombre": "María Del Carmen de Mendoza",
+    "Salario": 2602.24
+  },
+  {
+    "id_personal": "ADM052",
+    "id_hospital": "H002",
+    "Nombre": "Montserrat Cáceres Roura",
+    "Salario": 1778.45
+  },
+  {
+    "id_personal": "ADM053",
+    "id_hospital": "H002",
+    "Nombre": "Edelmira del Acero",
+    "Salario": 2691.69
+  },
+  {
+    "id_personal": "ADM054",
+    "id_hospital": "H002",
+    "Nombre": "Che Gárate Aller",
+    "Salario": 2008.1
+  },
+  {
+    "id_personal": "ADM055",
+    "id_hospital": "H002",
+    "Nombre": "Agustín del Olmo",
+    "Salario": 2497.11
+  },
+  {
+    "id_personal": "ADM056",
+    "id_hospital": "H002",
+    "Nombre": "Javiera Escalona-Cabeza",
+    "Salario": 1753.15
+  },
+  {
+    "id_personal": "ADM057",
+    "id_hospital": "H002",
+    "Nombre": "Eli Salgado Arévalo",
+    "Salario": 2709.7
+  },
+  {
+    "id_personal": "ADM058",
+    "id_hospital": "H002",
+    "Nombre": "Nacio Segarra",
+    "Salario": 1700.99
+  },
+  {
+    "id_personal": "ADM059",
+    "id_hospital": "H002",
+    "Nombre": "Jafet Sedano",
+    "Salario": 2870.41
+  },
+  {
+    "id_personal": "ADM060",
+    "id_hospital": "H002",
+    "Nombre": "Valero Gabaldón Vendrell",
+    "Salario": 1534.8
+  },
+  {
+    "id_personal": "ADM061",
+    "id_hospital": "H002",
+    "Nombre": "Julieta Garriga Mateu",
+    "Salario": 2351.98
+  },
+  {
+    "id_personal": "ADM062",
+    "id_hospital": "H002",
+    "Nombre": "Máximo Lobo Iriarte",
+    "Salario": 1714.02
+  },
+  {
+    "id_personal": "ADM063",
+    "id_hospital": "H002",
+    "Nombre": "Severiano Dueñas Solís",
+    "Salario": 2339.77
+  },
+  {
+    "id_personal": "ADM064",
+    "id_hospital": "H002",
+    "Nombre": "Odalys Alsina Lucas",
+    "Salario": 2145.5
+  },
+  {
+    "id_personal": "ADM065",
+    "id_hospital": "H002",
+    "Nombre": "Alfredo Guerra Guardiola",
+    "Salario": 1572.45
+  },
+  {
+    "id_personal": "ADM066",
+    "id_hospital": "H002",
+    "Nombre": "Juan Manuel Cerdán Villalonga",
+    "Salario": 2982.5
+  },
+  {
+    "id_personal": "ADM067",
+    "id_hospital": "H002",
+    "Nombre": "Felicidad Gallardo Higueras",
+    "Salario": 1635.51
+  },
+  {
+    "id_personal": "ADM068",
+    "id_hospital": "H002",
+    "Nombre": "Paola Martin Casas",
+    "Salario": 1745.45
+  },
+  {
+    "id_personal": "ADM069",
+    "id_hospital": "H002",
+    "Nombre": "Amelia Barberá Guerrero",
+    "Salario": 2135.35
+  },
+  {
+    "id_personal": "ADM070",
+    "id_hospital": "H002",
+    "Nombre": "Édgar Saldaña Palomar",
+    "Salario": 2527.94
+  },
+  {
+    "id_personal": "ADM071",
+    "id_hospital": "H002",
+    "Nombre": "Angelita Landa-Pujol",
+    "Salario": 2139.69
+  },
+  {
+    "id_personal": "ADM072",
+    "id_hospital": "H002",
+    "Nombre": "Encarnación Corominas Alberdi",
+    "Salario": 2971.05
+  },
+  {
+    "id_personal": "ADM073",
+    "id_hospital": "H002",
+    "Nombre": "Ruperta Gallart Egea",
+    "Salario": 1858.11
+  },
+  {
+    "id_personal": "ADM074",
+    "id_hospital": "H002",
+    "Nombre": "Brígida Isa Castilla Mancebo",
+    "Salario": 2421.55
+  },
+  {
+    "id_personal": "ADM075",
+    "id_hospital": "H002",
+    "Nombre": "Seve Barreda Robledo",
+    "Salario": 1897.86
+  },
+  {
+    "id_personal": "ADM076",
+    "id_hospital": "H002",
+    "Nombre": "Adela Río Lucas",
+    "Salario": 2628.97
+  },
+  {
+    "id_personal": "ADM077",
+    "id_hospital": "H002",
+    "Nombre": "Paola Febe Noguera Rivero",
+    "Salario": 2016.9
+  },
+  {
+    "id_personal": "ADM078",
+    "id_hospital": "H002",
+    "Nombre": "Aristides Valls Bravo",
+    "Salario": 2958.27
+  },
+  {
+    "id_personal": "ADM079",
+    "id_hospital": "H002",
+    "Nombre": "Natividad Núñez Téllez",
+    "Salario": 2235.19
+  },
+  {
+    "id_personal": "ADM080",
+    "id_hospital": "H002",
+    "Nombre": "Buenaventura Baró Zabala",
+    "Salario": 2729.86
+  },
+  {
+    "id_personal": "ADM081",
+    "id_hospital": "H002",
+    "Nombre": "Ernesto Mariño Aragonés",
+    "Salario": 2738.59
+  },
+  {
+    "id_personal": "ADM082",
+    "id_hospital": "H002",
+    "Nombre": "Chema del Rubio",
+    "Salario": 1525.54
+  },
+  {
+    "id_personal": "ADM083",
+    "id_hospital": "H002",
+    "Nombre": "Rita Pont Talavera",
+    "Salario": 2301.34
+  },
+  {
+    "id_personal": "ADM084",
+    "id_hospital": "H002",
+    "Nombre": "Dan Valera",
+    "Salario": 1623.24
+  },
+  {
+    "id_personal": "ADM085",
+    "id_hospital": "H002",
+    "Nombre": "Marcos Calleja-Soria",
+    "Salario": 2936.73
+  },
+  {
+    "id_personal": "ADM086",
+    "id_hospital": "H002",
+    "Nombre": "Marina Cuenca Doménech",
+    "Salario": 2161.23
+  },
+  {
+    "id_personal": "ADM087",
+    "id_hospital": "H002",
+    "Nombre": "Gonzalo de Marín",
+    "Salario": 2867.22
+  },
+  {
+    "id_personal": "ADM088",
+    "id_hospital": "H002",
+    "Nombre": "Pepita Castrillo Alemany",
+    "Salario": 2748.39
+  },
+  {
+    "id_personal": "ADM089",
+    "id_hospital": "H002",
+    "Nombre": "Hortensia Priscila Baños Carpio",
+    "Salario": 1973.55
+  },
+  {
+    "id_personal": "ADM090",
+    "id_hospital": "H002",
+    "Nombre": "Pánfilo Tadeo Morell Cobo",
+    "Salario": 2879.6
+  },
+  {
+    "id_personal": "ADM091",
+    "id_hospital": "H002",
+    "Nombre": "Azahar Diéguez-Coloma",
+    "Salario": 2716.34
+  },
+  {
+    "id_personal": "ADM092",
+    "id_hospital": "H002",
+    "Nombre": "Herminia Menendez Amat",
+    "Salario": 2376.54
+  },
+  {
+    "id_personal": "ADM093",
+    "id_hospital": "H002",
+    "Nombre": "Samuel Escolano Barriga",
+    "Salario": 2463.86
+  },
+  {
+    "id_personal": "ADM094",
+    "id_hospital": "H002",
+    "Nombre": "Piedad Reina",
+    "Salario": 2674.46
+  },
+  {
+    "id_personal": "ADM095",
+    "id_hospital": "H002",
+    "Nombre": "Eduardo Sans Baquero",
+    "Salario": 1955.33
+  },
+  {
+    "id_personal": "ADM096",
+    "id_hospital": "H002",
+    "Nombre": "Mariano Matas-Villar",
+    "Salario": 1880.29
+  },
+  {
+    "id_personal": "ADM097",
+    "id_hospital": "H002",
+    "Nombre": "Vasco Mateo Almagro",
+    "Salario": 1904.86
+  },
+  {
+    "id_personal": "ADM098",
+    "id_hospital": "H002",
+    "Nombre": "Manola Acero Arévalo",
+    "Salario": 1580.76
+  },
+  {
+    "id_personal": "ADM099",
+    "id_hospital": "H002",
+    "Nombre": "Lupita Mata Rivero",
+    "Salario": 2148.12
+  },
+  {
+    "id_personal": "ADM100",
+    "id_hospital": "H002",
+    "Nombre": "Geraldo Casals Olivera",
+    "Salario": 1624.66
+  },
+  {
+    "id_personal": "ADM101",
+    "id_hospital": "H003",
+    "Nombre": "Diana Nazaret Carmona Vallejo",
+    "Salario": 1678.48
+  },
+  {
+    "id_personal": "ADM102",
+    "id_hospital": "H003",
+    "Nombre": "Eutimio Aguilera-Vidal",
+    "Salario": 1628.65
+  },
+  {
+    "id_personal": "ADM103",
+    "id_hospital": "H003",
+    "Nombre": "Cruz Molina Escamilla",
+    "Salario": 2951.41
+  },
+  {
+    "id_personal": "ADM104",
+    "id_hospital": "H003",
+    "Nombre": "Josefa Mármol Casado",
+    "Salario": 1981.46
+  },
+  {
+    "id_personal": "ADM105",
+    "id_hospital": "H003",
+    "Nombre": "Serafina Ferrándiz Sáez",
+    "Salario": 1503.56
+  },
+  {
+    "id_personal": "ADM106",
+    "id_hospital": "H003",
+    "Nombre": "Ernesto Zaragoza Figueras",
+    "Salario": 2614.47
+  },
+  {
+    "id_personal": "ADM107",
+    "id_hospital": "H003",
+    "Nombre": "Nydia Alemany Garzón",
+    "Salario": 1953.65
+  },
+  {
+    "id_personal": "ADM108",
+    "id_hospital": "H003",
+    "Nombre": "Pilar Planas Roselló",
+    "Salario": 2237.01
+  },
+  {
+    "id_personal": "ADM109",
+    "id_hospital": "H003",
+    "Nombre": "Epifanio Roda Gibert",
+    "Salario": 1969.6
+  },
+  {
+    "id_personal": "ADM110",
+    "id_hospital": "H003",
+    "Nombre": "Bartolomé Bosch Espejo",
+    "Salario": 1716.68
+  },
+  {
+    "id_personal": "ADM111",
+    "id_hospital": "H003",
+    "Nombre": "Jesús Maximiano Suárez Sobrino",
+    "Salario": 2522.78
+  },
+  {
+    "id_personal": "ADM112",
+    "id_hospital": "H003",
+    "Nombre": "Urbano Lino Gallardo Rodríguez",
+    "Salario": 1898.38
+  },
+  {
+    "id_personal": "ADM113",
+    "id_hospital": "H003",
+    "Nombre": "Matías Tejedor Trujillo",
+    "Salario": 2455.24
+  },
+  {
+    "id_personal": "ADM114",
+    "id_hospital": "H003",
+    "Nombre": "Juan Gallart Seco",
+    "Salario": 1939.8
+  },
+  {
+    "id_personal": "ADM115",
+    "id_hospital": "H003",
+    "Nombre": "Luciano Ojeda Paniagua",
+    "Salario": 2066.31
+  },
+  {
+    "id_personal": "ADM116",
+    "id_hospital": "H003",
+    "Nombre": "Feliciana Morales Valera",
+    "Salario": 2676.25
+  },
+  {
+    "id_personal": "ADM117",
+    "id_hospital": "H003",
+    "Nombre": "Inmaculada Olivares Cobo",
+    "Salario": 1885.11
+  },
+  {
+    "id_personal": "ADM118",
+    "id_hospital": "H003",
+    "Nombre": "Marisa Tomas",
+    "Salario": 2041.9
+  },
+  {
+    "id_personal": "ADM119",
+    "id_hospital": "H003",
+    "Nombre": "Reyes Amor Ríos Alsina",
+    "Salario": 2786.43
+  },
+  {
+    "id_personal": "ADM120",
+    "id_hospital": "H003",
+    "Nombre": "Eva de Benitez",
+    "Salario": 2553.94
+  },
+  {
+    "id_personal": "ADM121",
+    "id_hospital": "H003",
+    "Nombre": "Primitivo Marco Mercader Figuerola",
+    "Salario": 2636.11
+  },
+  {
+    "id_personal": "ADM122",
+    "id_hospital": "H003",
+    "Nombre": "Reyes Martin",
+    "Salario": 2076.0
+  },
+  {
+    "id_personal": "ADM123",
+    "id_hospital": "H003",
+    "Nombre": "Roldán Vigil Palomino",
+    "Salario": 2833.05
+  },
+  {
+    "id_personal": "ADM124",
+    "id_hospital": "H003",
+    "Nombre": "Clemente Huerta",
+    "Salario": 2477.03
+  },
+  {
+    "id_personal": "ADM125",
+    "id_hospital": "H003",
+    "Nombre": "Prudencio Cifuentes Alcántara",
+    "Salario": 2191.52
+  },
+  {
+    "id_personal": "ADM126",
+    "id_hospital": "H003",
+    "Nombre": "Timoteo Prieto-Alegre",
+    "Salario": 2600.73
+  },
+  {
+    "id_personal": "ADM127",
+    "id_hospital": "H003",
+    "Nombre": "Lupe de Rodriguez",
+    "Salario": 2701.5
+  },
+  {
+    "id_personal": "ADM128",
+    "id_hospital": "H003",
+    "Nombre": "Martirio Montoya",
+    "Salario": 1516.95
+  },
+  {
+    "id_personal": "ADM129",
+    "id_hospital": "H003",
+    "Nombre": "Lorenza Morera-Montaña",
+    "Salario": 1732.28
+  },
+  {
+    "id_personal": "ADM130",
+    "id_hospital": "H003",
+    "Nombre": "Hortensia Durán Río",
+    "Salario": 1862.84
+  },
+  {
+    "id_personal": "ADM131",
+    "id_hospital": "H003",
+    "Nombre": "Perla Bejarano-Adán",
+    "Salario": 2225.8
+  },
+  {
+    "id_personal": "ADM132",
+    "id_hospital": "H003",
+    "Nombre": "Calixto Moya Campo",
+    "Salario": 2898.4
+  },
+  {
+    "id_personal": "ADM133",
+    "id_hospital": "H003",
+    "Nombre": "José María Gascón Castro",
+    "Salario": 2313.7
+  },
+  {
+    "id_personal": "ADM134",
+    "id_hospital": "H003",
+    "Nombre": "Prudencio Horacio Canales Romeu",
+    "Salario": 2615.52
+  },
+  {
+    "id_personal": "ADM135",
+    "id_hospital": "H003",
+    "Nombre": "Olivia Miranda Viñas",
+    "Salario": 2535.39
+  },
+  {
+    "id_personal": "ADM136",
+    "id_hospital": "H003",
+    "Nombre": "Óscar Cobos-Roma",
+    "Salario": 2662.34
+  },
+  {
+    "id_personal": "ADM137",
+    "id_hospital": "H003",
+    "Nombre": "Melisa Villar Crespi",
+    "Salario": 2849.98
+  },
+  {
+    "id_personal": "ADM138",
+    "id_hospital": "H003",
+    "Nombre": "Zoraida Giner Donaire",
+    "Salario": 2149.82
+  },
+  {
+    "id_personal": "ADM139",
+    "id_hospital": "H003",
+    "Nombre": "Yaiza González Riquelme",
+    "Salario": 2096.73
+  },
+  {
+    "id_personal": "ADM140",
+    "id_hospital": "H003",
+    "Nombre": "Ibán de Córdoba",
+    "Salario": 2740.62
+  },
+  {
+    "id_personal": "ADM141",
+    "id_hospital": "H003",
+    "Nombre": "Ale Bayón Jove",
+    "Salario": 2385.33
+  },
+  {
+    "id_personal": "ADM142",
+    "id_hospital": "H003",
+    "Nombre": "Aroa Cervantes Larrea",
+    "Salario": 2504.08
+  },
+  {
+    "id_personal": "ADM143",
+    "id_hospital": "H003",
+    "Nombre": "Olivia Donaire Rey",
+    "Salario": 1686.77
+  },
+  {
+    "id_personal": "ADM144",
+    "id_hospital": "H003",
+    "Nombre": "Mercedes Coello González",
+    "Salario": 1655.72
+  },
+  {
+    "id_personal": "ADM145",
+    "id_hospital": "H003",
+    "Nombre": "Horacio Gallego Grande",
+    "Salario": 1795.61
+  },
+  {
+    "id_personal": "ADM146",
+    "id_hospital": "H003",
+    "Nombre": "Yolanda Verdugo Montserrat",
+    "Salario": 2724.78
+  },
+  {
+    "id_personal": "ADM147",
+    "id_hospital": "H003",
+    "Nombre": "Leandro del Rivero",
+    "Salario": 2009.34
+  },
+  {
+    "id_personal": "ADM148",
+    "id_hospital": "H003",
+    "Nombre": "Gervasio Santos Alarcón",
+    "Salario": 2626.64
+  },
+  {
+    "id_personal": "ADM149",
+    "id_hospital": "H003",
+    "Nombre": "Abraham Florentino Mulet Piñeiro",
+    "Salario": 2920.24
+  },
+  {
+    "id_personal": "ADM150",
+    "id_hospital": "H003",
+    "Nombre": "Urbano Juliá Villalobos",
+    "Salario": 1573.92
+  },
+  {
+    "id_personal": "ADM151",
+    "id_hospital": "H004",
+    "Nombre": "Alba Sales",
+    "Salario": 2143.79
+  },
+  {
+    "id_personal": "ADM152",
+    "id_hospital": "H004",
+    "Nombre": "Leoncio Duarte Mariscal",
+    "Salario": 2269.37
+  },
+  {
+    "id_personal": "ADM153",
+    "id_hospital": "H004",
+    "Nombre": "Ramón Vilar Bartolomé",
+    "Salario": 1640.93
+  },
+  {
+    "id_personal": "ADM154",
+    "id_hospital": "H004",
+    "Nombre": "Carmelo Saez Hervás",
+    "Salario": 1581.66
+  },
+  {
+    "id_personal": "ADM155",
+    "id_hospital": "H004",
+    "Nombre": "Pascuala Ribas-Armas",
+    "Salario": 2788.17
+  },
+  {
+    "id_personal": "ADM156",
+    "id_hospital": "H004",
+    "Nombre": "Ciro Perelló Rivero",
+    "Salario": 2104.76
+  },
+  {
+    "id_personal": "ADM157",
+    "id_hospital": "H004",
+    "Nombre": "Cirino Casas Serrano",
+    "Salario": 1887.95
+  },
+  {
+    "id_personal": "ADM158",
+    "id_hospital": "H004",
+    "Nombre": "Bernardita del Rios",
+    "Salario": 1998.35
+  },
+  {
+    "id_personal": "ADM159",
+    "id_hospital": "H004",
+    "Nombre": "Dominga Salom Zaragoza",
+    "Salario": 2950.58
+  },
+  {
+    "id_personal": "ADM160",
+    "id_hospital": "H004",
+    "Nombre": "Teresa de Sandoval",
+    "Salario": 2558.92
+  },
+  {
+    "id_personal": "ADM161",
+    "id_hospital": "H004",
+    "Nombre": "Ildefonso de Jaume",
+    "Salario": 2735.58
+  },
+  {
+    "id_personal": "ADM162",
+    "id_hospital": "H004",
+    "Nombre": "Rafa Higueras Mate",
+    "Salario": 2136.63
+  },
+  {
+    "id_personal": "ADM163",
+    "id_hospital": "H004",
+    "Nombre": "Buenaventura Mulet Bayón",
+    "Salario": 2843.02
+  },
+  {
+    "id_personal": "ADM164",
+    "id_hospital": "H004",
+    "Nombre": "Marco de Vall",
+    "Salario": 2460.93
+  },
+  {
+    "id_personal": "ADM165",
+    "id_hospital": "H004",
+    "Nombre": "Rubén de Millán",
+    "Salario": 2107.92
+  },
+  {
+    "id_personal": "ADM166",
+    "id_hospital": "H004",
+    "Nombre": "Fátima Vilalta-Echeverría",
+    "Salario": 1595.29
+  },
+  {
+    "id_personal": "ADM167",
+    "id_hospital": "H004",
+    "Nombre": "Lupe Batlle Elías",
+    "Salario": 1629.46
+  },
+  {
+    "id_personal": "ADM168",
+    "id_hospital": "H004",
+    "Nombre": "Florinda Llamas-Miguel",
+    "Salario": 2016.37
+  },
+  {
+    "id_personal": "ADM169",
+    "id_hospital": "H004",
+    "Nombre": "Timoteo Contreras Ramírez",
+    "Salario": 2905.49
+  },
+  {
+    "id_personal": "ADM170",
+    "id_hospital": "H004",
+    "Nombre": "Manu Nicolás Marquez",
+    "Salario": 2977.56
+  },
+  {
+    "id_personal": "ADM171",
+    "id_hospital": "H004",
+    "Nombre": "Patricio Pozo Portero",
+    "Salario": 2967.56
+  },
+  {
+    "id_personal": "ADM172",
+    "id_hospital": "H004",
+    "Nombre": "Cornelio Pi",
+    "Salario": 2611.54
+  },
+  {
+    "id_personal": "ADM173",
+    "id_hospital": "H004",
+    "Nombre": "Débora de Cámara",
+    "Salario": 2196.01
+  },
+  {
+    "id_personal": "ADM174",
+    "id_hospital": "H004",
+    "Nombre": "Jordán Alemán Salinas",
+    "Salario": 2067.84
+  },
+  {
+    "id_personal": "ADM175",
+    "id_hospital": "H004",
+    "Nombre": "Gregorio Millán Barrera",
+    "Salario": 2803.96
+  },
+  {
+    "id_personal": "ADM176",
+    "id_hospital": "H004",
+    "Nombre": "Cándida Juárez Sanz",
+    "Salario": 2369.75
+  },
+  {
+    "id_personal": "ADM177",
+    "id_hospital": "H004",
+    "Nombre": "Maristela Valdés Patiño",
+    "Salario": 1556.03
+  },
+  {
+    "id_personal": "ADM178",
+    "id_hospital": "H004",
+    "Nombre": "Evangelina del Zorrilla",
+    "Salario": 2960.82
+  },
+  {
+    "id_personal": "ADM179",
+    "id_hospital": "H004",
+    "Nombre": "Tadeo Adán-Valencia",
+    "Salario": 1972.15
+  },
+  {
+    "id_personal": "ADM180",
+    "id_hospital": "H004",
+    "Nombre": "Angelina Rocamora",
+    "Salario": 2461.75
+  },
+  {
+    "id_personal": "ADM181",
+    "id_hospital": "H004",
+    "Nombre": "Manu Serra",
+    "Salario": 1901.71
+  },
+  {
+    "id_personal": "ADM182",
+    "id_hospital": "H004",
+    "Nombre": "Oriana Isern Lago",
+    "Salario": 2530.62
+  },
+  {
+    "id_personal": "ADM183",
+    "id_hospital": "H004",
+    "Nombre": "Maricruz Gallart",
+    "Salario": 2587.08
+  },
+  {
+    "id_personal": "ADM184",
+    "id_hospital": "H004",
+    "Nombre": "Camilo Real",
+    "Salario": 2571.99
+  },
+  {
+    "id_personal": "ADM185",
+    "id_hospital": "H004",
+    "Nombre": "Jose Francisco Ribera Arnaiz",
+    "Salario": 1742.07
+  },
+  {
+    "id_personal": "ADM186",
+    "id_hospital": "H004",
+    "Nombre": "Narcisa León Patiño",
+    "Salario": 1992.24
+  },
+  {
+    "id_personal": "ADM187",
+    "id_hospital": "H004",
+    "Nombre": "Irene del Vilar",
+    "Salario": 1824.21
+  },
+  {
+    "id_personal": "ADM188",
+    "id_hospital": "H004",
+    "Nombre": "Lupita Giralt Gimenez",
+    "Salario": 2758.94
+  },
+  {
+    "id_personal": "ADM189",
+    "id_hospital": "H004",
+    "Nombre": "Manu Dorotea Cortina Rovira",
+    "Salario": 1735.82
+  },
+  {
+    "id_personal": "ADM190",
+    "id_hospital": "H004",
+    "Nombre": "Jose Antonio Quevedo Andrade",
+    "Salario": 2118.62
+  },
+  {
+    "id_personal": "ADM191",
+    "id_hospital": "H004",
+    "Nombre": "Reinaldo Bueno-Giménez",
+    "Salario": 2553.88
+  },
+  {
+    "id_personal": "ADM192",
+    "id_hospital": "H004",
+    "Nombre": "Begoña Azahara Aguirre Villegas",
+    "Salario": 1871.06
+  },
+  {
+    "id_personal": "ADM193",
+    "id_hospital": "H004",
+    "Nombre": "Máxima Coca Cortés",
+    "Salario": 2677.46
+  },
+  {
+    "id_personal": "ADM194",
+    "id_hospital": "H004",
+    "Nombre": "Lalo Batlle Clemente",
+    "Salario": 2360.39
+  },
+  {
+    "id_personal": "ADM195",
+    "id_hospital": "H004",
+    "Nombre": "Florencia Teresa Casares Caro",
+    "Salario": 1951.2
+  },
+  {
+    "id_personal": "ADM196",
+    "id_hospital": "H004",
+    "Nombre": "Loreto Rosell-Gracia",
+    "Salario": 2574.56
+  },
+  {
+    "id_personal": "ADM197",
+    "id_hospital": "H004",
+    "Nombre": "Eufemia Marqués Rosales",
+    "Salario": 2009.09
+  },
+  {
+    "id_personal": "ADM198",
+    "id_hospital": "H004",
+    "Nombre": "Ainoa Alemán Portero",
+    "Salario": 1789.82
+  },
+  {
+    "id_personal": "ADM199",
+    "id_hospital": "H004",
+    "Nombre": "Purificación Madrid Pozo",
+    "Salario": 1602.47
+  },
+  {
+    "id_personal": "ADM200",
+    "id_hospital": "H004",
+    "Nombre": "Fabio Gil",
+    "Salario": 2611.57
+  },
+  {
+    "id_personal": "ADM201",
+    "id_hospital": "H005",
+    "Nombre": "Rufina Romeu Puente",
+    "Salario": 1753.38
+  },
+  {
+    "id_personal": "ADM202",
+    "id_hospital": "H005",
+    "Nombre": "Angélica Valenzuela-Martín",
+    "Salario": 2504.93
+  },
+  {
+    "id_personal": "ADM203",
+    "id_hospital": "H005",
+    "Nombre": "Rosa María Orozco Garrido",
+    "Salario": 1752.98
+  },
+  {
+    "id_personal": "ADM204",
+    "id_hospital": "H005",
+    "Nombre": "Haroldo Jordán",
+    "Salario": 2900.47
+  },
+  {
+    "id_personal": "ADM205",
+    "id_hospital": "H005",
+    "Nombre": "Lucila Santana Conde",
+    "Salario": 2568.31
+  },
+  {
+    "id_personal": "ADM206",
+    "id_hospital": "H005",
+    "Nombre": "Isaura Dávila Pineda",
+    "Salario": 2877.03
+  },
+  {
+    "id_personal": "ADM207",
+    "id_hospital": "H005",
+    "Nombre": "Mariana Gargallo Estevez",
+    "Salario": 1557.15
+  },
+  {
+    "id_personal": "ADM208",
+    "id_hospital": "H005",
+    "Nombre": "Piedad del Olmo",
+    "Salario": 2063.8
+  },
+  {
+    "id_personal": "ADM209",
+    "id_hospital": "H005",
+    "Nombre": "Carlota Antúnez Cobo",
+    "Salario": 1930.18
+  },
+  {
+    "id_personal": "ADM210",
+    "id_hospital": "H005",
+    "Nombre": "Severo Galindo Casanovas",
+    "Salario": 1751.72
+  },
+  {
+    "id_personal": "ADM211",
+    "id_hospital": "H005",
+    "Nombre": "Máximo Carbó Ríos",
+    "Salario": 2773.1
+  },
+  {
+    "id_personal": "ADM212",
+    "id_hospital": "H005",
+    "Nombre": "René de Seco",
+    "Salario": 2239.46
+  },
+  {
+    "id_personal": "ADM213",
+    "id_hospital": "H005",
+    "Nombre": "Esperanza Noemí Serrano Cazorla",
+    "Salario": 2330.04
+  },
+  {
+    "id_personal": "ADM214",
+    "id_hospital": "H005",
+    "Nombre": "Rafa Girona Leiva",
+    "Salario": 2212.0
+  },
+  {
+    "id_personal": "ADM215",
+    "id_hospital": "H005",
+    "Nombre": "Emiliano Ayuso",
+    "Salario": 2351.75
+  },
+  {
+    "id_personal": "ADM216",
+    "id_hospital": "H005",
+    "Nombre": "Nazaret Carrera Vicente",
+    "Salario": 2004.7
+  },
+  {
+    "id_personal": "ADM217",
+    "id_hospital": "H005",
+    "Nombre": "Teodoro Oliver",
+    "Salario": 2676.84
+  },
+  {
+    "id_personal": "ADM218",
+    "id_hospital": "H005",
+    "Nombre": "Dimas Peinado-Escrivá",
+    "Salario": 2301.2
+  },
+  {
+    "id_personal": "ADM219",
+    "id_hospital": "H005",
+    "Nombre": "Paulina Caro",
+    "Salario": 2929.88
+  },
+  {
+    "id_personal": "ADM220",
+    "id_hospital": "H005",
+    "Nombre": "Javier Suarez Estevez",
+    "Salario": 1625.55
+  },
+  {
+    "id_personal": "ADM221",
+    "id_hospital": "H005",
+    "Nombre": "Sosimo Eloy Martí Haro",
+    "Salario": 2438.06
+  },
+  {
+    "id_personal": "ADM222",
+    "id_hospital": "H005",
+    "Nombre": "Camilo Pepito Arroyo Torre",
+    "Salario": 2071.38
+  },
+  {
+    "id_personal": "ADM223",
+    "id_hospital": "H005",
+    "Nombre": "Mateo Marín Macías",
+    "Salario": 2383.29
+  },
+  {
+    "id_personal": "ADM224",
+    "id_hospital": "H005",
+    "Nombre": "Ricardo del Feijoo",
+    "Salario": 2819.77
+  },
+  {
+    "id_personal": "ADM225",
+    "id_hospital": "H005",
+    "Nombre": "Félix Arnau Dueñas",
+    "Salario": 1905.31
+  },
+  {
+    "id_personal": "ADM226",
+    "id_hospital": "H005",
+    "Nombre": "Etelvina Coca Torres",
+    "Salario": 1953.68
+  },
+  {
+    "id_personal": "ADM227",
+    "id_hospital": "H005",
+    "Nombre": "Fulgencio Teruel Borrás",
+    "Salario": 2652.42
+  },
+  {
+    "id_personal": "ADM228",
+    "id_hospital": "H005",
+    "Nombre": "Bartolomé Uría-Vargas",
+    "Salario": 2216.06
+  },
+  {
+    "id_personal": "ADM229",
+    "id_hospital": "H005",
+    "Nombre": "Abel Belmonte",
+    "Salario": 2430.98
+  },
+  {
+    "id_personal": "ADM230",
+    "id_hospital": "H005",
+    "Nombre": "Pedro Meléndez Mendoza",
+    "Salario": 2656.19
+  },
+  {
+    "id_personal": "ADM231",
+    "id_hospital": "H005",
+    "Nombre": "Viviana Alvarado",
+    "Salario": 1539.35
+  },
+  {
+    "id_personal": "ADM232",
+    "id_hospital": "H005",
+    "Nombre": "Valero Carvajal Villalonga",
+    "Salario": 2751.66
+  },
+  {
+    "id_personal": "ADM233",
+    "id_hospital": "H005",
+    "Nombre": "Juan Manuel Lozano Salazar",
+    "Salario": 2807.58
+  },
+  {
+    "id_personal": "ADM234",
+    "id_hospital": "H005",
+    "Nombre": "Juana Fajardo Cabeza",
+    "Salario": 1736.47
+  },
+  {
+    "id_personal": "ADM235",
+    "id_hospital": "H005",
+    "Nombre": "Teodosio Carvajal",
+    "Salario": 2551.06
+  },
+  {
+    "id_personal": "ADM236",
+    "id_hospital": "H005",
+    "Nombre": "Noé Goicoechea-Andrade",
+    "Salario": 2100.28
+  },
+  {
+    "id_personal": "ADM237",
+    "id_hospital": "H005",
+    "Nombre": "Dorita Dionisia Gómez Baquero",
+    "Salario": 2802.06
+  },
+  {
+    "id_personal": "ADM238",
+    "id_hospital": "H005",
+    "Nombre": "Victor Manuel Hidalgo Villa",
+    "Salario": 2900.41
+  },
+  {
+    "id_personal": "ADM239",
+    "id_hospital": "H005",
+    "Nombre": "Agustina Abellán Rosell",
+    "Salario": 1880.65
+  },
+  {
+    "id_personal": "ADM240",
+    "id_hospital": "H005",
+    "Nombre": "Heraclio Cortina Corbacho",
+    "Salario": 2089.95
+  },
+  {
+    "id_personal": "ADM241",
+    "id_hospital": "H005",
+    "Nombre": "Silvestre Cordero Donoso",
+    "Salario": 1690.39
+  },
+  {
+    "id_personal": "ADM242",
+    "id_hospital": "H005",
+    "Nombre": "Claudio Tovar Madrid",
+    "Salario": 2539.12
+  },
+  {
+    "id_personal": "ADM243",
+    "id_hospital": "H005",
+    "Nombre": "Bibiana Cuenca Nicolau",
+    "Salario": 2314.11
+  },
+  {
+    "id_personal": "ADM244",
+    "id_hospital": "H005",
+    "Nombre": "Serafina de Gilabert",
+    "Salario": 2845.81
+  },
+  {
+    "id_personal": "ADM245",
+    "id_hospital": "H005",
+    "Nombre": "Marta del Capdevila",
+    "Salario": 2485.29
+  },
+  {
+    "id_personal": "ADM246",
+    "id_hospital": "H005",
+    "Nombre": "Anunciación Cepeda-Donaire",
+    "Salario": 2184.9
+  },
+  {
+    "id_personal": "ADM247",
+    "id_hospital": "H005",
+    "Nombre": "Roberta Requena Varela",
+    "Salario": 1842.89
+  },
+  {
+    "id_personal": "ADM248",
+    "id_hospital": "H005",
+    "Nombre": "Valentín Zurita-Saura",
+    "Salario": 2141.03
+  },
+  {
+    "id_personal": "ADM249",
+    "id_hospital": "H005",
+    "Nombre": "África Mora Herranz",
+    "Salario": 2060.55
+  },
+  {
+    "id_personal": "ADM250",
+    "id_hospital": "H005",
+    "Nombre": "Emma Candela Fernandez Cervantes",
+    "Salario": 2919.8
+  }
+]
+);
+
+db.PERSONAL_MANTENIMIENTO.insertMany(
+[
+  {
+    "id_personal": "MNT001",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 1912.71
+  },
+  {
+    "id_personal": "MNT002",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 2394.86
+  },
+  {
+    "id_personal": "MNT003",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 2177.37
+  },
+  {
+    "id_personal": "MNT004",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 2326.23
+  },
+  {
+    "id_personal": "MNT005",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1801.95
+  },
+  {
+    "id_personal": "MNT006",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1512.98
+  },
+  {
+    "id_personal": "MNT007",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 2236.95
+  },
+  {
+    "id_personal": "MNT008",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1783.43
+  },
+  {
+    "id_personal": "MNT009",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1456.11
+  },
+  {
+    "id_personal": "MNT010",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 1658.89
+  },
+  {
+    "id_personal": "MNT011",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1470.42
+  },
+  {
+    "id_personal": "MNT012",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 1597.12
+  },
+  {
+    "id_personal": "MNT013",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 2136.94
+  },
+  {
+    "id_personal": "MNT014",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 2187.31
+  },
+  {
+    "id_personal": "MNT015",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 1569.73
+  },
+  {
+    "id_personal": "MNT016",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1970.02
+  },
+  {
+    "id_personal": "MNT017",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 2178.08
+  },
+  {
+    "id_personal": "MNT018",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 2390.49
+  },
+  {
+    "id_personal": "MNT019",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 2433.24
+  },
+  {
+    "id_personal": "MNT020",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1297.77
+  },
+  {
+    "id_personal": "MNT021",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 2121.59
+  },
+  {
+    "id_personal": "MNT022",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 2307.31
+  },
+  {
+    "id_personal": "MNT023",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1492.81
+  },
+  {
+    "id_personal": "MNT024",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1379.28
+  },
+  {
+    "id_personal": "MNT025",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 1220.43
+  },
+  {
+    "id_personal": "MNT026",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1341.44
+  },
+  {
+    "id_personal": "MNT027",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1964.47
+  },
+  {
+    "id_personal": "MNT028",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1565.69
+  },
+  {
+    "id_personal": "MNT029",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1792.54
+  },
+  {
+    "id_personal": "MNT030",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 2486.21
+  },
+  {
+    "id_personal": "MNT031",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1864.21
+  },
+  {
+    "id_personal": "MNT032",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 2340.25
+  },
+  {
+    "id_personal": "MNT033",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1728.95
+  },
+  {
+    "id_personal": "MNT034",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 1389.2
+  },
+  {
+    "id_personal": "MNT035",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 2074.21
+  },
+  {
+    "id_personal": "MNT036",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 2176.71
+  },
+  {
+    "id_personal": "MNT037",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1256.77
+  },
+  {
+    "id_personal": "MNT038",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1784.4
+  },
+  {
+    "id_personal": "MNT039",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1282.3
+  },
+  {
+    "id_personal": "MNT040",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1440.16
+  },
+  {
+    "id_personal": "MNT041",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 2062.24
+  },
+  {
+    "id_personal": "MNT042",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1711.7
+  },
+  {
+    "id_personal": "MNT043",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 2051.0
+  },
+  {
+    "id_personal": "MNT044",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 2137.04
+  },
+  {
+    "id_personal": "MNT045",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1713.53
+  },
+  {
+    "id_personal": "MNT046",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 2265.52
+  },
+  {
+    "id_personal": "MNT047",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1337.27
+  },
+  {
+    "id_personal": "MNT048",
+    "id_hospital": "H001",
+    "Gestion": "Servicios Generales",
+    "Salario": 1202.28
+  },
+  {
+    "id_personal": "MNT049",
+    "id_hospital": "H001",
+    "Gestion": "Mantenimiento",
+    "Salario": 1993.8
+  },
+  {
+    "id_personal": "MNT050",
+    "id_hospital": "H001",
+    "Gestion": "Limpieza",
+    "Salario": 1573.83
+  },
+  {
+    "id_personal": "MNT051",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1538.46
+  },
+  {
+    "id_personal": "MNT052",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2210.41
+  },
+  {
+    "id_personal": "MNT053",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1525.25
+  },
+  {
+    "id_personal": "MNT054",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2084.95
+  },
+  {
+    "id_personal": "MNT055",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2318.08
+  },
+  {
+    "id_personal": "MNT056",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1329.61
+  },
+  {
+    "id_personal": "MNT057",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1688.39
+  },
+  {
+    "id_personal": "MNT058",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1970.22
+  },
+  {
+    "id_personal": "MNT059",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 2261.12
+  },
+  {
+    "id_personal": "MNT060",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2119.32
+  },
+  {
+    "id_personal": "MNT061",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2274.06
+  },
+  {
+    "id_personal": "MNT062",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2113.77
+  },
+  {
+    "id_personal": "MNT063",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 2403.38
+  },
+  {
+    "id_personal": "MNT064",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 2091.88
+  },
+  {
+    "id_personal": "MNT065",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1543.37
+  },
+  {
+    "id_personal": "MNT066",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1396.74
+  },
+  {
+    "id_personal": "MNT067",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 2227.66
+  },
+  {
+    "id_personal": "MNT068",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2131.35
+  },
+  {
+    "id_personal": "MNT069",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2380.69
+  },
+  {
+    "id_personal": "MNT070",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2459.14
+  },
+  {
+    "id_personal": "MNT071",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 2090.19
+  },
+  {
+    "id_personal": "MNT072",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2378.02
+  },
+  {
+    "id_personal": "MNT073",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1716.67
+  },
+  {
+    "id_personal": "MNT074",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1559.82
+  },
+  {
+    "id_personal": "MNT075",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1839.86
+  },
+  {
+    "id_personal": "MNT076",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1674.56
+  },
+  {
+    "id_personal": "MNT077",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 2442.85
+  },
+  {
+    "id_personal": "MNT078",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2103.04
+  },
+  {
+    "id_personal": "MNT079",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1759.65
+  },
+  {
+    "id_personal": "MNT080",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1954.84
+  },
+  {
+    "id_personal": "MNT081",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2134.07
+  },
+  {
+    "id_personal": "MNT082",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2357.47
+  },
+  {
+    "id_personal": "MNT083",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1365.82
+  },
+  {
+    "id_personal": "MNT084",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2361.59
+  },
+  {
+    "id_personal": "MNT085",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1729.51
+  },
+  {
+    "id_personal": "MNT086",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1560.76
+  },
+  {
+    "id_personal": "MNT087",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1482.84
+  },
+  {
+    "id_personal": "MNT088",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 2111.39
+  },
+  {
+    "id_personal": "MNT089",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1265.64
+  },
+  {
+    "id_personal": "MNT090",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1613.8
+  },
+  {
+    "id_personal": "MNT091",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1872.43
+  },
+  {
+    "id_personal": "MNT092",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1909.89
+  },
+  {
+    "id_personal": "MNT093",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2059.62
+  },
+  {
+    "id_personal": "MNT094",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1462.9
+  },
+  {
+    "id_personal": "MNT095",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 2201.2
+  },
+  {
+    "id_personal": "MNT096",
+    "id_hospital": "H002",
+    "Gestion": "Limpieza",
+    "Salario": 1428.11
+  },
+  {
+    "id_personal": "MNT097",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 1554.18
+  },
+  {
+    "id_personal": "MNT098",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2100.7
+  },
+  {
+    "id_personal": "MNT099",
+    "id_hospital": "H002",
+    "Gestion": "Mantenimiento",
+    "Salario": 1440.3
+  },
+  {
+    "id_personal": "MNT100",
+    "id_hospital": "H002",
+    "Gestion": "Servicios Generales",
+    "Salario": 2262.7
+  },
+  {
+    "id_personal": "MNT101",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2263.85
+  },
+  {
+    "id_personal": "MNT102",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1365.82
+  },
+  {
+    "id_personal": "MNT103",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2009.64
+  },
+  {
+    "id_personal": "MNT104",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 2409.22
+  },
+  {
+    "id_personal": "MNT105",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2025.76
+  },
+  {
+    "id_personal": "MNT106",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1996.52
+  },
+  {
+    "id_personal": "MNT107",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2375.86
+  },
+  {
+    "id_personal": "MNT108",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 1768.36
+  },
+  {
+    "id_personal": "MNT109",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1858.6
+  },
+  {
+    "id_personal": "MNT110",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1494.02
+  },
+  {
+    "id_personal": "MNT111",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1430.54
+  },
+  {
+    "id_personal": "MNT112",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1393.25
+  },
+  {
+    "id_personal": "MNT113",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2451.34
+  },
+  {
+    "id_personal": "MNT114",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1461.24
+  },
+  {
+    "id_personal": "MNT115",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1875.28
+  },
+  {
+    "id_personal": "MNT116",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 1494.93
+  },
+  {
+    "id_personal": "MNT117",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 2369.55
+  },
+  {
+    "id_personal": "MNT118",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1383.23
+  },
+  {
+    "id_personal": "MNT119",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 1909.3
+  },
+  {
+    "id_personal": "MNT120",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1414.24
+  },
+  {
+    "id_personal": "MNT121",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1668.03
+  },
+  {
+    "id_personal": "MNT122",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1688.47
+  },
+  {
+    "id_personal": "MNT123",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1531.18
+  },
+  {
+    "id_personal": "MNT124",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2126.74
+  },
+  {
+    "id_personal": "MNT125",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 2355.66
+  },
+  {
+    "id_personal": "MNT126",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2462.75
+  },
+  {
+    "id_personal": "MNT127",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 2393.89
+  },
+  {
+    "id_personal": "MNT128",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2385.76
+  },
+  {
+    "id_personal": "MNT129",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1736.26
+  },
+  {
+    "id_personal": "MNT130",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1753.6
+  },
+  {
+    "id_personal": "MNT131",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1257.4
+  },
+  {
+    "id_personal": "MNT132",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2284.51
+  },
+  {
+    "id_personal": "MNT133",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2050.62
+  },
+  {
+    "id_personal": "MNT134",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 1606.82
+  },
+  {
+    "id_personal": "MNT135",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 1907.5
+  },
+  {
+    "id_personal": "MNT136",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1284.16
+  },
+  {
+    "id_personal": "MNT137",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2382.02
+  },
+  {
+    "id_personal": "MNT138",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 2131.89
+  },
+  {
+    "id_personal": "MNT139",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 1989.08
+  },
+  {
+    "id_personal": "MNT140",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1323.22
+  },
+  {
+    "id_personal": "MNT141",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1331.83
+  },
+  {
+    "id_personal": "MNT142",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1599.96
+  },
+  {
+    "id_personal": "MNT143",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 1377.86
+  },
+  {
+    "id_personal": "MNT144",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1421.16
+  },
+  {
+    "id_personal": "MNT145",
+    "id_hospital": "H003",
+    "Gestion": "Mantenimiento",
+    "Salario": 2345.45
+  },
+  {
+    "id_personal": "MNT146",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1842.02
+  },
+  {
+    "id_personal": "MNT147",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2477.46
+  },
+  {
+    "id_personal": "MNT148",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1915.59
+  },
+  {
+    "id_personal": "MNT149",
+    "id_hospital": "H003",
+    "Gestion": "Limpieza",
+    "Salario": 2498.48
+  },
+  {
+    "id_personal": "MNT150",
+    "id_hospital": "H003",
+    "Gestion": "Servicios Generales",
+    "Salario": 1712.88
+  },
+  {
+    "id_personal": "MNT151",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1685.56
+  },
+  {
+    "id_personal": "MNT152",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1376.63
+  },
+  {
+    "id_personal": "MNT153",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1559.58
+  },
+  {
+    "id_personal": "MNT154",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1741.34
+  },
+  {
+    "id_personal": "MNT155",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1901.12
+  },
+  {
+    "id_personal": "MNT156",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 2284.13
+  },
+  {
+    "id_personal": "MNT157",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1359.47
+  },
+  {
+    "id_personal": "MNT158",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 2079.48
+  },
+  {
+    "id_personal": "MNT159",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1295.44
+  },
+  {
+    "id_personal": "MNT160",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1355.54
+  },
+  {
+    "id_personal": "MNT161",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1725.66
+  },
+  {
+    "id_personal": "MNT162",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1572.98
+  },
+  {
+    "id_personal": "MNT163",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1868.82
+  },
+  {
+    "id_personal": "MNT164",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1676.63
+  },
+  {
+    "id_personal": "MNT165",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1476.66
+  },
+  {
+    "id_personal": "MNT166",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1473.53
+  },
+  {
+    "id_personal": "MNT167",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1281.41
+  },
+  {
+    "id_personal": "MNT168",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1595.85
+  },
+  {
+    "id_personal": "MNT169",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1546.53
+  },
+  {
+    "id_personal": "MNT170",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1495.27
+  },
+  {
+    "id_personal": "MNT171",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1493.29
+  },
+  {
+    "id_personal": "MNT172",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1875.53
+  },
+  {
+    "id_personal": "MNT173",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1558.04
+  },
+  {
+    "id_personal": "MNT174",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1317.41
+  },
+  {
+    "id_personal": "MNT175",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 2184.67
+  },
+  {
+    "id_personal": "MNT176",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 2198.04
+  },
+  {
+    "id_personal": "MNT177",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1852.12
+  },
+  {
+    "id_personal": "MNT178",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1578.36
+  },
+  {
+    "id_personal": "MNT179",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1759.33
+  },
+  {
+    "id_personal": "MNT180",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1420.44
+  },
+  {
+    "id_personal": "MNT181",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1861.81
+  },
+  {
+    "id_personal": "MNT182",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 2062.2
+  },
+  {
+    "id_personal": "MNT183",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1917.02
+  },
+  {
+    "id_personal": "MNT184",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1230.39
+  },
+  {
+    "id_personal": "MNT185",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 2046.18
+  },
+  {
+    "id_personal": "MNT186",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1488.49
+  },
+  {
+    "id_personal": "MNT187",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1772.14
+  },
+  {
+    "id_personal": "MNT188",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 2199.87
+  },
+  {
+    "id_personal": "MNT189",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1587.54
+  },
+  {
+    "id_personal": "MNT190",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1209.43
+  },
+  {
+    "id_personal": "MNT191",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1704.68
+  },
+  {
+    "id_personal": "MNT192",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 2344.83
+  },
+  {
+    "id_personal": "MNT193",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 2044.89
+  },
+  {
+    "id_personal": "MNT194",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1472.78
+  },
+  {
+    "id_personal": "MNT195",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 2460.65
+  },
+  {
+    "id_personal": "MNT196",
+    "id_hospital": "H004",
+    "Gestion": "Limpieza",
+    "Salario": 1227.91
+  },
+  {
+    "id_personal": "MNT197",
+    "id_hospital": "H004",
+    "Gestion": "Servicios Generales",
+    "Salario": 1448.61
+  },
+  {
+    "id_personal": "MNT198",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1630.67
+  },
+  {
+    "id_personal": "MNT199",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1253.83
+  },
+  {
+    "id_personal": "MNT200",
+    "id_hospital": "H004",
+    "Gestion": "Mantenimiento",
+    "Salario": 1662.68
+  },
+  {
+    "id_personal": "MNT201",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 2124.94
+  },
+  {
+    "id_personal": "MNT202",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1371.22
+  },
+  {
+    "id_personal": "MNT203",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2240.56
+  },
+  {
+    "id_personal": "MNT204",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1282.57
+  },
+  {
+    "id_personal": "MNT205",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1734.2
+  },
+  {
+    "id_personal": "MNT206",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 2328.15
+  },
+  {
+    "id_personal": "MNT207",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1270.42
+  },
+  {
+    "id_personal": "MNT208",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1936.86
+  },
+  {
+    "id_personal": "MNT209",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1517.9
+  },
+  {
+    "id_personal": "MNT210",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1637.56
+  },
+  {
+    "id_personal": "MNT211",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1966.52
+  },
+  {
+    "id_personal": "MNT212",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 2219.4
+  },
+  {
+    "id_personal": "MNT213",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2341.76
+  },
+  {
+    "id_personal": "MNT214",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2314.1
+  },
+  {
+    "id_personal": "MNT215",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1984.74
+  },
+  {
+    "id_personal": "MNT216",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 2360.91
+  },
+  {
+    "id_personal": "MNT217",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 2164.93
+  },
+  {
+    "id_personal": "MNT218",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1660.47
+  },
+  {
+    "id_personal": "MNT219",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 2318.4
+  },
+  {
+    "id_personal": "MNT220",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1366.18
+  },
+  {
+    "id_personal": "MNT221",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1768.62
+  },
+  {
+    "id_personal": "MNT222",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1990.65
+  },
+  {
+    "id_personal": "MNT223",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2404.47
+  },
+  {
+    "id_personal": "MNT224",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1951.9
+  },
+  {
+    "id_personal": "MNT225",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1420.99
+  },
+  {
+    "id_personal": "MNT226",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1696.63
+  },
+  {
+    "id_personal": "MNT227",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1732.19
+  },
+  {
+    "id_personal": "MNT228",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2015.68
+  },
+  {
+    "id_personal": "MNT229",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 2052.1
+  },
+  {
+    "id_personal": "MNT230",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1395.24
+  },
+  {
+    "id_personal": "MNT231",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1636.39
+  },
+  {
+    "id_personal": "MNT232",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1608.08
+  },
+  {
+    "id_personal": "MNT233",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2335.33
+  },
+  {
+    "id_personal": "MNT234",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 2171.68
+  },
+  {
+    "id_personal": "MNT235",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2412.86
+  },
+  {
+    "id_personal": "MNT236",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 2396.35
+  },
+  {
+    "id_personal": "MNT237",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1600.84
+  },
+  {
+    "id_personal": "MNT238",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1390.43
+  },
+  {
+    "id_personal": "MNT239",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1793.44
+  },
+  {
+    "id_personal": "MNT240",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 2071.4
+  },
+  {
+    "id_personal": "MNT241",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1929.17
+  },
+  {
+    "id_personal": "MNT242",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1416.09
+  },
+  {
+    "id_personal": "MNT243",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2397.3
+  },
+  {
+    "id_personal": "MNT244",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 1491.07
+  },
+  {
+    "id_personal": "MNT245",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2058.35
+  },
+  {
+    "id_personal": "MNT246",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1672.97
+  },
+  {
+    "id_personal": "MNT247",
+    "id_hospital": "H005",
+    "Gestion": "Mantenimiento",
+    "Salario": 1957.8
+  },
+  {
+    "id_personal": "MNT248",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 1728.2
+  },
+  {
+    "id_personal": "MNT249",
+    "id_hospital": "H005",
+    "Gestion": "Limpieza",
+    "Salario": 2273.63
+  },
+  {
+    "id_personal": "MNT250",
+    "id_hospital": "H005",
+    "Gestion": "Servicios Generales",
+    "Salario": 2409.98
+  }
+]
+);
+
+db.ENFERMERAS.insertMany(
+[
+  {
+    "id_enfermera": "ENF001",
+    "id_area": "A009",
+    "Salario": 3907.72,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF002",
+    "id_area": "A002",
+    "Salario": 2971.89,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF003",
+    "id_area": "A002",
+    "Salario": 3025.98,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF004",
+    "id_area": "A009",
+    "Salario": 2451.01,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF005",
+    "id_area": "A010",
+    "Salario": 2265.27,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF006",
+    "id_area": "A009",
+    "Salario": 3123.03,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF007",
+    "id_area": "A008",
+    "Salario": 2674.32,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF008",
+    "id_area": "A009",
+    "Salario": 3318.31,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF009",
+    "id_area": "A003",
+    "Salario": 2048.0,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF010",
+    "id_area": "A003",
+    "Salario": 2606.95,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF011",
+    "id_area": "A010",
+    "Salario": 3129.36,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF012",
+    "id_area": "A006",
+    "Salario": 2404.43,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF013",
+    "id_area": "A002",
+    "Salario": 2854.75,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF014",
+    "id_area": "A007",
+    "Salario": 2354.65,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF015",
+    "id_area": "A002",
+    "Salario": 3298.7,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF016",
+    "id_area": "A002",
+    "Salario": 3651.03,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF017",
+    "id_area": "A001",
+    "Salario": 3637.18,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF018",
+    "id_area": "A009",
+    "Salario": 3363.7,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF019",
+    "id_area": "A005",
+    "Salario": 2101.27,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF020",
+    "id_area": "A006",
+    "Salario": 3669.11,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF021",
+    "id_area": "A006",
+    "Salario": 3055.26,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF022",
+    "id_area": "A008",
+    "Salario": 3027.65,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF023",
+    "id_area": "A004",
+    "Salario": 2821.79,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF024",
+    "id_area": "A009",
+    "Salario": 2569.92,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF025",
+    "id_area": "A003",
+    "Salario": 3504.05,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF026",
+    "id_area": "A002",
+    "Salario": 2864.39,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF027",
+    "id_area": "A007",
+    "Salario": 2766.03,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF028",
+    "id_area": "A008",
+    "Salario": 2411.59,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF029",
+    "id_area": "A002",
+    "Salario": 2209.03,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF030",
+    "id_area": "A005",
+    "Salario": 2002.99,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF031",
+    "id_area": "A001",
+    "Salario": 2029.59,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF032",
+    "id_area": "A010",
+    "Salario": 2674.11,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF033",
+    "id_area": "A003",
+    "Salario": 2884.08,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF034",
+    "id_area": "A010",
+    "Salario": 3869.47,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF035",
+    "id_area": "A004",
+    "Salario": 2094.61,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF036",
+    "id_area": "A001",
+    "Salario": 3533.2,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF037",
+    "id_area": "A004",
+    "Salario": 3769.17,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF038",
+    "id_area": "A004",
+    "Salario": 3303.82,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF039",
+    "id_area": "A004",
+    "Salario": 3181.19,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF040",
+    "id_area": "A008",
+    "Salario": 2036.24,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF041",
+    "id_area": "A005",
+    "Salario": 2863.19,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF042",
+    "id_area": "A007",
+    "Salario": 2418.93,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF043",
+    "id_area": "A010",
+    "Salario": 2334.76,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF044",
+    "id_area": "A003",
+    "Salario": 3179.88,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF045",
+    "id_area": "A006",
+    "Salario": 2211.48,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF046",
+    "id_area": "A008",
+    "Salario": 2344.4,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF047",
+    "id_area": "A003",
+    "Salario": 3962.88,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF048",
+    "id_area": "A004",
+    "Salario": 2571.74,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF049",
+    "id_area": "A010",
+    "Salario": 3562.22,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF050",
+    "id_area": "A001",
+    "Salario": 2961.4,
+    "id_hospital": "H001"
+  },
+  {
+    "id_enfermera": "ENF051",
+    "id_area": "A008",
+    "Salario": 3804.53,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF052",
+    "id_area": "A007",
+    "Salario": 3235.65,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF053",
+    "id_area": "A010",
+    "Salario": 2114.57,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF054",
+    "id_area": "A005",
+    "Salario": 2400.98,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF055",
+    "id_area": "A009",
+    "Salario": 3832.65,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF056",
+    "id_area": "A001",
+    "Salario": 3338.56,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF057",
+    "id_area": "A003",
+    "Salario": 3537.51,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF058",
+    "id_area": "A001",
+    "Salario": 3558.74,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF059",
+    "id_area": "A005",
+    "Salario": 2269.28,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF060",
+    "id_area": "A006",
+    "Salario": 2277.53,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF061",
+    "id_area": "A004",
+    "Salario": 2460.35,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF062",
+    "id_area": "A010",
+    "Salario": 3243.31,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF063",
+    "id_area": "A002",
+    "Salario": 3603.87,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF064",
+    "id_area": "A003",
+    "Salario": 2103.23,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF065",
+    "id_area": "A005",
+    "Salario": 3942.23,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF066",
+    "id_area": "A006",
+    "Salario": 2913.34,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF067",
+    "id_area": "A002",
+    "Salario": 3230.8,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF068",
+    "id_area": "A005",
+    "Salario": 2974.48,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF069",
+    "id_area": "A002",
+    "Salario": 3071.55,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF070",
+    "id_area": "A007",
+    "Salario": 2712.95,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF071",
+    "id_area": "A007",
+    "Salario": 3554.94,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF072",
+    "id_area": "A004",
+    "Salario": 3775.48,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF073",
+    "id_area": "A009",
+    "Salario": 3359.03,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF074",
+    "id_area": "A007",
+    "Salario": 2486.14,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF075",
+    "id_area": "A005",
+    "Salario": 2518.98,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF076",
+    "id_area": "A005",
+    "Salario": 2379.91,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF077",
+    "id_area": "A005",
+    "Salario": 3494.15,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF078",
+    "id_area": "A005",
+    "Salario": 2869.65,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF079",
+    "id_area": "A006",
+    "Salario": 3738.59,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF080",
+    "id_area": "A004",
+    "Salario": 2375.65,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF081",
+    "id_area": "A009",
+    "Salario": 3446.1,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF082",
+    "id_area": "A002",
+    "Salario": 2310.01,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF083",
+    "id_area": "A010",
+    "Salario": 2808.66,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF084",
+    "id_area": "A007",
+    "Salario": 3499.93,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF085",
+    "id_area": "A004",
+    "Salario": 3205.58,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF086",
+    "id_area": "A001",
+    "Salario": 3763.38,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF087",
+    "id_area": "A005",
+    "Salario": 2391.24,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF088",
+    "id_area": "A002",
+    "Salario": 2930.53,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF089",
+    "id_area": "A001",
+    "Salario": 2538.03,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF090",
+    "id_area": "A009",
+    "Salario": 2964.56,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF091",
+    "id_area": "A001",
+    "Salario": 3511.2,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF092",
+    "id_area": "A009",
+    "Salario": 2390.47,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF093",
+    "id_area": "A004",
+    "Salario": 3264.73,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF094",
+    "id_area": "A002",
+    "Salario": 2735.17,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF095",
+    "id_area": "A010",
+    "Salario": 2963.45,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF096",
+    "id_area": "A004",
+    "Salario": 3833.2,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF097",
+    "id_area": "A005",
+    "Salario": 2585.16,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF098",
+    "id_area": "A004",
+    "Salario": 3388.92,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF099",
+    "id_area": "A001",
+    "Salario": 3913.57,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF100",
+    "id_area": "A009",
+    "Salario": 2317.14,
+    "id_hospital": "H002"
+  },
+  {
+    "id_enfermera": "ENF101",
+    "id_area": "A009",
+    "Salario": 3327.97,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF102",
+    "id_area": "A009",
+    "Salario": 2494.3,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF103",
+    "id_area": "A006",
+    "Salario": 2284.32,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF104",
+    "id_area": "A001",
+    "Salario": 3887.22,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF105",
+    "id_area": "A009",
+    "Salario": 2102.71,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF106",
+    "id_area": "A006",
+    "Salario": 2497.03,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF107",
+    "id_area": "A003",
+    "Salario": 3770.48,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF108",
+    "id_area": "A005",
+    "Salario": 2455.52,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF109",
+    "id_area": "A001",
+    "Salario": 2648.72,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF110",
+    "id_area": "A001",
+    "Salario": 2485.53,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF111",
+    "id_area": "A004",
+    "Salario": 3373.2,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF112",
+    "id_area": "A007",
+    "Salario": 2857.2,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF113",
+    "id_area": "A010",
+    "Salario": 3803.49,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF114",
+    "id_area": "A003",
+    "Salario": 3183.08,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF115",
+    "id_area": "A003",
+    "Salario": 3116.4,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF116",
+    "id_area": "A009",
+    "Salario": 2153.42,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF117",
+    "id_area": "A006",
+    "Salario": 3443.17,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF118",
+    "id_area": "A006",
+    "Salario": 2798.24,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF119",
+    "id_area": "A005",
+    "Salario": 2692.81,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF120",
+    "id_area": "A007",
+    "Salario": 3723.95,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF121",
+    "id_area": "A009",
+    "Salario": 2586.0,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF122",
+    "id_area": "A006",
+    "Salario": 2238.61,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF123",
+    "id_area": "A005",
+    "Salario": 3034.38,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF124",
+    "id_area": "A002",
+    "Salario": 2830.97,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF125",
+    "id_area": "A007",
+    "Salario": 2601.2,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF126",
+    "id_area": "A002",
+    "Salario": 2965.97,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF127",
+    "id_area": "A001",
+    "Salario": 2379.15,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF128",
+    "id_area": "A004",
+    "Salario": 2896.7,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF129",
+    "id_area": "A001",
+    "Salario": 3064.43,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF130",
+    "id_area": "A003",
+    "Salario": 3236.6,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF131",
+    "id_area": "A005",
+    "Salario": 2963.16,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF132",
+    "id_area": "A005",
+    "Salario": 3437.3,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF133",
+    "id_area": "A007",
+    "Salario": 3594.1,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF134",
+    "id_area": "A003",
+    "Salario": 3916.93,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF135",
+    "id_area": "A002",
+    "Salario": 2823.13,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF136",
+    "id_area": "A010",
+    "Salario": 3640.87,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF137",
+    "id_area": "A006",
+    "Salario": 2739.46,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF138",
+    "id_area": "A008",
+    "Salario": 2900.08,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF139",
+    "id_area": "A005",
+    "Salario": 3982.29,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF140",
+    "id_area": "A010",
+    "Salario": 3282.24,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF141",
+    "id_area": "A004",
+    "Salario": 3989.87,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF142",
+    "id_area": "A002",
+    "Salario": 2825.78,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF143",
+    "id_area": "A002",
+    "Salario": 3867.17,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF144",
+    "id_area": "A005",
+    "Salario": 3127.64,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF145",
+    "id_area": "A001",
+    "Salario": 3262.62,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF146",
+    "id_area": "A008",
+    "Salario": 3928.04,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF147",
+    "id_area": "A005",
+    "Salario": 2548.96,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF148",
+    "id_area": "A006",
+    "Salario": 3264.77,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF149",
+    "id_area": "A009",
+    "Salario": 2577.48,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF150",
+    "id_area": "A010",
+    "Salario": 3840.03,
+    "id_hospital": "H003"
+  },
+  {
+    "id_enfermera": "ENF151",
+    "id_area": "A005",
+    "Salario": 2754.24,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF152",
+    "id_area": "A005",
+    "Salario": 3311.98,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF153",
+    "id_area": "A009",
+    "Salario": 3466.72,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF154",
+    "id_area": "A004",
+    "Salario": 3614.83,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF155",
+    "id_area": "A005",
+    "Salario": 3964.47,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF156",
+    "id_area": "A010",
+    "Salario": 3679.56,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF157",
+    "id_area": "A004",
+    "Salario": 3934.32,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF158",
+    "id_area": "A007",
+    "Salario": 3577.74,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF159",
+    "id_area": "A004",
+    "Salario": 3884.22,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF160",
+    "id_area": "A001",
+    "Salario": 2796.14,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF161",
+    "id_area": "A004",
+    "Salario": 2760.21,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF162",
+    "id_area": "A008",
+    "Salario": 2102.96,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF163",
+    "id_area": "A005",
+    "Salario": 2161.57,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF164",
+    "id_area": "A003",
+    "Salario": 3877.3,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF165",
+    "id_area": "A001",
+    "Salario": 3078.88,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF166",
+    "id_area": "A010",
+    "Salario": 3249.45,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF167",
+    "id_area": "A005",
+    "Salario": 3721.94,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF168",
+    "id_area": "A002",
+    "Salario": 2892.72,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF169",
+    "id_area": "A008",
+    "Salario": 3507.53,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF170",
+    "id_area": "A006",
+    "Salario": 3069.34,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF171",
+    "id_area": "A007",
+    "Salario": 3289.84,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF172",
+    "id_area": "A009",
+    "Salario": 3222.63,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF173",
+    "id_area": "A001",
+    "Salario": 3409.28,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF174",
+    "id_area": "A005",
+    "Salario": 2083.63,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF175",
+    "id_area": "A004",
+    "Salario": 3203.27,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF176",
+    "id_area": "A005",
+    "Salario": 2279.88,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF177",
+    "id_area": "A006",
+    "Salario": 2535.41,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF178",
+    "id_area": "A008",
+    "Salario": 3319.55,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF179",
+    "id_area": "A007",
+    "Salario": 2369.54,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF180",
+    "id_area": "A004",
+    "Salario": 3951.85,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF181",
+    "id_area": "A002",
+    "Salario": 2757.99,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF182",
+    "id_area": "A003",
+    "Salario": 3319.14,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF183",
+    "id_area": "A008",
+    "Salario": 3626.79,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF184",
+    "id_area": "A001",
+    "Salario": 3650.32,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF185",
+    "id_area": "A005",
+    "Salario": 2308.26,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF186",
+    "id_area": "A004",
+    "Salario": 3253.46,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF187",
+    "id_area": "A001",
+    "Salario": 3073.71,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF188",
+    "id_area": "A006",
+    "Salario": 2562.2,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF189",
+    "id_area": "A002",
+    "Salario": 3337.11,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF190",
+    "id_area": "A008",
+    "Salario": 2200.8,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF191",
+    "id_area": "A010",
+    "Salario": 3672.6,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF192",
+    "id_area": "A002",
+    "Salario": 3055.7,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF193",
+    "id_area": "A010",
+    "Salario": 3461.24,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF194",
+    "id_area": "A006",
+    "Salario": 3158.61,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF195",
+    "id_area": "A010",
+    "Salario": 3525.71,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF196",
+    "id_area": "A006",
+    "Salario": 2450.69,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF197",
+    "id_area": "A003",
+    "Salario": 3819.13,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF198",
+    "id_area": "A001",
+    "Salario": 2958.14,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF199",
+    "id_area": "A006",
+    "Salario": 3354.21,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF200",
+    "id_area": "A003",
+    "Salario": 3440.1,
+    "id_hospital": "H004"
+  },
+  {
+    "id_enfermera": "ENF201",
+    "id_area": "A006",
+    "Salario": 2666.25,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF202",
+    "id_area": "A010",
+    "Salario": 2348.54,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF203",
+    "id_area": "A005",
+    "Salario": 3837.45,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF204",
+    "id_area": "A009",
+    "Salario": 2865.56,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF205",
+    "id_area": "A004",
+    "Salario": 3431.87,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF206",
+    "id_area": "A003",
+    "Salario": 2113.24,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF207",
+    "id_area": "A007",
+    "Salario": 2755.0,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF208",
+    "id_area": "A007",
+    "Salario": 3709.84,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF209",
+    "id_area": "A002",
+    "Salario": 2482.27,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF210",
+    "id_area": "A009",
+    "Salario": 2178.62,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF211",
+    "id_area": "A006",
+    "Salario": 2796.93,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF212",
+    "id_area": "A004",
+    "Salario": 3403.87,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF213",
+    "id_area": "A008",
+    "Salario": 3040.6,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF214",
+    "id_area": "A007",
+    "Salario": 3312.78,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF215",
+    "id_area": "A006",
+    "Salario": 2137.31,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF216",
+    "id_area": "A006",
+    "Salario": 2780.17,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF217",
+    "id_area": "A001",
+    "Salario": 3822.78,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF218",
+    "id_area": "A009",
+    "Salario": 3640.02,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF219",
+    "id_area": "A006",
+    "Salario": 3906.47,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF220",
+    "id_area": "A008",
+    "Salario": 3920.98,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF221",
+    "id_area": "A008",
+    "Salario": 2226.86,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF222",
+    "id_area": "A005",
+    "Salario": 2408.54,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF223",
+    "id_area": "A005",
+    "Salario": 3379.39,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF224",
+    "id_area": "A003",
+    "Salario": 2228.22,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF225",
+    "id_area": "A002",
+    "Salario": 2283.2,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF226",
+    "id_area": "A008",
+    "Salario": 3109.33,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF227",
+    "id_area": "A004",
+    "Salario": 3033.43,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF228",
+    "id_area": "A005",
+    "Salario": 3773.73,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF229",
+    "id_area": "A002",
+    "Salario": 2183.13,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF230",
+    "id_area": "A010",
+    "Salario": 3630.02,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF231",
+    "id_area": "A006",
+    "Salario": 3198.49,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF232",
+    "id_area": "A004",
+    "Salario": 2967.85,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF233",
+    "id_area": "A002",
+    "Salario": 2492.54,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF234",
+    "id_area": "A008",
+    "Salario": 2669.33,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF235",
+    "id_area": "A001",
+    "Salario": 2770.82,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF236",
+    "id_area": "A007",
+    "Salario": 2337.48,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF237",
+    "id_area": "A003",
+    "Salario": 2994.92,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF238",
+    "id_area": "A004",
+    "Salario": 3350.49,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF239",
+    "id_area": "A002",
+    "Salario": 2574.06,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF240",
+    "id_area": "A007",
+    "Salario": 3807.5,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF241",
+    "id_area": "A009",
+    "Salario": 2904.59,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF242",
+    "id_area": "A010",
+    "Salario": 2802.53,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF243",
+    "id_area": "A002",
+    "Salario": 2468.98,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF244",
+    "id_area": "A007",
+    "Salario": 3103.41,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF245",
+    "id_area": "A005",
+    "Salario": 3985.47,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF246",
+    "id_area": "A003",
+    "Salario": 2488.2,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF247",
+    "id_area": "A002",
+    "Salario": 3691.35,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF248",
+    "id_area": "A005",
+    "Salario": 2735.29,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF249",
+    "id_area": "A009",
+    "Salario": 2867.99,
+    "id_hospital": "H005"
+  },
+  {
+    "id_enfermera": "ENF250",
+    "id_area": "A006",
+    "Salario": 3035.39,
+    "id_hospital": "H005"
+  }
+]
+);
+
+db.TIPO_MEDICAMENTO.insertMany(
+[
+  {
+    "id_tipo_medicamento": "TIPO001",
+    "Nombre": "Analgésico"
+  },
+  {
+    "id_tipo_medicamento": "TIPO002",
+    "Nombre": "Antibiótico"
+  },
+  {
+    "id_tipo_medicamento": "TIPO003",
+    "Nombre": "Antiinflamatorio"
+  },
+  {
+    "id_tipo_medicamento": "TIPO004",
+    "Nombre": "Vacuna"
+  },
+  {
+    "id_tipo_medicamento": "TIPO005",
+    "Nombre": "Antialérgico"
+  }
+]
+);
+
+db.MEDICAMENTOS.insertMany(
+[
+  {
+    "id_medicamento": "M001",
+    "Nombre": "Quisquam 357mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Plaza, Somoza and Cabezas",
+    "Lote": "L001",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M002",
+    "Nombre": "Exercitationem 223mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Andrade, Cuenca and Cañizares",
+    "Lote": "L002",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M003",
+    "Nombre": "Beatae 195mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Casado Group",
+    "Lote": "L003",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M004",
+    "Nombre": "Reprehenderit 923mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Hoz, Egea and Lladó",
+    "Lote": "L004",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M005",
+    "Nombre": "Excepturi 235mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Recio, Vazquez and Garriga",
+    "Lote": "L005",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M006",
+    "Nombre": "Asperiores 742mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Trujillo-Villanueva",
+    "Lote": "L006",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M007",
+    "Nombre": "Vel 592mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Clemente LLC",
+    "Lote": "L007",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M008",
+    "Nombre": "Deleniti 766mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Castilla Inc",
+    "Lote": "L008",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M009",
+    "Nombre": "Soluta 195mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Sales-Avilés",
+    "Lote": "L009",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M010",
+    "Nombre": "Nemo 900mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Hernando-Vera",
+    "Lote": "L010",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M011",
+    "Nombre": "Vero 491mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Santos-Mendizábal",
+    "Lote": "L011",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M012",
+    "Nombre": "Impedit 469mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Dalmau, Manrique and Acosta",
+    "Lote": "L012",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M013",
+    "Nombre": "Perspiciatis 737mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Belda Inc",
+    "Lote": "L013",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M014",
+    "Nombre": "Tenetur 930mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Castelló, Valderrama and Hoyos",
+    "Lote": "L014",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M015",
+    "Nombre": "Corporis 771mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Olmo PLC",
+    "Lote": "L015",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M016",
+    "Nombre": "Tenetur 433mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Cadenas-Roldan",
+    "Lote": "L016",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M017",
+    "Nombre": "Quis 381mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Macias-Angulo",
+    "Lote": "L017",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M018",
+    "Nombre": "Sed 267mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Cuervo-Borrell",
+    "Lote": "L018",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M019",
+    "Nombre": "Non 437mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Reguera-Ballesteros",
+    "Lote": "L019",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M020",
+    "Nombre": "In 175mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Sarmiento-Galindo",
+    "Lote": "L020",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M021",
+    "Nombre": "At 913mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Torrecilla-Noguera",
+    "Lote": "L021",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M022",
+    "Nombre": "Labore 138mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Botella-Alcalde",
+    "Lote": "L022",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M023",
+    "Nombre": "Modi 354mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Álamo Inc",
+    "Lote": "L023",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M024",
+    "Nombre": "Voluptatibus 800mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Alvarado-Nieto",
+    "Lote": "L024",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M025",
+    "Nombre": "Nemo 787mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Ramón, Ayala and Boada",
+    "Lote": "L025",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M026",
+    "Nombre": "Optio 923mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Valencia, Carrión and Otero",
+    "Lote": "L026",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M027",
+    "Nombre": "Eos 851mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Armas, Ibarra and Asenjo",
+    "Lote": "L027",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M028",
+    "Nombre": "Dicta 650mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Plaza Ltd",
+    "Lote": "L028",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M029",
+    "Nombre": "Quo 925mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Fuster, Pascual and Palacio",
+    "Lote": "L029",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M030",
+    "Nombre": "Cum 472mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Benito-Caballero",
+    "Lote": "L030",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M031",
+    "Nombre": "Et 842mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Ángel, Crespo and Pereira",
+    "Lote": "L031",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M032",
+    "Nombre": "Vel 972mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Raya-Alcolea",
+    "Lote": "L032",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M033",
+    "Nombre": "Dicta 529mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Melero, Garcés and Jordá",
+    "Lote": "L033",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M034",
+    "Nombre": "Cumque 364mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Jover-Huertas",
+    "Lote": "L034",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M035",
+    "Nombre": "Dolor 212mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Montes Inc",
+    "Lote": "L035",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M036",
+    "Nombre": "Suscipit 468mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Ponce-Galán",
+    "Lote": "L036",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M037",
+    "Nombre": "Unde 829mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Belda, Antúnez and Peralta",
+    "Lote": "L037",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M038",
+    "Nombre": "Voluptatem 725mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Baena, Larrañaga and Narváez",
+    "Lote": "L038",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M039",
+    "Nombre": "Placeat 240mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Millán, Carranza and Cerdá",
+    "Lote": "L039",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M040",
+    "Nombre": "Rem 747mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Escobar Ltd",
+    "Lote": "L040",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M041",
+    "Nombre": "Maiores 670mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Caballero, Torralba and Orozco",
+    "Lote": "L041",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M042",
+    "Nombre": "Alias 234mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Lladó-Fernández",
+    "Lote": "L042",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M043",
+    "Nombre": "Enim 257mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Gimenez-Pomares",
+    "Lote": "L043",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M044",
+    "Nombre": "Quae 151mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Barbero, Marti and Gascón",
+    "Lote": "L044",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M045",
+    "Nombre": "Atque 221mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Larrañaga-Real",
+    "Lote": "L045",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M046",
+    "Nombre": "Cumque 281mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Becerra, Bayo and Morales",
+    "Lote": "L046",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M047",
+    "Nombre": "Voluptatum 469mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Cuenca, Pons and Ribas",
+    "Lote": "L047",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M048",
+    "Nombre": "Debitis 652mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Pedrosa and Sons",
+    "Lote": "L048",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M049",
+    "Nombre": "Voluptatem 256mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Crespo-Ribas",
+    "Lote": "L049",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M050",
+    "Nombre": "Doloremque 989mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Vilalta and Sons",
+    "Lote": "L050",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M051",
+    "Nombre": "Esse 641mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Llobet-Porta",
+    "Lote": "L051",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M052",
+    "Nombre": "Dolore 306mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Tenorio, Capdevila and Benavides",
+    "Lote": "L052",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M053",
+    "Nombre": "Temporibus 877mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Ferrer PLC",
+    "Lote": "L053",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M054",
+    "Nombre": "Sequi 528mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Corbacho, Lamas and Gelabert",
+    "Lote": "L054",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M055",
+    "Nombre": "Est 188mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Girón Group",
+    "Lote": "L055",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M056",
+    "Nombre": "Doloribus 668mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Peinado-Jiménez",
+    "Lote": "L056",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M057",
+    "Nombre": "Similique 887mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Lillo-Parra",
+    "Lote": "L057",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M058",
+    "Nombre": "Officia 938mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Codina-Pareja",
+    "Lote": "L058",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M059",
+    "Nombre": "Esse 170mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Cobo Group",
+    "Lote": "L059",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M060",
+    "Nombre": "Repellendus 650mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Vilanova-Beltran",
+    "Lote": "L060",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M061",
+    "Nombre": "Possimus 625mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Guardia LLC",
+    "Lote": "L061",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M062",
+    "Nombre": "Libero 687mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Contreras-Cerezo",
+    "Lote": "L062",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M063",
+    "Nombre": "Voluptatem 321mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Fuentes Group",
+    "Lote": "L063",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M064",
+    "Nombre": "Tempore 550mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Navarro, Cadenas and Briones",
+    "Lote": "L064",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M065",
+    "Nombre": "Cupiditate 483mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Durán Group",
+    "Lote": "L065",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M066",
+    "Nombre": "Saepe 756mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Romeu Inc",
+    "Lote": "L066",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M067",
+    "Nombre": "Harum 763mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Paz, Cid and Garriga",
+    "Lote": "L067",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M068",
+    "Nombre": "Quo 941mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Santiago-Bellido",
+    "Lote": "L068",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M069",
+    "Nombre": "Repudiandae 367mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Miranda, Mayol and Gonzalo",
+    "Lote": "L069",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M070",
+    "Nombre": "Odio 217mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Casas-Arnal",
+    "Lote": "L070",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M071",
+    "Nombre": "Molestiae 123mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Armas, Rosselló and Salgado",
+    "Lote": "L071",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M072",
+    "Nombre": "Placeat 210mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Arco, Nebot and Benavides",
+    "Lote": "L072",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M073",
+    "Nombre": "Quos 551mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Vendrell LLC",
+    "Lote": "L073",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M074",
+    "Nombre": "Aspernatur 808mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Luna Ltd",
+    "Lote": "L074",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M075",
+    "Nombre": "Ad 222mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Acedo-Vergara",
+    "Lote": "L075",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M076",
+    "Nombre": "Vero 306mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Roselló, Iriarte and Pablo",
+    "Lote": "L076",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M077",
+    "Nombre": "Harum 122mg",
+    "id_tipo_medicamento": "TIPO005",
+    "Fabricante": "Arias, Vélez and Roma",
+    "Lote": "L077",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M078",
+    "Nombre": "At 931mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Manzano Ltd",
+    "Lote": "L078",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M079",
+    "Nombre": "Nostrum 256mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Campos, Ponce and Zurita",
+    "Lote": "L079",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M080",
+    "Nombre": "Quam 534mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Rius and Sons",
+    "Lote": "L080",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M081",
+    "Nombre": "Expedita 830mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Aramburu, Sanz and Boix",
+    "Lote": "L081",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M082",
+    "Nombre": "Beatae 108mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Tello, Ferrer and Coloma",
+    "Lote": "L082",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M083",
+    "Nombre": "Reiciendis 970mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Amo-Haro",
+    "Lote": "L083",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M084",
+    "Nombre": "Quas 625mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Blanco PLC",
+    "Lote": "L084",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M085",
+    "Nombre": "Reprehenderit 857mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Tolosa, Tejera and Oliver",
+    "Lote": "L085",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M086",
+    "Nombre": "Delectus 959mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Angulo, Andres and Dominguez",
+    "Lote": "L086",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M087",
+    "Nombre": "Velit 889mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Lucena Group",
+    "Lote": "L087",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M088",
+    "Nombre": "Quas 156mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Montero Inc",
+    "Lote": "L088",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M089",
+    "Nombre": "Est 313mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Toro-Alba",
+    "Lote": "L089",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M090",
+    "Nombre": "Autem 206mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Múgica LLC",
+    "Lote": "L090",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M091",
+    "Nombre": "Itaque 131mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Catalán, Giménez and Belmonte",
+    "Lote": "L091",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M092",
+    "Nombre": "Perspiciatis 704mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Lumbreras LLC",
+    "Lote": "L092",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M093",
+    "Nombre": "Blanditiis 812mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Armengol Group",
+    "Lote": "L093",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M094",
+    "Nombre": "In 108mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Llorente Group",
+    "Lote": "L094",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M095",
+    "Nombre": "Necessitatibus 713mg",
+    "id_tipo_medicamento": "TIPO002",
+    "Fabricante": "Rodrigo-Bravo",
+    "Lote": "L095",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M096",
+    "Nombre": "Veritatis 374mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Porta, Maldonado and Córdoba",
+    "Lote": "L096",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M097",
+    "Nombre": "Occaecati 301mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Navarrete, Trujillo and Ferrero",
+    "Lote": "L097",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M098",
+    "Nombre": "Sapiente 248mg",
+    "id_tipo_medicamento": "TIPO001",
+    "Fabricante": "Chico-Alcántara",
+    "Lote": "L098",
+    "Disponible": false
+  },
+  {
+    "id_medicamento": "M099",
+    "Nombre": "Fuga 882mg",
+    "id_tipo_medicamento": "TIPO004",
+    "Fabricante": "Ávila-Canales",
+    "Lote": "L099",
+    "Disponible": true
+  },
+  {
+    "id_medicamento": "M100",
+    "Nombre": "Quos 113mg",
+    "id_tipo_medicamento": "TIPO003",
+    "Fabricante": "Bermejo, Arteaga and Barragán",
+    "Lote": "L100",
+    "Disponible": true
+  }
+]
+);
+
+db.MEDICOS.insertMany(
+[
+  {
+    "NumColegiatura": "MED001",
+    "Nombre": "Victorino del Planas",
+    "Telefono": "+34 702 457 885",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "luisinachaves@llamas.com",
+    "Salario": 6813.17,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED002",
+    "Nombre": "Ani Carmelita Coello Llabrés",
+    "Telefono": "+34927287051",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "danarranz@almansa.com",
+    "Salario": 7200.85,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED003",
+    "Nombre": "Samuel Hoyos-Alegria",
+    "Telefono": "+34708458387",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "anibal10@hotmail.com",
+    "Salario": 10886.33,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED004",
+    "Nombre": "Ainara Pujol Múñiz",
+    "Telefono": "+34 729702941",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "colomaerasmo@hotmail.com",
+    "Salario": 9753.03,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED005",
+    "Nombre": "Herminia Fiol Rueda",
+    "Telefono": "+34 708 18 84 46",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "vpeinado@pedraza-bosch.org",
+    "Salario": 7382.08,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED006",
+    "Nombre": "Julián Alcalá-Barba",
+    "Telefono": "+34650954792",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "artigaslucila@hotmail.com",
+    "Salario": 11760.34,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED007",
+    "Nombre": "Berta Girona Zabala",
+    "Telefono": "+34702 831 075",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "portillolino@pedraza.es",
+    "Salario": 5674.76,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED008",
+    "Nombre": "Selena Alcalá Carbajo",
+    "Telefono": "+34 705 19 65 26",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "aitorcolomer@gonzalo.org",
+    "Salario": 9868.43,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED009",
+    "Nombre": "Marciano Torrent Alegria",
+    "Telefono": "+34 725446528",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "joveramanda@yahoo.com",
+    "Salario": 7439.76,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED010",
+    "Nombre": "Maximiliano Tapia Canet",
+    "Telefono": "+34997 637 970",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "hvillaverde@yahoo.com",
+    "Salario": 10048.14,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED011",
+    "Nombre": "Nazaret Espejo Gomila",
+    "Telefono": "+34 845341683",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "siniguez@yahoo.com",
+    "Salario": 10100.76,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED012",
+    "Nombre": "Samu Mármol Almazán",
+    "Telefono": "+34 994636001",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "lobatotomasa@montesinos-alcantara.com",
+    "Salario": 8168.5,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED013",
+    "Nombre": "Julia del Martinez",
+    "Telefono": "+34735257986",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "alvaradocristian@yahoo.com",
+    "Salario": 11985.93,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED014",
+    "Nombre": "Aitana Peña Nogués",
+    "Telefono": "+34 713373913",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "dieguezdanilo@ribas.org",
+    "Salario": 5719.24,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED015",
+    "Nombre": "Maximiano Valerio Andrade Segura",
+    "Telefono": "+34663 60 65 31",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "hugocatala@salcedo.com",
+    "Salario": 8024.2,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED016",
+    "Nombre": "Martín Chaparro Solano",
+    "Telefono": "+34748 29 47 16",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "vgiralt@hotmail.com",
+    "Salario": 8831.68,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED017",
+    "Nombre": "Amor Cordero Dominguez",
+    "Telefono": "+34 721 895 161",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "maria-teresainfante@gmail.com",
+    "Salario": 11463.38,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED018",
+    "Nombre": "Jesús Carrasco Paredes",
+    "Telefono": "+34 726376557",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "urrutiacristina@hotmail.com",
+    "Salario": 9575.14,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED019",
+    "Nombre": "Alfonso Arroyo Rosselló",
+    "Telefono": "+34893010726",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "nserra@gmail.com",
+    "Salario": 9066.96,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED020",
+    "Nombre": "María Carmen Cáceres Enríquez",
+    "Telefono": "+34 702053495",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "luis75@hotmail.com",
+    "Salario": 9728.48,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED021",
+    "Nombre": "Jacobo Carpio-Fonseca",
+    "Telefono": "+34732 042 200",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "expositoarturo@cepeda-fabregat.com",
+    "Salario": 8563.37,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED022",
+    "Nombre": "Pancho Agudo Silva",
+    "Telefono": "+34745820107",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "custodia08@romero.es",
+    "Salario": 5263.86,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED023",
+    "Nombre": "Cándido Fiol Izaguirre",
+    "Telefono": "+34 743185165",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "roselloalejandro@yahoo.com",
+    "Salario": 7614.68,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED024",
+    "Nombre": "Jose Antonio Sarabia Acero",
+    "Telefono": "+34739 53 65 86",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "ugaliano@cortes-bellido.es",
+    "Salario": 6250.65,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED025",
+    "Nombre": "Narcisa de Colom",
+    "Telefono": "+34 730 17 87 63",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "sanzluisa@gmail.com",
+    "Salario": 9530.29,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED026",
+    "Nombre": "Heraclio del Adán",
+    "Telefono": "+34 727 98 12 15",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "osomoza@hotmail.com",
+    "Salario": 7617.42,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED027",
+    "Nombre": "Vinicio Revilla Manzanares",
+    "Telefono": "+34924009976",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "oscar74@torre.es",
+    "Salario": 6220.78,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED028",
+    "Nombre": "Hilda Vázquez",
+    "Telefono": "+34 826 01 89 61",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "eferrera@arana.net",
+    "Salario": 11063.27,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED029",
+    "Nombre": "Felipa Diego Losada",
+    "Telefono": "+34 744 680 688",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "severocorominas@gmail.com",
+    "Salario": 9794.42,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED030",
+    "Nombre": "Mayte Esteban Alcántara",
+    "Telefono": "+34713998766",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "seve82@hotmail.com",
+    "Salario": 9361.34,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED031",
+    "Nombre": "Omar Campoy Espada",
+    "Telefono": "+34 667531123",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "maria-cristina67@oller.com",
+    "Salario": 10823.62,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED032",
+    "Nombre": "Manuelita Pedrero-Carpio",
+    "Telefono": "+34722147886",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "vbustamante@yahoo.com",
+    "Salario": 9550.18,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED033",
+    "Nombre": "Rosario Guijarro",
+    "Telefono": "+34 609 14 52 35",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "torrentheraclio@gmail.com",
+    "Salario": 9381.43,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED034",
+    "Nombre": "Victorino Goyo Ruano Ribes",
+    "Telefono": "+34708885344",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "cherrero@hotmail.com",
+    "Salario": 8631.14,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED035",
+    "Nombre": "Martin de Jordá",
+    "Telefono": "+34729227680",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "ester07@gmail.com",
+    "Salario": 5207.8,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED036",
+    "Nombre": "Encarnita Oliva Mas",
+    "Telefono": "+34711550911",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "martirio11@yahoo.com",
+    "Salario": 6597.14,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED037",
+    "Nombre": "Julio César Figuerola Agustí",
+    "Telefono": "+34715 561 087",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "kvives@gmail.com",
+    "Salario": 5173.95,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED038",
+    "Nombre": "Valero del Barral",
+    "Telefono": "+34 708690021",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "valeraaurea@bernat.es",
+    "Salario": 10413.96,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED039",
+    "Nombre": "Toño Berto Román Carpio",
+    "Telefono": "+34749 164 964",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "sanchonieto@castillo.org",
+    "Salario": 10267.62,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED040",
+    "Nombre": "Aitor Manu Blázquez Revilla",
+    "Telefono": "+34 701891084",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "inigo62@giner.org",
+    "Salario": 7942.27,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED041",
+    "Nombre": "Jose Antonio Rubio",
+    "Telefono": "+34 737 47 25 75",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "pmenendez@mari.org",
+    "Salario": 6967.42,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED042",
+    "Nombre": "Juan Manuel Ponce Beltrán",
+    "Telefono": "+34 949778656",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "arcoesperanza@gmail.com",
+    "Salario": 9134.94,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED043",
+    "Nombre": "Javiera Mate",
+    "Telefono": "+34 727 35 57 18",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "elorzaamparo@salinas-roca.net",
+    "Salario": 6529.48,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED044",
+    "Nombre": "Lázaro Matías Giralt Valls",
+    "Telefono": "+34 701 103 332",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "vanesa59@galvez.org",
+    "Salario": 7220.86,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED045",
+    "Nombre": "Marcelino Leon Bou",
+    "Telefono": "+34701283628",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "montanaale@gmail.com",
+    "Salario": 9963.54,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED046",
+    "Nombre": "Nadia Coca-Morán",
+    "Telefono": "+34749533956",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "anabellopez@yahoo.com",
+    "Salario": 7521.12,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED047",
+    "Nombre": "Luís Bravo Camps",
+    "Telefono": "+34652 010 444",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "bernarda12@rodriguez.org",
+    "Salario": 7522.61,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED048",
+    "Nombre": "Feliciano Benavente Losa",
+    "Telefono": "+34 747360778",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "icasanova@hotmail.com",
+    "Salario": 11147.07,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED049",
+    "Nombre": "Chema Quirós-Calderón",
+    "Telefono": "+34734 626 347",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "severubio@yahoo.com",
+    "Salario": 11764.3,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED050",
+    "Nombre": "Luz Pazos Riera",
+    "Telefono": "+34732 50 90 02",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "cesaragustin@blasco.es",
+    "Salario": 10319.37,
+    "id_hospital": "H001"
+  },
+  {
+    "NumColegiatura": "MED051",
+    "Nombre": "Olegario de Andrés",
+    "Telefono": "+34 889 34 13 76",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "canetereina@gmail.com",
+    "Salario": 9518.71,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED052",
+    "Nombre": "Máximo Bas-Chaves",
+    "Telefono": "+34 911 111 934",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "carminanicolau@sabater-llado.com",
+    "Salario": 11556.73,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED053",
+    "Nombre": "Eugenia Sarabia Gallardo",
+    "Telefono": "+34690621459",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "zacariassotelo@antunez.org",
+    "Salario": 9977.81,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED054",
+    "Nombre": "María Fernanda Franch Comas",
+    "Telefono": "+34 831560040",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "yaizajara@gmail.com",
+    "Salario": 9060.88,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED055",
+    "Nombre": "Jose Antonio del Duran",
+    "Telefono": "+34 712091182",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "vallesarmando@gmail.com",
+    "Salario": 11426.8,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED056",
+    "Nombre": "Albino Gabaldón",
+    "Telefono": "+34608914714",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "roldanmartin@yahoo.com",
+    "Salario": 10612.6,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED057",
+    "Nombre": "Dorotea Martorell Ribera",
+    "Telefono": "+34 900657927",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "ibanezsandra@yahoo.com",
+    "Salario": 5666.29,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED058",
+    "Nombre": "Pelayo Hoyos Mata",
+    "Telefono": "+34 737 740 327",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "marcos47@paz.com",
+    "Salario": 8214.08,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED059",
+    "Nombre": "Aura Mayoral Rivero",
+    "Telefono": "+34 626726900",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "mmanrique@yahoo.com",
+    "Salario": 6080.56,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED060",
+    "Nombre": "Melchor Mármol Solís",
+    "Telefono": "+34703112534",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "gabaldondonato@yahoo.com",
+    "Salario": 8758.3,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED061",
+    "Nombre": "Berto Espinosa Vaquero",
+    "Telefono": "+34722 654 748",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "jovefortunata@hotmail.com",
+    "Salario": 7512.98,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED062",
+    "Nombre": "Rosendo Xavier Alcolea Peñalver",
+    "Telefono": "+34746897148",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "marcampos@pou.net",
+    "Salario": 5127.87,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED063",
+    "Nombre": "Jose Carlos Bernardo Ródenas Valls",
+    "Telefono": "+34 634973194",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "somozaberto@hotmail.com",
+    "Salario": 8945.22,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED064",
+    "Nombre": "Telmo Alberdi",
+    "Telefono": "+34902 48 35 61",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "luisamarin@yahoo.com",
+    "Salario": 7503.35,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED065",
+    "Nombre": "Yolanda Ponce Poza",
+    "Telefono": "+34895704597",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "fpacheco@gmail.com",
+    "Salario": 6945.69,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED066",
+    "Nombre": "Genoveva Coloma Diez",
+    "Telefono": "+34958 85 98 87",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "fabianpatino@hotmail.com",
+    "Salario": 10478.03,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED067",
+    "Nombre": "Ariel Octavio Landa Francisco",
+    "Telefono": "+34 835 58 76 05",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "azeneth26@benavides.org",
+    "Salario": 8054.16,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED068",
+    "Nombre": "Modesto Aguirre Quintana",
+    "Telefono": "+34 749355429",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "pilarjara@matas.com",
+    "Salario": 9537.94,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED069",
+    "Nombre": "Florencio Puente-Ojeda",
+    "Telefono": "+34 903798612",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "dsole@gabaldon-calleja.com",
+    "Salario": 8146.23,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED070",
+    "Nombre": "Isabela Inés Blanes Pellicer",
+    "Telefono": "+34 928 76 04 64",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "humbertoalonso@gmail.com",
+    "Salario": 6074.48,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED071",
+    "Nombre": "Amaya Crespo",
+    "Telefono": "+34 700814009",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "rosalindaribera@rebollo.es",
+    "Salario": 6916.56,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED072",
+    "Nombre": "Kike Marquez Samper",
+    "Telefono": "+34 857 170 697",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "zbalaguer@hotmail.com",
+    "Salario": 9477.08,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED073",
+    "Nombre": "Calisto del Madrid",
+    "Telefono": "+34730320143",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "hluna@salinas.es",
+    "Salario": 5298.43,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED074",
+    "Nombre": "Nayara Torrens Puig",
+    "Telefono": "+34 827 038 860",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "emilia97@gmail.com",
+    "Salario": 9838.02,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED075",
+    "Nombre": "Marcelino Serna Quirós",
+    "Telefono": "+34659074074",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "liliana66@hotmail.com",
+    "Salario": 10093.5,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED076",
+    "Nombre": "Javiera Parra Grau",
+    "Telefono": "+34 730 90 78 19",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "badiamanu@pardo.com",
+    "Salario": 9810.0,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED077",
+    "Nombre": "Sosimo Pozo Valera",
+    "Telefono": "+34 952 72 22 76",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "lcerro@yahoo.com",
+    "Salario": 5188.98,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED078",
+    "Nombre": "Darío Pardo Amigó",
+    "Telefono": "+34 727807658",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "ruth86@hotmail.com",
+    "Salario": 8014.24,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED079",
+    "Nombre": "Teodosio Portero Navarrete",
+    "Telefono": "+34989568966",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "remediosgomez@hotmail.com",
+    "Salario": 10624.98,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED080",
+    "Nombre": "Cornelio Ruperto Giralt Baró",
+    "Telefono": "+34 722 64 79 39",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "victorino26@penalver.es",
+    "Salario": 9378.3,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED081",
+    "Nombre": "Cebrián Mármol Velázquez",
+    "Telefono": "+34701654917",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "ilanda@carrion.es",
+    "Salario": 11134.22,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED082",
+    "Nombre": "Arsenio Hurtado Zaragoza",
+    "Telefono": "+34945 184 880",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "lucia51@perera-catala.net",
+    "Salario": 10452.28,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED083",
+    "Nombre": "Xiomara Marti Zaragoza",
+    "Telefono": "+34702 080 983",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "luisinaluna@santamaria-moll.com",
+    "Salario": 8088.76,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED084",
+    "Nombre": "Armida Cid Palmer",
+    "Telefono": "+34724 805 186",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "ygallardo@mascaro-barrios.com",
+    "Salario": 9284.76,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED085",
+    "Nombre": "Jafet Botella Sandoval",
+    "Telefono": "+34730 23 35 96",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "fabiolamayol@escobar.es",
+    "Salario": 5599.34,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED086",
+    "Nombre": "Marita Isidora Carreño Baeza",
+    "Telefono": "+34 705 09 90 85",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "adalbertosegovia@lerma-prado.com",
+    "Salario": 8966.78,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED087",
+    "Nombre": "Teófilo Matas Perea",
+    "Telefono": "+34612 006 806",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "ilara@hotmail.com",
+    "Salario": 8517.29,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED088",
+    "Nombre": "Dafne Jáuregui Vilalta",
+    "Telefono": "+34 739 119 494",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "toribio92@mugica.es",
+    "Salario": 7091.76,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED089",
+    "Nombre": "Jacinta Gordillo Alcántara",
+    "Telefono": "+34 836 66 63 93",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "juanitofonseca@yahoo.com",
+    "Salario": 7446.0,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED090",
+    "Nombre": "Hilda Quintero",
+    "Telefono": "+34 918074978",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "marciano96@agustin.com",
+    "Salario": 5577.55,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED091",
+    "Nombre": "Marina Noguera Giralt",
+    "Telefono": "+34 640623939",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "humberto33@hotmail.com",
+    "Salario": 10850.77,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED092",
+    "Nombre": "Jorge Neira Blanes",
+    "Telefono": "+34 700 645 725",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "ecoloma@zabala.es",
+    "Salario": 6871.33,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED093",
+    "Nombre": "Lupe Cases Hernandez",
+    "Telefono": "+34 944 22 54 35",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "gustavo78@esteban.org",
+    "Salario": 8859.83,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED094",
+    "Nombre": "Isidoro Tomás Fuertes Fuster",
+    "Telefono": "+34 682 072 792",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "yaizaparejo@hotmail.com",
+    "Salario": 11532.21,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED095",
+    "Nombre": "Agustina Gonzalez-Carbó",
+    "Telefono": "+34 701 77 00 09",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "ftorrents@gmail.com",
+    "Salario": 9806.21,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED096",
+    "Nombre": "Félix Alcalde-Espinosa",
+    "Telefono": "+34 626923125",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "morilloimelda@gmail.com",
+    "Salario": 6850.26,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED097",
+    "Nombre": "Casemiro Márquez Zamora",
+    "Telefono": "+34731 660 906",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "gallegoligia@jauregui-carrillo.es",
+    "Salario": 7809.9,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED098",
+    "Nombre": "Lupita Palomares Oliver",
+    "Telefono": "+34728505289",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "arevalomarcio@conesa.net",
+    "Salario": 11207.98,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED099",
+    "Nombre": "Encarnación Santiago Perez",
+    "Telefono": "+34 740 042 610",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "malena06@gmail.com",
+    "Salario": 11968.35,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED100",
+    "Nombre": "María Manuela Natalia Ochoa Amores",
+    "Telefono": "+34707 46 77 54",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "vhuguet@castells.org",
+    "Salario": 11609.28,
+    "id_hospital": "H002"
+  },
+  {
+    "NumColegiatura": "MED101",
+    "Nombre": "Nieves Arco Amat",
+    "Telefono": "+34858 93 98 76",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "bernardo18@almeida.com",
+    "Salario": 8641.45,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED102",
+    "Nombre": "Emelina Saturnina Tolosa Poza",
+    "Telefono": "+34749487149",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "varana@hotmail.com",
+    "Salario": 8438.97,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED103",
+    "Nombre": "Diana Pineda-Báez",
+    "Telefono": "+34 672 034 658",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "edgar29@yahoo.com",
+    "Salario": 5812.96,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED104",
+    "Nombre": "Cesar Poncio Casanova López",
+    "Telefono": "+34949221520",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "piedadtalavera@yahoo.com",
+    "Salario": 5923.68,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED105",
+    "Nombre": "Nazaret Matías Fortuny Carretero",
+    "Telefono": "+34706296982",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "adelardoamor@yahoo.com",
+    "Salario": 6986.33,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED106",
+    "Nombre": "Dulce Mascaró-Murillo",
+    "Telefono": "+34 730 24 11 65",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "rgonzalez@duran.com",
+    "Salario": 6412.02,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED107",
+    "Nombre": "Sebastian del Sanmartín",
+    "Telefono": "+34712484755",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "oliviabarbera@lobo-camara.es",
+    "Salario": 11629.66,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED108",
+    "Nombre": "Prudencia Novoa",
+    "Telefono": "+34987146702",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "lorenza08@gmail.com",
+    "Salario": 8176.28,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED109",
+    "Nombre": "Florina Cisneros Isern",
+    "Telefono": "+34 733 22 01 30",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "dulcetormo@yahoo.com",
+    "Salario": 11996.99,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED110",
+    "Nombre": "Silvio de Galiano",
+    "Telefono": "+34 939273028",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "ricotomasa@calvet-zorrilla.com",
+    "Salario": 10252.59,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED111",
+    "Nombre": "Mirta Manrique Quero",
+    "Telefono": "+34 900863362",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "leonadan@gmail.com",
+    "Salario": 11589.19,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED112",
+    "Nombre": "Julio Menendez Perera",
+    "Telefono": "+34 742 00 41 00",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "anselma68@hotmail.com",
+    "Salario": 9698.06,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED113",
+    "Nombre": "Paz Mendoza-Díaz",
+    "Telefono": "+34742376141",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "vnevado@yahoo.com",
+    "Salario": 8824.21,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED114",
+    "Nombre": "Ignacio de Macías",
+    "Telefono": "+34739502883",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "ribescustodio@perea.es",
+    "Salario": 10082.57,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED115",
+    "Nombre": "Irene Álvaro Camino",
+    "Telefono": "+34874043684",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "epifanio92@gmail.com",
+    "Salario": 5930.42,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED116",
+    "Nombre": "Óscar Bellido Vidal",
+    "Telefono": "+34 705850499",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "ecardona@yahoo.com",
+    "Salario": 6271.22,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED117",
+    "Nombre": "Eleuterio Cerezo Borrego",
+    "Telefono": "+34 703 94 15 70",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "barbarabarba@millan.org",
+    "Salario": 11305.35,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED118",
+    "Nombre": "Samu Graciano Ayala Urrutia",
+    "Telefono": "+34 739 85 51 16",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "telloruben@alfonso-solis.es",
+    "Salario": 8860.67,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED119",
+    "Nombre": "Julieta Yéssica Chaves Haro",
+    "Telefono": "+34749 678 395",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "carina71@llobet.com",
+    "Salario": 11097.65,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED120",
+    "Nombre": "Leocadio Ortuño Cortés",
+    "Telefono": "+34 747 829 058",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "casesnicodemo@jove.com",
+    "Salario": 9324.14,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED121",
+    "Nombre": "Ágata Pavón Zurita",
+    "Telefono": "+34740 77 94 78",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "cheloserra@hotmail.com",
+    "Salario": 10535.24,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED122",
+    "Nombre": "Eugenio Fernández",
+    "Telefono": "+34667 46 22 14",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "romanvictorino@gmail.com",
+    "Salario": 9358.64,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED123",
+    "Nombre": "Arturo Tena Agustí",
+    "Telefono": "+34871 19 62 38",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "aurelioarmas@guzman-sacristan.com",
+    "Salario": 10490.64,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED124",
+    "Nombre": "Salvador Navarrete Cabrera",
+    "Telefono": "+34812 239 446",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "peinadojose-luis@gmail.com",
+    "Salario": 7986.37,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED125",
+    "Nombre": "Marcelino Gonzalo Baró",
+    "Telefono": "+34 921252460",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "lina84@hotmail.com",
+    "Salario": 7632.93,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED126",
+    "Nombre": "Ramona Camps Grau",
+    "Telefono": "+34 734 718 518",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "higlesia@salgado-vazquez.com",
+    "Salario": 8073.46,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED127",
+    "Nombre": "Damián Barco Capdevila",
+    "Telefono": "+34 708 192 138",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "salasjulia@cabezas-rebollo.es",
+    "Salario": 6284.67,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED128",
+    "Nombre": "Tiburcio Pintor Donoso",
+    "Telefono": "+34739 74 96 99",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "bgiron@hotmail.com",
+    "Salario": 6781.29,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED129",
+    "Nombre": "Antonia Belda Lerma",
+    "Telefono": "+34 892 994 194",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "mvarela@solano-antunez.com",
+    "Salario": 8737.72,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED130",
+    "Nombre": "Evaristo Puga Fernandez",
+    "Telefono": "+34721155226",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "ximenaprieto@hotmail.com",
+    "Salario": 10535.44,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED131",
+    "Nombre": "Ignacio Becerra Posada",
+    "Telefono": "+34744 516 130",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "osvaldo48@angulo.com",
+    "Salario": 11693.83,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED132",
+    "Nombre": "Flavio Ferrera",
+    "Telefono": "+34725236713",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "consuelosevilla@hotmail.com",
+    "Salario": 10536.1,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED133",
+    "Nombre": "Chus Barrena Rico",
+    "Telefono": "+34940 56 69 76",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "adelia40@yahoo.com",
+    "Salario": 11902.6,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED134",
+    "Nombre": "Tadeo Llobet Serra",
+    "Telefono": "+34702 696 120",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "ytamarit@hervia-vall.es",
+    "Salario": 6739.35,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED135",
+    "Nombre": "Dionisia Miró",
+    "Telefono": "+34 729312983",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "zacarias33@yahoo.com",
+    "Salario": 6810.13,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED136",
+    "Nombre": "Roberto Ballester",
+    "Telefono": "+34 873 730 121",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "vespanol@hotmail.com",
+    "Salario": 10512.33,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED137",
+    "Nombre": "Calista Urrutia Aranda",
+    "Telefono": "+34 734 671 848",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "jose-antonio44@gmail.com",
+    "Salario": 11013.82,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED138",
+    "Nombre": "Luís Puig-Pi",
+    "Telefono": "+34 719 25 69 29",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "eligio04@ricart-sierra.es",
+    "Salario": 7542.56,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED139",
+    "Nombre": "Jose Ramón Rueda Mancebo",
+    "Telefono": "+34 738 624 052",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "tadeomarti@anglada.com",
+    "Salario": 11624.57,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED140",
+    "Nombre": "Elisa Sureda Montalbán",
+    "Telefono": "+34860 400 286",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "nuria58@yahoo.com",
+    "Salario": 8581.49,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED141",
+    "Nombre": "Rita Diaz",
+    "Telefono": "+34853 54 33 70",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "plaomar@gmail.com",
+    "Salario": 5391.59,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED142",
+    "Nombre": "Marcelino Busquets Pino",
+    "Telefono": "+34704 29 70 49",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "apages@hotmail.com",
+    "Salario": 7505.53,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED143",
+    "Nombre": "Marc Jaén Leon",
+    "Telefono": "+34707220286",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "nietopia@belda.com",
+    "Salario": 11752.16,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED144",
+    "Nombre": "Reinaldo Tudela-Vigil",
+    "Telefono": "+34 709817479",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "gcalderon@barrios.net",
+    "Salario": 7446.48,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED145",
+    "Nombre": "Martina Jimena Barroso Vázquez",
+    "Telefono": "+34743 49 97 11",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "aleon@yahoo.com",
+    "Salario": 6332.15,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED146",
+    "Nombre": "Pacífica Sainz Blasco",
+    "Telefono": "+34648 53 73 74",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "jesusa09@alarcon.com",
+    "Salario": 11334.39,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED147",
+    "Nombre": "Renato Priego Echeverría",
+    "Telefono": "+34734 97 39 78",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "manola72@hotmail.com",
+    "Salario": 10576.08,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED148",
+    "Nombre": "Patricia Manso",
+    "Telefono": "+34721 894 098",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "diegoencarnacion@escamilla.es",
+    "Salario": 10852.99,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED149",
+    "Nombre": "Asdrubal Piquer Barral",
+    "Telefono": "+34 708 88 03 08",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "acedoesteban@suarez-vicens.org",
+    "Salario": 11578.42,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED150",
+    "Nombre": "Juan Francisco Sainz Iñiguez",
+    "Telefono": "+34 945 120 191",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "gracianajauregui@yahoo.com",
+    "Salario": 10332.69,
+    "id_hospital": "H003"
+  },
+  {
+    "NumColegiatura": "MED151",
+    "Nombre": "Encarnacion Barral Santos",
+    "Telefono": "+34643 291 779",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "matiasbarba@hotmail.com",
+    "Salario": 5466.44,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED152",
+    "Nombre": "Miguel Pinilla Luz",
+    "Telefono": "+34734241116",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "martinbelen@alcazar-cepeda.com",
+    "Salario": 9430.59,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED153",
+    "Nombre": "Eusebio Pavón-Escolano",
+    "Telefono": "+34 718519368",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "caridadperez@hoz.net",
+    "Salario": 10767.8,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED154",
+    "Nombre": "Ernesto Mir Villar",
+    "Telefono": "+34 728091980",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "cuestaoscar@saura.org",
+    "Salario": 8167.08,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED155",
+    "Nombre": "Melisa de Tormo",
+    "Telefono": "+34 723 40 59 34",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "leocadiomuro@yahoo.com",
+    "Salario": 5286.03,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED156",
+    "Nombre": "Amor Conrado Porta Ferrán",
+    "Telefono": "+34886334219",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "xaviermancebo@yahoo.com",
+    "Salario": 8392.81,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED157",
+    "Nombre": "Carmela Cánovas Larrañaga",
+    "Telefono": "+34 649 61 48 87",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "wolmedo@hotmail.com",
+    "Salario": 10403.71,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED158",
+    "Nombre": "Guadalupe Vera Frutos",
+    "Telefono": "+34 702 72 49 60",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "fausto19@valenzuela-quintero.org",
+    "Salario": 11372.55,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED159",
+    "Nombre": "Leonor Trillo-Cabanillas",
+    "Telefono": "+34984 000 230",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "luisvilalta@benavides.es",
+    "Salario": 9407.35,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED160",
+    "Nombre": "Febe Hernández Esteban",
+    "Telefono": "+34721 92 69 63",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "cosme81@rozas.es",
+    "Salario": 7533.73,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED161",
+    "Nombre": "Teobaldo Piquer Lobato",
+    "Telefono": "+34918 100 901",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "ricofabricio@villalonga.com",
+    "Salario": 5790.11,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED162",
+    "Nombre": "Armida Zorrilla Casanovas",
+    "Telefono": "+34 853195448",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "efrain13@mari.net",
+    "Salario": 8082.17,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED163",
+    "Nombre": "Felipa Sastre Andreu",
+    "Telefono": "+34 667 34 73 07",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "losadaonofre@serrano.com",
+    "Salario": 11436.17,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED164",
+    "Nombre": "Ana Fabregat Chacón",
+    "Telefono": "+34 643 248 583",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "fustermaricela@gmail.com",
+    "Salario": 7790.86,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED165",
+    "Nombre": "José Riba Ortega",
+    "Telefono": "+34741334374",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "eisern@hotmail.com",
+    "Salario": 10641.85,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED166",
+    "Nombre": "Vinicio Verdugo-Nicolau",
+    "Telefono": "+34705667038",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "telmopareja@salcedo.net",
+    "Salario": 5468.85,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED167",
+    "Nombre": "Perlita Amigó Somoza",
+    "Telefono": "+34 744882386",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "vcorral@jaen.es",
+    "Salario": 7552.89,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED168",
+    "Nombre": "Celestino Garriga Ramirez",
+    "Telefono": "+34706 50 21 13",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "gvives@perez.com",
+    "Salario": 9815.7,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED169",
+    "Nombre": "Cristóbal Arregui Segarra",
+    "Telefono": "+34731 925 859",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "cesarmarquez@yahoo.com",
+    "Salario": 8630.06,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED170",
+    "Nombre": "Leire Baró Franco",
+    "Telefono": "+34707 90 64 48",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "orozcolourdes@minguez.com",
+    "Salario": 7395.45,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED171",
+    "Nombre": "Maura Marcos Gras",
+    "Telefono": "+34744 818 760",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "nzamora@yahoo.com",
+    "Salario": 7170.41,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED172",
+    "Nombre": "Jose Carlos Tovar Carrera",
+    "Telefono": "+34 702 326 648",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "melerofrancisco-javier@hotmail.com",
+    "Salario": 11088.98,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED173",
+    "Nombre": "Nicolasa Leiva Peña",
+    "Telefono": "+34 985666326",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "quesadanoe@hotmail.com",
+    "Salario": 11569.72,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED174",
+    "Nombre": "Eloy Reguera Ramón",
+    "Telefono": "+34936 110 439",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "alberdijuan-luis@hotmail.com",
+    "Salario": 9967.28,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED175",
+    "Nombre": "Leire González-Castrillo",
+    "Telefono": "+34728 927 391",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "mariano17@sandoval-quiroga.es",
+    "Salario": 6951.31,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED176",
+    "Nombre": "Guadalupe Anaya Guerra",
+    "Telefono": "+34 712 60 13 15",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "edufont@monreal-abellan.com",
+    "Salario": 5927.23,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED177",
+    "Nombre": "Albano Zapata Montalbán",
+    "Telefono": "+34 618 373 709",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "mariscaljuana@pascual.net",
+    "Salario": 6568.73,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED178",
+    "Nombre": "Ciríaco Torrecilla Yáñez",
+    "Telefono": "+34 860 79 91 17",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "salazarerasmo@buendia-julian.net",
+    "Salario": 6459.39,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED179",
+    "Nombre": "María Luisa Rosell Guardia",
+    "Telefono": "+34 705389224",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "marina37@yahoo.com",
+    "Salario": 5502.55,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED180",
+    "Nombre": "Brunilda Corral-Abellán",
+    "Telefono": "+34746 786 152",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "crodriguez@peiro.org",
+    "Salario": 7923.87,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED181",
+    "Nombre": "Olalla Escrivá Mate",
+    "Telefono": "+34667480527",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "qvalencia@tena.es",
+    "Salario": 7844.59,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED182",
+    "Nombre": "Artemio Figueras Lerma",
+    "Telefono": "+34902 42 64 80",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "graciareguera@sans.es",
+    "Salario": 10969.74,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED183",
+    "Nombre": "Raimundo Puig Bonet",
+    "Telefono": "+34 804 927 115",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "josepujadas@sierra-jaume.es",
+    "Salario": 6880.81,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED184",
+    "Nombre": "Iker Bayona Benavent",
+    "Telefono": "+34 715 64 76 72",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "nazaretlamas@sanz-carrasco.com",
+    "Salario": 9497.34,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED185",
+    "Nombre": "Priscila del Rocamora",
+    "Telefono": "+34920 968 691",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "eric37@gmail.com",
+    "Salario": 7463.19,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED186",
+    "Nombre": "Dani Zabaleta Armengol",
+    "Telefono": "+34 829 88 69 36",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "marciano87@gmail.com",
+    "Salario": 6041.28,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED187",
+    "Nombre": "Gertrudis Castell Cabezas",
+    "Telefono": "+34658867788",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "mayte00@hotmail.com",
+    "Salario": 6811.41,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED188",
+    "Nombre": "Elías Agudo-Pedrero",
+    "Telefono": "+34722 23 34 78",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "abueno@aranda.es",
+    "Salario": 9486.03,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED189",
+    "Nombre": "Amancio Benet Arco",
+    "Telefono": "+34743 29 78 80",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "bienvenida44@hotmail.com",
+    "Salario": 10670.95,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED190",
+    "Nombre": "Amaya Gimeno Hurtado",
+    "Telefono": "+34981 148 839",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "evitablazquez@carnero-almagro.com",
+    "Salario": 5763.08,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED191",
+    "Nombre": "Paco Moliner Bermudez",
+    "Telefono": "+34 708378710",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "lino95@maza-revilla.net",
+    "Salario": 6774.11,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED192",
+    "Nombre": "Nadia Rodríguez Asenjo",
+    "Telefono": "+34 718 00 35 64",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "pmanzanares@hotmail.com",
+    "Salario": 10429.18,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED193",
+    "Nombre": "Silvestre Zamorano Águila",
+    "Telefono": "+34 990 11 92 56",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "penasruben@yahoo.com",
+    "Salario": 9335.6,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED194",
+    "Nombre": "Jose Francisco Molins Mariscal",
+    "Telefono": "+34 701579886",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "alegriaaureliano@gmail.com",
+    "Salario": 11072.53,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED195",
+    "Nombre": "Cleto del Sanjuan",
+    "Telefono": "+34740 090 191",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "solanoasdrubal@hotmail.com",
+    "Salario": 11371.27,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED196",
+    "Nombre": "Vasco Vaquero",
+    "Telefono": "+34727 67 87 94",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "macarena67@hotmail.com",
+    "Salario": 9907.61,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED197",
+    "Nombre": "Custodia del Alcántara",
+    "Telefono": "+34663437998",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "oribas@gmail.com",
+    "Salario": 6328.97,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED198",
+    "Nombre": "Álvaro Toni Hidalgo Monreal",
+    "Telefono": "+34 653662810",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "chuyarnal@hotmail.com",
+    "Salario": 8412.56,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED199",
+    "Nombre": "Carlota del Coello",
+    "Telefono": "+34865295376",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "caroeli@hotmail.com",
+    "Salario": 8510.05,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED200",
+    "Nombre": "Jeremías Ávila Palacio",
+    "Telefono": "+34 749 242 339",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "zdonaire@amaya.org",
+    "Salario": 8058.3,
+    "id_hospital": "H004"
+  },
+  {
+    "NumColegiatura": "MED201",
+    "Nombre": "Sarita Villar Valbuena",
+    "Telefono": "+34708 988 979",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "arroyonazario@yahoo.com",
+    "Salario": 7410.56,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED202",
+    "Nombre": "Amaya Haro-Nogueira",
+    "Telefono": "+34727 751 643",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "gbatalla@yahoo.com",
+    "Salario": 8785.22,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED203",
+    "Nombre": "Sarita del Pacheco",
+    "Telefono": "+34 733605454",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "juanitaespejo@cozar.com",
+    "Salario": 10262.46,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED204",
+    "Nombre": "Amado Cervantes-Fabra",
+    "Telefono": "+34639 222 159",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "nunezoriana@hotmail.com",
+    "Salario": 7091.9,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED205",
+    "Nombre": "Jerónimo Gálvez Elías",
+    "Telefono": "+34724 393 876",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "cristinatejero@hotmail.com",
+    "Salario": 5253.07,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED206",
+    "Nombre": "Felipe Suarez Zorrilla",
+    "Telefono": "+34837270662",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "bonetpascual@falco.com",
+    "Salario": 10895.2,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED207",
+    "Nombre": "Víctor Alonso Pintor",
+    "Telefono": "+34626475983",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "marianoromeu@yahoo.com",
+    "Salario": 5824.92,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED208",
+    "Nombre": "Nazaret Cabrera Vilaplana",
+    "Telefono": "+34749550977",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "paredesalex@aller.es",
+    "Salario": 8451.96,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED209",
+    "Nombre": "Pía Blanca Fuertes",
+    "Telefono": "+34 730 10 91 05",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "xnicolau@mendoza.es",
+    "Salario": 7665.84,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED210",
+    "Nombre": "María Teresa Guerrero Fuente",
+    "Telefono": "+34 706203844",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "josefapedrosa@yahoo.com",
+    "Salario": 6817.46,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED211",
+    "Nombre": "Celia Gonzalez Méndez",
+    "Telefono": "+34 739050805",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "brunilda41@hotmail.com",
+    "Salario": 8932.77,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED212",
+    "Nombre": "Ligia Leon",
+    "Telefono": "+34 737 05 57 36",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "pelaezgraciela@hoz.es",
+    "Salario": 5757.97,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED213",
+    "Nombre": "Casandra Bastida Cifuentes",
+    "Telefono": "+34708 72 39 45",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "edmundomadrid@pulido.es",
+    "Salario": 9445.31,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED214",
+    "Nombre": "Hernando Carretero Olivares",
+    "Telefono": "+34717 977 926",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "hvalderrama@yahoo.com",
+    "Salario": 11957.53,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED215",
+    "Nombre": "Alonso Quirós",
+    "Telefono": "+34742 37 57 01",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "aroaarco@tudela.es",
+    "Salario": 10104.78,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED216",
+    "Nombre": "Isidora Romero-Castells",
+    "Telefono": "+34713 74 78 34",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "ceciliapombo@gomis-serra.es",
+    "Salario": 8852.35,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED217",
+    "Nombre": "Jacobo del Boada",
+    "Telefono": "+34 735 834 001",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "emiliano12@fuentes-coll.es",
+    "Salario": 8186.98,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED218",
+    "Nombre": "Omar Pujol Rey",
+    "Telefono": "+34745 96 73 40",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "maria69@gmail.com",
+    "Salario": 8454.09,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED219",
+    "Nombre": "Glauco Yáñez Giménez",
+    "Telefono": "+34 832649657",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "florentino96@gmail.com",
+    "Salario": 9960.24,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED220",
+    "Nombre": "Mariano del Sevillano",
+    "Telefono": "+34932 757 856",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "barcelosonia@posada-tejedor.com",
+    "Salario": 6249.91,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED221",
+    "Nombre": "Feliciana Hervás-Sebastián",
+    "Telefono": "+34 743 69 85 20",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "gallardorebeca@gimenez.org",
+    "Salario": 10828.24,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED222",
+    "Nombre": "Chelo Mendizábal Andres",
+    "Telefono": "+34 739422104",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "ngarriga@yahoo.com",
+    "Salario": 7005.25,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED223",
+    "Nombre": "Andrés Olivares Zamorano",
+    "Telefono": "+34738158637",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "tororosaura@gmail.com",
+    "Salario": 10629.11,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED224",
+    "Nombre": "Reina Estevez Andrade",
+    "Telefono": "+34 918302716",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "marcomas@hotmail.com",
+    "Salario": 6827.24,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED225",
+    "Nombre": "Albano Carvajal-Soler",
+    "Telefono": "+34 701959631",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "amurcia@yahoo.com",
+    "Salario": 9542.05,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED226",
+    "Nombre": "Dionisio Folch Oliver",
+    "Telefono": "+34 702 77 50 25",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "aureliajove@yahoo.com",
+    "Salario": 11636.98,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED227",
+    "Nombre": "Samu Hervia Acuña",
+    "Telefono": "+34704 29 83 12",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "josefa77@trillo-domingo.net",
+    "Salario": 11211.26,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED228",
+    "Nombre": "Nacio Barros Sales",
+    "Telefono": "+34 647 566 656",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "ecepeda@cruz-mesa.com",
+    "Salario": 9040.2,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED229",
+    "Nombre": "Isaías Cervera Barrera",
+    "Telefono": "+34 940 01 76 55",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "baltasar24@gmail.com",
+    "Salario": 11081.13,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED230",
+    "Nombre": "Apolinar Ponce",
+    "Telefono": "+34810 33 96 44",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "fabian26@hotmail.com",
+    "Salario": 6321.31,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED231",
+    "Nombre": "Clotilde Anguita Berenguer",
+    "Telefono": "+34728 76 25 57",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "xvalverde@crespi-vina.es",
+    "Salario": 5938.85,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED232",
+    "Nombre": "Mercedes de Benavente",
+    "Telefono": "+34997 04 50 03",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "diana60@bernal.com",
+    "Salario": 11958.66,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED233",
+    "Nombre": "Anacleto Cepeda Arnaiz",
+    "Telefono": "+34 717989603",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "amoraparicio@castaneda-bustamante.es",
+    "Salario": 8263.47,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED234",
+    "Nombre": "Custodio Giménez Prado",
+    "Telefono": "+34609432994",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "sandaliomarquez@gmail.com",
+    "Salario": 8194.7,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED235",
+    "Nombre": "Eutropio Piquer",
+    "Telefono": "+34 713 085 209",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "pbayon@giner.com",
+    "Salario": 10528.46,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED236",
+    "Nombre": "Lola Felipa Rosselló Benitez",
+    "Telefono": "+34 721 26 22 40",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "godoyleticia@yahoo.com",
+    "Salario": 10101.08,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED237",
+    "Nombre": "Evaristo Oliveras Torrijos",
+    "Telefono": "+34 719117168",
+    "id_especialidad": "ESP005",
+    "CorreoElectronico": "guiomartorres@leon.com",
+    "Salario": 6898.53,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED238",
+    "Nombre": "Loreto Romeu Uribe",
+    "Telefono": "+34940 055 905",
+    "id_especialidad": "ESP003",
+    "CorreoElectronico": "pazaleman@pozo.com",
+    "Salario": 6472.9,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED239",
+    "Nombre": "Celso Rivero-Garriga",
+    "Telefono": "+34 704 926 239",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "odalisgelabert@gallego.com",
+    "Salario": 9887.39,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED240",
+    "Nombre": "Luciana Naranjo",
+    "Telefono": "+34 714 22 97 08",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "plopez@iborra-colomer.es",
+    "Salario": 5384.2,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED241",
+    "Nombre": "Maura Frutos",
+    "Telefono": "+34 745296260",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "qmiralles@saez.com",
+    "Salario": 11597.92,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED242",
+    "Nombre": "Emelina Maldonado Carvajal",
+    "Telefono": "+34 737339526",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "eballesteros@aleman.com",
+    "Salario": 10407.63,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED243",
+    "Nombre": "Iker Casado Noguera",
+    "Telefono": "+34711775073",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "yrocamora@gonzalez-romero.es",
+    "Salario": 9920.92,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED244",
+    "Nombre": "Nidia Plana Peiró",
+    "Telefono": "+34 746 07 12 06",
+    "id_especialidad": "ESP001",
+    "CorreoElectronico": "julianbegona@yahoo.com",
+    "Salario": 9694.5,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED245",
+    "Nombre": "Sebastián Ávila Llano",
+    "Telefono": "+34702 97 08 08",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "socorroprieto@yahoo.com",
+    "Salario": 11178.35,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED246",
+    "Nombre": "Eli Corbacho",
+    "Telefono": "+34605 65 78 62",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "bgibert@hotmail.com",
+    "Salario": 10114.01,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED247",
+    "Nombre": "Víctor Luján Águila",
+    "Telefono": "+34 716 09 55 24",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "pinedosilvia@hotmail.com",
+    "Salario": 8355.13,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED248",
+    "Nombre": "Gala Anaya Baena",
+    "Telefono": "+34 842 89 05 94",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "nacho10@moya.com",
+    "Salario": 7828.93,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED249",
+    "Nombre": "Débora Aguilar Caballero",
+    "Telefono": "+34 884185888",
+    "id_especialidad": "ESP004",
+    "CorreoElectronico": "eustaquio02@hotmail.com",
+    "Salario": 6409.25,
+    "id_hospital": "H005"
+  },
+  {
+    "NumColegiatura": "MED250",
+    "Nombre": "Ramiro Casas Crespi",
+    "Telefono": "+34 614 316 820",
+    "id_especialidad": "ESP002",
+    "CorreoElectronico": "umendoza@lucena.org",
+    "Salario": 8738.17,
+    "id_hospital": "H005"
+  }
+]
+);
+
+db.ESPECIALIDADES.insertMany(
+[
+  {
+    "id_especialidad": "ESP001",
+    "Nombre": "Cardiología"
+  },
+  {
+    "id_especialidad": "ESP002",
+    "Nombre": "Pediatría"
+  },
+  {
+    "id_especialidad": "ESP003",
+    "Nombre": "Cirugía"
+  },
+  {
+    "id_especialidad": "ESP004",
+    "Nombre": "Ginecología"
+  },
+  {
+    "id_especialidad": "ESP005",
+    "Nombre": "Neurología"
+  }
+]
+);
+
+db.PACIENTES.insertMany(
+[
+  {
+    "DNI": "310-76-1713",
+    "Nombre": "Gabriela Roman Pol",
+    "Telefono": "+34709 152 887",
+    "Direccion": "Alameda de Adelina Sanjuan 70\nOurense, 84483",
+    "CorreoElectronico": "adan37@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL001",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "375-74-6103",
+    "Nombre": "Nadia del Echeverría",
+    "Telefono": "+34743152890",
+    "Direccion": "Pasaje de Eleuterio Páez 28\nMadrid, 95068",
+    "CorreoElectronico": "javisanabria@gmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL002",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "807-08-2104",
+    "Nombre": "Guillermo Nicolau Ordóñez",
+    "Telefono": "+34 986871659",
+    "Direccion": "Vial Fidela Bermúdez 79\nCádiz, 84582",
+    "CorreoElectronico": "nadiasalcedo@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL003",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "091-97-5664",
+    "Nombre": "Clemente Mora Santamaría",
+    "Telefono": "+34956879996",
+    "Direccion": "Alameda Ximena Jurado 5\nHuelva, 72966",
+    "CorreoElectronico": "djaume@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL004",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "219-60-3486",
+    "Nombre": "Ciríaco Batalla Madrid",
+    "Telefono": "+34857 23 31 08",
+    "Direccion": "Rambla de Nilda Cifuentes 33 Apt. 75 \nTeruel, 29883",
+    "CorreoElectronico": "dlastra@manzanares-echevarria.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL005",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "438-77-6487",
+    "Nombre": "Simón Borrego",
+    "Telefono": "+34 629779893",
+    "Direccion": "Rambla de Lisandro Elías 85\nMurcia, 22868",
+    "CorreoElectronico": "gordillodamian@becerra-lorenzo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL006",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "109-73-6910",
+    "Nombre": "Vinicio Oliva Ramirez",
+    "Telefono": "+34 728 447 508",
+    "Direccion": "Avenida Joel Fortuny 743\nLugo, 21184",
+    "CorreoElectronico": "eliseovalenciano@botella-guerra.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL007",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "868-08-1542",
+    "Nombre": "Benito Jimenez Fuente",
+    "Telefono": "+34 731 86 27 41",
+    "Direccion": "Rambla Matías Robles 60\nValencia, 88516",
+    "CorreoElectronico": "lopezamada@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL008",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "019-54-5929",
+    "Nombre": "Pepita Niño-Amor",
+    "Telefono": "+34 832 981 729",
+    "Direccion": "Cuesta Bernardo Moliner 68\nSalamanca, 06833",
+    "CorreoElectronico": "celia93@amador.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL009",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "325-10-4720",
+    "Nombre": "Socorro Poza Goñi",
+    "Telefono": "+34 661 07 32 12",
+    "Direccion": "Rambla Ignacia Elías 59 Piso 8 \nTarragona, 66666",
+    "CorreoElectronico": "bienvenida48@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL010",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "727-25-4635",
+    "Nombre": "Haydée Miguel Arribas",
+    "Telefono": "+34843 104 441",
+    "Direccion": "Cañada Yéssica Frías 75\nZaragoza, 86022",
+    "CorreoElectronico": "victorino93@jodar-arevalo.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL011",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "019-86-6992",
+    "Nombre": "Íngrid Morera Corral",
+    "Telefono": "+34652586668",
+    "Direccion": "Cañada Gerónimo Lamas 32\nMálaga, 86374",
+    "CorreoElectronico": "martagaya@adadia.org",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL012",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "713-37-4913",
+    "Nombre": "Saturnina Yáñez Alcaraz",
+    "Telefono": "+34829 16 47 95",
+    "Direccion": "Via Bonifacio Cárdenas 94 Apt. 61 \nBarcelona, 32422",
+    "CorreoElectronico": "casesmaria-fernanda@mate-aguirre.org",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL013",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "892-27-5223",
+    "Nombre": "Rosario Villalba",
+    "Telefono": "+34740425918",
+    "Direccion": "C. Jessica Feijoo 2 Puerta 9 \nPalencia, 71193",
+    "CorreoElectronico": "edelmiracuellar@pina-gomis.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL014",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "186-12-0025",
+    "Nombre": "Maximiano Raya Pallarès",
+    "Telefono": "+34 746044062",
+    "Direccion": "Alameda Curro Gomis 89 Puerta 0 \nOurense, 01013",
+    "CorreoElectronico": "solapaca@julia.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL015",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "331-80-4091",
+    "Nombre": "Eusebio Esteve Aramburu",
+    "Telefono": "+34 746 68 83 93",
+    "Direccion": "Paseo Primitivo Quintanilla 338\nCiudad, 01081",
+    "CorreoElectronico": "fortunatomenendez@gmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL016",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "849-25-7247",
+    "Nombre": "Luis Rosa Egea",
+    "Telefono": "+34737 71 52 77",
+    "Direccion": "Rambla de Priscila Aragón 92 Puerta 1 \nBaleares, 05100",
+    "CorreoElectronico": "chamorrovera@iglesias.org",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL017",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "099-67-2573",
+    "Nombre": "Julio César Casal Ledesma",
+    "Telefono": "+34 742747675",
+    "Direccion": "Pasadizo de Pacífica Sola 7\nMurcia, 47601",
+    "CorreoElectronico": "martinsanabria@fernandez.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL018",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "282-14-3739",
+    "Nombre": "Nydia Estévez Peláez",
+    "Telefono": "+34950 106 150",
+    "Direccion": "Plaza Belen Bilbao 59 Apt. 17 \nAlmería, 17062",
+    "CorreoElectronico": "andres70@hotmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL019",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "037-30-4814",
+    "Nombre": "Begoña Mínguez Miranda",
+    "Telefono": "+34921546106",
+    "Direccion": "Alameda Jordán Calvo 5\nZaragoza, 72303",
+    "CorreoElectronico": "vinicio94@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL020",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "326-09-7354",
+    "Nombre": "Amanda del Cuenca",
+    "Telefono": "+34703 059 794",
+    "Direccion": "Plaza Azucena Acero 104 Piso 3 \nLugo, 21949",
+    "CorreoElectronico": "upedrosa@saldana.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL021",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "515-27-0769",
+    "Nombre": "Pilar del Isern",
+    "Telefono": "+34 740128786",
+    "Direccion": "Plaza Daniel Porras 1 Puerta 8 \nLugo, 89466",
+    "CorreoElectronico": "oliverassantos@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL022",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "260-87-9361",
+    "Nombre": "Luisina Castelló-Acedo",
+    "Telefono": "+34 705 88 07 12",
+    "Direccion": "Cañada Cecilia Leon 438\nGuipúzcoa, 94422",
+    "CorreoElectronico": "alondramorante@nogueira.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL023",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "662-62-3097",
+    "Nombre": "África Garrido",
+    "Telefono": "+34681 65 31 88",
+    "Direccion": "Ronda de Flor Vaquero 575\nLa Rioja, 15677",
+    "CorreoElectronico": "nespana@villar.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL024",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "524-00-9272",
+    "Nombre": "Montserrat del Verdugo",
+    "Telefono": "+34 810928224",
+    "Direccion": "Paseo Bienvenida Pallarès 430\nSoria, 90327",
+    "CorreoElectronico": "emelina58@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL025",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "845-03-7942",
+    "Nombre": "Pilar Reyes Gascón Bermejo",
+    "Telefono": "+34728 01 64 11",
+    "Direccion": "Rambla de Rafaela Campos 646\nTarragona, 77727",
+    "CorreoElectronico": "casemiroballesteros@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL026",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "791-89-6006",
+    "Nombre": "Maricruz Rios Frías",
+    "Telefono": "+34737850870",
+    "Direccion": "Pasadizo de Tania Azcona 27 Puerta 0 \nLa Coruña, 79436",
+    "CorreoElectronico": "anibalballester@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL027",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "431-61-0961",
+    "Nombre": "Irma Sala Jover",
+    "Telefono": "+34 674 650 920",
+    "Direccion": "Acceso Manola Chaparro 200\nMadrid, 95067",
+    "CorreoElectronico": "millaniban@anaya.es",
+    "id_seguro": "SEG003",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL028",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "195-25-0806",
+    "Nombre": "Delia Daniela Feijoo Dueñas",
+    "Telefono": "+34 712480785",
+    "Direccion": "Pasadizo Che Dueñas 52\nAsturias, 47361",
+    "CorreoElectronico": "reyesluna@yahoo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL029",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "188-09-2699",
+    "Nombre": "Esther Gallart-Cisneros",
+    "Telefono": "+34922617334",
+    "Direccion": "Pasaje Ceferino Guardiola 42\nAlmería, 54761",
+    "CorreoElectronico": "luis-angelacevedo@rovira-carnero.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL030",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "936-76-3981",
+    "Nombre": "Adoración Cabeza-Tirado",
+    "Telefono": "+34654939302",
+    "Direccion": "Vial de Samuel Miralles 86 Puerta 7 \nZamora, 12696",
+    "CorreoElectronico": "amayaamada@gmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL031",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "631-19-9110",
+    "Nombre": "Herminia Puga Céspedes",
+    "Telefono": "+34740 43 09 24",
+    "Direccion": "Vial de Isaías Montenegro 853\nOurense, 78040",
+    "CorreoElectronico": "ricartamerica@rivas-ballesteros.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL032",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "215-77-3556",
+    "Nombre": "Luz Piñol",
+    "Telefono": "+34 721 26 95 43",
+    "Direccion": "Camino Calixto Perelló 26 Apt. 51 \nTarragona, 17986",
+    "CorreoElectronico": "amelia95@gmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL033",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "830-13-5647",
+    "Nombre": "Gaspar Gabriel Saez Tamarit",
+    "Telefono": "+34835 89 39 21",
+    "Direccion": "Pasaje de Olivia Alegria 6\nAlicante, 50886",
+    "CorreoElectronico": "urbano18@rosell-lujan.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL034",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "593-06-6408",
+    "Nombre": "Reyes Roca Mora",
+    "Telefono": "+34726210629",
+    "Direccion": "Camino Roberto Vendrell 34 Puerta 6 \nGuipúzcoa, 54027",
+    "CorreoElectronico": "montalbanhilda@cabello-cases.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL035",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "447-48-1056",
+    "Nombre": "Eulalia de Cervera",
+    "Telefono": "+34 708060308",
+    "Direccion": "Pasadizo de Ariel Salvà 35\nZamora, 99818",
+    "CorreoElectronico": "dominga93@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL036",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "583-60-9212",
+    "Nombre": "Camila Fuertes Amador",
+    "Telefono": "+34945 21 28 38",
+    "Direccion": "Paseo Natanael Mate 9\nAlmería, 03985",
+    "CorreoElectronico": "jmartinez@cardenas.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL037",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "406-94-0809",
+    "Nombre": "Ismael Tristán Gibert Arco",
+    "Telefono": "+34981 933 725",
+    "Direccion": "Vial Eliana Maestre 8 Piso 0 \nSalamanca, 74651",
+    "CorreoElectronico": "samanta42@alonso.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL038",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "423-75-9069",
+    "Nombre": "Alberto Cifuentes-Casals",
+    "Telefono": "+34722097441",
+    "Direccion": "Avenida de Leonor Lorenzo 766 Piso 0 \nOurense, 67540",
+    "CorreoElectronico": "marisol76@manrique.net",
+    "id_seguro": "SEG001",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL039",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "931-36-5647",
+    "Nombre": "Iker Manjón Belda",
+    "Telefono": "+34894 69 06 34",
+    "Direccion": "Vial de Paloma Matas 997 Piso 8 \nHuelva, 80949",
+    "CorreoElectronico": "somozaamarilis@vazquez.net",
+    "id_seguro": "SEG004",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL040",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "981-64-8213",
+    "Nombre": "Asdrubal Jara Quirós",
+    "Telefono": "+34727 349 897",
+    "Direccion": "C. de Coral Soria 62 Puerta 5 \nCiudad, 95630",
+    "CorreoElectronico": "criadoyolanda@mayol-coloma.org",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL041",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "999-17-3094",
+    "Nombre": "Édgar Arjona",
+    "Telefono": "+34 915 822 592",
+    "Direccion": "Glorieta Milagros Abellán 26\nLeón, 74161",
+    "CorreoElectronico": "damianandres@valles-martin.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL042",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "800-31-2462",
+    "Nombre": "Teresa Espinosa Castañeda",
+    "Telefono": "+34722 02 74 90",
+    "Direccion": "Camino Antonio Redondo 34\nGranada, 17470",
+    "CorreoElectronico": "puigfederico@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL043",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "291-55-7854",
+    "Nombre": "Dafne Villalobos-Aragón",
+    "Telefono": "+34841 03 27 90",
+    "Direccion": "Pasadizo Ovidio Andreu 20\nToledo, 93355",
+    "CorreoElectronico": "paca43@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL044",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "336-86-7941",
+    "Nombre": "Hilario de Escrivá",
+    "Telefono": "+34 708 75 60 16",
+    "Direccion": "Paseo de Odalis Valero 13\nSoria, 52703",
+    "CorreoElectronico": "luquepaca@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL045",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "909-08-1814",
+    "Nombre": "Melchor Rubén Nogueira Méndez",
+    "Telefono": "+34 965480761",
+    "Direccion": "Rambla Miguel Ángel Murillo 773 Apt. 53 \nBaleares, 21668",
+    "CorreoElectronico": "adelardo88@collado.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL046",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "432-73-7069",
+    "Nombre": "Gregorio Toribio Gomez Torre",
+    "Telefono": "+34 743414412",
+    "Direccion": "Callejón Chema Rozas 79\nTeruel, 14036",
+    "CorreoElectronico": "agapitorebollo@gmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL047",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "571-77-3486",
+    "Nombre": "Valeria Corbacho Hierro",
+    "Telefono": "+34728708288",
+    "Direccion": "Alameda Mireia Piñeiro 30\nGirona, 93255",
+    "CorreoElectronico": "francoroberta@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL048",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "517-24-1458",
+    "Nombre": "Selena Duque Benito",
+    "Telefono": "+34701 719 354",
+    "Direccion": "Glorieta de Nidia Otero 52\nValladolid, 09660",
+    "CorreoElectronico": "bernardino62@gmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL049",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "099-76-1591",
+    "Nombre": "Telmo de Pedrero",
+    "Telefono": "+34 900604153",
+    "Direccion": "Pasadizo de Berta Mendez 23 Apt. 09 \nGuipúzcoa, 73429",
+    "CorreoElectronico": "cuencacornelio@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL050",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "850-38-1061",
+    "Nombre": "Flora Alsina Grande",
+    "Telefono": "+34724763688",
+    "Direccion": "Pasaje de Olalla Girona 18\nBarcelona, 53391",
+    "CorreoElectronico": "abellantono@lamas-llano.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL051",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "808-58-0538",
+    "Nombre": "Gastón Molina Mínguez",
+    "Telefono": "+34 716 331 312",
+    "Direccion": "Glorieta de Margarita Menéndez 36 Piso 2 \nAsturias, 83080",
+    "CorreoElectronico": "monteroteodoro@nicolau.es",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL052",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "834-97-9753",
+    "Nombre": "Abraham Baquero Gimenez",
+    "Telefono": "+34 700 81 86 77",
+    "Direccion": "Cuesta de Leonel Juliá 13 Apt. 69 \nSalamanca, 42339",
+    "CorreoElectronico": "pisamuel@vendrell.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL053",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "623-10-0373",
+    "Nombre": "Adrián Simó-Llorente",
+    "Telefono": "+34 747 57 91 50",
+    "Direccion": "Calle de Olalla Mulet 60\nCeuta, 12107",
+    "CorreoElectronico": "pascual27@llobet.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL054",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "772-24-4150",
+    "Nombre": "Mireia Múñiz Ferrera",
+    "Telefono": "+34 816 94 13 58",
+    "Direccion": "Vial Pablo Luz 159\nGuadalajara, 78076",
+    "CorreoElectronico": "rosarioviana@amo-moran.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL055",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "878-46-2767",
+    "Nombre": "Erasmo de Ferrera",
+    "Telefono": "+34710 00 98 20",
+    "Direccion": "Avenida de Ovidio Ureña 69\nVizcaya, 03308",
+    "CorreoElectronico": "odalisteruel@morante.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL056",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "455-51-6288",
+    "Nombre": "Bernardo Batlle Ferrán",
+    "Telefono": "+34714 79 65 03",
+    "Direccion": "Via Otilia Roldán 624 Puerta 4 \nSanta Cruz de Tenerife, 02322",
+    "CorreoElectronico": "barrigaangelica@valdes.org",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL057",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "581-29-2612",
+    "Nombre": "Leocadio Cañas Aguiló",
+    "Telefono": "+34728454475",
+    "Direccion": "Acceso Demetrio Barreda 5 Puerta 7 \nNavarra, 40541",
+    "CorreoElectronico": "rpineda@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL058",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "753-83-9863",
+    "Nombre": "Josefa Valcárcel-Palacio",
+    "Telefono": "+34742023821",
+    "Direccion": "Cuesta Lázaro Chamorro 61\nJaén, 65663",
+    "CorreoElectronico": "solerjose-angel@tomas.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL059",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "529-50-5944",
+    "Nombre": "Jesusa Laguna Abella",
+    "Telefono": "+34 722120873",
+    "Direccion": "Via de Bernabé Toledo 62\nTeruel, 77104",
+    "CorreoElectronico": "daniela41@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL060",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "963-16-8982",
+    "Nombre": "Victorino Tena Yáñez",
+    "Telefono": "+34 893 68 56 96",
+    "Direccion": "Vial Celso Ballester 6 Puerta 6 \nLugo, 43132",
+    "CorreoElectronico": "casemiroriera@baena.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL061",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "625-95-8884",
+    "Nombre": "Verónica del Iriarte",
+    "Telefono": "+34 815013493",
+    "Direccion": "Pasaje Tamara Polo 3 Apt. 26 \nLugo, 83544",
+    "CorreoElectronico": "hferrer@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL062",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "985-11-1831",
+    "Nombre": "Aurelio Correa-Tirado",
+    "Telefono": "+34 728 85 60 06",
+    "Direccion": "Glorieta de Fermín Tamayo 5 Puerta 0 \nVizcaya, 10441",
+    "CorreoElectronico": "sol79@alberdi.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL063",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "702-64-6630",
+    "Nombre": "Leire Manjón",
+    "Telefono": "+34698 65 64 34",
+    "Direccion": "Urbanización de Amaro Peiró 35\nGuadalajara, 12788",
+    "CorreoElectronico": "feliciana49@burgos.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL064",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "851-60-9697",
+    "Nombre": "Martin Escribano-Benavent",
+    "Telefono": "+34691 324 422",
+    "Direccion": "Cuesta Jovita Sotelo 50 Puerta 7 \nPontevedra, 43866",
+    "CorreoElectronico": "leire68@casas.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL065",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "659-63-2616",
+    "Nombre": "Ale Verdú Llano",
+    "Telefono": "+34 691 64 50 45",
+    "Direccion": "Via Jovita García 8 Puerta 7 \nCantabria, 07575",
+    "CorreoElectronico": "hortensiarivas@cervantes.es",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL066",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "676-26-4652",
+    "Nombre": "Isaías Canet-Guillen",
+    "Telefono": "+34739595331",
+    "Direccion": "Camino Marisol Montaña 79 Piso 3 \nOurense, 84555",
+    "CorreoElectronico": "perezflorinda@gmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL067",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "414-42-2787",
+    "Nombre": "Martin Llopis Donaire",
+    "Telefono": "+34701 612 700",
+    "Direccion": "Acceso de María Luisa Bru 28\nNavarra, 85283",
+    "CorreoElectronico": "aroavazquez@jerez.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL068",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "053-38-8943",
+    "Nombre": "Lilia Lago Galan",
+    "Telefono": "+34823 88 48 46",
+    "Direccion": "Urbanización de Ramón Moles 3 Piso 1 \nCádiz, 20681",
+    "CorreoElectronico": "aura31@planas.net",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL069",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "651-26-1557",
+    "Nombre": "Ricarda Alfonso Moll",
+    "Telefono": "+34932865690",
+    "Direccion": "C. María Jesús Elías 2\nSanta Cruz de Tenerife, 05089",
+    "CorreoElectronico": "nescamilla@camacho.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL070",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "741-35-3760",
+    "Nombre": "Dafne Diana Castelló Frías",
+    "Telefono": "+34809603821",
+    "Direccion": "Calle de Montserrat Moll 1 Apt. 73 \nBadajoz, 49834",
+    "CorreoElectronico": "casanovasamuel@llado.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL071",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "173-49-0789",
+    "Nombre": "Albina Gimenez Becerra",
+    "Telefono": "+34706 95 26 64",
+    "Direccion": "Pasaje Herberto Ramis 17 Puerta 5 \nZaragoza, 73548",
+    "CorreoElectronico": "tmerino@hotmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL072",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "987-08-2424",
+    "Nombre": "Julio César Corral Jover",
+    "Telefono": "+34 965 59 19 04",
+    "Direccion": "Plaza Marino Rocha 52\nBurgos, 51026",
+    "CorreoElectronico": "upinilla@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL073",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "985-33-1787",
+    "Nombre": "Jaime Baquero",
+    "Telefono": "+34710 37 93 86",
+    "Direccion": "Calle de Leandra Armas 9\nPontevedra, 41439",
+    "CorreoElectronico": "eutropio77@pina.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL074",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "089-10-2911",
+    "Nombre": "Isidora Benito Céspedes",
+    "Telefono": "+34716033074",
+    "Direccion": "Camino de Charo Mendoza 77 Apt. 00 \nSalamanca, 71756",
+    "CorreoElectronico": "bertranreyes@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL075",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "051-65-6963",
+    "Nombre": "José Mari Manuel Jurado",
+    "Telefono": "+34 886 08 56 63",
+    "Direccion": "Camino Dimas Rodríguez 9\nMálaga, 05545",
+    "CorreoElectronico": "mprat@gmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL076",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "085-27-2749",
+    "Nombre": "Samuel Feliu Hidalgo",
+    "Telefono": "+34 736 021 637",
+    "Direccion": "Glorieta de Crescencia Seguí 5 Puerta 9 \nSoria, 82717",
+    "CorreoElectronico": "vicenta47@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL077",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "755-45-5582",
+    "Nombre": "Bernardita Calixta Barros Gilabert",
+    "Telefono": "+34733 045 248",
+    "Direccion": "Pasaje Santos Cardona 40 Apt. 93 \nJaén, 69811",
+    "CorreoElectronico": "pmanrique@cuadrado.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL078",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "961-01-9940",
+    "Nombre": "Elisa Escobar Frías",
+    "Telefono": "+34 846 639 334",
+    "Direccion": "Urbanización de Saturnino Costa 8 Puerta 8 \nAlmería, 91161",
+    "CorreoElectronico": "baltasarbadia@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL079",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "538-03-2808",
+    "Nombre": "Amor Agullo-Pera",
+    "Telefono": "+34 607 61 50 77",
+    "Direccion": "Callejón Adelaida Berenguer 31 Apt. 15 \nBurgos, 72648",
+    "CorreoElectronico": "jeronimocamara@gmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL080",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "714-21-6145",
+    "Nombre": "Jesusa Zamora Pont",
+    "Telefono": "+34738 47 70 24",
+    "Direccion": "Ronda Roxana Castell 66\nBarcelona, 39404",
+    "CorreoElectronico": "alegordillo@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL081",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "037-42-0369",
+    "Nombre": "María Fernanda Rueda Fabra",
+    "Telefono": "+34716 843 531",
+    "Direccion": "Acceso Dimas Cerdán 848\nHuelva, 96686",
+    "CorreoElectronico": "eladio88@talavera.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL082",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "417-30-0887",
+    "Nombre": "Daniela de Uría",
+    "Telefono": "+34 744 957 924",
+    "Direccion": "Calle de Mariana Múgica 64 Apt. 35 \nCantabria, 81023",
+    "CorreoElectronico": "pepito04@puig.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL083",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "128-47-8353",
+    "Nombre": "Joaquín Rius Díez",
+    "Telefono": "+34703 42 43 83",
+    "Direccion": "C. de Amador Urrutia 10 Puerta 0 \nCiudad, 88172",
+    "CorreoElectronico": "lfonseca@gmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL084",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "762-52-5273",
+    "Nombre": "Eloísa Goñi-Dominguez",
+    "Telefono": "+34748889766",
+    "Direccion": "Ronda de Miguel Mena 44\nCuenca, 98695",
+    "CorreoElectronico": "sierrarosenda@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL085",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "820-88-8815",
+    "Nombre": "Flavio Ferrando",
+    "Telefono": "+34 917270559",
+    "Direccion": "Vial Marisela Perales 13 Apt. 55 \nCórdoba, 95849",
+    "CorreoElectronico": "climacocarbo@gmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL086",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "865-17-1170",
+    "Nombre": "Demetrio de Pedraza",
+    "Telefono": "+34816165996",
+    "Direccion": "Ronda Yésica Prat 94\nMelilla, 05957",
+    "CorreoElectronico": "gerardo37@sarabia-esparza.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL087",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "497-43-9361",
+    "Nombre": "Edmundo Herranz España",
+    "Telefono": "+34702 676 339",
+    "Direccion": "Acceso de Dalila Palomares 73\nCórdoba, 82826",
+    "CorreoElectronico": "ramonavega@gmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL088",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "127-66-4635",
+    "Nombre": "Calisto Espinosa Rius",
+    "Telefono": "+34 744 07 61 96",
+    "Direccion": "Cañada Dionisio Abella 289\nPalencia, 44722",
+    "CorreoElectronico": "otalavera@gmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL089",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "287-24-4738",
+    "Nombre": "Crescencia Perera Balaguer",
+    "Telefono": "+34 818 460 288",
+    "Direccion": "Glorieta de Carlito Calderón 2\nSanta Cruz de Tenerife, 76631",
+    "CorreoElectronico": "amalia24@gimenez-vilar.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL090",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "351-00-0552",
+    "Nombre": "Loida Alsina Samper",
+    "Telefono": "+34725 20 11 27",
+    "Direccion": "Camino de Aitor Alcázar 12\nNavarra, 72435",
+    "CorreoElectronico": "cuevasazahar@gmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL091",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "054-34-2672",
+    "Nombre": "Victoriano Mauricio Llano Caballero",
+    "Telefono": "+34 734090873",
+    "Direccion": "Calle Catalina Varela 926 Piso 2 \nLleida, 16515",
+    "CorreoElectronico": "churtado@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL092",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "330-61-8665",
+    "Nombre": "Samu Reyes Escudero",
+    "Telefono": "+34946654953",
+    "Direccion": "Plaza de Rosenda Cerro 5 Apt. 59 \nAlbacete, 40841",
+    "CorreoElectronico": "almazangracia@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL093",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "474-33-4569",
+    "Nombre": "Samu Estévez Agustín",
+    "Telefono": "+34909 675 038",
+    "Direccion": "Pasaje Iris Bautista 40\nSalamanca, 45462",
+    "CorreoElectronico": "gayamarianela@gmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL094",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "838-37-5719",
+    "Nombre": "Heriberto Sarabia-Calzada",
+    "Telefono": "+34 701 052 354",
+    "Direccion": "Avenida Calixto Pelayo 114 Puerta 9 \nBadajoz, 43165",
+    "CorreoElectronico": "floramedina@reyes-cespedes.org",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL095",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "267-53-9687",
+    "Nombre": "Florencia Galvez-Gomila",
+    "Telefono": "+34 859 98 04 96",
+    "Direccion": "Calle de Saturnino Guitart 21\nZamora, 80971",
+    "CorreoElectronico": "fpuente@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL096",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "400-34-1014",
+    "Nombre": "Socorro Vara Reig",
+    "Telefono": "+34712 80 85 01",
+    "Direccion": "Plaza Jacinto Cámara 387 Piso 8 \nSanta Cruz de Tenerife, 26423",
+    "CorreoElectronico": "loreto84@amat-sole.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL097",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "363-50-4355",
+    "Nombre": "Rosalina Moles",
+    "Telefono": "+34733 086 930",
+    "Direccion": "Paseo de Alfredo Fuster 30 Puerta 2 \nZamora, 86828",
+    "CorreoElectronico": "jose-ramon95@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL098",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "188-19-3356",
+    "Nombre": "Dora Recio Llabrés",
+    "Telefono": "+34 954 542 339",
+    "Direccion": "Ronda de Eusebia Hoz 62\nPalencia, 12024",
+    "CorreoElectronico": "nicolauleocadia@aragon.org",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL099",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "727-35-8277",
+    "Nombre": "Armida de Sevilla",
+    "Telefono": "+34 728380476",
+    "Direccion": "Alameda Evita Machado 96\nZaragoza, 38381",
+    "CorreoElectronico": "hilario52@moliner-puente.org",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL100",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "444-99-8137",
+    "Nombre": "René de Torrecilla",
+    "Telefono": "+34703165793",
+    "Direccion": "Vial Vanesa Burgos 5\nAlicante, 22010",
+    "CorreoElectronico": "rafael23@tapia.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL101",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "849-53-0104",
+    "Nombre": "David Ibarra Vallejo",
+    "Telefono": "+34 882 22 78 88",
+    "Direccion": "Rambla de Ángel Heras 95\nGranada, 26916",
+    "CorreoElectronico": "pazospepe@yahoo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL102",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "235-67-0502",
+    "Nombre": "Isa Villena Ribes",
+    "Telefono": "+34 701715339",
+    "Direccion": "C. Cristóbal Pedrero 368\nBarcelona, 66886",
+    "CorreoElectronico": "maximo85@pulido.net",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL103",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "957-87-8081",
+    "Nombre": "Armida Manola Garzón Ruano",
+    "Telefono": "+34 741 19 11 78",
+    "Direccion": "Glorieta Emiliana Acevedo 6 Apt. 61 \nSevilla, 06285",
+    "CorreoElectronico": "luisa37@gmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL104",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "378-57-1122",
+    "Nombre": "Emelina Seco Barberá",
+    "Telefono": "+34 727 046 141",
+    "Direccion": "Paseo Daniela Bustos 11 Piso 1 \nGuadalajara, 09426",
+    "CorreoElectronico": "montserratchico@calderon.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL105",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "689-35-9997",
+    "Nombre": "Agustín de Salgado",
+    "Telefono": "+34 733 161 024",
+    "Direccion": "Cuesta de Apolonia Arnau 859\nBadajoz, 33670",
+    "CorreoElectronico": "cerdafrancisco@blanco.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL106",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "417-05-1357",
+    "Nombre": "Abraham Morante-Jáuregui",
+    "Telefono": "+34823 92 37 13",
+    "Direccion": "Acceso de Rosa Castell 41\nTeruel, 25665",
+    "CorreoElectronico": "adriananogueira@gmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL107",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "065-99-0287",
+    "Nombre": "Febe Segura Moles",
+    "Telefono": "+34 700194909",
+    "Direccion": "Cañada Amaya Múgica 491\nHuelva, 34542",
+    "CorreoElectronico": "monreallupe@dalmau.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL108",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "602-80-6521",
+    "Nombre": "Román Noé Plana Bilbao",
+    "Telefono": "+34641 54 97 51",
+    "Direccion": "Vial Lucas Feijoo 731 Apt. 73 \nValladolid, 08739",
+    "CorreoElectronico": "flor73@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL109",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "548-91-5813",
+    "Nombre": "Emilio Cantero Revilla",
+    "Telefono": "+34733 45 48 92",
+    "Direccion": "Alameda de Nieves Ruiz 81 Piso 7 \nJaén, 49585",
+    "CorreoElectronico": "vbonilla@villalonga.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL110",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "408-39-1557",
+    "Nombre": "Mercedes Rodrigo-Gárate",
+    "Telefono": "+34 703188345",
+    "Direccion": "Acceso Mauricio Uría 28 Piso 3 \nHuelva, 13203",
+    "CorreoElectronico": "nicolas10@redondo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL111",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "652-59-3922",
+    "Nombre": "Emiliana Arranz Pagès",
+    "Telefono": "+34747 69 24 48",
+    "Direccion": "C. de Manuel Agullo 2 Piso 4 \nÁlava, 84288",
+    "CorreoElectronico": "aranzazusarmiento@carrera-vall.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL112",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "890-72-1541",
+    "Nombre": "Mar Llopis Cánovas",
+    "Telefono": "+34 745 46 12 04",
+    "Direccion": "Urbanización de Rómulo Valbuena 57\nHuesca, 23342",
+    "CorreoElectronico": "alberoligia@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL113",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "997-56-1709",
+    "Nombre": "Manolo Basilio Gonzalez Casal",
+    "Telefono": "+34714 066 014",
+    "Direccion": "Pasadizo de Tomasa Morcillo 739 Apt. 50 \nCádiz, 68432",
+    "CorreoElectronico": "hzabala@muro.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL114",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "188-35-9713",
+    "Nombre": "Curro Victorino Gallo Crespo",
+    "Telefono": "+34724 578 938",
+    "Direccion": "C. Candelas Catalán 910 Piso 7 \nBadajoz, 89941",
+    "CorreoElectronico": "nataliomoraleda@yahoo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL115",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "742-01-5304",
+    "Nombre": "Sarita Ana Cuesta Villaverde",
+    "Telefono": "+34975 596 680",
+    "Direccion": "Vial de Laura Menendez 39\nÁvila, 92907",
+    "CorreoElectronico": "amarilis55@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL116",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "183-46-3994",
+    "Nombre": "Fortunato Leal Cabrero",
+    "Telefono": "+34 711 094 403",
+    "Direccion": "Callejón de Teófila Carrión 55\nLa Rioja, 99265",
+    "CorreoElectronico": "herminia36@rosello.net",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL117",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "290-59-5095",
+    "Nombre": "Paca Álamo",
+    "Telefono": "+34665 727 652",
+    "Direccion": "Ronda Máximo Pinto 31\nCuenca, 24383",
+    "CorreoElectronico": "leyre17@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL118",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "973-45-8061",
+    "Nombre": "Ángel Gregorio Matas Ayala",
+    "Telefono": "+34 888 47 37 46",
+    "Direccion": "Glorieta Heriberto Vizcaíno 479\nTarragona, 00175",
+    "CorreoElectronico": "marmolcustodio@sala-barrio.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL119",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "210-26-6842",
+    "Nombre": "Patricia Fortuny Barrera",
+    "Telefono": "+34714 023 061",
+    "Direccion": "Avenida de Micaela Melero 32 Puerta 2 \nJaén, 30728",
+    "CorreoElectronico": "azeneth28@gmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL120",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "427-77-0953",
+    "Nombre": "Samanta Manjón Mena",
+    "Telefono": "+34834889996",
+    "Direccion": "Calle Estefanía Solana 56\nLeón, 34110",
+    "CorreoElectronico": "fbaez@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL121",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "113-33-3141",
+    "Nombre": "Ricarda de Ferrando",
+    "Telefono": "+34723805275",
+    "Direccion": "Glorieta Bruno Palomar 77 Apt. 48 \nCastellón, 84718",
+    "CorreoElectronico": "silvasol@herranz.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL122",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "919-84-2773",
+    "Nombre": "Silvestre Calzada Solís",
+    "Telefono": "+34 802511522",
+    "Direccion": "Vial Rosalinda Tamayo 95\nAlmería, 36500",
+    "CorreoElectronico": "leandro32@alcantara.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL123",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "883-67-4699",
+    "Nombre": "Fortunato Alegria Calleja",
+    "Telefono": "+34 725 31 70 95",
+    "Direccion": "Urbanización de Leire Trujillo 47 Puerta 2 \nAlbacete, 02803",
+    "CorreoElectronico": "fernandoyuste@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL124",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "838-63-2451",
+    "Nombre": "Federico Adán Osorio",
+    "Telefono": "+34 735 68 11 30",
+    "Direccion": "C. Cecilia Segarra 13 Puerta 5 \nBaleares, 09084",
+    "CorreoElectronico": "sigfrido70@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL125",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "318-36-6807",
+    "Nombre": "Galo Gómez Duarte",
+    "Telefono": "+34737 287 111",
+    "Direccion": "Cuesta de Wilfredo Álvarez 57 Piso 4 \nVizcaya, 48834",
+    "CorreoElectronico": "rolivares@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL126",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "401-47-7371",
+    "Nombre": "Evangelina Arana Villalobos",
+    "Telefono": "+34 707 17 66 00",
+    "Direccion": "Paseo Loida Juárez 326\nCórdoba, 63253",
+    "CorreoElectronico": "kibarra@adan-ibarra.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL127",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "939-84-6834",
+    "Nombre": "Urbano Goicoechea Burgos",
+    "Telefono": "+34722 77 19 22",
+    "Direccion": "C. de Ámbar Mínguez 15\nValladolid, 23740",
+    "CorreoElectronico": "aneira@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL128",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "441-99-3859",
+    "Nombre": "Evaristo Santamaría Guerra",
+    "Telefono": "+34 707 306 375",
+    "Direccion": "Via de Dionisia Márquez 88 Puerta 6 \nZamora, 27968",
+    "CorreoElectronico": "ariadna53@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL129",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "208-20-7526",
+    "Nombre": "Alcides Emilio Villalonga Narváez",
+    "Telefono": "+34 876 98 76 61",
+    "Direccion": "Urbanización de Ulises Santana 413 Puerta 8 \nBadajoz, 05079",
+    "CorreoElectronico": "irisaller@prieto.es",
+    "id_seguro": "SEG003",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL130",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "515-68-8184",
+    "Nombre": "Iván Linares Catalán",
+    "Telefono": "+34 672 02 35 13",
+    "Direccion": "Callejón Bautista Fonseca 80\nSoria, 43709",
+    "CorreoElectronico": "donairecayetano@huertas.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL131",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "061-44-2987",
+    "Nombre": "Adolfo Cózar-Gimenez",
+    "Telefono": "+34713 959 872",
+    "Direccion": "Pasadizo Anacleto Gilabert 85 Piso 9 \nPontevedra, 57622",
+    "CorreoElectronico": "spozo@tamarit.org",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL132",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "422-51-4808",
+    "Nombre": "Jose Antonio Hierro Rico",
+    "Telefono": "+34715 09 71 76",
+    "Direccion": "Cañada de Clementina Pereira 51\nLeón, 60629",
+    "CorreoElectronico": "antunezantonio@herrera-falcon.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL133",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "536-07-9203",
+    "Nombre": "Ester Hernandez Manzanares",
+    "Telefono": "+34 665891777",
+    "Direccion": "Via Anacleto Ríos 2 Piso 6 \nLeón, 49768",
+    "CorreoElectronico": "tdaza@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL134",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "048-80-8389",
+    "Nombre": "Ema Hervás Reina",
+    "Telefono": "+34716 823 102",
+    "Direccion": "Paseo de Sara Reina 585\nAlmería, 09957",
+    "CorreoElectronico": "isabel51@rebollo-tapia.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL135",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "044-48-1936",
+    "Nombre": "Anita Sala Roldan",
+    "Telefono": "+34 686332095",
+    "Direccion": "Plaza Danilo Cabello 78 Piso 3 \nLas Palmas, 79919",
+    "CorreoElectronico": "feliciana95@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL136",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "199-64-2570",
+    "Nombre": "Jose Ignacio Collado-Valenzuela",
+    "Telefono": "+34724 23 04 33",
+    "Direccion": "Cuesta Tiburcio Valverde 69\nPontevedra, 93382",
+    "CorreoElectronico": "rosa-mariapereira@soriano.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL137",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "709-41-9043",
+    "Nombre": "Mirta Burgos Aznar",
+    "Telefono": "+34 743674590",
+    "Direccion": "Ronda Rebeca Naranjo 5\nValencia, 92022",
+    "CorreoElectronico": "lmiguel@pellicer-plana.org",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL138",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "574-35-1877",
+    "Nombre": "Felipe Abascal-Reina",
+    "Telefono": "+34746750076",
+    "Direccion": "Acceso de María Del Carmen Castell 22 Puerta 2 \nLleida, 64438",
+    "CorreoElectronico": "guadaluperoldan@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL139",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "361-63-6515",
+    "Nombre": "Severino Salmerón Camacho",
+    "Telefono": "+34747161933",
+    "Direccion": "Via de Matías Romeu 96\nJaén, 60967",
+    "CorreoElectronico": "ygomis@losa-saura.net",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL140",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "082-29-2735",
+    "Nombre": "Lina del Villanueva",
+    "Telefono": "+34733900537",
+    "Direccion": "Avenida Gervasio Andreu 602\nVizcaya, 14860",
+    "CorreoElectronico": "carneroclaudia@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL141",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "966-82-3280",
+    "Nombre": "Tatiana Aragón Paredes",
+    "Telefono": "+34703053401",
+    "Direccion": "Alameda José Luis Vila 41\nCórdoba, 91778",
+    "CorreoElectronico": "higuerasfrancisco-jose@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL142",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "415-56-9848",
+    "Nombre": "María Carmen Machado Sastre",
+    "Telefono": "+34746 14 68 15",
+    "Direccion": "C. María Manuela Pont 1\nBurgos, 00548",
+    "CorreoElectronico": "porrasjose-antonio@figueras-carlos.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL143",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "687-87-4508",
+    "Nombre": "Artemio del Jara",
+    "Telefono": "+34 715948302",
+    "Direccion": "Vial Valentina Giralt 650 Apt. 12 \nGuadalajara, 83653",
+    "CorreoElectronico": "gramon@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL144",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "005-80-5534",
+    "Nombre": "Daniel Toño Cantero Diego",
+    "Telefono": "+34873374190",
+    "Direccion": "Cuesta de Luna Sánchez 59\nZaragoza, 83125",
+    "CorreoElectronico": "solsonaangeles@arino.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL145",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "163-04-2273",
+    "Nombre": "Efraín Amaya Llano",
+    "Telefono": "+34 839 920 289",
+    "Direccion": "Camino Rafael Miguel 47 Puerta 1 \nHuesca, 92603",
+    "CorreoElectronico": "jacinto23@bueno.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL146",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "656-67-6020",
+    "Nombre": "Aurelio Otero Riera",
+    "Telefono": "+34612 152 209",
+    "Direccion": "Urbanización Maxi Flores 25 Apt. 84 \nMadrid, 22089",
+    "CorreoElectronico": "samuelfarre@gmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL147",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "471-70-2695",
+    "Nombre": "Isidro Falcó Seco",
+    "Telefono": "+34736256449",
+    "Direccion": "Cañada de Lázaro Ocaña 1 Apt. 71 \nTeruel, 57410",
+    "CorreoElectronico": "cabanillasjavi@criado-barroso.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL148",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "346-59-4703",
+    "Nombre": "Efraín Benavente",
+    "Telefono": "+34914 724 371",
+    "Direccion": "Cuesta Flavia Barbero 981 Puerta 5 \nAlbacete, 56762",
+    "CorreoElectronico": "tabellan@frias.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL149",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "147-79-4532",
+    "Nombre": "Sabina Medina Exposito",
+    "Telefono": "+34 845 79 32 22",
+    "Direccion": "Plaza Xiomara Espada 243 Puerta 7 \nSegovia, 47088",
+    "CorreoElectronico": "aitor53@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL150",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "608-39-4562",
+    "Nombre": "Elías Torrijos-Huguet",
+    "Telefono": "+34960 625 598",
+    "Direccion": "Vial Amelia Andres 7\nSevilla, 57693",
+    "CorreoElectronico": "maura66@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL151",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "078-21-0930",
+    "Nombre": "Maribel Galan Gomis",
+    "Telefono": "+34749 427 198",
+    "Direccion": "Camino Evita Folch 20 Piso 4 \nGuipúzcoa, 44207",
+    "CorreoElectronico": "agapito37@gmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL152",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "910-74-4148",
+    "Nombre": "Angélica Fortunata Recio Lucena",
+    "Telefono": "+34 874 24 85 97",
+    "Direccion": "C. de Ofelia Leon 87 Piso 0 \nAlicante, 65226",
+    "CorreoElectronico": "eladio96@tamayo.org",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL153",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "577-69-0994",
+    "Nombre": "Alma Calvet Macias",
+    "Telefono": "+34733 49 47 12",
+    "Direccion": "Acceso de Eusebia Carballo 657 Puerta 8 \nHuesca, 54873",
+    "CorreoElectronico": "noa83@alvarado-matas.net",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL154",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "725-44-7850",
+    "Nombre": "Hector Santos Alvarez",
+    "Telefono": "+34 711 99 96 45",
+    "Direccion": "Callejón de Leonel Somoza 65\nCantabria, 83021",
+    "CorreoElectronico": "raimundolumbreras@echeverria.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL155",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "266-64-6361",
+    "Nombre": "Fito Landa Delgado",
+    "Telefono": "+34 891906757",
+    "Direccion": "Avenida Carmina Berenguer 56 Puerta 6 \nLleida, 38583",
+    "CorreoElectronico": "galvezcristian@rios.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL156",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "873-44-6417",
+    "Nombre": "Febe Fátima Salgado Fábregas",
+    "Telefono": "+34988 270 326",
+    "Direccion": "Plaza de Calisto Reguera 92\nÁvila, 02710",
+    "CorreoElectronico": "cloe59@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL157",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "471-15-9974",
+    "Nombre": "Susanita Estrada Chacón",
+    "Telefono": "+34628106830",
+    "Direccion": "Via de Mayte Carbajo 16 Apt. 96 \nJaén, 38651",
+    "CorreoElectronico": "fbermejo@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL158",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "977-07-2717",
+    "Nombre": "Tere Diez Lledó",
+    "Telefono": "+34 653877926",
+    "Direccion": "Paseo Samanta Manzanares 991\nTeruel, 94160",
+    "CorreoElectronico": "porfirio23@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL159",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "549-81-3040",
+    "Nombre": "Jonatan Rivera Solana",
+    "Telefono": "+34735906972",
+    "Direccion": "Via Verónica Bonilla 721 Apt. 62 \nMurcia, 79624",
+    "CorreoElectronico": "marcojaime@valbuena.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL160",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "076-49-6105",
+    "Nombre": "César Granados Luque",
+    "Telefono": "+34707058715",
+    "Direccion": "C. de Magdalena Zaragoza 60 Piso 4 \nTarragona, 57674",
+    "CorreoElectronico": "fidelescalona@sainz-bilbao.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL161",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "960-83-5668",
+    "Nombre": "Graciano Barral Porta",
+    "Telefono": "+34746 995 296",
+    "Direccion": "Rambla de Evangelina Quero 39 Piso 8 \nBurgos, 55285",
+    "CorreoElectronico": "aristides12@gmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL162",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "301-56-6548",
+    "Nombre": "Ainoa Jimena Asensio Cabello",
+    "Telefono": "+34729 909 344",
+    "Direccion": "Plaza de Geraldo Hidalgo 2\nZamora, 10711",
+    "CorreoElectronico": "hipolitomarmol@cortina.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL163",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "165-63-8442",
+    "Nombre": "Jacobo Rosselló Jerez",
+    "Telefono": "+34 740 13 66 68",
+    "Direccion": "Vial de Evaristo Cuesta 817\nZamora, 07903",
+    "CorreoElectronico": "oposada@gmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL164",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "760-41-8582",
+    "Nombre": "Begoña Javiera Botella Meléndez",
+    "Telefono": "+34715 701 968",
+    "Direccion": "Pasaje María Lillo 18 Piso 3 \nBadajoz, 27116",
+    "CorreoElectronico": "leonciolorenzo@hotmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL165",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "296-05-6795",
+    "Nombre": "Evelia Rosario Esteban Blasco",
+    "Telefono": "+34601196521",
+    "Direccion": "Acceso Cecilio Durán 30\nHuesca, 09588",
+    "CorreoElectronico": "josep75@gmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL166",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "906-02-1851",
+    "Nombre": "Dafne Bravo Jaume",
+    "Telefono": "+34 651 217 597",
+    "Direccion": "Avenida de Fidel Vendrell 53\nCórdoba, 90196",
+    "CorreoElectronico": "gallegoalejandra@hotmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL167",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "431-12-2281",
+    "Nombre": "Dominga Bou Cabañas",
+    "Telefono": "+34736 312 450",
+    "Direccion": "Alameda de Cleto Moya 7 Apt. 68 \nTeruel, 63677",
+    "CorreoElectronico": "carminaaguilo@nicolau.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL168",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "922-67-0952",
+    "Nombre": "Emilia Vallés Marin",
+    "Telefono": "+34 997 836 908",
+    "Direccion": "Pasadizo Tomasa Cabeza 31\nMelilla, 17946",
+    "CorreoElectronico": "ycervera@hotmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL169",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "467-85-2989",
+    "Nombre": "Alfonso Vall Mata",
+    "Telefono": "+34872 351 468",
+    "Direccion": "Via Vidal Reguera 4 Apt. 82 \nPalencia, 64750",
+    "CorreoElectronico": "perlita55@cardona.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL170",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "034-47-0501",
+    "Nombre": "Teófilo Báez Pintor",
+    "Telefono": "+34 718 31 11 97",
+    "Direccion": "Rambla Elisa Abella 2 Apt. 38 \nBurgos, 22033",
+    "CorreoElectronico": "panchomadrid@leon.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL171",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "190-31-2370",
+    "Nombre": "Pío Luque Bayo",
+    "Telefono": "+34 826 026 768",
+    "Direccion": "Urbanización Ceferino Gil 629\nAlmería, 50414",
+    "CorreoElectronico": "rmontes@yahoo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL172",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "904-67-6013",
+    "Nombre": "Consuelo Domínguez Pulido",
+    "Telefono": "+34 964432720",
+    "Direccion": "Plaza de Lola Estrada 41 Piso 5 \nGuadalajara, 60338",
+    "CorreoElectronico": "lola10@villaverde.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL173",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "226-18-1000",
+    "Nombre": "Ruperta de Bilbao",
+    "Telefono": "+34722 599 865",
+    "Direccion": "Cañada Eli Vazquez 23 Puerta 2 \nNavarra, 72395",
+    "CorreoElectronico": "rinconveronica@jauregui.net",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL174",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "543-60-3292",
+    "Nombre": "Celestino Tejada Peral",
+    "Telefono": "+34 814 88 70 91",
+    "Direccion": "Pasadizo Morena Fuertes 23\nZaragoza, 08991",
+    "CorreoElectronico": "benigna75@miranda.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL175",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "715-70-3694",
+    "Nombre": "Ceferino Cepeda Gonzalo",
+    "Telefono": "+34748696972",
+    "Direccion": "Callejón de Cleto Rosselló 73 Piso 0 \nCiudad, 78010",
+    "CorreoElectronico": "montoyagerman@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL176",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "420-76-6168",
+    "Nombre": "Fabio Canales Escamilla",
+    "Telefono": "+34 701 953 135",
+    "Direccion": "Plaza de Eutimio Díez 27 Puerta 7 \nBurgos, 61227",
+    "CorreoElectronico": "isidoracamacho@iriarte.net",
+    "id_seguro": "SEG001",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL177",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "929-18-1270",
+    "Nombre": "Pepita Vilaplana Villalobos",
+    "Telefono": "+34911165561",
+    "Direccion": "Pasaje de José Ángel Vives 61\nBaleares, 10948",
+    "CorreoElectronico": "manuelaaznar@ramos-chaparro.net",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL178",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "909-00-0935",
+    "Nombre": "Eutropio Esteve Vega",
+    "Telefono": "+34716 51 29 64",
+    "Direccion": "Pasadizo Federico Carreras 44 Piso 8 \nCeuta, 67454",
+    "CorreoElectronico": "isidro66@fortuny.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL179",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "671-26-3582",
+    "Nombre": "Chus Ripoll",
+    "Telefono": "+34709 940 589",
+    "Direccion": "Cuesta Dolores Piñol 80 Piso 1 \nÁvila, 97792",
+    "CorreoElectronico": "borjasarabia@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL180",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "494-05-4607",
+    "Nombre": "Paloma Prudencia Arnaiz Lago",
+    "Telefono": "+34726 01 80 51",
+    "Direccion": "Pasadizo Eusebia Escribano 45\nZaragoza, 54131",
+    "CorreoElectronico": "adelia60@gmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL181",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "736-62-9600",
+    "Nombre": "Donato Ruy Chacón Jiménez",
+    "Telefono": "+34 737 380 066",
+    "Direccion": "Pasadizo de Aureliano Elorza 41\nLa Coruña, 45719",
+    "CorreoElectronico": "rodrigo72@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL182",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "083-12-0524",
+    "Nombre": "Azahara Comas Cabrera",
+    "Telefono": "+34 713808223",
+    "Direccion": "Acceso de Nicolás Esparza 66 Puerta 3 \nCiudad, 47024",
+    "CorreoElectronico": "hcordero@aranda-mariscal.net",
+    "id_seguro": "SEG003",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL183",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "924-60-3993",
+    "Nombre": "Prudencio Arias Palomino",
+    "Telefono": "+34 736 45 53 91",
+    "Direccion": "Urbanización de Duilio Aznar 66 Apt. 04 \nBadajoz, 18362",
+    "CorreoElectronico": "yolanda37@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL184",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "756-70-5568",
+    "Nombre": "Eli Zurita",
+    "Telefono": "+34 675518163",
+    "Direccion": "Alameda Juan Antonio Garzón 109 Apt. 23 \nLeón, 63287",
+    "CorreoElectronico": "privera@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL185",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "786-47-7970",
+    "Nombre": "Antonia Haro Salmerón",
+    "Telefono": "+34 662531631",
+    "Direccion": "Callejón Maxi Tomé 85 Apt. 79 \nÁlava, 64539",
+    "CorreoElectronico": "jibarra@yahoo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL186",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "070-70-9156",
+    "Nombre": "Román de Ripoll",
+    "Telefono": "+34966 812 369",
+    "Direccion": "Acceso Bernardita Fortuny 33 Apt. 93 \nLa Coruña, 59524",
+    "CorreoElectronico": "morenaacevedo@gmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL187",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "424-72-8174",
+    "Nombre": "Petrona Sebastián Arce",
+    "Telefono": "+34 712 963 695",
+    "Direccion": "Camino Ainoa Cervantes 715\nMurcia, 38109",
+    "CorreoElectronico": "gertrudis20@castell-verdu.org",
+    "id_seguro": "SEG004",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL188",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "654-66-9407",
+    "Nombre": "Leticia Salinas Vélez",
+    "Telefono": "+34937324072",
+    "Direccion": "Via de Carmelita Reig 55\nValladolid, 01062",
+    "CorreoElectronico": "obeltran@catala-espada.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL189",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "555-26-8399",
+    "Nombre": "Cebrián Jimenez Salgado",
+    "Telefono": "+34 721 555 549",
+    "Direccion": "Callejón de Edelmira Peña 39\nBaleares, 34781",
+    "CorreoElectronico": "crescenciabarcena@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL190",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "062-17-2510",
+    "Nombre": "Renata Duque Herranz",
+    "Telefono": "+34709 86 89 01",
+    "Direccion": "Pasaje Jonatan Puerta 91 Apt. 33 \nOurense, 06116",
+    "CorreoElectronico": "luciano07@yahoo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL191",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "629-15-5134",
+    "Nombre": "Jose Manuel Sandalio Jáuregui Barberá",
+    "Telefono": "+34745 27 11 13",
+    "Direccion": "Calle Chema Bermúdez 2\nAlbacete, 15680",
+    "CorreoElectronico": "qtolosa@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL192",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "159-31-6035",
+    "Nombre": "Carina Pino Escalona",
+    "Telefono": "+34709 268 714",
+    "Direccion": "Rambla de Marc Morcillo 29 Puerta 1 \nSoria, 96792",
+    "CorreoElectronico": "osanabria@gmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL193",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "512-50-3939",
+    "Nombre": "Lourdes Llanos Hurtado",
+    "Telefono": "+34728 241 531",
+    "Direccion": "Callejón Emperatriz Santana 30\nCantabria, 84712",
+    "CorreoElectronico": "calderonmagdalena@gmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL194",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "236-91-3697",
+    "Nombre": "Marino del Cañizares",
+    "Telefono": "+34708 188 304",
+    "Direccion": "Avenida de Ángeles Calzada 77 Piso 2 \nBarcelona, 24449",
+    "CorreoElectronico": "sarita17@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL195",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "184-97-5333",
+    "Nombre": "Rubén Zabaleta Mulet",
+    "Telefono": "+34806 39 28 32",
+    "Direccion": "Via de Carmina Guillén 780\nCantabria, 08377",
+    "CorreoElectronico": "valentin57@pascual.org",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL196",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "374-30-7831",
+    "Nombre": "Almudena Fajardo Mendez",
+    "Telefono": "+34 866018364",
+    "Direccion": "Acceso de Catalina Lobato 969 Apt. 75 \nCeuta, 65911",
+    "CorreoElectronico": "avalle@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL197",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "923-83-0523",
+    "Nombre": "Calisto Valentín Osuna",
+    "Telefono": "+34 948 535 326",
+    "Direccion": "Rambla de Florina Redondo 2\nBurgos, 32788",
+    "CorreoElectronico": "candelariouribe@cases-vidal.net",
+    "id_seguro": "SEG001",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL198",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "215-74-8143",
+    "Nombre": "Ainoa Garay",
+    "Telefono": "+34731 729 723",
+    "Direccion": "Cañada de Jordi Leiva 32 Apt. 58 \nLugo, 23854",
+    "CorreoElectronico": "dalegre@ribera.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL199",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "122-40-7054",
+    "Nombre": "Reina Quintana Peiró",
+    "Telefono": "+34 662 80 69 52",
+    "Direccion": "Alameda de Sofía Valderrama 5 Piso 7 \nLas Palmas, 62396",
+    "CorreoElectronico": "aurelianocoronado@marin-cordoba.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL200",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "282-64-1668",
+    "Nombre": "Bautista Rivera",
+    "Telefono": "+34953537865",
+    "Direccion": "Pasadizo Aroa Calderón 628\nPontevedra, 81739",
+    "CorreoElectronico": "gabrielpedro@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL201",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "422-11-9007",
+    "Nombre": "Consuelo Feliu Vigil",
+    "Telefono": "+34746920505",
+    "Direccion": "Glorieta de Flor Rojas 51\nCastellón, 29749",
+    "CorreoElectronico": "leandragrau@gmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL202",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "100-35-0510",
+    "Nombre": "Aitana Esteban-Anglada",
+    "Telefono": "+34820257489",
+    "Direccion": "Via Carina Abril 20 Puerta 0 \nBaleares, 73545",
+    "CorreoElectronico": "andres-felipe42@hotmail.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL203",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "593-88-8066",
+    "Nombre": "Eugenio Calatayud Lloret",
+    "Telefono": "+34728 959 716",
+    "Direccion": "Plaza Blanca Leon 23 Piso 8 \nSevilla, 34103",
+    "CorreoElectronico": "obdulia71@jaen.es",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL204",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "404-78-4541",
+    "Nombre": "Cleto López Lobo",
+    "Telefono": "+34661790808",
+    "Direccion": "Glorieta de Angelita Calleja 42 Piso 4 \nNavarra, 41909",
+    "CorreoElectronico": "sescobar@villalba-marques.es",
+    "id_seguro": "SEG001",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL205",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "517-92-2026",
+    "Nombre": "Amor Jerez Reyes",
+    "Telefono": "+34 980 337 592",
+    "Direccion": "Pasadizo de Roxana Valle 871\nSalamanca, 21846",
+    "CorreoElectronico": "sedanoregina@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL206",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "124-90-0639",
+    "Nombre": "Trini Orozco Palomo",
+    "Telefono": "+34 749 547 380",
+    "Direccion": "Urbanización Darío Prats 551 Piso 4 \nSoria, 47134",
+    "CorreoElectronico": "bcanales@planas.net",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL207",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "517-61-0763",
+    "Nombre": "Isabela Peña Villena",
+    "Telefono": "+34 880836026",
+    "Direccion": "Callejón de Eric Ricart 29 Piso 7 \nCáceres, 76087",
+    "CorreoElectronico": "espinosamarta@yahoo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL208",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "419-64-0471",
+    "Nombre": "Andrea Bayona Cabo",
+    "Telefono": "+34 744 383 000",
+    "Direccion": "Paseo de Feliciano Cobo 81 Apt. 28 \nCeuta, 34147",
+    "CorreoElectronico": "wluna@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL209",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "139-58-6402",
+    "Nombre": "Oriana Cañizares",
+    "Telefono": "+34704068364",
+    "Direccion": "Calle Guiomar Batalla 1\nÁlava, 23999",
+    "CorreoElectronico": "almeidamaite@blanca.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL210",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "525-82-2782",
+    "Nombre": "Corona Bastida Ruano",
+    "Telefono": "+34 749 114 275",
+    "Direccion": "Urbanización Édgar Román 64\nBurgos, 09955",
+    "CorreoElectronico": "nalsina@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL211",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "027-18-8269",
+    "Nombre": "Ambrosio Aznar Fuentes",
+    "Telefono": "+34706223048",
+    "Direccion": "Pasaje de Raimundo Piquer 830\nTeruel, 59618",
+    "CorreoElectronico": "atiliocoronado@gargallo.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL212",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "136-84-6587",
+    "Nombre": "Abigaíl Cuervo Vilanova",
+    "Telefono": "+34985 21 82 50",
+    "Direccion": "Acceso Candelario Cortés 24 Puerta 3 \nAsturias, 62634",
+    "CorreoElectronico": "inesrojas@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL213",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "823-67-6331",
+    "Nombre": "Mateo Novoa Nevado",
+    "Telefono": "+34817 18 92 31",
+    "Direccion": "Avenida de María Dolores Castellanos 4 Puerta 2 \nÁlava, 31950",
+    "CorreoElectronico": "xsanchez@atienza-gomez.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL214",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "243-39-2961",
+    "Nombre": "Francisco Javier Ballester Barrio",
+    "Telefono": "+34911 40 79 28",
+    "Direccion": "Vial de Tomás Tejero 250\nBadajoz, 83005",
+    "CorreoElectronico": "morenoramirez@luque.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL215",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "242-31-9035",
+    "Nombre": "Gala Pla Murillo",
+    "Telefono": "+34 725 49 15 58",
+    "Direccion": "Rambla Priscila Bravo 21\nBadajoz, 96627",
+    "CorreoElectronico": "agustina33@somoza-gilabert.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL216",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "866-22-5654",
+    "Nombre": "Marino Alvarado Verdú",
+    "Telefono": "+34745 40 90 25",
+    "Direccion": "Via de Teófilo Real 65\nMálaga, 78136",
+    "CorreoElectronico": "loida58@madrigal.es",
+    "id_seguro": "SEG004",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL217",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "466-43-9329",
+    "Nombre": "Gregorio Madrid Barriga",
+    "Telefono": "+34818 832 667",
+    "Direccion": "Avenida Pepe Fortuny 290\nGuipúzcoa, 06172",
+    "CorreoElectronico": "rosadonerea@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL218",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "588-58-2828",
+    "Nombre": "Sofía Vendrell Almeida",
+    "Telefono": "+34947291686",
+    "Direccion": "Cañada de Olegario Naranjo 62\nMadrid, 10380",
+    "CorreoElectronico": "xballesteros@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL219",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "064-31-3931",
+    "Nombre": "Evelia Santos Gordillo",
+    "Telefono": "+34724 71 12 37",
+    "Direccion": "Ronda Esteban Sierra 27 Piso 1 \nTeruel, 75124",
+    "CorreoElectronico": "campojacinta@pol-bonet.org",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL220",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "143-15-7304",
+    "Nombre": "Antonio Toledo Pereira",
+    "Telefono": "+34724 10 90 13",
+    "Direccion": "Pasadizo de Perlita Tovar 850\nToledo, 42172",
+    "CorreoElectronico": "raimundootero@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL221",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "658-52-3698",
+    "Nombre": "Donato Carreras Juan",
+    "Telefono": "+34722 561 689",
+    "Direccion": "Urbanización de Horacio Pastor 7 Piso 7 \nGranada, 03225",
+    "CorreoElectronico": "martin71@bravo.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL222",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "691-80-8476",
+    "Nombre": "Selena Reguera Azorin",
+    "Telefono": "+34732 39 42 84",
+    "Direccion": "Ronda de Filomena Cerezo 34\nJaén, 97262",
+    "CorreoElectronico": "almansaagustina@hotmail.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL223",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "006-95-2266",
+    "Nombre": "Aurelia Daniela Egea Fuertes",
+    "Telefono": "+34707 070 133",
+    "Direccion": "Calle Nicolasa Barberá 2\nBarcelona, 74757",
+    "CorreoElectronico": "lcasas@yahoo.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL224",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "300-50-0402",
+    "Nombre": "Jose Carlos Montes Ortega",
+    "Telefono": "+34 630 45 43 18",
+    "Direccion": "Plaza de Noa Sales 3\nSegovia, 61611",
+    "CorreoElectronico": "andrea65@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL225",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "800-84-4922",
+    "Nombre": "Eloísa de Cortés",
+    "Telefono": "+34735 424 885",
+    "Direccion": "Plaza de Paola López 36\nVizcaya, 68340",
+    "CorreoElectronico": "celiaramirez@gmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL226",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "189-88-8509",
+    "Nombre": "Timoteo Correa Cabeza",
+    "Telefono": "+34 680220534",
+    "Direccion": "Via Dionisio Roig 14 Piso 8 \nSoria, 52065",
+    "CorreoElectronico": "sarranz@milla-villaverde.net",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL227",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "572-47-4491",
+    "Nombre": "Hugo Badía Corral",
+    "Telefono": "+34 712 42 81 44",
+    "Direccion": "Plaza Julio César Teruel 394 Piso 3 \nAlicante, 79387",
+    "CorreoElectronico": "maria-belen09@gmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL228",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "808-10-0376",
+    "Nombre": "Clarisa Uribe",
+    "Telefono": "+34 894 530 013",
+    "Direccion": "Paseo de Raúl Pereira 25\nBurgos, 71691",
+    "CorreoElectronico": "jose-luismillan@gmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL229",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "279-52-5309",
+    "Nombre": "Jimena Cuadrado Esparza",
+    "Telefono": "+34716987155",
+    "Direccion": "Cuesta de Nicolás Sedano 88 Piso 8 \nCáceres, 22214",
+    "CorreoElectronico": "zdiaz@yahoo.com",
+    "id_seguro": "SEG005",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL230",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "875-80-0821",
+    "Nombre": "Roxana Valero Carlos",
+    "Telefono": "+34 709830897",
+    "Direccion": "Pasaje Salud Baró 644 Puerta 9 \nCádiz, 15154",
+    "CorreoElectronico": "ydominguez@morera.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL231",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "703-97-4395",
+    "Nombre": "Tito del Izquierdo",
+    "Telefono": "+34 736 85 81 62",
+    "Direccion": "Calle de Gloria Lasa 6 Piso 1 \nCáceres, 52052",
+    "CorreoElectronico": "qandrade@alberdi.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL232",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "509-92-9964",
+    "Nombre": "Edu de Oliveras",
+    "Telefono": "+34806140711",
+    "Direccion": "Alameda Hortensia Rincón 392 Piso 9 \nVizcaya, 30787",
+    "CorreoElectronico": "arcossegismundo@hotmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL233",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "840-14-2222",
+    "Nombre": "Berto Fito Cuéllar Prat",
+    "Telefono": "+34705 71 13 10",
+    "Direccion": "Alameda Victor Navas 97 Piso 6 \nLa Coruña, 61488",
+    "CorreoElectronico": "florgraciela@roda-blanco.es",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL234",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "000-33-8375",
+    "Nombre": "Ignacia Amo Mayoral",
+    "Telefono": "+34731 15 29 06",
+    "Direccion": "Via Blanca Quirós 16\nLa Rioja, 94251",
+    "CorreoElectronico": "zairaarenas@anaya.org",
+    "id_seguro": "SEG003",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL235",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "472-34-9333",
+    "Nombre": "Fortunata Manrique-Recio",
+    "Telefono": "+34855 18 79 42",
+    "Direccion": "Glorieta de Paloma Ayuso 225\nGuipúzcoa, 66631",
+    "CorreoElectronico": "alonsoarcelia@hotmail.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL236",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "509-88-8997",
+    "Nombre": "Eli Amanda Almansa Marti",
+    "Telefono": "+34 732 51 87 58",
+    "Direccion": "Camino Albina Casanova 33 Apt. 14 \nHuesca, 61082",
+    "CorreoElectronico": "ciro66@andres.es",
+    "id_seguro": "SEG003",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL237",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "587-12-7704",
+    "Nombre": "Alfonso Chacón",
+    "Telefono": "+34740 736 386",
+    "Direccion": "Cañada Trinidad Jaume 21 Piso 5 \nAlbacete, 70101",
+    "CorreoElectronico": "jdieguez@gmail.com",
+    "id_seguro": "SEG001",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL238",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "685-60-0819",
+    "Nombre": "Mercedes Esmeralda Crespo Quintana",
+    "Telefono": "+34 732 94 88 40",
+    "Direccion": "Acceso de Edmundo Antúnez 31\nOurense, 46790",
+    "CorreoElectronico": "gabino00@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL239",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "420-37-6750",
+    "Nombre": "Espiridión Parra",
+    "Telefono": "+34979928565",
+    "Direccion": "Vial Abigaíl Alcalá 21 Puerta 4 \nMelilla, 06543",
+    "CorreoElectronico": "pugaismael@gmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H002",
+    "NumeroHistoria": "HCL240",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "608-22-6976",
+    "Nombre": "Natalio Castañeda Recio",
+    "Telefono": "+34 734 56 59 01",
+    "Direccion": "Ronda de Paulino Monreal 23\nSegovia, 11996",
+    "CorreoElectronico": "pradajose-manuel@yahoo.com",
+    "id_seguro": "SEG004",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL241",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "177-56-5470",
+    "Nombre": "Chuy Garmendia Espada",
+    "Telefono": "+34 734201150",
+    "Direccion": "Ronda de Sabina Valverde 57\nToledo, 50601",
+    "CorreoElectronico": "estefania74@yahoo.com",
+    "id_seguro": "SEG003",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL242",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "196-15-6156",
+    "Nombre": "Silvia Gámez-Jara",
+    "Telefono": "+34 621 48 07 67",
+    "Direccion": "Paseo de Eli Manso 35\nAlmería, 77884",
+    "CorreoElectronico": "conradotalavera@alvarez.net",
+    "id_seguro": "SEG005",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL243",
+    "GrupoEdad": "Adulto Mayor"
+  },
+  {
+    "DNI": "223-06-3818",
+    "Nombre": "Rufino Amigó Torrents",
+    "Telefono": "+34916313728",
+    "Direccion": "Rambla Cándida Cal 133 Puerta 9 \nPalencia, 72820",
+    "CorreoElectronico": "cristinapalomares@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL244",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "395-28-1169",
+    "Nombre": "Isabel Álamo",
+    "Telefono": "+34735202028",
+    "Direccion": "Pasaje Antonia Uría 750 Puerta 4 \nLas Palmas, 53582",
+    "CorreoElectronico": "maricruz62@hernando.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H005",
+    "NumeroHistoria": "HCL245",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "129-43-4187",
+    "Nombre": "Carmelita Granados",
+    "Telefono": "+34 838 336 506",
+    "Direccion": "Vial de Aurelia Oliver 958\nSoria, 90083",
+    "CorreoElectronico": "lriquelme@vera.es",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL246",
+    "GrupoEdad": "Adulto"
+  },
+  {
+    "DNI": "108-44-4851",
+    "Nombre": "Vasco Salmerón",
+    "Telefono": "+34705 46 06 54",
+    "Direccion": "Cuesta Paca Taboada 56 Apt. 30 \nAlbacete, 79135",
+    "CorreoElectronico": "calvetamor@benavente.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H001",
+    "NumeroHistoria": "HCL247",
+    "GrupoEdad": "Niño"
+  },
+  {
+    "DNI": "314-18-1261",
+    "Nombre": "Judith Herranz",
+    "Telefono": "+34 723 425 329",
+    "Direccion": "Ronda de Emigdio Ricart 467 Piso 0 \nBaleares, 26618",
+    "CorreoElectronico": "qrodriguez@hotmail.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL248",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "703-01-0401",
+    "Nombre": "Rosario Gabaldón Agudo",
+    "Telefono": "+34 709433481",
+    "Direccion": "Rambla de Juan José Arnaiz 53\nCastellón, 68731",
+    "CorreoElectronico": "corneliocomas@pavon-jurado.es",
+    "id_seguro": "SEG003",
+    "id_hospital": "H003",
+    "NumeroHistoria": "HCL249",
+    "GrupoEdad": "Adolescente"
+  },
+  {
+    "DNI": "360-96-3824",
+    "Nombre": "Azahara Taboada Alcaraz",
+    "Telefono": "+34 992 329 425",
+    "Direccion": "Glorieta de Yéssica Segura 196\nSevilla, 61731",
+    "CorreoElectronico": "perezjuan-bautista@puerta.com",
+    "id_seguro": "SEG002",
+    "id_hospital": "H004",
+    "NumeroHistoria": "HCL250",
+    "GrupoEdad": "Adulto Mayor"
+  }
+]
+);
+
+db.SEGUROS.insertMany(
+[
+  {
+    "id_seguro": "SEG001",
+    "Nombre": "Bravo-Noriega",
+    "id_cobertura": "COB001"
+  },
+  {
+    "id_seguro": "SEG002",
+    "Nombre": "Figuerola-Arcos",
+    "id_cobertura": "COB002"
+  },
+  {
+    "id_seguro": "SEG003",
+    "Nombre": "Carballo-Zapata",
+    "id_cobertura": "COB003"
+  },
+  {
+    "id_seguro": "SEG004",
+    "Nombre": "Andres, Hernando and Tormo",
+    "id_cobertura": "COB004"
+  },
+  {
+    "id_seguro": "SEG005",
+    "Nombre": "Peiró-Calzada",
+    "id_cobertura": "COB005"
+  }
+]
+);
+
+db.COBERTURAS.insertMany(
+[
+  {
+    "id_cobertura": "COB001",
+    "Tipo": "Parcial",
+    "Descripcion": "Cobertura parcial que cubre consultas y exámenes básicos."
+  },
+  {
+    "id_cobertura": "COB002",
+    "Tipo": "Total",
+    "Descripcion": "Cobertura completa de hospitalización, medicamentos y procedimientos."
+  },
+  {
+    "id_cobertura": "COB003",
+    "Tipo": "Parcial",
+    "Descripcion": "Cobertura parcial que cubre consultas y exámenes básicos."
+  },
+  {
+    "id_cobertura": "COB004",
+    "Tipo": "Total",
+    "Descripcion": "Cobertura completa de hospitalización, medicamentos y procedimientos."
+  },
+  {
+    "id_cobertura": "COB005",
+    "Tipo": "Parcial",
+    "Descripcion": "Cobertura parcial que cubre consultas y exámenes básicos."
+  }
+]
+);
+
+db.HISTORIA_CLINICA.insertMany(
+[
+  {
+    "id_historia_clinica": "HCL001",
+    "id_paciente": "310-76-1713"
+  },
+  {
+    "id_historia_clinica": "HCL002",
+    "id_paciente": "375-74-6103"
+  },
+  {
+    "id_historia_clinica": "HCL003",
+    "id_paciente": "807-08-2104"
+  },
+  {
+    "id_historia_clinica": "HCL004",
+    "id_paciente": "091-97-5664"
+  },
+  {
+    "id_historia_clinica": "HCL005",
+    "id_paciente": "219-60-3486"
+  },
+  {
+    "id_historia_clinica": "HCL006",
+    "id_paciente": "438-77-6487"
+  },
+  {
+    "id_historia_clinica": "HCL007",
+    "id_paciente": "109-73-6910"
+  },
+  {
+    "id_historia_clinica": "HCL008",
+    "id_paciente": "868-08-1542"
+  },
+  {
+    "id_historia_clinica": "HCL009",
+    "id_paciente": "019-54-5929"
+  },
+  {
+    "id_historia_clinica": "HCL010",
+    "id_paciente": "325-10-4720"
+  },
+  {
+    "id_historia_clinica": "HCL011",
+    "id_paciente": "727-25-4635"
+  },
+  {
+    "id_historia_clinica": "HCL012",
+    "id_paciente": "019-86-6992"
+  },
+  {
+    "id_historia_clinica": "HCL013",
+    "id_paciente": "713-37-4913"
+  },
+  {
+    "id_historia_clinica": "HCL014",
+    "id_paciente": "892-27-5223"
+  },
+  {
+    "id_historia_clinica": "HCL015",
+    "id_paciente": "186-12-0025"
+  },
+  {
+    "id_historia_clinica": "HCL016",
+    "id_paciente": "331-80-4091"
+  },
+  {
+    "id_historia_clinica": "HCL017",
+    "id_paciente": "849-25-7247"
+  },
+  {
+    "id_historia_clinica": "HCL018",
+    "id_paciente": "099-67-2573"
+  },
+  {
+    "id_historia_clinica": "HCL019",
+    "id_paciente": "282-14-3739"
+  },
+  {
+    "id_historia_clinica": "HCL020",
+    "id_paciente": "037-30-4814"
+  },
+  {
+    "id_historia_clinica": "HCL021",
+    "id_paciente": "326-09-7354"
+  },
+  {
+    "id_historia_clinica": "HCL022",
+    "id_paciente": "515-27-0769"
+  },
+  {
+    "id_historia_clinica": "HCL023",
+    "id_paciente": "260-87-9361"
+  },
+  {
+    "id_historia_clinica": "HCL024",
+    "id_paciente": "662-62-3097"
+  },
+  {
+    "id_historia_clinica": "HCL025",
+    "id_paciente": "524-00-9272"
+  },
+  {
+    "id_historia_clinica": "HCL026",
+    "id_paciente": "845-03-7942"
+  },
+  {
+    "id_historia_clinica": "HCL027",
+    "id_paciente": "791-89-6006"
+  },
+  {
+    "id_historia_clinica": "HCL028",
+    "id_paciente": "431-61-0961"
+  },
+  {
+    "id_historia_clinica": "HCL029",
+    "id_paciente": "195-25-0806"
+  },
+  {
+    "id_historia_clinica": "HCL030",
+    "id_paciente": "188-09-2699"
+  },
+  {
+    "id_historia_clinica": "HCL031",
+    "id_paciente": "936-76-3981"
+  },
+  {
+    "id_historia_clinica": "HCL032",
+    "id_paciente": "631-19-9110"
+  },
+  {
+    "id_historia_clinica": "HCL033",
+    "id_paciente": "215-77-3556"
+  },
+  {
+    "id_historia_clinica": "HCL034",
+    "id_paciente": "830-13-5647"
+  },
+  {
+    "id_historia_clinica": "HCL035",
+    "id_paciente": "593-06-6408"
+  },
+  {
+    "id_historia_clinica": "HCL036",
+    "id_paciente": "447-48-1056"
+  },
+  {
+    "id_historia_clinica": "HCL037",
+    "id_paciente": "583-60-9212"
+  },
+  {
+    "id_historia_clinica": "HCL038",
+    "id_paciente": "406-94-0809"
+  },
+  {
+    "id_historia_clinica": "HCL039",
+    "id_paciente": "423-75-9069"
+  },
+  {
+    "id_historia_clinica": "HCL040",
+    "id_paciente": "931-36-5647"
+  },
+  {
+    "id_historia_clinica": "HCL041",
+    "id_paciente": "981-64-8213"
+  },
+  {
+    "id_historia_clinica": "HCL042",
+    "id_paciente": "999-17-3094"
+  },
+  {
+    "id_historia_clinica": "HCL043",
+    "id_paciente": "800-31-2462"
+  },
+  {
+    "id_historia_clinica": "HCL044",
+    "id_paciente": "291-55-7854"
+  },
+  {
+    "id_historia_clinica": "HCL045",
+    "id_paciente": "336-86-7941"
+  },
+  {
+    "id_historia_clinica": "HCL046",
+    "id_paciente": "909-08-1814"
+  },
+  {
+    "id_historia_clinica": "HCL047",
+    "id_paciente": "432-73-7069"
+  },
+  {
+    "id_historia_clinica": "HCL048",
+    "id_paciente": "571-77-3486"
+  },
+  {
+    "id_historia_clinica": "HCL049",
+    "id_paciente": "517-24-1458"
+  },
+  {
+    "id_historia_clinica": "HCL050",
+    "id_paciente": "099-76-1591"
+  },
+  {
+    "id_historia_clinica": "HCL051",
+    "id_paciente": "850-38-1061"
+  },
+  {
+    "id_historia_clinica": "HCL052",
+    "id_paciente": "808-58-0538"
+  },
+  {
+    "id_historia_clinica": "HCL053",
+    "id_paciente": "834-97-9753"
+  },
+  {
+    "id_historia_clinica": "HCL054",
+    "id_paciente": "623-10-0373"
+  },
+  {
+    "id_historia_clinica": "HCL055",
+    "id_paciente": "772-24-4150"
+  },
+  {
+    "id_historia_clinica": "HCL056",
+    "id_paciente": "878-46-2767"
+  },
+  {
+    "id_historia_clinica": "HCL057",
+    "id_paciente": "455-51-6288"
+  },
+  {
+    "id_historia_clinica": "HCL058",
+    "id_paciente": "581-29-2612"
+  },
+  {
+    "id_historia_clinica": "HCL059",
+    "id_paciente": "753-83-9863"
+  },
+  {
+    "id_historia_clinica": "HCL060",
+    "id_paciente": "529-50-5944"
+  },
+  {
+    "id_historia_clinica": "HCL061",
+    "id_paciente": "963-16-8982"
+  },
+  {
+    "id_historia_clinica": "HCL062",
+    "id_paciente": "625-95-8884"
+  },
+  {
+    "id_historia_clinica": "HCL063",
+    "id_paciente": "985-11-1831"
+  },
+  {
+    "id_historia_clinica": "HCL064",
+    "id_paciente": "702-64-6630"
+  },
+  {
+    "id_historia_clinica": "HCL065",
+    "id_paciente": "851-60-9697"
+  },
+  {
+    "id_historia_clinica": "HCL066",
+    "id_paciente": "659-63-2616"
+  },
+  {
+    "id_historia_clinica": "HCL067",
+    "id_paciente": "676-26-4652"
+  },
+  {
+    "id_historia_clinica": "HCL068",
+    "id_paciente": "414-42-2787"
+  },
+  {
+    "id_historia_clinica": "HCL069",
+    "id_paciente": "053-38-8943"
+  },
+  {
+    "id_historia_clinica": "HCL070",
+    "id_paciente": "651-26-1557"
+  },
+  {
+    "id_historia_clinica": "HCL071",
+    "id_paciente": "741-35-3760"
+  },
+  {
+    "id_historia_clinica": "HCL072",
+    "id_paciente": "173-49-0789"
+  },
+  {
+    "id_historia_clinica": "HCL073",
+    "id_paciente": "987-08-2424"
+  },
+  {
+    "id_historia_clinica": "HCL074",
+    "id_paciente": "985-33-1787"
+  },
+  {
+    "id_historia_clinica": "HCL075",
+    "id_paciente": "089-10-2911"
+  },
+  {
+    "id_historia_clinica": "HCL076",
+    "id_paciente": "051-65-6963"
+  },
+  {
+    "id_historia_clinica": "HCL077",
+    "id_paciente": "085-27-2749"
+  },
+  {
+    "id_historia_clinica": "HCL078",
+    "id_paciente": "755-45-5582"
+  },
+  {
+    "id_historia_clinica": "HCL079",
+    "id_paciente": "961-01-9940"
+  },
+  {
+    "id_historia_clinica": "HCL080",
+    "id_paciente": "538-03-2808"
+  },
+  {
+    "id_historia_clinica": "HCL081",
+    "id_paciente": "714-21-6145"
+  },
+  {
+    "id_historia_clinica": "HCL082",
+    "id_paciente": "037-42-0369"
+  },
+  {
+    "id_historia_clinica": "HCL083",
+    "id_paciente": "417-30-0887"
+  },
+  {
+    "id_historia_clinica": "HCL084",
+    "id_paciente": "128-47-8353"
+  },
+  {
+    "id_historia_clinica": "HCL085",
+    "id_paciente": "762-52-5273"
+  },
+  {
+    "id_historia_clinica": "HCL086",
+    "id_paciente": "820-88-8815"
+  },
+  {
+    "id_historia_clinica": "HCL087",
+    "id_paciente": "865-17-1170"
+  },
+  {
+    "id_historia_clinica": "HCL088",
+    "id_paciente": "497-43-9361"
+  },
+  {
+    "id_historia_clinica": "HCL089",
+    "id_paciente": "127-66-4635"
+  },
+  {
+    "id_historia_clinica": "HCL090",
+    "id_paciente": "287-24-4738"
+  },
+  {
+    "id_historia_clinica": "HCL091",
+    "id_paciente": "351-00-0552"
+  },
+  {
+    "id_historia_clinica": "HCL092",
+    "id_paciente": "054-34-2672"
+  },
+  {
+    "id_historia_clinica": "HCL093",
+    "id_paciente": "330-61-8665"
+  },
+  {
+    "id_historia_clinica": "HCL094",
+    "id_paciente": "474-33-4569"
+  },
+  {
+    "id_historia_clinica": "HCL095",
+    "id_paciente": "838-37-5719"
+  },
+  {
+    "id_historia_clinica": "HCL096",
+    "id_paciente": "267-53-9687"
+  },
+  {
+    "id_historia_clinica": "HCL097",
+    "id_paciente": "400-34-1014"
+  },
+  {
+    "id_historia_clinica": "HCL098",
+    "id_paciente": "363-50-4355"
+  },
+  {
+    "id_historia_clinica": "HCL099",
+    "id_paciente": "188-19-3356"
+  },
+  {
+    "id_historia_clinica": "HCL100",
+    "id_paciente": "727-35-8277"
+  },
+  {
+    "id_historia_clinica": "HCL101",
+    "id_paciente": "444-99-8137"
+  },
+  {
+    "id_historia_clinica": "HCL102",
+    "id_paciente": "849-53-0104"
+  },
+  {
+    "id_historia_clinica": "HCL103",
+    "id_paciente": "235-67-0502"
+  },
+  {
+    "id_historia_clinica": "HCL104",
+    "id_paciente": "957-87-8081"
+  },
+  {
+    "id_historia_clinica": "HCL105",
+    "id_paciente": "378-57-1122"
+  },
+  {
+    "id_historia_clinica": "HCL106",
+    "id_paciente": "689-35-9997"
+  },
+  {
+    "id_historia_clinica": "HCL107",
+    "id_paciente": "417-05-1357"
+  },
+  {
+    "id_historia_clinica": "HCL108",
+    "id_paciente": "065-99-0287"
+  },
+  {
+    "id_historia_clinica": "HCL109",
+    "id_paciente": "602-80-6521"
+  },
+  {
+    "id_historia_clinica": "HCL110",
+    "id_paciente": "548-91-5813"
+  },
+  {
+    "id_historia_clinica": "HCL111",
+    "id_paciente": "408-39-1557"
+  },
+  {
+    "id_historia_clinica": "HCL112",
+    "id_paciente": "652-59-3922"
+  },
+  {
+    "id_historia_clinica": "HCL113",
+    "id_paciente": "890-72-1541"
+  },
+  {
+    "id_historia_clinica": "HCL114",
+    "id_paciente": "997-56-1709"
+  },
+  {
+    "id_historia_clinica": "HCL115",
+    "id_paciente": "188-35-9713"
+  },
+  {
+    "id_historia_clinica": "HCL116",
+    "id_paciente": "742-01-5304"
+  },
+  {
+    "id_historia_clinica": "HCL117",
+    "id_paciente": "183-46-3994"
+  },
+  {
+    "id_historia_clinica": "HCL118",
+    "id_paciente": "290-59-5095"
+  },
+  {
+    "id_historia_clinica": "HCL119",
+    "id_paciente": "973-45-8061"
+  },
+  {
+    "id_historia_clinica": "HCL120",
+    "id_paciente": "210-26-6842"
+  },
+  {
+    "id_historia_clinica": "HCL121",
+    "id_paciente": "427-77-0953"
+  },
+  {
+    "id_historia_clinica": "HCL122",
+    "id_paciente": "113-33-3141"
+  },
+  {
+    "id_historia_clinica": "HCL123",
+    "id_paciente": "919-84-2773"
+  },
+  {
+    "id_historia_clinica": "HCL124",
+    "id_paciente": "883-67-4699"
+  },
+  {
+    "id_historia_clinica": "HCL125",
+    "id_paciente": "838-63-2451"
+  },
+  {
+    "id_historia_clinica": "HCL126",
+    "id_paciente": "318-36-6807"
+  },
+  {
+    "id_historia_clinica": "HCL127",
+    "id_paciente": "401-47-7371"
+  },
+  {
+    "id_historia_clinica": "HCL128",
+    "id_paciente": "939-84-6834"
+  },
+  {
+    "id_historia_clinica": "HCL129",
+    "id_paciente": "441-99-3859"
+  },
+  {
+    "id_historia_clinica": "HCL130",
+    "id_paciente": "208-20-7526"
+  },
+  {
+    "id_historia_clinica": "HCL131",
+    "id_paciente": "515-68-8184"
+  },
+  {
+    "id_historia_clinica": "HCL132",
+    "id_paciente": "061-44-2987"
+  },
+  {
+    "id_historia_clinica": "HCL133",
+    "id_paciente": "422-51-4808"
+  },
+  {
+    "id_historia_clinica": "HCL134",
+    "id_paciente": "536-07-9203"
+  },
+  {
+    "id_historia_clinica": "HCL135",
+    "id_paciente": "048-80-8389"
+  },
+  {
+    "id_historia_clinica": "HCL136",
+    "id_paciente": "044-48-1936"
+  },
+  {
+    "id_historia_clinica": "HCL137",
+    "id_paciente": "199-64-2570"
+  },
+  {
+    "id_historia_clinica": "HCL138",
+    "id_paciente": "709-41-9043"
+  },
+  {
+    "id_historia_clinica": "HCL139",
+    "id_paciente": "574-35-1877"
+  },
+  {
+    "id_historia_clinica": "HCL140",
+    "id_paciente": "361-63-6515"
+  },
+  {
+    "id_historia_clinica": "HCL141",
+    "id_paciente": "082-29-2735"
+  },
+  {
+    "id_historia_clinica": "HCL142",
+    "id_paciente": "966-82-3280"
+  },
+  {
+    "id_historia_clinica": "HCL143",
+    "id_paciente": "415-56-9848"
+  },
+  {
+    "id_historia_clinica": "HCL144",
+    "id_paciente": "687-87-4508"
+  },
+  {
+    "id_historia_clinica": "HCL145",
+    "id_paciente": "005-80-5534"
+  },
+  {
+    "id_historia_clinica": "HCL146",
+    "id_paciente": "163-04-2273"
+  },
+  {
+    "id_historia_clinica": "HCL147",
+    "id_paciente": "656-67-6020"
+  },
+  {
+    "id_historia_clinica": "HCL148",
+    "id_paciente": "471-70-2695"
+  },
+  {
+    "id_historia_clinica": "HCL149",
+    "id_paciente": "346-59-4703"
+  },
+  {
+    "id_historia_clinica": "HCL150",
+    "id_paciente": "147-79-4532"
+  },
+  {
+    "id_historia_clinica": "HCL151",
+    "id_paciente": "608-39-4562"
+  },
+  {
+    "id_historia_clinica": "HCL152",
+    "id_paciente": "078-21-0930"
+  },
+  {
+    "id_historia_clinica": "HCL153",
+    "id_paciente": "910-74-4148"
+  },
+  {
+    "id_historia_clinica": "HCL154",
+    "id_paciente": "577-69-0994"
+  },
+  {
+    "id_historia_clinica": "HCL155",
+    "id_paciente": "725-44-7850"
+  },
+  {
+    "id_historia_clinica": "HCL156",
+    "id_paciente": "266-64-6361"
+  },
+  {
+    "id_historia_clinica": "HCL157",
+    "id_paciente": "873-44-6417"
+  },
+  {
+    "id_historia_clinica": "HCL158",
+    "id_paciente": "471-15-9974"
+  },
+  {
+    "id_historia_clinica": "HCL159",
+    "id_paciente": "977-07-2717"
+  },
+  {
+    "id_historia_clinica": "HCL160",
+    "id_paciente": "549-81-3040"
+  },
+  {
+    "id_historia_clinica": "HCL161",
+    "id_paciente": "076-49-6105"
+  },
+  {
+    "id_historia_clinica": "HCL162",
+    "id_paciente": "960-83-5668"
+  },
+  {
+    "id_historia_clinica": "HCL163",
+    "id_paciente": "301-56-6548"
+  },
+  {
+    "id_historia_clinica": "HCL164",
+    "id_paciente": "165-63-8442"
+  },
+  {
+    "id_historia_clinica": "HCL165",
+    "id_paciente": "760-41-8582"
+  },
+  {
+    "id_historia_clinica": "HCL166",
+    "id_paciente": "296-05-6795"
+  },
+  {
+    "id_historia_clinica": "HCL167",
+    "id_paciente": "906-02-1851"
+  },
+  {
+    "id_historia_clinica": "HCL168",
+    "id_paciente": "431-12-2281"
+  },
+  {
+    "id_historia_clinica": "HCL169",
+    "id_paciente": "922-67-0952"
+  },
+  {
+    "id_historia_clinica": "HCL170",
+    "id_paciente": "467-85-2989"
+  },
+  {
+    "id_historia_clinica": "HCL171",
+    "id_paciente": "034-47-0501"
+  },
+  {
+    "id_historia_clinica": "HCL172",
+    "id_paciente": "190-31-2370"
+  },
+  {
+    "id_historia_clinica": "HCL173",
+    "id_paciente": "904-67-6013"
+  },
+  {
+    "id_historia_clinica": "HCL174",
+    "id_paciente": "226-18-1000"
+  },
+  {
+    "id_historia_clinica": "HCL175",
+    "id_paciente": "543-60-3292"
+  },
+  {
+    "id_historia_clinica": "HCL176",
+    "id_paciente": "715-70-3694"
+  },
+  {
+    "id_historia_clinica": "HCL177",
+    "id_paciente": "420-76-6168"
+  },
+  {
+    "id_historia_clinica": "HCL178",
+    "id_paciente": "929-18-1270"
+  },
+  {
+    "id_historia_clinica": "HCL179",
+    "id_paciente": "909-00-0935"
+  },
+  {
+    "id_historia_clinica": "HCL180",
+    "id_paciente": "671-26-3582"
+  },
+  {
+    "id_historia_clinica": "HCL181",
+    "id_paciente": "494-05-4607"
+  },
+  {
+    "id_historia_clinica": "HCL182",
+    "id_paciente": "736-62-9600"
+  },
+  {
+    "id_historia_clinica": "HCL183",
+    "id_paciente": "083-12-0524"
+  },
+  {
+    "id_historia_clinica": "HCL184",
+    "id_paciente": "924-60-3993"
+  },
+  {
+    "id_historia_clinica": "HCL185",
+    "id_paciente": "756-70-5568"
+  },
+  {
+    "id_historia_clinica": "HCL186",
+    "id_paciente": "786-47-7970"
+  },
+  {
+    "id_historia_clinica": "HCL187",
+    "id_paciente": "070-70-9156"
+  },
+  {
+    "id_historia_clinica": "HCL188",
+    "id_paciente": "424-72-8174"
+  },
+  {
+    "id_historia_clinica": "HCL189",
+    "id_paciente": "654-66-9407"
+  },
+  {
+    "id_historia_clinica": "HCL190",
+    "id_paciente": "555-26-8399"
+  },
+  {
+    "id_historia_clinica": "HCL191",
+    "id_paciente": "062-17-2510"
+  },
+  {
+    "id_historia_clinica": "HCL192",
+    "id_paciente": "629-15-5134"
+  },
+  {
+    "id_historia_clinica": "HCL193",
+    "id_paciente": "159-31-6035"
+  },
+  {
+    "id_historia_clinica": "HCL194",
+    "id_paciente": "512-50-3939"
+  },
+  {
+    "id_historia_clinica": "HCL195",
+    "id_paciente": "236-91-3697"
+  },
+  {
+    "id_historia_clinica": "HCL196",
+    "id_paciente": "184-97-5333"
+  },
+  {
+    "id_historia_clinica": "HCL197",
+    "id_paciente": "374-30-7831"
+  },
+  {
+    "id_historia_clinica": "HCL198",
+    "id_paciente": "923-83-0523"
+  },
+  {
+    "id_historia_clinica": "HCL199",
+    "id_paciente": "215-74-8143"
+  },
+  {
+    "id_historia_clinica": "HCL200",
+    "id_paciente": "122-40-7054"
+  },
+  {
+    "id_historia_clinica": "HCL201",
+    "id_paciente": "282-64-1668"
+  },
+  {
+    "id_historia_clinica": "HCL202",
+    "id_paciente": "422-11-9007"
+  },
+  {
+    "id_historia_clinica": "HCL203",
+    "id_paciente": "100-35-0510"
+  },
+  {
+    "id_historia_clinica": "HCL204",
+    "id_paciente": "593-88-8066"
+  },
+  {
+    "id_historia_clinica": "HCL205",
+    "id_paciente": "404-78-4541"
+  },
+  {
+    "id_historia_clinica": "HCL206",
+    "id_paciente": "517-92-2026"
+  },
+  {
+    "id_historia_clinica": "HCL207",
+    "id_paciente": "124-90-0639"
+  },
+  {
+    "id_historia_clinica": "HCL208",
+    "id_paciente": "517-61-0763"
+  },
+  {
+    "id_historia_clinica": "HCL209",
+    "id_paciente": "419-64-0471"
+  },
+  {
+    "id_historia_clinica": "HCL210",
+    "id_paciente": "139-58-6402"
+  },
+  {
+    "id_historia_clinica": "HCL211",
+    "id_paciente": "525-82-2782"
+  },
+  {
+    "id_historia_clinica": "HCL212",
+    "id_paciente": "027-18-8269"
+  },
+  {
+    "id_historia_clinica": "HCL213",
+    "id_paciente": "136-84-6587"
+  },
+  {
+    "id_historia_clinica": "HCL214",
+    "id_paciente": "823-67-6331"
+  },
+  {
+    "id_historia_clinica": "HCL215",
+    "id_paciente": "243-39-2961"
+  },
+  {
+    "id_historia_clinica": "HCL216",
+    "id_paciente": "242-31-9035"
+  },
+  {
+    "id_historia_clinica": "HCL217",
+    "id_paciente": "866-22-5654"
+  },
+  {
+    "id_historia_clinica": "HCL218",
+    "id_paciente": "466-43-9329"
+  },
+  {
+    "id_historia_clinica": "HCL219",
+    "id_paciente": "588-58-2828"
+  },
+  {
+    "id_historia_clinica": "HCL220",
+    "id_paciente": "064-31-3931"
+  },
+  {
+    "id_historia_clinica": "HCL221",
+    "id_paciente": "143-15-7304"
+  },
+  {
+    "id_historia_clinica": "HCL222",
+    "id_paciente": "658-52-3698"
+  },
+  {
+    "id_historia_clinica": "HCL223",
+    "id_paciente": "691-80-8476"
+  },
+  {
+    "id_historia_clinica": "HCL224",
+    "id_paciente": "006-95-2266"
+  },
+  {
+    "id_historia_clinica": "HCL225",
+    "id_paciente": "300-50-0402"
+  },
+  {
+    "id_historia_clinica": "HCL226",
+    "id_paciente": "800-84-4922"
+  },
+  {
+    "id_historia_clinica": "HCL227",
+    "id_paciente": "189-88-8509"
+  },
+  {
+    "id_historia_clinica": "HCL228",
+    "id_paciente": "572-47-4491"
+  },
+  {
+    "id_historia_clinica": "HCL229",
+    "id_paciente": "808-10-0376"
+  },
+  {
+    "id_historia_clinica": "HCL230",
+    "id_paciente": "279-52-5309"
+  },
+  {
+    "id_historia_clinica": "HCL231",
+    "id_paciente": "875-80-0821"
+  },
+  {
+    "id_historia_clinica": "HCL232",
+    "id_paciente": "703-97-4395"
+  },
+  {
+    "id_historia_clinica": "HCL233",
+    "id_paciente": "509-92-9964"
+  },
+  {
+    "id_historia_clinica": "HCL234",
+    "id_paciente": "840-14-2222"
+  },
+  {
+    "id_historia_clinica": "HCL235",
+    "id_paciente": "000-33-8375"
+  },
+  {
+    "id_historia_clinica": "HCL236",
+    "id_paciente": "472-34-9333"
+  },
+  {
+    "id_historia_clinica": "HCL237",
+    "id_paciente": "509-88-8997"
+  },
+  {
+    "id_historia_clinica": "HCL238",
+    "id_paciente": "587-12-7704"
+  },
+  {
+    "id_historia_clinica": "HCL239",
+    "id_paciente": "685-60-0819"
+  },
+  {
+    "id_historia_clinica": "HCL240",
+    "id_paciente": "420-37-6750"
+  },
+  {
+    "id_historia_clinica": "HCL241",
+    "id_paciente": "608-22-6976"
+  },
+  {
+    "id_historia_clinica": "HCL242",
+    "id_paciente": "177-56-5470"
+  },
+  {
+    "id_historia_clinica": "HCL243",
+    "id_paciente": "196-15-6156"
+  },
+  {
+    "id_historia_clinica": "HCL244",
+    "id_paciente": "223-06-3818"
+  },
+  {
+    "id_historia_clinica": "HCL245",
+    "id_paciente": "395-28-1169"
+  },
+  {
+    "id_historia_clinica": "HCL246",
+    "id_paciente": "129-43-4187"
+  },
+  {
+    "id_historia_clinica": "HCL247",
+    "id_paciente": "108-44-4851"
+  },
+  {
+    "id_historia_clinica": "HCL248",
+    "id_paciente": "314-18-1261"
+  },
+  {
+    "id_historia_clinica": "HCL249",
+    "id_paciente": "703-01-0401"
+  },
+  {
+    "id_historia_clinica": "HCL250",
+    "id_paciente": "360-96-3824"
+  }
+]
+);
+
+db.DETALLE_HISTORIA.insertMany(
+[
+  {
+    "id_detalle": "DET001",
+    "id_historia_clinica": "HCL001",
+    "id_visita": "VIS001",
+    "Control": "architecto",
+    "Fecha": "2024-03-26",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET002",
+    "id_historia_clinica": "HCL002",
+    "id_visita": "VIS002",
+    "Control": "optio",
+    "Fecha": "2024-09-19",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET003",
+    "id_historia_clinica": "HCL003",
+    "id_visita": "VIS003",
+    "Control": "labore",
+    "Fecha": "2024-08-10",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET004",
+    "id_historia_clinica": "HCL003",
+    "id_visita": "VIS004",
+    "Control": "nihil",
+    "Fecha": "2023-11-06",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET005",
+    "id_historia_clinica": "HCL004",
+    "id_visita": "VIS005",
+    "Control": "id",
+    "Fecha": "2023-08-10",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET006",
+    "id_historia_clinica": "HCL004",
+    "id_visita": "VIS006",
+    "Control": "rem",
+    "Fecha": "2023-09-26",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET007",
+    "id_historia_clinica": "HCL004",
+    "id_visita": "VIS007",
+    "Control": "repudiandae",
+    "Fecha": "2024-01-25",
+    "Condicion": "Artritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET008",
+    "id_historia_clinica": "HCL005",
+    "id_visita": "VIS008",
+    "Control": "iste",
+    "Fecha": "2023-11-28",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET009",
+    "id_historia_clinica": "HCL005",
+    "id_visita": "VIS009",
+    "Control": "dolore",
+    "Fecha": "2024-12-03",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET010",
+    "id_historia_clinica": "HCL005",
+    "id_visita": "VIS010",
+    "Control": "quam",
+    "Fecha": "2025-01-13",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET011",
+    "id_historia_clinica": "HCL006",
+    "id_visita": "VIS011",
+    "Control": "praesentium",
+    "Fecha": "2025-02-26",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET012",
+    "id_historia_clinica": "HCL007",
+    "id_visita": "VIS012",
+    "Control": "porro",
+    "Fecha": "2024-02-15",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET013",
+    "id_historia_clinica": "HCL008",
+    "id_visita": "VIS013",
+    "Control": "quam",
+    "Fecha": "2025-02-26",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET014",
+    "id_historia_clinica": "HCL009",
+    "id_visita": "VIS014",
+    "Control": "pariatur",
+    "Fecha": "2024-06-12",
+    "Condicion": "Asma",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET015",
+    "id_historia_clinica": "HCL009",
+    "id_visita": "VIS015",
+    "Control": "iusto",
+    "Fecha": "2025-06-27",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET016",
+    "id_historia_clinica": "HCL010",
+    "id_visita": "VIS016",
+    "Control": "voluptates",
+    "Fecha": "2023-10-31",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET017",
+    "id_historia_clinica": "HCL010",
+    "id_visita": "VIS017",
+    "Control": "quia",
+    "Fecha": "2023-10-03",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET018",
+    "id_historia_clinica": "HCL011",
+    "id_visita": "VIS018",
+    "Control": "nobis",
+    "Fecha": "2023-10-19",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET019",
+    "id_historia_clinica": "HCL011",
+    "id_visita": "VIS019",
+    "Control": "nisi",
+    "Fecha": "2025-05-04",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET020",
+    "id_historia_clinica": "HCL012",
+    "id_visita": "VIS020",
+    "Control": "laborum",
+    "Fecha": "2024-02-04",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET021",
+    "id_historia_clinica": "HCL013",
+    "id_visita": "VIS021",
+    "Control": "nesciunt",
+    "Fecha": "2025-01-28",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET022",
+    "id_historia_clinica": "HCL014",
+    "id_visita": "VIS022",
+    "Control": "recusandae",
+    "Fecha": "2024-05-21",
+    "Condicion": "Asma",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET023",
+    "id_historia_clinica": "HCL014",
+    "id_visita": "VIS023",
+    "Control": "velit",
+    "Fecha": "2023-09-15",
+    "Condicion": "Asma",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET024",
+    "id_historia_clinica": "HCL015",
+    "id_visita": "VIS024",
+    "Control": "quos",
+    "Fecha": "2024-03-03",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET025",
+    "id_historia_clinica": "HCL015",
+    "id_visita": "VIS025",
+    "Control": "omnis",
+    "Fecha": "2025-06-20",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET026",
+    "id_historia_clinica": "HCL015",
+    "id_visita": "VIS026",
+    "Control": "illo",
+    "Fecha": "2024-08-23",
+    "Condicion": "Artritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET027",
+    "id_historia_clinica": "HCL016",
+    "id_visita": "VIS027",
+    "Control": "nisi",
+    "Fecha": "2023-12-22",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET028",
+    "id_historia_clinica": "HCL017",
+    "id_visita": "VIS028",
+    "Control": "voluptatem",
+    "Fecha": "2023-08-20",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET029",
+    "id_historia_clinica": "HCL017",
+    "id_visita": "VIS029",
+    "Control": "culpa",
+    "Fecha": "2023-10-27",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET030",
+    "id_historia_clinica": "HCL018",
+    "id_visita": "VIS030",
+    "Control": "molestiae",
+    "Fecha": "2024-02-24",
+    "Condicion": "Artritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET031",
+    "id_historia_clinica": "HCL018",
+    "id_visita": "VIS031",
+    "Control": "quam",
+    "Fecha": "2023-08-25",
+    "Condicion": "Artritis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET032",
+    "id_historia_clinica": "HCL018",
+    "id_visita": "VIS032",
+    "Control": "minus",
+    "Fecha": "2024-09-05",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET033",
+    "id_historia_clinica": "HCL019",
+    "id_visita": "VIS033",
+    "Control": "vitae",
+    "Fecha": "2024-02-04",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET034",
+    "id_historia_clinica": "HCL019",
+    "id_visita": "VIS034",
+    "Control": "hic",
+    "Fecha": "2024-04-23",
+    "Condicion": "Artritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET035",
+    "id_historia_clinica": "HCL019",
+    "id_visita": "VIS035",
+    "Control": "beatae",
+    "Fecha": "2024-01-10",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET036",
+    "id_historia_clinica": "HCL020",
+    "id_visita": "VIS036",
+    "Control": "enim",
+    "Fecha": "2024-02-01",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET037",
+    "id_historia_clinica": "HCL020",
+    "id_visita": "VIS037",
+    "Control": "amet",
+    "Fecha": "2025-05-02",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET038",
+    "id_historia_clinica": "HCL021",
+    "id_visita": "VIS038",
+    "Control": "atque",
+    "Fecha": "2025-05-28",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET039",
+    "id_historia_clinica": "HCL021",
+    "id_visita": "VIS039",
+    "Control": "voluptatem",
+    "Fecha": "2024-02-13",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET040",
+    "id_historia_clinica": "HCL022",
+    "id_visita": "VIS040",
+    "Control": "dignissimos",
+    "Fecha": "2024-11-22",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET041",
+    "id_historia_clinica": "HCL023",
+    "id_visita": "VIS041",
+    "Control": "corporis",
+    "Fecha": "2024-10-27",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET042",
+    "id_historia_clinica": "HCL023",
+    "id_visita": "VIS042",
+    "Control": "vel",
+    "Fecha": "2024-03-26",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET043",
+    "id_historia_clinica": "HCL023",
+    "id_visita": "VIS043",
+    "Control": "quo",
+    "Fecha": "2023-11-08",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET044",
+    "id_historia_clinica": "HCL024",
+    "id_visita": "VIS044",
+    "Control": "harum",
+    "Fecha": "2024-03-29",
+    "Condicion": "Artritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET045",
+    "id_historia_clinica": "HCL025",
+    "id_visita": "VIS045",
+    "Control": "et",
+    "Fecha": "2024-07-24",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET046",
+    "id_historia_clinica": "HCL025",
+    "id_visita": "VIS046",
+    "Control": "necessitatibus",
+    "Fecha": "2023-12-06",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET047",
+    "id_historia_clinica": "HCL025",
+    "id_visita": "VIS047",
+    "Control": "quia",
+    "Fecha": "2025-03-07",
+    "Condicion": "Asma",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET048",
+    "id_historia_clinica": "HCL026",
+    "id_visita": "VIS048",
+    "Control": "perspiciatis",
+    "Fecha": "2025-06-16",
+    "Condicion": "Artritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET049",
+    "id_historia_clinica": "HCL026",
+    "id_visita": "VIS049",
+    "Control": "sed",
+    "Fecha": "2023-10-26",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET050",
+    "id_historia_clinica": "HCL027",
+    "id_visita": "VIS050",
+    "Control": "harum",
+    "Fecha": "2024-01-06",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET051",
+    "id_historia_clinica": "HCL028",
+    "id_visita": "VIS051",
+    "Control": "voluptatibus",
+    "Fecha": "2023-12-30",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET052",
+    "id_historia_clinica": "HCL028",
+    "id_visita": "VIS052",
+    "Control": "nam",
+    "Fecha": "2024-08-16",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET053",
+    "id_historia_clinica": "HCL028",
+    "id_visita": "VIS053",
+    "Control": "doloribus",
+    "Fecha": "2024-02-14",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET054",
+    "id_historia_clinica": "HCL029",
+    "id_visita": "VIS054",
+    "Control": "voluptatum",
+    "Fecha": "2025-04-28",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET055",
+    "id_historia_clinica": "HCL029",
+    "id_visita": "VIS055",
+    "Control": "porro",
+    "Fecha": "2024-11-03",
+    "Condicion": "Asma",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET056",
+    "id_historia_clinica": "HCL030",
+    "id_visita": "VIS056",
+    "Control": "cum",
+    "Fecha": "2024-02-08",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET057",
+    "id_historia_clinica": "HCL030",
+    "id_visita": "VIS057",
+    "Control": "totam",
+    "Fecha": "2023-07-31",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET058",
+    "id_historia_clinica": "HCL031",
+    "id_visita": "VIS058",
+    "Control": "sint",
+    "Fecha": "2023-11-05",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET059",
+    "id_historia_clinica": "HCL031",
+    "id_visita": "VIS059",
+    "Control": "architecto",
+    "Fecha": "2023-11-22",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET060",
+    "id_historia_clinica": "HCL031",
+    "id_visita": "VIS060",
+    "Control": "distinctio",
+    "Fecha": "2023-08-24",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET061",
+    "id_historia_clinica": "HCL032",
+    "id_visita": "VIS061",
+    "Control": "eligendi",
+    "Fecha": "2024-06-18",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET062",
+    "id_historia_clinica": "HCL032",
+    "id_visita": "VIS062",
+    "Control": "quos",
+    "Fecha": "2023-10-28",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET063",
+    "id_historia_clinica": "HCL032",
+    "id_visita": "VIS063",
+    "Control": "aliquid",
+    "Fecha": "2023-08-03",
+    "Condicion": "Asma",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET064",
+    "id_historia_clinica": "HCL033",
+    "id_visita": "VIS064",
+    "Control": "facere",
+    "Fecha": "2025-05-22",
+    "Condicion": "Asma",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET065",
+    "id_historia_clinica": "HCL034",
+    "id_visita": "VIS065",
+    "Control": "expedita",
+    "Fecha": "2025-04-16",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET066",
+    "id_historia_clinica": "HCL034",
+    "id_visita": "VIS066",
+    "Control": "iste",
+    "Fecha": "2024-06-03",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET067",
+    "id_historia_clinica": "HCL035",
+    "id_visita": "VIS067",
+    "Control": "optio",
+    "Fecha": "2025-02-24",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET068",
+    "id_historia_clinica": "HCL035",
+    "id_visita": "VIS068",
+    "Control": "quam",
+    "Fecha": "2024-02-13",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET069",
+    "id_historia_clinica": "HCL035",
+    "id_visita": "VIS069",
+    "Control": "repellendus",
+    "Fecha": "2023-10-04",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET070",
+    "id_historia_clinica": "HCL036",
+    "id_visita": "VIS070",
+    "Control": "incidunt",
+    "Fecha": "2024-04-07",
+    "Condicion": "Asma",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET071",
+    "id_historia_clinica": "HCL036",
+    "id_visita": "VIS071",
+    "Control": "quas",
+    "Fecha": "2023-09-25",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET072",
+    "id_historia_clinica": "HCL037",
+    "id_visita": "VIS072",
+    "Control": "fugiat",
+    "Fecha": "2025-06-10",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET073",
+    "id_historia_clinica": "HCL037",
+    "id_visita": "VIS073",
+    "Control": "voluptates",
+    "Fecha": "2025-07-14",
+    "Condicion": "Asma",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET074",
+    "id_historia_clinica": "HCL037",
+    "id_visita": "VIS074",
+    "Control": "consequuntur",
+    "Fecha": "2023-10-27",
+    "Condicion": "Asma",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET075",
+    "id_historia_clinica": "HCL038",
+    "id_visita": "VIS075",
+    "Control": "eligendi",
+    "Fecha": "2023-09-27",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET076",
+    "id_historia_clinica": "HCL038",
+    "id_visita": "VIS076",
+    "Control": "distinctio",
+    "Fecha": "2024-12-29",
+    "Condicion": "Artritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET077",
+    "id_historia_clinica": "HCL039",
+    "id_visita": "VIS077",
+    "Control": "necessitatibus",
+    "Fecha": "2024-04-12",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET078",
+    "id_historia_clinica": "HCL040",
+    "id_visita": "VIS078",
+    "Control": "id",
+    "Fecha": "2024-05-11",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET079",
+    "id_historia_clinica": "HCL041",
+    "id_visita": "VIS079",
+    "Control": "architecto",
+    "Fecha": "2024-06-21",
+    "Condicion": "Asma",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET080",
+    "id_historia_clinica": "HCL041",
+    "id_visita": "VIS080",
+    "Control": "quae",
+    "Fecha": "2023-10-26",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET081",
+    "id_historia_clinica": "HCL042",
+    "id_visita": "VIS081",
+    "Control": "numquam",
+    "Fecha": "2023-09-05",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET082",
+    "id_historia_clinica": "HCL042",
+    "id_visita": "VIS082",
+    "Control": "cupiditate",
+    "Fecha": "2023-12-17",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET083",
+    "id_historia_clinica": "HCL042",
+    "id_visita": "VIS083",
+    "Control": "aut",
+    "Fecha": "2023-12-09",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET084",
+    "id_historia_clinica": "HCL043",
+    "id_visita": "VIS084",
+    "Control": "aliquid",
+    "Fecha": "2024-09-02",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET085",
+    "id_historia_clinica": "HCL043",
+    "id_visita": "VIS085",
+    "Control": "dolorem",
+    "Fecha": "2024-06-05",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET086",
+    "id_historia_clinica": "HCL043",
+    "id_visita": "VIS086",
+    "Control": "asperiores",
+    "Fecha": "2023-12-03",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET087",
+    "id_historia_clinica": "HCL044",
+    "id_visita": "VIS087",
+    "Control": "inventore",
+    "Fecha": "2023-11-16",
+    "Condicion": "Asma",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET088",
+    "id_historia_clinica": "HCL045",
+    "id_visita": "VIS088",
+    "Control": "in",
+    "Fecha": "2024-06-27",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET089",
+    "id_historia_clinica": "HCL045",
+    "id_visita": "VIS089",
+    "Control": "exercitationem",
+    "Fecha": "2024-07-08",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET090",
+    "id_historia_clinica": "HCL045",
+    "id_visita": "VIS090",
+    "Control": "consequuntur",
+    "Fecha": "2023-09-15",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET091",
+    "id_historia_clinica": "HCL046",
+    "id_visita": "VIS091",
+    "Control": "fuga",
+    "Fecha": "2023-08-11",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET092",
+    "id_historia_clinica": "HCL046",
+    "id_visita": "VIS092",
+    "Control": "iure",
+    "Fecha": "2023-08-13",
+    "Condicion": "Artritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET093",
+    "id_historia_clinica": "HCL047",
+    "id_visita": "VIS093",
+    "Control": "eligendi",
+    "Fecha": "2025-05-22",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET094",
+    "id_historia_clinica": "HCL047",
+    "id_visita": "VIS094",
+    "Control": "omnis",
+    "Fecha": "2025-02-25",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET095",
+    "id_historia_clinica": "HCL048",
+    "id_visita": "VIS095",
+    "Control": "perferendis",
+    "Fecha": "2024-06-19",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET096",
+    "id_historia_clinica": "HCL049",
+    "id_visita": "VIS096",
+    "Control": "neque",
+    "Fecha": "2024-12-14",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET097",
+    "id_historia_clinica": "HCL050",
+    "id_visita": "VIS097",
+    "Control": "aperiam",
+    "Fecha": "2023-10-25",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET098",
+    "id_historia_clinica": "HCL050",
+    "id_visita": "VIS098",
+    "Control": "corporis",
+    "Fecha": "2025-06-04",
+    "Condicion": "Asma",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET099",
+    "id_historia_clinica": "HCL051",
+    "id_visita": "VIS099",
+    "Control": "culpa",
+    "Fecha": "2024-07-10",
+    "Condicion": "Artritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET100",
+    "id_historia_clinica": "HCL051",
+    "id_visita": "VIS100",
+    "Control": "labore",
+    "Fecha": "2024-07-05",
+    "Condicion": "Artritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET101",
+    "id_historia_clinica": "HCL051",
+    "id_visita": "VIS101",
+    "Control": "esse",
+    "Fecha": "2024-09-12",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET102",
+    "id_historia_clinica": "HCL052",
+    "id_visita": "VIS102",
+    "Control": "maiores",
+    "Fecha": "2024-11-05",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET103",
+    "id_historia_clinica": "HCL053",
+    "id_visita": "VIS103",
+    "Control": "nam",
+    "Fecha": "2024-01-09",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET104",
+    "id_historia_clinica": "HCL053",
+    "id_visita": "VIS104",
+    "Control": "saepe",
+    "Fecha": "2025-03-29",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET105",
+    "id_historia_clinica": "HCL053",
+    "id_visita": "VIS105",
+    "Control": "ducimus",
+    "Fecha": "2024-02-03",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET106",
+    "id_historia_clinica": "HCL054",
+    "id_visita": "VIS106",
+    "Control": "cum",
+    "Fecha": "2025-06-19",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET107",
+    "id_historia_clinica": "HCL055",
+    "id_visita": "VIS107",
+    "Control": "at",
+    "Fecha": "2024-03-19",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET108",
+    "id_historia_clinica": "HCL055",
+    "id_visita": "VIS108",
+    "Control": "magnam",
+    "Fecha": "2023-12-13",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET109",
+    "id_historia_clinica": "HCL056",
+    "id_visita": "VIS109",
+    "Control": "deleniti",
+    "Fecha": "2025-05-02",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET110",
+    "id_historia_clinica": "HCL056",
+    "id_visita": "VIS110",
+    "Control": "accusamus",
+    "Fecha": "2024-12-16",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET111",
+    "id_historia_clinica": "HCL056",
+    "id_visita": "VIS111",
+    "Control": "minus",
+    "Fecha": "2023-12-12",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET112",
+    "id_historia_clinica": "HCL057",
+    "id_visita": "VIS112",
+    "Control": "ab",
+    "Fecha": "2024-10-23",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET113",
+    "id_historia_clinica": "HCL057",
+    "id_visita": "VIS113",
+    "Control": "alias",
+    "Fecha": "2024-11-02",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET114",
+    "id_historia_clinica": "HCL058",
+    "id_visita": "VIS114",
+    "Control": "expedita",
+    "Fecha": "2024-10-10",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET115",
+    "id_historia_clinica": "HCL059",
+    "id_visita": "VIS115",
+    "Control": "iste",
+    "Fecha": "2024-08-03",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET116",
+    "id_historia_clinica": "HCL059",
+    "id_visita": "VIS116",
+    "Control": "omnis",
+    "Fecha": "2024-08-05",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET117",
+    "id_historia_clinica": "HCL059",
+    "id_visita": "VIS117",
+    "Control": "nisi",
+    "Fecha": "2023-10-06",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET118",
+    "id_historia_clinica": "HCL060",
+    "id_visita": "VIS118",
+    "Control": "eos",
+    "Fecha": "2025-04-09",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET119",
+    "id_historia_clinica": "HCL060",
+    "id_visita": "VIS119",
+    "Control": "harum",
+    "Fecha": "2024-07-01",
+    "Condicion": "Asma",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET120",
+    "id_historia_clinica": "HCL061",
+    "id_visita": "VIS120",
+    "Control": "quibusdam",
+    "Fecha": "2025-06-30",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET121",
+    "id_historia_clinica": "HCL062",
+    "id_visita": "VIS121",
+    "Control": "id",
+    "Fecha": "2024-11-10",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET122",
+    "id_historia_clinica": "HCL063",
+    "id_visita": "VIS122",
+    "Control": "fuga",
+    "Fecha": "2024-07-02",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET123",
+    "id_historia_clinica": "HCL064",
+    "id_visita": "VIS123",
+    "Control": "consequuntur",
+    "Fecha": "2023-12-29",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET124",
+    "id_historia_clinica": "HCL064",
+    "id_visita": "VIS124",
+    "Control": "rerum",
+    "Fecha": "2025-03-03",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET125",
+    "id_historia_clinica": "HCL065",
+    "id_visita": "VIS125",
+    "Control": "iure",
+    "Fecha": "2024-05-01",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET126",
+    "id_historia_clinica": "HCL066",
+    "id_visita": "VIS126",
+    "Control": "illum",
+    "Fecha": "2025-03-27",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET127",
+    "id_historia_clinica": "HCL067",
+    "id_visita": "VIS127",
+    "Control": "quia",
+    "Fecha": "2024-04-22",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET128",
+    "id_historia_clinica": "HCL068",
+    "id_visita": "VIS128",
+    "Control": "tenetur",
+    "Fecha": "2024-09-04",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET129",
+    "id_historia_clinica": "HCL068",
+    "id_visita": "VIS129",
+    "Control": "mollitia",
+    "Fecha": "2025-06-07",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET130",
+    "id_historia_clinica": "HCL068",
+    "id_visita": "VIS130",
+    "Control": "libero",
+    "Fecha": "2024-06-30",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET131",
+    "id_historia_clinica": "HCL069",
+    "id_visita": "VIS131",
+    "Control": "laudantium",
+    "Fecha": "2024-01-22",
+    "Condicion": "Asma",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET132",
+    "id_historia_clinica": "HCL070",
+    "id_visita": "VIS132",
+    "Control": "rerum",
+    "Fecha": "2024-04-25",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET133",
+    "id_historia_clinica": "HCL070",
+    "id_visita": "VIS133",
+    "Control": "ipsum",
+    "Fecha": "2024-06-09",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET134",
+    "id_historia_clinica": "HCL070",
+    "id_visita": "VIS134",
+    "Control": "consequuntur",
+    "Fecha": "2024-02-25",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET135",
+    "id_historia_clinica": "HCL071",
+    "id_visita": "VIS135",
+    "Control": "odio",
+    "Fecha": "2024-08-23",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET136",
+    "id_historia_clinica": "HCL072",
+    "id_visita": "VIS136",
+    "Control": "corrupti",
+    "Fecha": "2024-02-13",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET137",
+    "id_historia_clinica": "HCL073",
+    "id_visita": "VIS137",
+    "Control": "necessitatibus",
+    "Fecha": "2024-07-03",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET138",
+    "id_historia_clinica": "HCL074",
+    "id_visita": "VIS138",
+    "Control": "similique",
+    "Fecha": "2024-04-10",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET139",
+    "id_historia_clinica": "HCL074",
+    "id_visita": "VIS139",
+    "Control": "tempora",
+    "Fecha": "2023-10-31",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET140",
+    "id_historia_clinica": "HCL074",
+    "id_visita": "VIS140",
+    "Control": "itaque",
+    "Fecha": "2025-03-19",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET141",
+    "id_historia_clinica": "HCL075",
+    "id_visita": "VIS141",
+    "Control": "veritatis",
+    "Fecha": "2024-04-29",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET142",
+    "id_historia_clinica": "HCL076",
+    "id_visita": "VIS142",
+    "Control": "fugiat",
+    "Fecha": "2024-09-22",
+    "Condicion": "Asma",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET143",
+    "id_historia_clinica": "HCL076",
+    "id_visita": "VIS143",
+    "Control": "ducimus",
+    "Fecha": "2025-04-22",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET144",
+    "id_historia_clinica": "HCL076",
+    "id_visita": "VIS144",
+    "Control": "molestias",
+    "Fecha": "2024-03-25",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET145",
+    "id_historia_clinica": "HCL077",
+    "id_visita": "VIS145",
+    "Control": "iure",
+    "Fecha": "2023-08-30",
+    "Condicion": "Artritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET146",
+    "id_historia_clinica": "HCL077",
+    "id_visita": "VIS146",
+    "Control": "porro",
+    "Fecha": "2024-03-08",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET147",
+    "id_historia_clinica": "HCL078",
+    "id_visita": "VIS147",
+    "Control": "odio",
+    "Fecha": "2024-07-25",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET148",
+    "id_historia_clinica": "HCL078",
+    "id_visita": "VIS148",
+    "Control": "ipsam",
+    "Fecha": "2023-12-30",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET149",
+    "id_historia_clinica": "HCL079",
+    "id_visita": "VIS149",
+    "Control": "corrupti",
+    "Fecha": "2024-07-17",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET150",
+    "id_historia_clinica": "HCL080",
+    "id_visita": "VIS150",
+    "Control": "enim",
+    "Fecha": "2024-05-29",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET151",
+    "id_historia_clinica": "HCL080",
+    "id_visita": "VIS151",
+    "Control": "atque",
+    "Fecha": "2024-09-02",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET152",
+    "id_historia_clinica": "HCL080",
+    "id_visita": "VIS152",
+    "Control": "consequuntur",
+    "Fecha": "2025-03-10",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET153",
+    "id_historia_clinica": "HCL081",
+    "id_visita": "VIS153",
+    "Control": "cumque",
+    "Fecha": "2024-02-14",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET154",
+    "id_historia_clinica": "HCL081",
+    "id_visita": "VIS154",
+    "Control": "nihil",
+    "Fecha": "2023-08-22",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET155",
+    "id_historia_clinica": "HCL081",
+    "id_visita": "VIS155",
+    "Control": "debitis",
+    "Fecha": "2024-09-18",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET156",
+    "id_historia_clinica": "HCL082",
+    "id_visita": "VIS156",
+    "Control": "facere",
+    "Fecha": "2024-10-03",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET157",
+    "id_historia_clinica": "HCL083",
+    "id_visita": "VIS157",
+    "Control": "explicabo",
+    "Fecha": "2025-03-27",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET158",
+    "id_historia_clinica": "HCL083",
+    "id_visita": "VIS158",
+    "Control": "facilis",
+    "Fecha": "2025-03-31",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET159",
+    "id_historia_clinica": "HCL084",
+    "id_visita": "VIS159",
+    "Control": "corporis",
+    "Fecha": "2023-12-23",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET160",
+    "id_historia_clinica": "HCL085",
+    "id_visita": "VIS160",
+    "Control": "debitis",
+    "Fecha": "2024-10-07",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET161",
+    "id_historia_clinica": "HCL085",
+    "id_visita": "VIS161",
+    "Control": "doloremque",
+    "Fecha": "2024-11-29",
+    "Condicion": "Asma",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET162",
+    "id_historia_clinica": "HCL085",
+    "id_visita": "VIS162",
+    "Control": "vitae",
+    "Fecha": "2024-08-24",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET163",
+    "id_historia_clinica": "HCL086",
+    "id_visita": "VIS163",
+    "Control": "quae",
+    "Fecha": "2025-01-21",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET164",
+    "id_historia_clinica": "HCL087",
+    "id_visita": "VIS164",
+    "Control": "ab",
+    "Fecha": "2024-01-06",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET165",
+    "id_historia_clinica": "HCL087",
+    "id_visita": "VIS165",
+    "Control": "ullam",
+    "Fecha": "2024-12-13",
+    "Condicion": "Asma",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET166",
+    "id_historia_clinica": "HCL088",
+    "id_visita": "VIS166",
+    "Control": "cupiditate",
+    "Fecha": "2025-03-06",
+    "Condicion": "Artritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET167",
+    "id_historia_clinica": "HCL088",
+    "id_visita": "VIS167",
+    "Control": "ipsa",
+    "Fecha": "2023-10-24",
+    "Condicion": "Asma",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET168",
+    "id_historia_clinica": "HCL088",
+    "id_visita": "VIS168",
+    "Control": "non",
+    "Fecha": "2024-03-11",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET169",
+    "id_historia_clinica": "HCL089",
+    "id_visita": "VIS169",
+    "Control": "esse",
+    "Fecha": "2025-05-25",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET170",
+    "id_historia_clinica": "HCL090",
+    "id_visita": "VIS170",
+    "Control": "excepturi",
+    "Fecha": "2023-09-09",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET171",
+    "id_historia_clinica": "HCL090",
+    "id_visita": "VIS171",
+    "Control": "voluptatum",
+    "Fecha": "2024-04-08",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET172",
+    "id_historia_clinica": "HCL090",
+    "id_visita": "VIS172",
+    "Control": "dignissimos",
+    "Fecha": "2024-08-10",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET173",
+    "id_historia_clinica": "HCL091",
+    "id_visita": "VIS173",
+    "Control": "recusandae",
+    "Fecha": "2024-03-12",
+    "Condicion": "Asma",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET174",
+    "id_historia_clinica": "HCL091",
+    "id_visita": "VIS174",
+    "Control": "cupiditate",
+    "Fecha": "2024-01-03",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET175",
+    "id_historia_clinica": "HCL092",
+    "id_visita": "VIS175",
+    "Control": "excepturi",
+    "Fecha": "2024-03-11",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET176",
+    "id_historia_clinica": "HCL093",
+    "id_visita": "VIS176",
+    "Control": "nisi",
+    "Fecha": "2023-08-09",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET177",
+    "id_historia_clinica": "HCL094",
+    "id_visita": "VIS177",
+    "Control": "totam",
+    "Fecha": "2025-01-17",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET178",
+    "id_historia_clinica": "HCL095",
+    "id_visita": "VIS178",
+    "Control": "in",
+    "Fecha": "2025-02-26",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET179",
+    "id_historia_clinica": "HCL095",
+    "id_visita": "VIS179",
+    "Control": "eum",
+    "Fecha": "2025-05-27",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET180",
+    "id_historia_clinica": "HCL095",
+    "id_visita": "VIS180",
+    "Control": "magni",
+    "Fecha": "2025-04-19",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET181",
+    "id_historia_clinica": "HCL096",
+    "id_visita": "VIS181",
+    "Control": "impedit",
+    "Fecha": "2024-06-11",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET182",
+    "id_historia_clinica": "HCL097",
+    "id_visita": "VIS182",
+    "Control": "consectetur",
+    "Fecha": "2024-12-16",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET183",
+    "id_historia_clinica": "HCL097",
+    "id_visita": "VIS183",
+    "Control": "ab",
+    "Fecha": "2024-11-27",
+    "Condicion": "Asma",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET184",
+    "id_historia_clinica": "HCL097",
+    "id_visita": "VIS184",
+    "Control": "quae",
+    "Fecha": "2024-10-21",
+    "Condicion": "Artritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET185",
+    "id_historia_clinica": "HCL098",
+    "id_visita": "VIS185",
+    "Control": "est",
+    "Fecha": "2023-09-09",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET186",
+    "id_historia_clinica": "HCL098",
+    "id_visita": "VIS186",
+    "Control": "nam",
+    "Fecha": "2025-07-24",
+    "Condicion": "Artritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET187",
+    "id_historia_clinica": "HCL098",
+    "id_visita": "VIS187",
+    "Control": "quisquam",
+    "Fecha": "2024-03-19",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET188",
+    "id_historia_clinica": "HCL099",
+    "id_visita": "VIS188",
+    "Control": "et",
+    "Fecha": "2023-11-08",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET189",
+    "id_historia_clinica": "HCL099",
+    "id_visita": "VIS189",
+    "Control": "iure",
+    "Fecha": "2023-10-15",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET190",
+    "id_historia_clinica": "HCL100",
+    "id_visita": "VIS190",
+    "Control": "corrupti",
+    "Fecha": "2024-08-26",
+    "Condicion": "Asma",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET191",
+    "id_historia_clinica": "HCL100",
+    "id_visita": "VIS191",
+    "Control": "incidunt",
+    "Fecha": "2025-02-19",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET192",
+    "id_historia_clinica": "HCL100",
+    "id_visita": "VIS192",
+    "Control": "ut",
+    "Fecha": "2024-09-02",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET193",
+    "id_historia_clinica": "HCL101",
+    "id_visita": "VIS193",
+    "Control": "quis",
+    "Fecha": "2025-02-22",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET194",
+    "id_historia_clinica": "HCL101",
+    "id_visita": "VIS194",
+    "Control": "quidem",
+    "Fecha": "2024-01-16",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET195",
+    "id_historia_clinica": "HCL101",
+    "id_visita": "VIS195",
+    "Control": "autem",
+    "Fecha": "2024-05-31",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET196",
+    "id_historia_clinica": "HCL102",
+    "id_visita": "VIS196",
+    "Control": "molestias",
+    "Fecha": "2023-08-26",
+    "Condicion": "Artritis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET197",
+    "id_historia_clinica": "HCL102",
+    "id_visita": "VIS197",
+    "Control": "omnis",
+    "Fecha": "2023-08-18",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET198",
+    "id_historia_clinica": "HCL103",
+    "id_visita": "VIS198",
+    "Control": "deleniti",
+    "Fecha": "2024-02-09",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET199",
+    "id_historia_clinica": "HCL104",
+    "id_visita": "VIS199",
+    "Control": "delectus",
+    "Fecha": "2023-12-02",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET200",
+    "id_historia_clinica": "HCL104",
+    "id_visita": "VIS200",
+    "Control": "quae",
+    "Fecha": "2024-02-19",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET201",
+    "id_historia_clinica": "HCL105",
+    "id_visita": "VIS201",
+    "Control": "fugit",
+    "Fecha": "2024-03-12",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET202",
+    "id_historia_clinica": "HCL105",
+    "id_visita": "VIS202",
+    "Control": "est",
+    "Fecha": "2025-06-23",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET203",
+    "id_historia_clinica": "HCL105",
+    "id_visita": "VIS203",
+    "Control": "odio",
+    "Fecha": "2024-03-16",
+    "Condicion": "Artritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET204",
+    "id_historia_clinica": "HCL106",
+    "id_visita": "VIS204",
+    "Control": "quos",
+    "Fecha": "2023-09-16",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET205",
+    "id_historia_clinica": "HCL106",
+    "id_visita": "VIS205",
+    "Control": "molestiae",
+    "Fecha": "2024-09-06",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET206",
+    "id_historia_clinica": "HCL106",
+    "id_visita": "VIS206",
+    "Control": "nemo",
+    "Fecha": "2024-09-07",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET207",
+    "id_historia_clinica": "HCL107",
+    "id_visita": "VIS207",
+    "Control": "labore",
+    "Fecha": "2024-07-19",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET208",
+    "id_historia_clinica": "HCL107",
+    "id_visita": "VIS208",
+    "Control": "corporis",
+    "Fecha": "2024-01-13",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET209",
+    "id_historia_clinica": "HCL107",
+    "id_visita": "VIS209",
+    "Control": "itaque",
+    "Fecha": "2023-12-07",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET210",
+    "id_historia_clinica": "HCL108",
+    "id_visita": "VIS210",
+    "Control": "impedit",
+    "Fecha": "2024-01-19",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET211",
+    "id_historia_clinica": "HCL108",
+    "id_visita": "VIS211",
+    "Control": "possimus",
+    "Fecha": "2024-08-23",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET212",
+    "id_historia_clinica": "HCL109",
+    "id_visita": "VIS212",
+    "Control": "ut",
+    "Fecha": "2023-09-05",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET213",
+    "id_historia_clinica": "HCL109",
+    "id_visita": "VIS213",
+    "Control": "nemo",
+    "Fecha": "2023-10-31",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET214",
+    "id_historia_clinica": "HCL109",
+    "id_visita": "VIS214",
+    "Control": "dolorem",
+    "Fecha": "2024-10-21",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET215",
+    "id_historia_clinica": "HCL110",
+    "id_visita": "VIS215",
+    "Control": "corrupti",
+    "Fecha": "2023-08-19",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET216",
+    "id_historia_clinica": "HCL110",
+    "id_visita": "VIS216",
+    "Control": "veniam",
+    "Fecha": "2025-02-08",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET217",
+    "id_historia_clinica": "HCL110",
+    "id_visita": "VIS217",
+    "Control": "occaecati",
+    "Fecha": "2025-01-18",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET218",
+    "id_historia_clinica": "HCL111",
+    "id_visita": "VIS218",
+    "Control": "iste",
+    "Fecha": "2024-06-17",
+    "Condicion": "Artritis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET219",
+    "id_historia_clinica": "HCL111",
+    "id_visita": "VIS219",
+    "Control": "error",
+    "Fecha": "2023-10-20",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET220",
+    "id_historia_clinica": "HCL112",
+    "id_visita": "VIS220",
+    "Control": "nostrum",
+    "Fecha": "2023-10-08",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET221",
+    "id_historia_clinica": "HCL113",
+    "id_visita": "VIS221",
+    "Control": "non",
+    "Fecha": "2024-07-05",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET222",
+    "id_historia_clinica": "HCL113",
+    "id_visita": "VIS222",
+    "Control": "accusantium",
+    "Fecha": "2024-03-01",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET223",
+    "id_historia_clinica": "HCL113",
+    "id_visita": "VIS223",
+    "Control": "recusandae",
+    "Fecha": "2025-02-13",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET224",
+    "id_historia_clinica": "HCL114",
+    "id_visita": "VIS224",
+    "Control": "accusantium",
+    "Fecha": "2024-02-24",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET225",
+    "id_historia_clinica": "HCL115",
+    "id_visita": "VIS225",
+    "Control": "fugit",
+    "Fecha": "2024-02-08",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET226",
+    "id_historia_clinica": "HCL115",
+    "id_visita": "VIS226",
+    "Control": "recusandae",
+    "Fecha": "2025-07-26",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET227",
+    "id_historia_clinica": "HCL116",
+    "id_visita": "VIS227",
+    "Control": "optio",
+    "Fecha": "2024-07-12",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET228",
+    "id_historia_clinica": "HCL116",
+    "id_visita": "VIS228",
+    "Control": "odit",
+    "Fecha": "2023-08-31",
+    "Condicion": "Artritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET229",
+    "id_historia_clinica": "HCL117",
+    "id_visita": "VIS229",
+    "Control": "pariatur",
+    "Fecha": "2024-09-30",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET230",
+    "id_historia_clinica": "HCL117",
+    "id_visita": "VIS230",
+    "Control": "delectus",
+    "Fecha": "2024-07-22",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET231",
+    "id_historia_clinica": "HCL118",
+    "id_visita": "VIS231",
+    "Control": "aliquam",
+    "Fecha": "2024-03-09",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET232",
+    "id_historia_clinica": "HCL119",
+    "id_visita": "VIS232",
+    "Control": "saepe",
+    "Fecha": "2024-02-17",
+    "Condicion": "Asma",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET233",
+    "id_historia_clinica": "HCL120",
+    "id_visita": "VIS233",
+    "Control": "neque",
+    "Fecha": "2024-10-09",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET234",
+    "id_historia_clinica": "HCL120",
+    "id_visita": "VIS234",
+    "Control": "ab",
+    "Fecha": "2023-11-19",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET235",
+    "id_historia_clinica": "HCL121",
+    "id_visita": "VIS235",
+    "Control": "inventore",
+    "Fecha": "2023-11-19",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET236",
+    "id_historia_clinica": "HCL122",
+    "id_visita": "VIS236",
+    "Control": "ipsam",
+    "Fecha": "2025-04-12",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET237",
+    "id_historia_clinica": "HCL122",
+    "id_visita": "VIS237",
+    "Control": "sunt",
+    "Fecha": "2025-02-21",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET238",
+    "id_historia_clinica": "HCL122",
+    "id_visita": "VIS238",
+    "Control": "perferendis",
+    "Fecha": "2024-04-29",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET239",
+    "id_historia_clinica": "HCL123",
+    "id_visita": "VIS239",
+    "Control": "fugiat",
+    "Fecha": "2024-09-28",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET240",
+    "id_historia_clinica": "HCL124",
+    "id_visita": "VIS240",
+    "Control": "iure",
+    "Fecha": "2024-02-12",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET241",
+    "id_historia_clinica": "HCL124",
+    "id_visita": "VIS241",
+    "Control": "alias",
+    "Fecha": "2025-05-02",
+    "Condicion": "Asma",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET242",
+    "id_historia_clinica": "HCL124",
+    "id_visita": "VIS242",
+    "Control": "harum",
+    "Fecha": "2023-09-28",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET243",
+    "id_historia_clinica": "HCL125",
+    "id_visita": "VIS243",
+    "Control": "odio",
+    "Fecha": "2025-06-27",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET244",
+    "id_historia_clinica": "HCL126",
+    "id_visita": "VIS244",
+    "Control": "error",
+    "Fecha": "2024-05-25",
+    "Condicion": "Artritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET245",
+    "id_historia_clinica": "HCL126",
+    "id_visita": "VIS245",
+    "Control": "sunt",
+    "Fecha": "2025-06-17",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET246",
+    "id_historia_clinica": "HCL127",
+    "id_visita": "VIS246",
+    "Control": "quas",
+    "Fecha": "2025-05-07",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET247",
+    "id_historia_clinica": "HCL127",
+    "id_visita": "VIS247",
+    "Control": "minus",
+    "Fecha": "2025-04-04",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET248",
+    "id_historia_clinica": "HCL128",
+    "id_visita": "VIS248",
+    "Control": "accusantium",
+    "Fecha": "2024-10-15",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET249",
+    "id_historia_clinica": "HCL129",
+    "id_visita": "VIS249",
+    "Control": "quia",
+    "Fecha": "2025-06-09",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET250",
+    "id_historia_clinica": "HCL130",
+    "id_visita": "VIS250",
+    "Control": "soluta",
+    "Fecha": "2025-06-07",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET251",
+    "id_historia_clinica": "HCL131",
+    "id_visita": "VIS251",
+    "Control": "impedit",
+    "Fecha": "2024-06-14",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET252",
+    "id_historia_clinica": "HCL131",
+    "id_visita": "VIS252",
+    "Control": "iure",
+    "Fecha": "2024-02-29",
+    "Condicion": "Artritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET253",
+    "id_historia_clinica": "HCL131",
+    "id_visita": "VIS253",
+    "Control": "sint",
+    "Fecha": "2024-07-23",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET254",
+    "id_historia_clinica": "HCL132",
+    "id_visita": "VIS254",
+    "Control": "eum",
+    "Fecha": "2025-06-22",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET255",
+    "id_historia_clinica": "HCL132",
+    "id_visita": "VIS255",
+    "Control": "asperiores",
+    "Fecha": "2024-12-23",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET256",
+    "id_historia_clinica": "HCL133",
+    "id_visita": "VIS256",
+    "Control": "ad",
+    "Fecha": "2024-10-09",
+    "Condicion": "Asma",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET257",
+    "id_historia_clinica": "HCL133",
+    "id_visita": "VIS257",
+    "Control": "facere",
+    "Fecha": "2025-02-03",
+    "Condicion": "Artritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET258",
+    "id_historia_clinica": "HCL134",
+    "id_visita": "VIS258",
+    "Control": "ut",
+    "Fecha": "2023-08-17",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET259",
+    "id_historia_clinica": "HCL134",
+    "id_visita": "VIS259",
+    "Control": "suscipit",
+    "Fecha": "2025-01-01",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET260",
+    "id_historia_clinica": "HCL135",
+    "id_visita": "VIS260",
+    "Control": "aliquid",
+    "Fecha": "2024-11-29",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET261",
+    "id_historia_clinica": "HCL136",
+    "id_visita": "VIS261",
+    "Control": "autem",
+    "Fecha": "2024-09-23",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET262",
+    "id_historia_clinica": "HCL136",
+    "id_visita": "VIS262",
+    "Control": "beatae",
+    "Fecha": "2023-09-10",
+    "Condicion": "Asma",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET263",
+    "id_historia_clinica": "HCL136",
+    "id_visita": "VIS263",
+    "Control": "culpa",
+    "Fecha": "2025-05-31",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET264",
+    "id_historia_clinica": "HCL137",
+    "id_visita": "VIS264",
+    "Control": "ab",
+    "Fecha": "2024-11-08",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET265",
+    "id_historia_clinica": "HCL137",
+    "id_visita": "VIS265",
+    "Control": "ad",
+    "Fecha": "2024-06-17",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET266",
+    "id_historia_clinica": "HCL137",
+    "id_visita": "VIS266",
+    "Control": "nisi",
+    "Fecha": "2023-09-10",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET267",
+    "id_historia_clinica": "HCL138",
+    "id_visita": "VIS267",
+    "Control": "quis",
+    "Fecha": "2024-11-10",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET268",
+    "id_historia_clinica": "HCL138",
+    "id_visita": "VIS268",
+    "Control": "consectetur",
+    "Fecha": "2024-09-18",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET269",
+    "id_historia_clinica": "HCL138",
+    "id_visita": "VIS269",
+    "Control": "deleniti",
+    "Fecha": "2025-06-07",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET270",
+    "id_historia_clinica": "HCL139",
+    "id_visita": "VIS270",
+    "Control": "totam",
+    "Fecha": "2025-02-01",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET271",
+    "id_historia_clinica": "HCL139",
+    "id_visita": "VIS271",
+    "Control": "modi",
+    "Fecha": "2025-03-23",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET272",
+    "id_historia_clinica": "HCL140",
+    "id_visita": "VIS272",
+    "Control": "voluptatum",
+    "Fecha": "2024-11-03",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET273",
+    "id_historia_clinica": "HCL140",
+    "id_visita": "VIS273",
+    "Control": "quia",
+    "Fecha": "2024-09-14",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET274",
+    "id_historia_clinica": "HCL140",
+    "id_visita": "VIS274",
+    "Control": "est",
+    "Fecha": "2023-08-15",
+    "Condicion": "Artritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET275",
+    "id_historia_clinica": "HCL141",
+    "id_visita": "VIS275",
+    "Control": "culpa",
+    "Fecha": "2023-10-24",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET276",
+    "id_historia_clinica": "HCL141",
+    "id_visita": "VIS276",
+    "Control": "libero",
+    "Fecha": "2024-10-27",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET277",
+    "id_historia_clinica": "HCL141",
+    "id_visita": "VIS277",
+    "Control": "doloremque",
+    "Fecha": "2024-05-10",
+    "Condicion": "Asma",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET278",
+    "id_historia_clinica": "HCL142",
+    "id_visita": "VIS278",
+    "Control": "excepturi",
+    "Fecha": "2024-05-01",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET279",
+    "id_historia_clinica": "HCL143",
+    "id_visita": "VIS279",
+    "Control": "laudantium",
+    "Fecha": "2023-09-16",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET280",
+    "id_historia_clinica": "HCL144",
+    "id_visita": "VIS280",
+    "Control": "corrupti",
+    "Fecha": "2025-01-02",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET281",
+    "id_historia_clinica": "HCL144",
+    "id_visita": "VIS281",
+    "Control": "occaecati",
+    "Fecha": "2024-05-09",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET282",
+    "id_historia_clinica": "HCL144",
+    "id_visita": "VIS282",
+    "Control": "harum",
+    "Fecha": "2024-02-15",
+    "Condicion": "Artritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET283",
+    "id_historia_clinica": "HCL145",
+    "id_visita": "VIS283",
+    "Control": "cumque",
+    "Fecha": "2024-03-06",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET284",
+    "id_historia_clinica": "HCL145",
+    "id_visita": "VIS284",
+    "Control": "aut",
+    "Fecha": "2024-01-08",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET285",
+    "id_historia_clinica": "HCL146",
+    "id_visita": "VIS285",
+    "Control": "iusto",
+    "Fecha": "2023-08-31",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET286",
+    "id_historia_clinica": "HCL146",
+    "id_visita": "VIS286",
+    "Control": "minima",
+    "Fecha": "2025-07-01",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET287",
+    "id_historia_clinica": "HCL146",
+    "id_visita": "VIS287",
+    "Control": "ratione",
+    "Fecha": "2023-11-08",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET288",
+    "id_historia_clinica": "HCL147",
+    "id_visita": "VIS288",
+    "Control": "excepturi",
+    "Fecha": "2025-02-15",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET289",
+    "id_historia_clinica": "HCL148",
+    "id_visita": "VIS289",
+    "Control": "aliquam",
+    "Fecha": "2024-09-02",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET290",
+    "id_historia_clinica": "HCL149",
+    "id_visita": "VIS290",
+    "Control": "quo",
+    "Fecha": "2023-12-17",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET291",
+    "id_historia_clinica": "HCL149",
+    "id_visita": "VIS291",
+    "Control": "voluptate",
+    "Fecha": "2025-04-24",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET292",
+    "id_historia_clinica": "HCL149",
+    "id_visita": "VIS292",
+    "Control": "quisquam",
+    "Fecha": "2025-03-28",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET293",
+    "id_historia_clinica": "HCL150",
+    "id_visita": "VIS293",
+    "Control": "corporis",
+    "Fecha": "2025-05-22",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET294",
+    "id_historia_clinica": "HCL150",
+    "id_visita": "VIS294",
+    "Control": "occaecati",
+    "Fecha": "2023-11-08",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET295",
+    "id_historia_clinica": "HCL151",
+    "id_visita": "VIS295",
+    "Control": "expedita",
+    "Fecha": "2023-11-15",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET296",
+    "id_historia_clinica": "HCL152",
+    "id_visita": "VIS296",
+    "Control": "id",
+    "Fecha": "2023-12-18",
+    "Condicion": "Artritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET297",
+    "id_historia_clinica": "HCL153",
+    "id_visita": "VIS297",
+    "Control": "cumque",
+    "Fecha": "2023-11-10",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET298",
+    "id_historia_clinica": "HCL153",
+    "id_visita": "VIS298",
+    "Control": "repudiandae",
+    "Fecha": "2025-05-10",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET299",
+    "id_historia_clinica": "HCL153",
+    "id_visita": "VIS299",
+    "Control": "iste",
+    "Fecha": "2024-02-20",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET300",
+    "id_historia_clinica": "HCL154",
+    "id_visita": "VIS300",
+    "Control": "nihil",
+    "Fecha": "2025-02-13",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET301",
+    "id_historia_clinica": "HCL155",
+    "id_visita": "VIS301",
+    "Control": "sunt",
+    "Fecha": "2024-03-18",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET302",
+    "id_historia_clinica": "HCL155",
+    "id_visita": "VIS302",
+    "Control": "minus",
+    "Fecha": "2024-09-07",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET303",
+    "id_historia_clinica": "HCL156",
+    "id_visita": "VIS303",
+    "Control": "ipsam",
+    "Fecha": "2024-06-09",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET304",
+    "id_historia_clinica": "HCL156",
+    "id_visita": "VIS304",
+    "Control": "optio",
+    "Fecha": "2024-11-28",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET305",
+    "id_historia_clinica": "HCL157",
+    "id_visita": "VIS305",
+    "Control": "animi",
+    "Fecha": "2023-11-19",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET306",
+    "id_historia_clinica": "HCL158",
+    "id_visita": "VIS306",
+    "Control": "architecto",
+    "Fecha": "2025-01-10",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET307",
+    "id_historia_clinica": "HCL158",
+    "id_visita": "VIS307",
+    "Control": "quos",
+    "Fecha": "2024-07-16",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET308",
+    "id_historia_clinica": "HCL159",
+    "id_visita": "VIS308",
+    "Control": "hic",
+    "Fecha": "2025-01-05",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET309",
+    "id_historia_clinica": "HCL160",
+    "id_visita": "VIS309",
+    "Control": "culpa",
+    "Fecha": "2024-04-30",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET310",
+    "id_historia_clinica": "HCL160",
+    "id_visita": "VIS310",
+    "Control": "eligendi",
+    "Fecha": "2024-04-15",
+    "Condicion": "Artritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET311",
+    "id_historia_clinica": "HCL161",
+    "id_visita": "VIS311",
+    "Control": "eaque",
+    "Fecha": "2024-05-02",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET312",
+    "id_historia_clinica": "HCL161",
+    "id_visita": "VIS312",
+    "Control": "qui",
+    "Fecha": "2023-10-17",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET313",
+    "id_historia_clinica": "HCL162",
+    "id_visita": "VIS313",
+    "Control": "nisi",
+    "Fecha": "2024-08-21",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET314",
+    "id_historia_clinica": "HCL162",
+    "id_visita": "VIS314",
+    "Control": "accusamus",
+    "Fecha": "2023-12-19",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET315",
+    "id_historia_clinica": "HCL163",
+    "id_visita": "VIS315",
+    "Control": "nesciunt",
+    "Fecha": "2025-04-15",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET316",
+    "id_historia_clinica": "HCL163",
+    "id_visita": "VIS316",
+    "Control": "nobis",
+    "Fecha": "2023-08-01",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET317",
+    "id_historia_clinica": "HCL163",
+    "id_visita": "VIS317",
+    "Control": "illum",
+    "Fecha": "2024-05-01",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET318",
+    "id_historia_clinica": "HCL164",
+    "id_visita": "VIS318",
+    "Control": "quis",
+    "Fecha": "2023-10-29",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET319",
+    "id_historia_clinica": "HCL164",
+    "id_visita": "VIS319",
+    "Control": "doloremque",
+    "Fecha": "2025-03-17",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET320",
+    "id_historia_clinica": "HCL164",
+    "id_visita": "VIS320",
+    "Control": "omnis",
+    "Fecha": "2024-05-15",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET321",
+    "id_historia_clinica": "HCL165",
+    "id_visita": "VIS321",
+    "Control": "asperiores",
+    "Fecha": "2023-08-14",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET322",
+    "id_historia_clinica": "HCL165",
+    "id_visita": "VIS322",
+    "Control": "voluptate",
+    "Fecha": "2024-02-26",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET323",
+    "id_historia_clinica": "HCL165",
+    "id_visita": "VIS323",
+    "Control": "id",
+    "Fecha": "2025-04-15",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET324",
+    "id_historia_clinica": "HCL166",
+    "id_visita": "VIS324",
+    "Control": "illo",
+    "Fecha": "2024-01-24",
+    "Condicion": "Artritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET325",
+    "id_historia_clinica": "HCL166",
+    "id_visita": "VIS325",
+    "Control": "occaecati",
+    "Fecha": "2023-10-26",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET326",
+    "id_historia_clinica": "HCL167",
+    "id_visita": "VIS326",
+    "Control": "id",
+    "Fecha": "2024-11-09",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET327",
+    "id_historia_clinica": "HCL168",
+    "id_visita": "VIS327",
+    "Control": "suscipit",
+    "Fecha": "2024-12-14",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET328",
+    "id_historia_clinica": "HCL168",
+    "id_visita": "VIS328",
+    "Control": "iure",
+    "Fecha": "2025-07-23",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET329",
+    "id_historia_clinica": "HCL168",
+    "id_visita": "VIS329",
+    "Control": "repellendus",
+    "Fecha": "2025-02-01",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET330",
+    "id_historia_clinica": "HCL169",
+    "id_visita": "VIS330",
+    "Control": "est",
+    "Fecha": "2024-02-29",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET331",
+    "id_historia_clinica": "HCL170",
+    "id_visita": "VIS331",
+    "Control": "asperiores",
+    "Fecha": "2024-05-03",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET332",
+    "id_historia_clinica": "HCL171",
+    "id_visita": "VIS332",
+    "Control": "recusandae",
+    "Fecha": "2025-02-04",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET333",
+    "id_historia_clinica": "HCL171",
+    "id_visita": "VIS333",
+    "Control": "quasi",
+    "Fecha": "2024-11-21",
+    "Condicion": "Asma",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET334",
+    "id_historia_clinica": "HCL172",
+    "id_visita": "VIS334",
+    "Control": "nesciunt",
+    "Fecha": "2024-06-25",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET335",
+    "id_historia_clinica": "HCL172",
+    "id_visita": "VIS335",
+    "Control": "aut",
+    "Fecha": "2023-11-10",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET336",
+    "id_historia_clinica": "HCL173",
+    "id_visita": "VIS336",
+    "Control": "commodi",
+    "Fecha": "2024-07-30",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET337",
+    "id_historia_clinica": "HCL173",
+    "id_visita": "VIS337",
+    "Control": "dolorum",
+    "Fecha": "2024-07-21",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET338",
+    "id_historia_clinica": "HCL173",
+    "id_visita": "VIS338",
+    "Control": "reprehenderit",
+    "Fecha": "2024-11-16",
+    "Condicion": "Asma",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET339",
+    "id_historia_clinica": "HCL174",
+    "id_visita": "VIS339",
+    "Control": "nostrum",
+    "Fecha": "2025-07-05",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET340",
+    "id_historia_clinica": "HCL174",
+    "id_visita": "VIS340",
+    "Control": "non",
+    "Fecha": "2024-04-13",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET341",
+    "id_historia_clinica": "HCL175",
+    "id_visita": "VIS341",
+    "Control": "temporibus",
+    "Fecha": "2024-06-09",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET342",
+    "id_historia_clinica": "HCL175",
+    "id_visita": "VIS342",
+    "Control": "dolor",
+    "Fecha": "2024-10-25",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET343",
+    "id_historia_clinica": "HCL175",
+    "id_visita": "VIS343",
+    "Control": "ad",
+    "Fecha": "2024-08-12",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET344",
+    "id_historia_clinica": "HCL176",
+    "id_visita": "VIS344",
+    "Control": "a",
+    "Fecha": "2025-06-30",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET345",
+    "id_historia_clinica": "HCL177",
+    "id_visita": "VIS345",
+    "Control": "dignissimos",
+    "Fecha": "2024-04-14",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET346",
+    "id_historia_clinica": "HCL178",
+    "id_visita": "VIS346",
+    "Control": "placeat",
+    "Fecha": "2024-05-02",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET347",
+    "id_historia_clinica": "HCL178",
+    "id_visita": "VIS347",
+    "Control": "maiores",
+    "Fecha": "2024-01-04",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET348",
+    "id_historia_clinica": "HCL178",
+    "id_visita": "VIS348",
+    "Control": "est",
+    "Fecha": "2024-02-17",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET349",
+    "id_historia_clinica": "HCL179",
+    "id_visita": "VIS349",
+    "Control": "explicabo",
+    "Fecha": "2024-05-26",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET350",
+    "id_historia_clinica": "HCL179",
+    "id_visita": "VIS350",
+    "Control": "nobis",
+    "Fecha": "2023-12-06",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET351",
+    "id_historia_clinica": "HCL179",
+    "id_visita": "VIS351",
+    "Control": "quidem",
+    "Fecha": "2024-10-22",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET352",
+    "id_historia_clinica": "HCL180",
+    "id_visita": "VIS352",
+    "Control": "natus",
+    "Fecha": "2025-02-21",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET353",
+    "id_historia_clinica": "HCL180",
+    "id_visita": "VIS353",
+    "Control": "sunt",
+    "Fecha": "2023-08-22",
+    "Condicion": "Asma",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET354",
+    "id_historia_clinica": "HCL181",
+    "id_visita": "VIS354",
+    "Control": "mollitia",
+    "Fecha": "2024-09-26",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET355",
+    "id_historia_clinica": "HCL182",
+    "id_visita": "VIS355",
+    "Control": "voluptate",
+    "Fecha": "2024-10-31",
+    "Condicion": "Artritis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET356",
+    "id_historia_clinica": "HCL182",
+    "id_visita": "VIS356",
+    "Control": "ratione",
+    "Fecha": "2025-05-23",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET357",
+    "id_historia_clinica": "HCL183",
+    "id_visita": "VIS357",
+    "Control": "quidem",
+    "Fecha": "2025-07-10",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET358",
+    "id_historia_clinica": "HCL183",
+    "id_visita": "VIS358",
+    "Control": "illo",
+    "Fecha": "2023-09-21",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET359",
+    "id_historia_clinica": "HCL184",
+    "id_visita": "VIS359",
+    "Control": "corporis",
+    "Fecha": "2024-09-17",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET360",
+    "id_historia_clinica": "HCL184",
+    "id_visita": "VIS360",
+    "Control": "et",
+    "Fecha": "2023-07-28",
+    "Condicion": "Asma",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET361",
+    "id_historia_clinica": "HCL184",
+    "id_visita": "VIS361",
+    "Control": "magnam",
+    "Fecha": "2025-03-16",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET362",
+    "id_historia_clinica": "HCL185",
+    "id_visita": "VIS362",
+    "Control": "nemo",
+    "Fecha": "2023-10-10",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET363",
+    "id_historia_clinica": "HCL185",
+    "id_visita": "VIS363",
+    "Control": "corporis",
+    "Fecha": "2023-09-17",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET364",
+    "id_historia_clinica": "HCL186",
+    "id_visita": "VIS364",
+    "Control": "accusamus",
+    "Fecha": "2024-03-09",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET365",
+    "id_historia_clinica": "HCL186",
+    "id_visita": "VIS365",
+    "Control": "fugiat",
+    "Fecha": "2025-07-10",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET366",
+    "id_historia_clinica": "HCL187",
+    "id_visita": "VIS366",
+    "Control": "eaque",
+    "Fecha": "2023-11-23",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET367",
+    "id_historia_clinica": "HCL188",
+    "id_visita": "VIS367",
+    "Control": "odit",
+    "Fecha": "2025-02-18",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET368",
+    "id_historia_clinica": "HCL188",
+    "id_visita": "VIS368",
+    "Control": "ullam",
+    "Fecha": "2024-05-02",
+    "Condicion": "Asma",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET369",
+    "id_historia_clinica": "HCL189",
+    "id_visita": "VIS369",
+    "Control": "provident",
+    "Fecha": "2025-04-23",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET370",
+    "id_historia_clinica": "HCL190",
+    "id_visita": "VIS370",
+    "Control": "accusamus",
+    "Fecha": "2024-07-03",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET371",
+    "id_historia_clinica": "HCL190",
+    "id_visita": "VIS371",
+    "Control": "placeat",
+    "Fecha": "2025-01-09",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET372",
+    "id_historia_clinica": "HCL190",
+    "id_visita": "VIS372",
+    "Control": "alias",
+    "Fecha": "2025-03-31",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET373",
+    "id_historia_clinica": "HCL191",
+    "id_visita": "VIS373",
+    "Control": "nobis",
+    "Fecha": "2025-05-18",
+    "Condicion": "Artritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET374",
+    "id_historia_clinica": "HCL191",
+    "id_visita": "VIS374",
+    "Control": "laboriosam",
+    "Fecha": "2025-01-12",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET375",
+    "id_historia_clinica": "HCL191",
+    "id_visita": "VIS375",
+    "Control": "ipsum",
+    "Fecha": "2023-11-30",
+    "Condicion": "Asma",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET376",
+    "id_historia_clinica": "HCL192",
+    "id_visita": "VIS376",
+    "Control": "reprehenderit",
+    "Fecha": "2024-06-03",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET377",
+    "id_historia_clinica": "HCL192",
+    "id_visita": "VIS377",
+    "Control": "inventore",
+    "Fecha": "2023-10-02",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET378",
+    "id_historia_clinica": "HCL192",
+    "id_visita": "VIS378",
+    "Control": "distinctio",
+    "Fecha": "2024-05-15",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET379",
+    "id_historia_clinica": "HCL193",
+    "id_visita": "VIS379",
+    "Control": "veniam",
+    "Fecha": "2024-09-21",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET380",
+    "id_historia_clinica": "HCL193",
+    "id_visita": "VIS380",
+    "Control": "necessitatibus",
+    "Fecha": "2024-11-17",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET381",
+    "id_historia_clinica": "HCL194",
+    "id_visita": "VIS381",
+    "Control": "iste",
+    "Fecha": "2024-07-30",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET382",
+    "id_historia_clinica": "HCL194",
+    "id_visita": "VIS382",
+    "Control": "aperiam",
+    "Fecha": "2024-04-09",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET383",
+    "id_historia_clinica": "HCL195",
+    "id_visita": "VIS383",
+    "Control": "esse",
+    "Fecha": "2023-11-09",
+    "Condicion": "Artritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET384",
+    "id_historia_clinica": "HCL196",
+    "id_visita": "VIS384",
+    "Control": "eaque",
+    "Fecha": "2025-01-29",
+    "Condicion": "Asma",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET385",
+    "id_historia_clinica": "HCL196",
+    "id_visita": "VIS385",
+    "Control": "iste",
+    "Fecha": "2024-02-24",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET386",
+    "id_historia_clinica": "HCL197",
+    "id_visita": "VIS386",
+    "Control": "placeat",
+    "Fecha": "2023-09-18",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET387",
+    "id_historia_clinica": "HCL198",
+    "id_visita": "VIS387",
+    "Control": "magni",
+    "Fecha": "2025-07-01",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET388",
+    "id_historia_clinica": "HCL198",
+    "id_visita": "VIS388",
+    "Control": "quia",
+    "Fecha": "2025-05-06",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET389",
+    "id_historia_clinica": "HCL198",
+    "id_visita": "VIS389",
+    "Control": "similique",
+    "Fecha": "2025-05-18",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET390",
+    "id_historia_clinica": "HCL199",
+    "id_visita": "VIS390",
+    "Control": "autem",
+    "Fecha": "2024-11-25",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET391",
+    "id_historia_clinica": "HCL199",
+    "id_visita": "VIS391",
+    "Control": "vitae",
+    "Fecha": "2025-02-14",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET392",
+    "id_historia_clinica": "HCL200",
+    "id_visita": "VIS392",
+    "Control": "praesentium",
+    "Fecha": "2025-04-21",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET393",
+    "id_historia_clinica": "HCL200",
+    "id_visita": "VIS393",
+    "Control": "hic",
+    "Fecha": "2024-03-04",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET394",
+    "id_historia_clinica": "HCL201",
+    "id_visita": "VIS394",
+    "Control": "ducimus",
+    "Fecha": "2025-01-16",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET395",
+    "id_historia_clinica": "HCL202",
+    "id_visita": "VIS395",
+    "Control": "fugiat",
+    "Fecha": "2023-08-11",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET396",
+    "id_historia_clinica": "HCL203",
+    "id_visita": "VIS396",
+    "Control": "optio",
+    "Fecha": "2023-10-12",
+    "Condicion": "Artritis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET397",
+    "id_historia_clinica": "HCL203",
+    "id_visita": "VIS397",
+    "Control": "dolorum",
+    "Fecha": "2025-01-17",
+    "Condicion": "Artritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET398",
+    "id_historia_clinica": "HCL204",
+    "id_visita": "VIS398",
+    "Control": "quis",
+    "Fecha": "2024-11-26",
+    "Condicion": "Asma",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET399",
+    "id_historia_clinica": "HCL204",
+    "id_visita": "VIS399",
+    "Control": "distinctio",
+    "Fecha": "2023-08-20",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET400",
+    "id_historia_clinica": "HCL205",
+    "id_visita": "VIS400",
+    "Control": "facere",
+    "Fecha": "2024-07-07",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET401",
+    "id_historia_clinica": "HCL205",
+    "id_visita": "VIS401",
+    "Control": "magni",
+    "Fecha": "2023-08-27",
+    "Condicion": "Artritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET402",
+    "id_historia_clinica": "HCL206",
+    "id_visita": "VIS402",
+    "Control": "laborum",
+    "Fecha": "2024-06-30",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET403",
+    "id_historia_clinica": "HCL206",
+    "id_visita": "VIS403",
+    "Control": "dolorum",
+    "Fecha": "2023-09-18",
+    "Condicion": "Artritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET404",
+    "id_historia_clinica": "HCL207",
+    "id_visita": "VIS404",
+    "Control": "sed",
+    "Fecha": "2023-07-29",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET405",
+    "id_historia_clinica": "HCL207",
+    "id_visita": "VIS405",
+    "Control": "numquam",
+    "Fecha": "2025-07-22",
+    "Condicion": "Artritis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET406",
+    "id_historia_clinica": "HCL207",
+    "id_visita": "VIS406",
+    "Control": "hic",
+    "Fecha": "2024-11-15",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET407",
+    "id_historia_clinica": "HCL208",
+    "id_visita": "VIS407",
+    "Control": "fugit",
+    "Fecha": "2023-08-07",
+    "Condicion": "Artritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET408",
+    "id_historia_clinica": "HCL208",
+    "id_visita": "VIS408",
+    "Control": "provident",
+    "Fecha": "2024-01-21",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET409",
+    "id_historia_clinica": "HCL208",
+    "id_visita": "VIS409",
+    "Control": "tempora",
+    "Fecha": "2024-08-12",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET410",
+    "id_historia_clinica": "HCL209",
+    "id_visita": "VIS410",
+    "Control": "quod",
+    "Fecha": "2024-09-03",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET411",
+    "id_historia_clinica": "HCL210",
+    "id_visita": "VIS411",
+    "Control": "ea",
+    "Fecha": "2025-01-08",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET412",
+    "id_historia_clinica": "HCL210",
+    "id_visita": "VIS412",
+    "Control": "doloremque",
+    "Fecha": "2024-01-09",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET413",
+    "id_historia_clinica": "HCL210",
+    "id_visita": "VIS413",
+    "Control": "perspiciatis",
+    "Fecha": "2025-01-13",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET414",
+    "id_historia_clinica": "HCL211",
+    "id_visita": "VIS414",
+    "Control": "natus",
+    "Fecha": "2024-05-12",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET415",
+    "id_historia_clinica": "HCL211",
+    "id_visita": "VIS415",
+    "Control": "quisquam",
+    "Fecha": "2025-04-29",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET416",
+    "id_historia_clinica": "HCL212",
+    "id_visita": "VIS416",
+    "Control": "dolorum",
+    "Fecha": "2025-04-16",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET417",
+    "id_historia_clinica": "HCL212",
+    "id_visita": "VIS417",
+    "Control": "quidem",
+    "Fecha": "2024-01-20",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET418",
+    "id_historia_clinica": "HCL213",
+    "id_visita": "VIS418",
+    "Control": "assumenda",
+    "Fecha": "2024-10-16",
+    "Condicion": "Asma",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET419",
+    "id_historia_clinica": "HCL214",
+    "id_visita": "VIS419",
+    "Control": "qui",
+    "Fecha": "2024-06-23",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET420",
+    "id_historia_clinica": "HCL214",
+    "id_visita": "VIS420",
+    "Control": "dolorem",
+    "Fecha": "2024-03-04",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET421",
+    "id_historia_clinica": "HCL215",
+    "id_visita": "VIS421",
+    "Control": "quas",
+    "Fecha": "2024-07-24",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET422",
+    "id_historia_clinica": "HCL215",
+    "id_visita": "VIS422",
+    "Control": "repellendus",
+    "Fecha": "2023-11-20",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET423",
+    "id_historia_clinica": "HCL216",
+    "id_visita": "VIS423",
+    "Control": "fuga",
+    "Fecha": "2023-09-20",
+    "Condicion": "Artritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET424",
+    "id_historia_clinica": "HCL216",
+    "id_visita": "VIS424",
+    "Control": "animi",
+    "Fecha": "2024-08-23",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET425",
+    "id_historia_clinica": "HCL217",
+    "id_visita": "VIS425",
+    "Control": "esse",
+    "Fecha": "2024-07-29",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET426",
+    "id_historia_clinica": "HCL217",
+    "id_visita": "VIS426",
+    "Control": "consectetur",
+    "Fecha": "2025-04-05",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET427",
+    "id_historia_clinica": "HCL218",
+    "id_visita": "VIS427",
+    "Control": "deserunt",
+    "Fecha": "2023-10-14",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET428",
+    "id_historia_clinica": "HCL218",
+    "id_visita": "VIS428",
+    "Control": "dolorem",
+    "Fecha": "2023-12-29",
+    "Condicion": "Asma",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET429",
+    "id_historia_clinica": "HCL219",
+    "id_visita": "VIS429",
+    "Control": "incidunt",
+    "Fecha": "2025-03-12",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET430",
+    "id_historia_clinica": "HCL220",
+    "id_visita": "VIS430",
+    "Control": "delectus",
+    "Fecha": "2025-04-23",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET431",
+    "id_historia_clinica": "HCL221",
+    "id_visita": "VIS431",
+    "Control": "accusantium",
+    "Fecha": "2023-10-25",
+    "Condicion": "Asma",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET432",
+    "id_historia_clinica": "HCL221",
+    "id_visita": "VIS432",
+    "Control": "sint",
+    "Fecha": "2023-12-29",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET433",
+    "id_historia_clinica": "HCL221",
+    "id_visita": "VIS433",
+    "Control": "incidunt",
+    "Fecha": "2024-09-19",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET434",
+    "id_historia_clinica": "HCL222",
+    "id_visita": "VIS434",
+    "Control": "quam",
+    "Fecha": "2024-08-27",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET435",
+    "id_historia_clinica": "HCL222",
+    "id_visita": "VIS435",
+    "Control": "recusandae",
+    "Fecha": "2023-12-31",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET436",
+    "id_historia_clinica": "HCL223",
+    "id_visita": "VIS436",
+    "Control": "nesciunt",
+    "Fecha": "2024-03-13",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET437",
+    "id_historia_clinica": "HCL223",
+    "id_visita": "VIS437",
+    "Control": "quisquam",
+    "Fecha": "2024-07-10",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET438",
+    "id_historia_clinica": "HCL224",
+    "id_visita": "VIS438",
+    "Control": "qui",
+    "Fecha": "2024-06-15",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET439",
+    "id_historia_clinica": "HCL224",
+    "id_visita": "VIS439",
+    "Control": "quaerat",
+    "Fecha": "2024-05-22",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET440",
+    "id_historia_clinica": "HCL224",
+    "id_visita": "VIS440",
+    "Control": "eos",
+    "Fecha": "2025-06-14",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET441",
+    "id_historia_clinica": "HCL225",
+    "id_visita": "VIS441",
+    "Control": "tenetur",
+    "Fecha": "2025-06-29",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET442",
+    "id_historia_clinica": "HCL225",
+    "id_visita": "VIS442",
+    "Control": "amet",
+    "Fecha": "2024-01-18",
+    "Condicion": "Artritis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET443",
+    "id_historia_clinica": "HCL226",
+    "id_visita": "VIS443",
+    "Control": "non",
+    "Fecha": "2024-12-21",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET444",
+    "id_historia_clinica": "HCL226",
+    "id_visita": "VIS444",
+    "Control": "consequatur",
+    "Fecha": "2024-02-29",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET445",
+    "id_historia_clinica": "HCL226",
+    "id_visita": "VIS445",
+    "Control": "deleniti",
+    "Fecha": "2025-06-30",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET446",
+    "id_historia_clinica": "HCL227",
+    "id_visita": "VIS446",
+    "Control": "saepe",
+    "Fecha": "2025-02-25",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET447",
+    "id_historia_clinica": "HCL227",
+    "id_visita": "VIS447",
+    "Control": "aliquam",
+    "Fecha": "2025-05-20",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET448",
+    "id_historia_clinica": "HCL228",
+    "id_visita": "VIS448",
+    "Control": "sed",
+    "Fecha": "2024-01-21",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET449",
+    "id_historia_clinica": "HCL228",
+    "id_visita": "VIS449",
+    "Control": "adipisci",
+    "Fecha": "2024-11-03",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET450",
+    "id_historia_clinica": "HCL228",
+    "id_visita": "VIS450",
+    "Control": "dolor",
+    "Fecha": "2025-03-30",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET451",
+    "id_historia_clinica": "HCL229",
+    "id_visita": "VIS451",
+    "Control": "modi",
+    "Fecha": "2025-04-01",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET452",
+    "id_historia_clinica": "HCL230",
+    "id_visita": "VIS452",
+    "Control": "suscipit",
+    "Fecha": "2023-08-26",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET453",
+    "id_historia_clinica": "HCL230",
+    "id_visita": "VIS453",
+    "Control": "sit",
+    "Fecha": "2023-10-18",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET454",
+    "id_historia_clinica": "HCL230",
+    "id_visita": "VIS454",
+    "Control": "sequi",
+    "Fecha": "2023-10-26",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET455",
+    "id_historia_clinica": "HCL231",
+    "id_visita": "VIS455",
+    "Control": "porro",
+    "Fecha": "2024-07-07",
+    "Condicion": "Artritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET456",
+    "id_historia_clinica": "HCL231",
+    "id_visita": "VIS456",
+    "Control": "vero",
+    "Fecha": "2024-10-26",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET457",
+    "id_historia_clinica": "HCL231",
+    "id_visita": "VIS457",
+    "Control": "quae",
+    "Fecha": "2024-07-11",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET458",
+    "id_historia_clinica": "HCL232",
+    "id_visita": "VIS458",
+    "Control": "fuga",
+    "Fecha": "2025-04-10",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET459",
+    "id_historia_clinica": "HCL232",
+    "id_visita": "VIS459",
+    "Control": "nostrum",
+    "Fecha": "2025-03-24",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET460",
+    "id_historia_clinica": "HCL233",
+    "id_visita": "VIS460",
+    "Control": "placeat",
+    "Fecha": "2024-04-18",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET461",
+    "id_historia_clinica": "HCL234",
+    "id_visita": "VIS461",
+    "Control": "voluptatum",
+    "Fecha": "2024-12-09",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET462",
+    "id_historia_clinica": "HCL234",
+    "id_visita": "VIS462",
+    "Control": "fuga",
+    "Fecha": "2024-08-21",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET463",
+    "id_historia_clinica": "HCL235",
+    "id_visita": "VIS463",
+    "Control": "dolorem",
+    "Fecha": "2024-08-01",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Análisis de sangre"
+  },
+  {
+    "id_detalle": "DET464",
+    "id_historia_clinica": "HCL235",
+    "id_visita": "VIS464",
+    "Control": "error",
+    "Fecha": "2023-08-09",
+    "Condicion": "Artritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET465",
+    "id_historia_clinica": "HCL235",
+    "id_visita": "VIS465",
+    "Control": "amet",
+    "Fecha": "2024-04-11",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET466",
+    "id_historia_clinica": "HCL236",
+    "id_visita": "VIS466",
+    "Control": "blanditiis",
+    "Fecha": "2024-03-17",
+    "Condicion": "Insuficiencia renal",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET467",
+    "id_historia_clinica": "HCL237",
+    "id_visita": "VIS467",
+    "Control": "quia",
+    "Fecha": "2024-08-16",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET468",
+    "id_historia_clinica": "HCL237",
+    "id_visita": "VIS468",
+    "Control": "suscipit",
+    "Fecha": "2024-03-28",
+    "Condicion": "Asma",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET469",
+    "id_historia_clinica": "HCL238",
+    "id_visita": "VIS469",
+    "Control": "ipsum",
+    "Fecha": "2024-01-07",
+    "Condicion": "Asma",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET470",
+    "id_historia_clinica": "HCL238",
+    "id_visita": "VIS470",
+    "Control": "dolore",
+    "Fecha": "2024-05-31",
+    "Condicion": "Neumonía",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET471",
+    "id_historia_clinica": "HCL239",
+    "id_visita": "VIS471",
+    "Control": "eos",
+    "Fecha": "2024-02-14",
+    "Condicion": "Artritis",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET472",
+    "id_historia_clinica": "HCL239",
+    "id_visita": "VIS472",
+    "Control": "ipsam",
+    "Fecha": "2024-01-26",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET473",
+    "id_historia_clinica": "HCL239",
+    "id_visita": "VIS473",
+    "Control": "placeat",
+    "Fecha": "2024-10-30",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Electrocardiograma"
+  },
+  {
+    "id_detalle": "DET474",
+    "id_historia_clinica": "HCL240",
+    "id_visita": "VIS474",
+    "Control": "doloremque",
+    "Fecha": "2024-03-31",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET475",
+    "id_historia_clinica": "HCL240",
+    "id_visita": "VIS475",
+    "Control": "sapiente",
+    "Fecha": "2023-12-07",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET476",
+    "id_historia_clinica": "HCL240",
+    "id_visita": "VIS476",
+    "Control": "vel",
+    "Fecha": "2023-08-05",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET477",
+    "id_historia_clinica": "HCL241",
+    "id_visita": "VIS477",
+    "Control": "reprehenderit",
+    "Fecha": "2025-02-04",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET478",
+    "id_historia_clinica": "HCL242",
+    "id_visita": "VIS478",
+    "Control": "distinctio",
+    "Fecha": "2023-12-09",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET479",
+    "id_historia_clinica": "HCL242",
+    "id_visita": "VIS479",
+    "Control": "veritatis",
+    "Fecha": "2024-12-27",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Fisioterapia"
+  },
+  {
+    "id_detalle": "DET480",
+    "id_historia_clinica": "HCL242",
+    "id_visita": "VIS480",
+    "Control": "facere",
+    "Fecha": "2023-12-03",
+    "Condicion": "Asma",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET481",
+    "id_historia_clinica": "HCL243",
+    "id_visita": "VIS481",
+    "Control": "velit",
+    "Fecha": "2024-02-02",
+    "Condicion": "COVID-19",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET482",
+    "id_historia_clinica": "HCL243",
+    "id_visita": "VIS482",
+    "Control": "vel",
+    "Fecha": "2025-07-25",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Diálisis"
+  },
+  {
+    "id_detalle": "DET483",
+    "id_historia_clinica": "HCL244",
+    "id_visita": "VIS483",
+    "Control": "minus",
+    "Fecha": "2024-11-30",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET484",
+    "id_historia_clinica": "HCL244",
+    "id_visita": "VIS484",
+    "Control": "totam",
+    "Fecha": "2025-02-05",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET485",
+    "id_historia_clinica": "HCL245",
+    "id_visita": "VIS485",
+    "Control": "debitis",
+    "Fecha": "2024-01-30",
+    "Condicion": "Diabetes tipo 2",
+    "Procedimiento": "Terapia respiratoria"
+  },
+  {
+    "id_detalle": "DET486",
+    "id_historia_clinica": "HCL245",
+    "id_visita": "VIS486",
+    "Control": "pariatur",
+    "Fecha": "2025-02-08",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET487",
+    "id_historia_clinica": "HCL245",
+    "id_visita": "VIS487",
+    "Control": "optio",
+    "Fecha": "2025-03-11",
+    "Condicion": "Hipertensión",
+    "Procedimiento": "Cirugía laparoscópica"
+  },
+  {
+    "id_detalle": "DET488",
+    "id_historia_clinica": "HCL246",
+    "id_visita": "VIS488",
+    "Control": "quidem",
+    "Fecha": "2024-03-10",
+    "Condicion": "Gastritis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET489",
+    "id_historia_clinica": "HCL247",
+    "id_visita": "VIS489",
+    "Control": "labore",
+    "Fecha": "2025-02-11",
+    "Condicion": "Asma",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET490",
+    "id_historia_clinica": "HCL247",
+    "id_visita": "VIS490",
+    "Control": "debitis",
+    "Fecha": "2025-06-30",
+    "Condicion": "Asma",
+    "Procedimiento": "Radiografía de tórax"
+  },
+  {
+    "id_detalle": "DET491",
+    "id_historia_clinica": "HCL248",
+    "id_visita": "VIS491",
+    "Control": "asperiores",
+    "Fecha": "2024-12-15",
+    "Condicion": "Artritis",
+    "Procedimiento": "Vacunación"
+  },
+  {
+    "id_detalle": "DET492",
+    "id_historia_clinica": "HCL248",
+    "id_visita": "VIS492",
+    "Control": "quos",
+    "Fecha": "2024-05-10",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET493",
+    "id_historia_clinica": "HCL249",
+    "id_visita": "VIS493",
+    "Control": "nulla",
+    "Fecha": "2023-11-09",
+    "Condicion": "Bronquitis",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET494",
+    "id_historia_clinica": "HCL250",
+    "id_visita": "VIS494",
+    "Control": "harum",
+    "Fecha": "2025-03-21",
+    "Condicion": "Apendicitis",
+    "Procedimiento": "Endoscopia"
+  },
+  {
+    "id_detalle": "DET495",
+    "id_historia_clinica": "HCL250",
+    "id_visita": "VIS495",
+    "Control": "aperiam",
+    "Fecha": "2025-03-27",
+    "Condicion": "Asma",
+    "Procedimiento": "Administración de medicamentos"
+  },
+  {
+    "id_detalle": "DET496",
+    "id_historia_clinica": "HCL250",
+    "id_visita": "VIS496",
+    "Control": "voluptates",
+    "Fecha": "2024-04-15",
+    "Condicion": "Artritis",
+    "Procedimiento": "Endoscopia"
+  }
+]
+);
+
+db.VISITAS_MEDICAS.insertMany(
+[
+  {
+    "id_visita": "VIS001",
+    "Fecha": "2024-03-26",
+    "Hora": "8:45",
+    "Direccion": "Ronda Aura Valbuena 24\nZaragoza, 13467",
+    "id_medico": "MED055",
+    "id_paciente": "890-72-1541",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS002",
+    "Fecha": "2024-09-19",
+    "Hora": "17:30",
+    "Direccion": "Acceso Chuy Murcia 21 Puerta 3 \nLas Palmas, 12625",
+    "id_medico": "MED235",
+    "id_paciente": "431-12-2281",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS003",
+    "Fecha": "2024-08-10",
+    "Hora": "8:15",
+    "Direccion": "Pasaje de Anselma Duran 74 Apt. 31 \nTeruel, 59754",
+    "id_medico": "MED179",
+    "id_paciente": "471-15-9974",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS004",
+    "Fecha": "2023-11-06",
+    "Hora": "15:15",
+    "Direccion": "Acceso de Hilario Alonso 62\nGuadalajara, 94718",
+    "id_medico": "MED212",
+    "id_paciente": "529-50-5944",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS005",
+    "Fecha": "2023-08-10",
+    "Hora": "14:30",
+    "Direccion": "Cañada Teodosio Mateo 26\nSevilla, 69000",
+    "id_medico": "MED101",
+    "id_paciente": "472-34-9333",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS006",
+    "Fecha": "2023-09-26",
+    "Hora": "17:15",
+    "Direccion": "Camino Nuria Bermejo 28\nAsturias, 68643",
+    "id_medico": "MED211",
+    "id_paciente": "631-19-9110",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS007",
+    "Fecha": "2024-01-25",
+    "Hora": "8:45",
+    "Direccion": "Callejón Bernardo Velázquez 7\nCantabria, 75912",
+    "id_medico": "MED234",
+    "id_paciente": "999-17-3094",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS008",
+    "Fecha": "2023-11-28",
+    "Hora": "16:30",
+    "Direccion": "Calle de Celia Montes 2\nValencia, 62039",
+    "id_medico": "MED097",
+    "id_paciente": "427-77-0953",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS009",
+    "Fecha": "2024-12-03",
+    "Hora": "14:45",
+    "Direccion": "Acceso Gertrudis Hervia 82\nAlmería, 57137",
+    "id_medico": "MED017",
+    "id_paciente": "414-42-2787",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS010",
+    "Fecha": "2025-01-13",
+    "Hora": "10:45",
+    "Direccion": "Camino de Visitación Izaguirre 8\nLleida, 38306",
+    "id_medico": "MED149",
+    "id_paciente": "408-39-1557",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS011",
+    "Fecha": "2025-02-26",
+    "Hora": "8:45",
+    "Direccion": "Rambla de Albert Trujillo 19\nSevilla, 78202",
+    "id_medico": "MED250",
+    "id_paciente": "629-15-5134",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS012",
+    "Fecha": "2024-02-15",
+    "Hora": "13:30",
+    "Direccion": "Acceso de Eva Santiago 7 Piso 7 \nLeón, 53874",
+    "id_medico": "MED178",
+    "id_paciente": "923-83-0523",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS013",
+    "Fecha": "2025-02-26",
+    "Hora": "8:30",
+    "Direccion": "Cañada Martín Arrieta 801 Piso 4 \nValencia, 51243",
+    "id_medico": "MED241",
+    "id_paciente": "883-67-4699",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS014",
+    "Fecha": "2024-06-12",
+    "Hora": "11:45",
+    "Direccion": "Plaza Mayte Juan 24 Apt. 99 \nGirona, 97733",
+    "id_medico": "MED159",
+    "id_paciente": "128-47-8353",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS015",
+    "Fecha": "2025-06-27",
+    "Hora": "11:45",
+    "Direccion": "Vial Emma Gimenez 936 Apt. 71 \nCastellón, 67651",
+    "id_medico": "MED204",
+    "id_paciente": "840-14-2222",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS016",
+    "Fecha": "2023-10-31",
+    "Hora": "14:30",
+    "Direccion": "Cuesta Victor Patiño 92\nSegovia, 52736",
+    "id_medico": "MED155",
+    "id_paciente": "538-03-2808",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS017",
+    "Fecha": "2023-10-03",
+    "Hora": "14:15",
+    "Direccion": "Alameda de Claudia Pacheco 58 Apt. 27 \nGranada, 05090",
+    "id_medico": "MED016",
+    "id_paciente": "215-77-3556",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS018",
+    "Fecha": "2023-10-19",
+    "Hora": "15:00",
+    "Direccion": "Ronda de Malena Alberdi 56\nSegovia, 33290",
+    "id_medico": "MED208",
+    "id_paciente": "808-58-0538",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS019",
+    "Fecha": "2025-05-04",
+    "Hora": "16:00",
+    "Direccion": "Via Juan Bautista Torrents 39\nSanta Cruz de Tenerife, 24529",
+    "id_medico": "MED076",
+    "id_paciente": "351-00-0552",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS020",
+    "Fecha": "2024-02-04",
+    "Hora": "17:45",
+    "Direccion": "Pasadizo de Urbano Carballo 42\nCuenca, 77124",
+    "id_medico": "MED065",
+    "id_paciente": "772-24-4150",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS021",
+    "Fecha": "2025-01-28",
+    "Hora": "9:15",
+    "Direccion": "Vial de Yago Andrade 764\nGuadalajara, 13425",
+    "id_medico": "MED179",
+    "id_paciente": "756-70-5568",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS022",
+    "Fecha": "2024-05-21",
+    "Hora": "10:15",
+    "Direccion": "Ronda de Maximiano Casares 1\nCádiz, 33618",
+    "id_medico": "MED240",
+    "id_paciente": "159-31-6035",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS023",
+    "Fecha": "2023-09-15",
+    "Hora": "10:45",
+    "Direccion": "Calle de Felipa Rodríguez 467 Apt. 77 \nCeuta, 35178",
+    "id_medico": "MED035",
+    "id_paciente": "128-47-8353",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS024",
+    "Fecha": "2024-03-03",
+    "Hora": "12:45",
+    "Direccion": "Cuesta de Fortunata Alfonso 85 Apt. 72 \nMálaga, 72942",
+    "id_medico": "MED201",
+    "id_paciente": "431-61-0961",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS025",
+    "Fecha": "2025-06-20",
+    "Hora": "9:45",
+    "Direccion": "Plaza Ángeles Blanco 14\nLa Rioja, 66229",
+    "id_medico": "MED192",
+    "id_paciente": "441-99-3859",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS026",
+    "Fecha": "2024-08-23",
+    "Hora": "17:15",
+    "Direccion": "Rambla Prudencio Bernal 1 Puerta 9 \nCuenca, 79624",
+    "id_medico": "MED124",
+    "id_paciente": "981-64-8213",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS027",
+    "Fecha": "2023-12-22",
+    "Hora": "12:30",
+    "Direccion": "Rambla Gil Donaire 96\nValladolid, 42520",
+    "id_medico": "MED129",
+    "id_paciente": "346-59-4703",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS028",
+    "Fecha": "2023-08-20",
+    "Hora": "10:45",
+    "Direccion": "Urbanización Pelayo Villanueva 93 Piso 2 \nZamora, 29154",
+    "id_medico": "MED162",
+    "id_paciente": "873-44-6417",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS029",
+    "Fecha": "2023-10-27",
+    "Hora": "9:30",
+    "Direccion": "Urbanización de Jovita Rebollo 13 Apt. 61 \nValladolid, 32084",
+    "id_medico": "MED067",
+    "id_paciente": "005-80-5534",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS030",
+    "Fecha": "2024-02-24",
+    "Hora": "8:30",
+    "Direccion": "Pasaje de Evaristo Batalla 547\nLa Coruña, 17839",
+    "id_medico": "MED128",
+    "id_paciente": "838-37-5719",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS031",
+    "Fecha": "2023-08-25",
+    "Hora": "12:00",
+    "Direccion": "Avenida de Celso Muñoz 28 Puerta 7 \nCantabria, 49465",
+    "id_medico": "MED060",
+    "id_paciente": "497-43-9361",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS032",
+    "Fecha": "2024-09-05",
+    "Hora": "12:15",
+    "Direccion": "Cuesta de Haroldo Arenas 13 Puerta 4 \nMálaga, 41078",
+    "id_medico": "MED078",
+    "id_paciente": "676-26-4652",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS033",
+    "Fecha": "2024-02-04",
+    "Hora": "13:45",
+    "Direccion": "Paseo de Sabas Sanmartín 2\nCiudad, 13978",
+    "id_medico": "MED202",
+    "id_paciente": "961-01-9940",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS034",
+    "Fecha": "2024-04-23",
+    "Hora": "14:45",
+    "Direccion": "Acceso María Cristina Piñol 52\nVizcaya, 94487",
+    "id_medico": "MED089",
+    "id_paciente": "909-08-1814",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS035",
+    "Fecha": "2024-01-10",
+    "Hora": "14:00",
+    "Direccion": "Rambla de Natalio Valcárcel 94 Piso 8 \nValencia, 55391",
+    "id_medico": "MED059",
+    "id_paciente": "113-33-3141",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS036",
+    "Fecha": "2024-02-01",
+    "Hora": "10:30",
+    "Direccion": "Calle Emilia Carmona 836 Apt. 22 \nTeruel, 55096",
+    "id_medico": "MED160",
+    "id_paciente": "820-88-8815",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS037",
+    "Fecha": "2025-05-02",
+    "Hora": "8:30",
+    "Direccion": "Alameda Mayte Carlos 92 Apt. 84 \nCádiz, 41508",
+    "id_medico": "MED060",
+    "id_paciente": "834-97-9753",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS038",
+    "Fecha": "2025-05-28",
+    "Hora": "11:30",
+    "Direccion": "Ronda de Claudia Raya 19\nSegovia, 31628",
+    "id_medico": "MED020",
+    "id_paciente": "363-50-4355",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS039",
+    "Fecha": "2024-02-13",
+    "Hora": "17:15",
+    "Direccion": "Pasadizo de José Luis Boix 25 Piso 5 \nSegovia, 09930",
+    "id_medico": "MED157",
+    "id_paciente": "571-77-3486",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS040",
+    "Fecha": "2024-11-22",
+    "Hora": "17:45",
+    "Direccion": "Glorieta Chus Manuel 91 Piso 5 \nHuesca, 34147",
+    "id_medico": "MED128",
+    "id_paciente": "441-99-3859",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS041",
+    "Fecha": "2024-10-27",
+    "Hora": "14:00",
+    "Direccion": "Cuesta Natividad Arranz 99 Apt. 39 \nLa Rioja, 91911",
+    "id_medico": "MED023",
+    "id_paciente": "850-38-1061",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS042",
+    "Fecha": "2024-03-26",
+    "Hora": "16:45",
+    "Direccion": "Cañada Bernardino Ibañez 40 Puerta 8 \nMadrid, 20155",
+    "id_medico": "MED182",
+    "id_paciente": "070-70-9156",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS043",
+    "Fecha": "2023-11-08",
+    "Hora": "17:15",
+    "Direccion": "Ronda Miguela Cuéllar 257 Apt. 93 \nNavarra, 50679",
+    "id_medico": "MED151",
+    "id_paciente": "466-43-9329",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS044",
+    "Fecha": "2024-03-29",
+    "Hora": "11:00",
+    "Direccion": "Ronda de Gisela Alonso 73 Piso 4 \nValencia, 86255",
+    "id_medico": "MED128",
+    "id_paciente": "360-96-3824",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS045",
+    "Fecha": "2024-07-24",
+    "Hora": "11:00",
+    "Direccion": "Via Cecilia Muro 4\nZamora, 61772",
+    "id_medico": "MED019",
+    "id_paciente": "931-36-5647",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS046",
+    "Fecha": "2023-12-06",
+    "Hora": "17:00",
+    "Direccion": "Callejón Eugenio Landa 8 Apt. 80 \nMadrid, 83457",
+    "id_medico": "MED006",
+    "id_paciente": "471-70-2695",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS047",
+    "Fecha": "2025-03-07",
+    "Hora": "12:15",
+    "Direccion": "Cañada de Laura Iglesias 2 Piso 9 \nBarcelona, 83083",
+    "id_medico": "MED135",
+    "id_paciente": "574-35-1877",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS048",
+    "Fecha": "2025-06-16",
+    "Hora": "10:45",
+    "Direccion": "Cuesta de Gabriel Roldán 74\nAsturias, 99682",
+    "id_medico": "MED035",
+    "id_paciente": "909-08-1814",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS049",
+    "Fecha": "2023-10-26",
+    "Hora": "13:30",
+    "Direccion": "Urbanización Federico Gomez 57 Puerta 5 \nTeruel, 17402",
+    "id_medico": "MED186",
+    "id_paciente": "977-07-2717",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS050",
+    "Fecha": "2024-01-06",
+    "Hora": "11:30",
+    "Direccion": "Cañada Eulalia Batlle 22\nSevilla, 89141",
+    "id_medico": "MED108",
+    "id_paciente": "865-17-1170",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS051",
+    "Fecha": "2023-12-30",
+    "Hora": "11:30",
+    "Direccion": "Ronda María Teresa Dominguez 61 Piso 8 \nBurgos, 77421",
+    "id_medico": "MED131",
+    "id_paciente": "423-75-9069",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS052",
+    "Fecha": "2024-08-16",
+    "Hora": "10:30",
+    "Direccion": "Callejón de Amador Grau 6\nZaragoza, 25075",
+    "id_medico": "MED232",
+    "id_paciente": "053-38-8943",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS053",
+    "Fecha": "2024-02-14",
+    "Hora": "16:45",
+    "Direccion": "Paseo Gerónimo Juárez 853\nLeón, 49724",
+    "id_medico": "MED039",
+    "id_paciente": "006-95-2266",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS054",
+    "Fecha": "2025-04-28",
+    "Hora": "13:00",
+    "Direccion": "Vial de Donato Armas 6 Puerta 5 \nGuipúzcoa, 81854",
+    "id_medico": "MED027",
+    "id_paciente": "143-15-7304",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS055",
+    "Fecha": "2024-11-03",
+    "Hora": "13:45",
+    "Direccion": "Pasaje de Martín Cordero 250 Piso 4 \nLa Coruña, 32603",
+    "id_medico": "MED240",
+    "id_paciente": "973-45-8061",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS056",
+    "Fecha": "2024-02-08",
+    "Hora": "8:00",
+    "Direccion": "Paseo Lidia Priego 73\nAlmería, 91154",
+    "id_medico": "MED093",
+    "id_paciente": "267-53-9687",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS057",
+    "Fecha": "2023-07-31",
+    "Hora": "13:00",
+    "Direccion": "Callejón de Leticia Carranza 24\nAsturias, 05480",
+    "id_medico": "MED079",
+    "id_paciente": "957-87-8081",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS058",
+    "Fecha": "2023-11-05",
+    "Hora": "11:00",
+    "Direccion": "Urbanización Guillermo Iborra 65 Piso 0 \nCastellón, 57758",
+    "id_medico": "MED119",
+    "id_paciente": "266-64-6361",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS059",
+    "Fecha": "2023-11-22",
+    "Hora": "14:45",
+    "Direccion": "Vial de Felipa Rocha 90\nBarcelona, 03842",
+    "id_medico": "MED200",
+    "id_paciente": "019-54-5929",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS060",
+    "Fecha": "2023-08-24",
+    "Hora": "9:00",
+    "Direccion": "Acceso de Vidal Bermudez 96 Apt. 83 \nCiudad, 60170",
+    "id_medico": "MED114",
+    "id_paciente": "515-68-8184",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS061",
+    "Fecha": "2024-06-18",
+    "Hora": "13:15",
+    "Direccion": "Ronda de Ovidio Guijarro 40\nÁvila, 09116",
+    "id_medico": "MED165",
+    "id_paciente": "830-13-5647",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS062",
+    "Fecha": "2023-10-28",
+    "Hora": "16:30",
+    "Direccion": "Calle Heraclio Ibarra 72 Apt. 71 \nPontevedra, 74126",
+    "id_medico": "MED072",
+    "id_paciente": "714-21-6145",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS063",
+    "Fecha": "2023-08-03",
+    "Hora": "8:30",
+    "Direccion": "Ronda de Juan Luis Coca 1 Apt. 47 \nLa Coruña, 37214",
+    "id_medico": "MED159",
+    "id_paciente": "027-18-8269",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS064",
+    "Fecha": "2025-05-22",
+    "Hora": "9:45",
+    "Direccion": "Via de Ciro Canet 198\nPalencia, 95751",
+    "id_medico": "MED126",
+    "id_paciente": "215-77-3556",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS065",
+    "Fecha": "2025-04-16",
+    "Hora": "13:45",
+    "Direccion": "Pasaje de Chelo Mármol 94\nJaén, 84380",
+    "id_medico": "MED153",
+    "id_paciente": "851-60-9697",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS066",
+    "Fecha": "2024-06-03",
+    "Hora": "17:30",
+    "Direccion": "Pasadizo de Eloísa Leiva 95 Piso 3 \nGuipúzcoa, 64939",
+    "id_medico": "MED226",
+    "id_paciente": "215-74-8143",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS067",
+    "Fecha": "2025-02-24",
+    "Hora": "10:45",
+    "Direccion": "Pasadizo Gregorio Soria 18 Piso 3 \nTarragona, 08542",
+    "id_medico": "MED111",
+    "id_paciente": "654-66-9407",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS068",
+    "Fecha": "2024-02-13",
+    "Hora": "14:00",
+    "Direccion": "Avenida Berto Noguera 8 Piso 5 \nHuelva, 52192",
+    "id_medico": "MED229",
+    "id_paciente": "850-38-1061",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS069",
+    "Fecha": "2023-10-04",
+    "Hora": "13:45",
+    "Direccion": "Cuesta de Toni Iñiguez 374\nJaén, 30195",
+    "id_medico": "MED203",
+    "id_paciente": "549-81-3040",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS070",
+    "Fecha": "2024-04-07",
+    "Hora": "17:15",
+    "Direccion": "Vial de Elisa Salmerón 15\nLleida, 34394",
+    "id_medico": "MED214",
+    "id_paciente": "374-30-7831",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS071",
+    "Fecha": "2023-09-25",
+    "Hora": "17:15",
+    "Direccion": "Pasaje de Delfina Morillo 812 Apt. 44 \nÁlava, 70891",
+    "id_medico": "MED200",
+    "id_paciente": "999-17-3094",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS072",
+    "Fecha": "2025-06-10",
+    "Hora": "11:00",
+    "Direccion": "Pasadizo de Florina Cepeda 84\nBaleares, 63287",
+    "id_medico": "MED244",
+    "id_paciente": "906-02-1851",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS073",
+    "Fecha": "2025-07-14",
+    "Hora": "15:00",
+    "Direccion": "Camino de Paula Rodrigo 52\nMurcia, 49482",
+    "id_medico": "MED013",
+    "id_paciente": "840-14-2222",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS074",
+    "Fecha": "2023-10-27",
+    "Hora": "16:00",
+    "Direccion": "Paseo Augusto Baños 21\nZamora, 54030",
+    "id_medico": "MED188",
+    "id_paciente": "571-77-3486",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS075",
+    "Fecha": "2023-09-27",
+    "Hora": "16:00",
+    "Direccion": "Camino de Lalo Botella 5\nHuesca, 79112",
+    "id_medico": "MED027",
+    "id_paciente": "571-77-3486",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS076",
+    "Fecha": "2024-12-29",
+    "Hora": "12:15",
+    "Direccion": "Pasaje Jordana Villaverde 781 Puerta 3 \nBaleares, 87328",
+    "id_medico": "MED025",
+    "id_paciente": "215-77-3556",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS077",
+    "Fecha": "2024-04-12",
+    "Hora": "12:45",
+    "Direccion": "Rambla de Vito Niño 1 Piso 3 \nMadrid, 27479",
+    "id_medico": "MED222",
+    "id_paciente": "838-37-5719",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS078",
+    "Fecha": "2024-05-11",
+    "Hora": "13:45",
+    "Direccion": "Camino de Pastora Hervia 739\nAlmería, 93228",
+    "id_medico": "MED064",
+    "id_paciente": "873-44-6417",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS079",
+    "Fecha": "2024-06-21",
+    "Hora": "13:30",
+    "Direccion": "Camino de Carmen Cerezo 23 Apt. 62 \nMadrid, 89215",
+    "id_medico": "MED161",
+    "id_paciente": "762-52-5273",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS080",
+    "Fecha": "2023-10-26",
+    "Hora": "15:30",
+    "Direccion": "Calle de Marcio Gaya 29 Piso 6 \nHuesca, 27965",
+    "id_medico": "MED005",
+    "id_paciente": "242-31-9035",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS081",
+    "Fecha": "2023-09-05",
+    "Hora": "11:45",
+    "Direccion": "Ronda Luis Miguel Anaya 75 Puerta 4 \nLas Palmas, 61064",
+    "id_medico": "MED122",
+    "id_paciente": "571-77-3486",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS082",
+    "Fecha": "2023-12-17",
+    "Hora": "17:15",
+    "Direccion": "Via Susanita Azorin 92 Puerta 1 \nValladolid, 73160",
+    "id_medico": "MED133",
+    "id_paciente": "188-19-3356",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS083",
+    "Fecha": "2023-12-09",
+    "Hora": "14:15",
+    "Direccion": "Urbanización de Maximino Riba 64 Puerta 3 \nÁlava, 43134",
+    "id_medico": "MED105",
+    "id_paciente": "906-02-1851",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS084",
+    "Fecha": "2024-09-02",
+    "Hora": "11:45",
+    "Direccion": "Acceso José Antonio Mariscal 223 Piso 0 \nAlicante, 47068",
+    "id_medico": "MED196",
+    "id_paciente": "159-31-6035",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS085",
+    "Fecha": "2024-06-05",
+    "Hora": "14:45",
+    "Direccion": "Acceso Emma Nieto 81 Apt. 09 \nCastellón, 47906",
+    "id_medico": "MED130",
+    "id_paciente": "438-77-6487",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS086",
+    "Fecha": "2023-12-03",
+    "Hora": "11:00",
+    "Direccion": "Avenida de Victor Caro 47 Puerta 7 \nPalencia, 98566",
+    "id_medico": "MED005",
+    "id_paciente": "143-15-7304",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS087",
+    "Fecha": "2023-11-16",
+    "Hora": "8:45",
+    "Direccion": "Via Leonardo Sala 87 Piso 5 \nBaleares, 75015",
+    "id_medico": "MED127",
+    "id_paciente": "715-70-3694",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS088",
+    "Fecha": "2024-06-27",
+    "Hora": "17:30",
+    "Direccion": "Via de Rosalva Corominas 63 Piso 2 \nLa Rioja, 21646",
+    "id_medico": "MED043",
+    "id_paciente": "331-80-4091",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS089",
+    "Fecha": "2024-07-08",
+    "Hora": "9:15",
+    "Direccion": "Callejón de Josep Patiño 7\nCeuta, 24651",
+    "id_medico": "MED225",
+    "id_paciente": "834-97-9753",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS090",
+    "Fecha": "2023-09-15",
+    "Hora": "17:45",
+    "Direccion": "Acceso Mariana Sánchez 56\nLa Coruña, 28358",
+    "id_medico": "MED120",
+    "id_paciente": "064-31-3931",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS091",
+    "Fecha": "2023-08-11",
+    "Hora": "11:45",
+    "Direccion": "Callejón Otilia Blazquez 95\nÁlava, 35817",
+    "id_medico": "MED176",
+    "id_paciente": "455-51-6288",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS092",
+    "Fecha": "2023-08-13",
+    "Hora": "12:15",
+    "Direccion": "Acceso Pablo Cárdenas 26\nCórdoba, 70971",
+    "id_medico": "MED105",
+    "id_paciente": "791-89-6006",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS093",
+    "Fecha": "2025-05-22",
+    "Hora": "8:15",
+    "Direccion": "Callejón de Paca Luz 76 Apt. 94 \nAlmería, 11422",
+    "id_medico": "MED090",
+    "id_paciente": "061-44-2987",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS094",
+    "Fecha": "2025-02-25",
+    "Hora": "17:45",
+    "Direccion": "C. de Fabio Villalba 428\nBadajoz, 59748",
+    "id_medico": "MED231",
+    "id_paciente": "061-44-2987",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS095",
+    "Fecha": "2024-06-19",
+    "Hora": "9:45",
+    "Direccion": "Calle de Sebastián Viña 396\nZaragoza, 61214",
+    "id_medico": "MED080",
+    "id_paciente": "282-14-3739",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS096",
+    "Fecha": "2024-12-14",
+    "Hora": "9:00",
+    "Direccion": "Avenida Vidal Gracia 56 Puerta 2 \nBadajoz, 15495",
+    "id_medico": "MED122",
+    "id_paciente": "623-10-0373",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS097",
+    "Fecha": "2023-10-25",
+    "Hora": "13:15",
+    "Direccion": "Via de Cayetano Román 75\nCórdoba, 10481",
+    "id_medico": "MED171",
+    "id_paciente": "714-21-6145",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS098",
+    "Fecha": "2025-06-04",
+    "Hora": "17:45",
+    "Direccion": "Via de Amparo Casares 4\nSegovia, 55722",
+    "id_medico": "MED208",
+    "id_paciente": "424-72-8174",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS099",
+    "Fecha": "2024-07-10",
+    "Hora": "13:00",
+    "Direccion": "Paseo de Blanca Nogueira 26\nMelilla, 52795",
+    "id_medico": "MED191",
+    "id_paciente": "235-67-0502",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS100",
+    "Fecha": "2024-07-05",
+    "Hora": "13:00",
+    "Direccion": "Cañada de Octavio Toledo 32 Piso 3 \nLa Rioja, 03855",
+    "id_medico": "MED148",
+    "id_paciente": "494-05-4607",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS101",
+    "Fecha": "2024-09-12",
+    "Hora": "13:15",
+    "Direccion": "Ronda Agapito Sanmartín 99 Piso 0 \nBadajoz, 82085",
+    "id_medico": "MED225",
+    "id_paciente": "471-15-9974",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS102",
+    "Fecha": "2024-11-05",
+    "Hora": "13:45",
+    "Direccion": "C. de Casandra Maza 387 Piso 8 \nValencia, 31264",
+    "id_medico": "MED212",
+    "id_paciente": "282-64-1668",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS103",
+    "Fecha": "2024-01-09",
+    "Hora": "16:30",
+    "Direccion": "C. Domingo Royo 73 Apt. 82 \nHuelva, 52342",
+    "id_medico": "MED079",
+    "id_paciente": "800-31-2462",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS104",
+    "Fecha": "2025-03-29",
+    "Hora": "15:45",
+    "Direccion": "Via de Perla Bartolomé 75 Piso 2 \nHuesca, 29841",
+    "id_medico": "MED019",
+    "id_paciente": "139-58-6402",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS105",
+    "Fecha": "2024-02-03",
+    "Hora": "10:15",
+    "Direccion": "Pasadizo Hilda Escamilla 7\nLleida, 44160",
+    "id_medico": "MED223",
+    "id_paciente": "438-77-6487",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS106",
+    "Fecha": "2025-06-19",
+    "Hora": "12:00",
+    "Direccion": "Glorieta Godofredo Espejo 6 Puerta 2 \nSalamanca, 61219",
+    "id_medico": "MED041",
+    "id_paciente": "725-44-7850",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS107",
+    "Fecha": "2024-03-19",
+    "Hora": "13:45",
+    "Direccion": "Alameda de Eufemia Jáuregui 14\nMurcia, 66357",
+    "id_medico": "MED015",
+    "id_paciente": "517-24-1458",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS108",
+    "Fecha": "2023-12-13",
+    "Hora": "13:15",
+    "Direccion": "Paseo Reinaldo Barral 12\nGranada, 83426",
+    "id_medico": "MED065",
+    "id_paciente": "629-15-5134",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS109",
+    "Fecha": "2025-05-02",
+    "Hora": "11:30",
+    "Direccion": "Vial de Evaristo Enríquez 88 Apt. 42 \nMadrid, 13939",
+    "id_medico": "MED209",
+    "id_paciente": "044-48-1936",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS110",
+    "Fecha": "2024-12-16",
+    "Hora": "14:30",
+    "Direccion": "Urbanización Augusto Diez 5\nCantabria, 49419",
+    "id_medico": "MED216",
+    "id_paciente": "325-10-4720",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS111",
+    "Fecha": "2023-12-12",
+    "Hora": "11:15",
+    "Direccion": "Paseo Alexandra Cañete 15\nMadrid, 67221",
+    "id_medico": "MED048",
+    "id_paciente": "139-58-6402",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS112",
+    "Fecha": "2024-10-23",
+    "Hora": "16:15",
+    "Direccion": "Camino Almudena Prieto 556\nCuenca, 87705",
+    "id_medico": "MED101",
+    "id_paciente": "923-83-0523",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS113",
+    "Fecha": "2024-11-02",
+    "Hora": "15:45",
+    "Direccion": "Acceso de Marianela Lucena 5\nAlicante, 44962",
+    "id_medico": "MED224",
+    "id_paciente": "736-62-9600",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS114",
+    "Fecha": "2024-10-10",
+    "Hora": "14:15",
+    "Direccion": "Cuesta Felicidad Escudero 5 Puerta 3 \nAsturias, 14318",
+    "id_medico": "MED214",
+    "id_paciente": "574-35-1877",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS115",
+    "Fecha": "2024-08-03",
+    "Hora": "15:00",
+    "Direccion": "Callejón Fabián Cuadrado 9\nValencia, 65281",
+    "id_medico": "MED202",
+    "id_paciente": "509-88-8997",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS116",
+    "Fecha": "2024-08-05",
+    "Hora": "12:45",
+    "Direccion": "Ronda de Anastasio Barroso 29\nMelilla, 42578",
+    "id_medico": "MED221",
+    "id_paciente": "375-74-6103",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS117",
+    "Fecha": "2023-10-06",
+    "Hora": "10:30",
+    "Direccion": "Avenida Tomasa Agustí 320\nCáceres, 64323",
+    "id_medico": "MED138",
+    "id_paciente": "985-11-1831",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS118",
+    "Fecha": "2025-04-09",
+    "Hora": "10:30",
+    "Direccion": "Pasadizo Soraya Fábregas 56\nSegovia, 94172",
+    "id_medico": "MED062",
+    "id_paciente": "314-18-1261",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS119",
+    "Fecha": "2024-07-01",
+    "Hora": "13:00",
+    "Direccion": "Rambla Salomón Cobos 401 Puerta 1 \nLa Rioja, 01854",
+    "id_medico": "MED158",
+    "id_paciente": "922-67-0952",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS120",
+    "Fecha": "2025-06-30",
+    "Hora": "8:30",
+    "Direccion": "Calle Leandra Lledó 43 Apt. 47 \nAlicante, 92332",
+    "id_medico": "MED041",
+    "id_paciente": "199-64-2570",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS121",
+    "Fecha": "2024-11-10",
+    "Hora": "14:30",
+    "Direccion": "Acceso de Manolo Domingo 49\nCeuta, 00201",
+    "id_medico": "MED019",
+    "id_paciente": "587-12-7704",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS122",
+    "Fecha": "2024-07-02",
+    "Hora": "17:30",
+    "Direccion": "Rambla de Amaro Villanueva 74\nLa Coruña, 69703",
+    "id_medico": "MED080",
+    "id_paciente": "602-80-6521",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS123",
+    "Fecha": "2023-12-29",
+    "Hora": "13:15",
+    "Direccion": "Ronda Emigdio Aznar 240 Puerta 7 \nLugo, 09004",
+    "id_medico": "MED222",
+    "id_paciente": "623-10-0373",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS124",
+    "Fecha": "2025-03-03",
+    "Hora": "13:30",
+    "Direccion": "Glorieta Maristela Rodrigo 8 Piso 2 \nCórdoba, 33924",
+    "id_medico": "MED120",
+    "id_paciente": "064-31-3931",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS125",
+    "Fecha": "2024-05-01",
+    "Hora": "14:15",
+    "Direccion": "Pasadizo de Victorino Amorós 93 Puerta 2 \nNavarra, 04242",
+    "id_medico": "MED169",
+    "id_paciente": "834-97-9753",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS126",
+    "Fecha": "2025-03-27",
+    "Hora": "8:45",
+    "Direccion": "C. Andrea Cañellas 7 Puerta 9 \nAsturias, 13805",
+    "id_medico": "MED207",
+    "id_paciente": "808-58-0538",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS127",
+    "Fecha": "2024-04-22",
+    "Hora": "14:00",
+    "Direccion": "Pasadizo Lucas Pedrosa 35\nCórdoba, 31445",
+    "id_medico": "MED160",
+    "id_paciente": "685-60-0819",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS128",
+    "Fecha": "2024-09-04",
+    "Hora": "16:15",
+    "Direccion": "Alameda Godofredo Bertrán 635\nGranada, 99996",
+    "id_medico": "MED094",
+    "id_paciente": "671-26-3582",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS129",
+    "Fecha": "2025-06-07",
+    "Hora": "13:15",
+    "Direccion": "Calle Otilia Arenas 84 Piso 1 \nSoria, 46571",
+    "id_medico": "MED089",
+    "id_paciente": "279-52-5309",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS130",
+    "Fecha": "2024-06-30",
+    "Hora": "9:00",
+    "Direccion": "Glorieta Felisa Pina 362\nMelilla, 30770",
+    "id_medico": "MED001",
+    "id_paciente": "977-07-2717",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS131",
+    "Fecha": "2024-01-22",
+    "Hora": "13:15",
+    "Direccion": "Plaza de Melchor Ripoll 2\nAsturias, 85714",
+    "id_medico": "MED247",
+    "id_paciente": "772-24-4150",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS132",
+    "Fecha": "2024-04-25",
+    "Hora": "16:00",
+    "Direccion": "Paseo de Sandra Herrero 53\nBurgos, 99195",
+    "id_medico": "MED044",
+    "id_paciente": "756-70-5568",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS133",
+    "Fecha": "2024-06-09",
+    "Hora": "15:15",
+    "Direccion": "Callejón Candelario Roda 41\nAlmería, 79660",
+    "id_medico": "MED062",
+    "id_paciente": "282-64-1668",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS134",
+    "Fecha": "2024-02-25",
+    "Hora": "14:30",
+    "Direccion": "Pasaje Olalla Menendez 9\nPalencia, 05932",
+    "id_medico": "MED169",
+    "id_paciente": "800-84-4922",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS135",
+    "Fecha": "2024-08-23",
+    "Hora": "15:00",
+    "Direccion": "Alameda de Juan Antonio Barragán 29\nLas Palmas, 54294",
+    "id_medico": "MED176",
+    "id_paciente": "242-31-9035",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS136",
+    "Fecha": "2024-02-13",
+    "Hora": "11:00",
+    "Direccion": "Avenida Heliodoro Serra 85 Piso 3 \nToledo, 71503",
+    "id_medico": "MED017",
+    "id_paciente": "834-97-9753",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS137",
+    "Fecha": "2024-07-03",
+    "Hora": "13:15",
+    "Direccion": "Cañada de María José Ayala 32\nGranada, 16528",
+    "id_medico": "MED162",
+    "id_paciente": "062-17-2510",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS138",
+    "Fecha": "2024-04-10",
+    "Hora": "8:00",
+    "Direccion": "Via Juan Carlos Zamora 27 Piso 4 \nToledo, 46589",
+    "id_medico": "MED154",
+    "id_paciente": "548-91-5813",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS139",
+    "Fecha": "2023-10-31",
+    "Hora": "9:00",
+    "Direccion": "Cañada Andrés Barberá 18\nLa Coruña, 38845",
+    "id_medico": "MED065",
+    "id_paciente": "509-92-9964",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS140",
+    "Fecha": "2025-03-19",
+    "Hora": "10:00",
+    "Direccion": "Vial Clotilde Ávila 637\nMadrid, 44557",
+    "id_medico": "MED004",
+    "id_paciente": "659-63-2616",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS141",
+    "Fecha": "2024-04-29",
+    "Hora": "12:30",
+    "Direccion": "Cuesta Brunilda Cases 60\nZamora, 92375",
+    "id_medico": "MED195",
+    "id_paciente": "414-42-2787",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS142",
+    "Fecha": "2024-09-22",
+    "Hora": "8:45",
+    "Direccion": "Cuesta Desiderio Lobato 34\nAlbacete, 54270",
+    "id_medico": "MED130",
+    "id_paciente": "124-90-0639",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS143",
+    "Fecha": "2025-04-22",
+    "Hora": "14:00",
+    "Direccion": "Cañada Simón Sanmiguel 56\nLa Coruña, 46238",
+    "id_medico": "MED022",
+    "id_paciente": "629-15-5134",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS144",
+    "Fecha": "2024-03-25",
+    "Hora": "17:15",
+    "Direccion": "Pasaje Pancho Pascual 59 Piso 3 \nValencia, 34953",
+    "id_medico": "MED239",
+    "id_paciente": "823-67-6331",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS145",
+    "Fecha": "2023-08-30",
+    "Hora": "9:15",
+    "Direccion": "Acceso de Encarnita Amaya 87 Piso 3 \nHuesca, 11178",
+    "id_medico": "MED127",
+    "id_paciente": "662-62-3097",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS146",
+    "Fecha": "2024-03-08",
+    "Hora": "9:00",
+    "Direccion": "Cuesta de Manola Bru 64 Piso 8 \nCórdoba, 87249",
+    "id_medico": "MED111",
+    "id_paciente": "408-39-1557",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS147",
+    "Fecha": "2024-07-25",
+    "Hora": "17:00",
+    "Direccion": "Vial Macaria Prat 844 Apt. 47 \nBarcelona, 13529",
+    "id_medico": "MED149",
+    "id_paciente": "147-79-4532",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS148",
+    "Fecha": "2023-12-30",
+    "Hora": "16:15",
+    "Direccion": "Plaza Bonifacio Correa 40 Piso 1 \nÁvila, 47363",
+    "id_medico": "MED156",
+    "id_paciente": "215-74-8143",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS149",
+    "Fecha": "2024-07-17",
+    "Hora": "10:15",
+    "Direccion": "Acceso Horacio Téllez 83 Piso 5 \nZaragoza, 66286",
+    "id_medico": "MED136",
+    "id_paciente": "173-49-0789",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS150",
+    "Fecha": "2024-05-29",
+    "Hora": "14:30",
+    "Direccion": "Glorieta de Rosalva Cal 16\nGranada, 81122",
+    "id_medico": "MED224",
+    "id_paciente": "330-61-8665",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS151",
+    "Fecha": "2024-09-02",
+    "Hora": "14:15",
+    "Direccion": "Plaza de Silvia Uría 124\nCeuta, 54977",
+    "id_medico": "MED013",
+    "id_paciente": "099-76-1591",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS152",
+    "Fecha": "2025-03-10",
+    "Hora": "17:15",
+    "Direccion": "Camino de Prudencio Frías 50 Puerta 3 \nCuenca, 41247",
+    "id_medico": "MED143",
+    "id_paciente": "807-08-2104",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS153",
+    "Fecha": "2024-02-14",
+    "Hora": "14:00",
+    "Direccion": "Urbanización de Gala Escribano 407 Apt. 46 \nTarragona, 72864",
+    "id_medico": "MED161",
+    "id_paciente": "936-76-3981",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS154",
+    "Fecha": "2023-08-22",
+    "Hora": "9:30",
+    "Direccion": "Ronda de Hilda Barberá 26 Apt. 41 \nZamora, 02483",
+    "id_medico": "MED198",
+    "id_paciente": "000-33-8375",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS155",
+    "Fecha": "2024-09-18",
+    "Hora": "17:45",
+    "Direccion": "Via José Manuel Azcona 72 Puerta 4 \nLleida, 29016",
+    "id_medico": "MED199",
+    "id_paciente": "083-12-0524",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS156",
+    "Fecha": "2024-10-03",
+    "Hora": "16:45",
+    "Direccion": "Callejón Abel Gabaldón 87\nLa Coruña, 03155",
+    "id_medico": "MED107",
+    "id_paciente": "417-05-1357",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS157",
+    "Fecha": "2025-03-27",
+    "Hora": "12:15",
+    "Direccion": "C. Amílcar Hoyos 69\nAlmería, 97500",
+    "id_medico": "MED012",
+    "id_paciente": "219-60-3486",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS158",
+    "Fecha": "2025-03-31",
+    "Hora": "10:15",
+    "Direccion": "Paseo de Bonifacio Cánovas 87 Apt. 71 \nSoria, 91919",
+    "id_medico": "MED056",
+    "id_paciente": "929-18-1270",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS159",
+    "Fecha": "2023-12-23",
+    "Hora": "14:45",
+    "Direccion": "Rambla Segismundo Diéguez 5\nValencia, 90817",
+    "id_medico": "MED136",
+    "id_paciente": "936-76-3981",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS160",
+    "Fecha": "2024-10-07",
+    "Hora": "12:00",
+    "Direccion": "Pasaje Amelia Gascón 9 Piso 4 \nAlicante, 38711",
+    "id_medico": "MED162",
+    "id_paciente": "183-46-3994",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS161",
+    "Fecha": "2024-11-29",
+    "Hora": "8:45",
+    "Direccion": "C. Olivia Costa 502 Apt. 08 \nTeruel, 71215",
+    "id_medico": "MED187",
+    "id_paciente": "188-19-3356",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS162",
+    "Fecha": "2024-08-24",
+    "Hora": "17:15",
+    "Direccion": "Cañada Eliseo Alcántara 35 Piso 1 \nCáceres, 32935",
+    "id_medico": "MED053",
+    "id_paciente": "070-70-9156",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS163",
+    "Fecha": "2025-01-21",
+    "Hora": "11:15",
+    "Direccion": "Alameda de Mireia Urrutia 8\nTeruel, 28525",
+    "id_medico": "MED192",
+    "id_paciente": "422-11-9007",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS164",
+    "Fecha": "2024-01-06",
+    "Hora": "11:30",
+    "Direccion": "Camino de Isaías Terrón 38 Apt. 37 \nCantabria, 29440",
+    "id_medico": "MED229",
+    "id_paciente": "713-37-4913",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS165",
+    "Fecha": "2024-12-13",
+    "Hora": "17:45",
+    "Direccion": "Callejón Dionisia Prats 59\nCantabria, 10462",
+    "id_medico": "MED175",
+    "id_paciente": "997-56-1709",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS166",
+    "Fecha": "2025-03-06",
+    "Hora": "10:00",
+    "Direccion": "Alameda Felipe Lillo 88\nJaén, 96742",
+    "id_medico": "MED241",
+    "id_paciente": "840-14-2222",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS167",
+    "Fecha": "2023-10-24",
+    "Hora": "15:15",
+    "Direccion": "Calle Paz Calvo 819 Apt. 33 \nLas Palmas, 89318",
+    "id_medico": "MED231",
+    "id_paciente": "593-06-6408",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS168",
+    "Fecha": "2024-03-11",
+    "Hora": "17:30",
+    "Direccion": "Vial de Saturnino Roig 889 Apt. 47 \nCeuta, 53064",
+    "id_medico": "MED232",
+    "id_paciente": "890-72-1541",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS169",
+    "Fecha": "2025-05-25",
+    "Hora": "12:45",
+    "Direccion": "C. Fulgencio Gámez 96\nAsturias, 17996",
+    "id_medico": "MED036",
+    "id_paciente": "051-65-6963",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS170",
+    "Fecha": "2023-09-09",
+    "Hora": "14:00",
+    "Direccion": "Glorieta Clarisa Marco 32\nGuipúzcoa, 52344",
+    "id_medico": "MED064",
+    "id_paciente": "375-74-6103",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS171",
+    "Fecha": "2024-04-08",
+    "Hora": "10:30",
+    "Direccion": "Urbanización de Jimena Mora 762\nCáceres, 18368",
+    "id_medico": "MED041",
+    "id_paciente": "099-67-2573",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS172",
+    "Fecha": "2024-08-10",
+    "Hora": "12:30",
+    "Direccion": "C. Eleuterio Pi 1\nLeón, 22469",
+    "id_medico": "MED043",
+    "id_paciente": "455-51-6288",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS173",
+    "Fecha": "2024-03-12",
+    "Hora": "14:30",
+    "Direccion": "C. de Eloy Roselló 433\nLeón, 20008",
+    "id_medico": "MED029",
+    "id_paciente": "676-26-4652",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS174",
+    "Fecha": "2024-01-03",
+    "Hora": "11:00",
+    "Direccion": "Urbanización David Hoyos 2\nValladolid, 79875",
+    "id_medico": "MED083",
+    "id_paciente": "070-70-9156",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS175",
+    "Fecha": "2024-03-11",
+    "Hora": "14:15",
+    "Direccion": "Paseo de Jose Ignacio Cáceres 58\nSoria, 86636",
+    "id_medico": "MED074",
+    "id_paciente": "378-57-1122",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS176",
+    "Fecha": "2023-08-09",
+    "Hora": "12:45",
+    "Direccion": "Urbanización Victoria Torralba 95\nÁlava, 85924",
+    "id_medico": "MED020",
+    "id_paciente": "199-64-2570",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS177",
+    "Fecha": "2025-01-17",
+    "Hora": "9:30",
+    "Direccion": "Cañada Juan Carlos Riera 592\nVizcaya, 32091",
+    "id_medico": "MED144",
+    "id_paciente": "404-78-4541",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS178",
+    "Fecha": "2025-02-26",
+    "Hora": "13:15",
+    "Direccion": "Calle José Luis Pont 42 Puerta 7 \nAlmería, 03091",
+    "id_medico": "MED158",
+    "id_paciente": "223-06-3818",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS179",
+    "Fecha": "2025-05-27",
+    "Hora": "14:30",
+    "Direccion": "Camino de Anselma Pera 68\nBadajoz, 46281",
+    "id_medico": "MED176",
+    "id_paciente": "136-84-6587",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS180",
+    "Fecha": "2025-04-19",
+    "Hora": "16:45",
+    "Direccion": "Ronda Rico Marín 61 Puerta 6 \nBurgos, 01784",
+    "id_medico": "MED232",
+    "id_paciente": "143-15-7304",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS181",
+    "Fecha": "2024-06-11",
+    "Hora": "13:00",
+    "Direccion": "Cuesta de Yolanda Ros 81\nHuesca, 08779",
+    "id_medico": "MED012",
+    "id_paciente": "455-51-6288",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS182",
+    "Fecha": "2024-12-16",
+    "Hora": "12:00",
+    "Direccion": "Acceso Marcela Gil 92 Apt. 21 \nSegovia, 35080",
+    "id_medico": "MED084",
+    "id_paciente": "444-99-8137",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS183",
+    "Fecha": "2024-11-27",
+    "Hora": "13:30",
+    "Direccion": "Avenida de Mónica Ojeda 7 Apt. 15 \nGranada, 76512",
+    "id_medico": "MED074",
+    "id_paciente": "791-89-6006",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS184",
+    "Fecha": "2024-10-21",
+    "Hora": "15:00",
+    "Direccion": "Cuesta de Aureliano Marti 27\nLa Coruña, 59488",
+    "id_medico": "MED212",
+    "id_paciente": "401-47-7371",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS185",
+    "Fecha": "2023-09-09",
+    "Hora": "9:45",
+    "Direccion": "Avenida Susanita Pont 74 Piso 3 \nZamora, 16782",
+    "id_medico": "MED037",
+    "id_paciente": "064-31-3931",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS186",
+    "Fecha": "2025-07-24",
+    "Hora": "13:45",
+    "Direccion": "Cañada Primitivo Morales 28 Puerta 3 \nAlmería, 45750",
+    "id_medico": "MED226",
+    "id_paciente": "062-17-2510",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS187",
+    "Fecha": "2024-03-19",
+    "Hora": "11:15",
+    "Direccion": "Rambla Natalio Heredia 6 Puerta 7 \nBarcelona, 66470",
+    "id_medico": "MED162",
+    "id_paciente": "054-34-2672",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS188",
+    "Fecha": "2023-11-08",
+    "Hora": "10:30",
+    "Direccion": "Plaza Amílcar Ferrero 40\nGranada, 69391",
+    "id_medico": "MED094",
+    "id_paciente": "173-49-0789",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS189",
+    "Fecha": "2023-10-15",
+    "Hora": "12:00",
+    "Direccion": "Ronda de Olegario Grau 932\nLa Rioja, 79539",
+    "id_medico": "MED194",
+    "id_paciente": "300-50-0402",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS190",
+    "Fecha": "2024-08-26",
+    "Hora": "12:15",
+    "Direccion": "Calle de Nereida Vazquez 8\nMurcia, 73027",
+    "id_medico": "MED130",
+    "id_paciente": "136-84-6587",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS191",
+    "Fecha": "2025-02-19",
+    "Hora": "14:45",
+    "Direccion": "C. Asunción Ferrándiz 49 Puerta 4 \nLugo, 94413",
+    "id_medico": "MED180",
+    "id_paciente": "742-01-5304",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS192",
+    "Fecha": "2024-09-02",
+    "Hora": "11:00",
+    "Direccion": "Cuesta Emigdio Nevado 26\nCantabria, 25867",
+    "id_medico": "MED072",
+    "id_paciente": "136-84-6587",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS193",
+    "Fecha": "2025-02-22",
+    "Hora": "8:30",
+    "Direccion": "Plaza Socorro Gelabert 13\nÁvila, 20796",
+    "id_medico": "MED166",
+    "id_paciente": "062-17-2510",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS194",
+    "Fecha": "2024-01-16",
+    "Hora": "12:00",
+    "Direccion": "Avenida Maribel Andrés 16\nCeuta, 55303",
+    "id_medico": "MED074",
+    "id_paciente": "122-40-7054",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS195",
+    "Fecha": "2024-05-31",
+    "Hora": "12:15",
+    "Direccion": "Camino de Bibiana Manzanares 35\nMálaga, 29829",
+    "id_medico": "MED022",
+    "id_paciente": "883-67-4699",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS196",
+    "Fecha": "2023-08-26",
+    "Hora": "11:00",
+    "Direccion": "Pasaje de Clemente Pera 69\nToledo, 36070",
+    "id_medico": "MED175",
+    "id_paciente": "963-16-8982",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS197",
+    "Fecha": "2023-08-18",
+    "Hora": "11:45",
+    "Direccion": "Pasaje de Curro Borrell 632\nCiudad, 95083",
+    "id_medico": "MED092",
+    "id_paciente": "924-60-3993",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS198",
+    "Fecha": "2024-02-09",
+    "Hora": "17:30",
+    "Direccion": "C. de Mayte Barrena 93\nLugo, 05451",
+    "id_medico": "MED040",
+    "id_paciente": "064-31-3931",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS199",
+    "Fecha": "2023-12-02",
+    "Hora": "14:15",
+    "Direccion": "Camino de Silvestre Ruiz 30\nAlicante, 38063",
+    "id_medico": "MED081",
+    "id_paciente": "301-56-6548",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS200",
+    "Fecha": "2024-02-19",
+    "Hora": "16:45",
+    "Direccion": "Glorieta de Oriana Domínguez 7\nLa Coruña, 06347",
+    "id_medico": "MED241",
+    "id_paciente": "195-25-0806",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS201",
+    "Fecha": "2024-03-12",
+    "Hora": "10:00",
+    "Direccion": "Acceso Adoración Camps 36 Piso 5 \nJaén, 08859",
+    "id_medico": "MED102",
+    "id_paciente": "924-60-3993",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS202",
+    "Fecha": "2025-06-23",
+    "Hora": "17:00",
+    "Direccion": "Vial de Olga Bertrán 164\nMurcia, 98985",
+    "id_medico": "MED091",
+    "id_paciente": "219-60-3486",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS203",
+    "Fecha": "2024-03-16",
+    "Hora": "17:30",
+    "Direccion": "Vial Maxi Priego 189 Apt. 53 \nLas Palmas, 19375",
+    "id_medico": "MED231",
+    "id_paciente": "054-34-2672",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS204",
+    "Fecha": "2023-09-16",
+    "Hora": "12:15",
+    "Direccion": "Rambla de Diana Pagès 15\nValencia, 78704",
+    "id_medico": "MED031",
+    "id_paciente": "517-92-2026",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS205",
+    "Fecha": "2024-09-06",
+    "Hora": "10:00",
+    "Direccion": "Rambla Corona Ribes 78 Puerta 9 \nCantabria, 69676",
+    "id_medico": "MED106",
+    "id_paciente": "497-43-9361",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS206",
+    "Fecha": "2024-09-07",
+    "Hora": "10:00",
+    "Direccion": "Glorieta Kike Blasco 25 Puerta 6 \nLas Palmas, 85096",
+    "id_medico": "MED244",
+    "id_paciente": "124-90-0639",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS207",
+    "Fecha": "2024-07-19",
+    "Hora": "16:15",
+    "Direccion": "Callejón de Gracia Anguita 5\nMurcia, 50285",
+    "id_medico": "MED196",
+    "id_paciente": "509-92-9964",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS208",
+    "Fecha": "2024-01-13",
+    "Hora": "9:00",
+    "Direccion": "Alameda de Lucho Montesinos 856 Apt. 33 \nAlbacete, 98402",
+    "id_medico": "MED213",
+    "id_paciente": "061-44-2987",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS209",
+    "Fecha": "2023-12-07",
+    "Hora": "10:00",
+    "Direccion": "C. Juan Manuel Baquero 771 Piso 5 \nMelilla, 62022",
+    "id_medico": "MED114",
+    "id_paciente": "909-08-1814",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS210",
+    "Fecha": "2024-01-19",
+    "Hora": "10:30",
+    "Direccion": "Cañada de Rafaela Berenguer 26 Puerta 9 \nLeón, 03995",
+    "id_medico": "MED170",
+    "id_paciente": "190-31-2370",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS211",
+    "Fecha": "2024-08-23",
+    "Hora": "11:00",
+    "Direccion": "Alameda Leocadia Valls 5\nBadajoz, 98059",
+    "id_medico": "MED024",
+    "id_paciente": "471-15-9974",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS212",
+    "Fecha": "2023-09-05",
+    "Hora": "10:15",
+    "Direccion": "Plaza de Telmo Ribes 50\nGuadalajara, 53591",
+    "id_medico": "MED100",
+    "id_paciente": "019-54-5929",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS213",
+    "Fecha": "2023-10-31",
+    "Hora": "16:00",
+    "Direccion": "Camino Luis Valenzuela 98\nLa Coruña, 74379",
+    "id_medico": "MED199",
+    "id_paciente": "330-61-8665",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS214",
+    "Fecha": "2024-10-21",
+    "Hora": "13:00",
+    "Direccion": "Paseo Fabricio Aranda 6 Piso 4 \nVizcaya, 30209",
+    "id_medico": "MED104",
+    "id_paciente": "431-12-2281",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS215",
+    "Fecha": "2023-08-19",
+    "Hora": "17:15",
+    "Direccion": "Urbanización de Concepción Morera 61 Puerta 6 \nSegovia, 36817",
+    "id_medico": "MED049",
+    "id_paciente": "939-84-6834",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS216",
+    "Fecha": "2025-02-08",
+    "Hora": "9:45",
+    "Direccion": "Pasadizo de Custodia Nebot 48\nSoria, 88596",
+    "id_medico": "MED027",
+    "id_paciente": "662-62-3097",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS217",
+    "Fecha": "2025-01-18",
+    "Hora": "9:30",
+    "Direccion": "Cañada Teresita Valera 29\nAlbacete, 31771",
+    "id_medico": "MED205",
+    "id_paciente": "715-70-3694",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS218",
+    "Fecha": "2024-06-17",
+    "Hora": "12:15",
+    "Direccion": "Cuesta de Pastora Pastor 3 Apt. 01 \nBadajoz, 50141",
+    "id_medico": "MED090",
+    "id_paciente": "762-52-5273",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS219",
+    "Fecha": "2023-10-20",
+    "Hora": "10:00",
+    "Direccion": "Pasaje Anastasio Almagro 40 Piso 6 \nÁlava, 19434",
+    "id_medico": "MED056",
+    "id_paciente": "581-29-2612",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS220",
+    "Fecha": "2023-10-08",
+    "Hora": "15:00",
+    "Direccion": "Rambla Fabricio Juárez 54 Piso 0 \nZaragoza, 83314",
+    "id_medico": "MED076",
+    "id_paciente": "190-31-2370",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS221",
+    "Fecha": "2024-07-05",
+    "Hora": "13:30",
+    "Direccion": "Cañada Anastasio Marin 24 Apt. 81 \nCuenca, 23034",
+    "id_medico": "MED118",
+    "id_paciente": "548-91-5813",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS222",
+    "Fecha": "2024-03-01",
+    "Hora": "8:30",
+    "Direccion": "Glorieta Mohamed Galindo 117 Piso 5 \nTarragona, 21308",
+    "id_medico": "MED096",
+    "id_paciente": "006-95-2266",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS223",
+    "Fecha": "2025-02-13",
+    "Hora": "17:00",
+    "Direccion": "Pasadizo de Guadalupe Chaves 8\nCiudad, 44858",
+    "id_medico": "MED042",
+    "id_paciente": "419-64-0471",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS224",
+    "Fecha": "2024-02-24",
+    "Hora": "15:00",
+    "Direccion": "Alameda Néstor Blanch 46 Apt. 82 \nGirona, 22322",
+    "id_medico": "MED062",
+    "id_paciente": "807-08-2104",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS225",
+    "Fecha": "2024-02-08",
+    "Hora": "12:30",
+    "Direccion": "Paseo de Marta Bas 68\nToledo, 87440",
+    "id_medico": "MED208",
+    "id_paciente": "525-82-2782",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS226",
+    "Fecha": "2025-07-26",
+    "Hora": "8:45",
+    "Direccion": "Vial Isaías Alberto 31 Apt. 23 \nÁvila, 57337",
+    "id_medico": "MED153",
+    "id_paciente": "109-73-6910",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS227",
+    "Fecha": "2024-07-12",
+    "Hora": "8:45",
+    "Direccion": "Camino de Armando Castell 27\nPontevedra, 74448",
+    "id_medico": "MED028",
+    "id_paciente": "985-11-1831",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS228",
+    "Fecha": "2023-08-31",
+    "Hora": "9:45",
+    "Direccion": "Paseo Rafaela Viana 68 Puerta 1 \nValencia, 81293",
+    "id_medico": "MED119",
+    "id_paciente": "267-53-9687",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS229",
+    "Fecha": "2024-09-30",
+    "Hora": "15:15",
+    "Direccion": "Paseo Fabricio Gálvez 57 Puerta 7 \nGranada, 02099",
+    "id_medico": "MED002",
+    "id_paciente": "808-58-0538",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS230",
+    "Fecha": "2024-07-22",
+    "Hora": "14:30",
+    "Direccion": "Rambla de Jordi Barba 6\nVizcaya, 52014",
+    "id_medico": "MED218",
+    "id_paciente": "346-59-4703",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS231",
+    "Fecha": "2024-03-09",
+    "Hora": "13:30",
+    "Direccion": "Ronda de Jordán Cases 303 Apt. 48 \nMálaga, 47796",
+    "id_medico": "MED155",
+    "id_paciente": "128-47-8353",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS232",
+    "Fecha": "2024-02-17",
+    "Hora": "14:15",
+    "Direccion": "Cañada de Eduardo Llanos 93\nPalencia, 26498",
+    "id_medico": "MED246",
+    "id_paciente": "808-58-0538",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS233",
+    "Fecha": "2024-10-09",
+    "Hora": "16:15",
+    "Direccion": "C. Florina Pulido 46\nLleida, 45225",
+    "id_medico": "MED212",
+    "id_paciente": "715-70-3694",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS234",
+    "Fecha": "2023-11-19",
+    "Hora": "11:45",
+    "Direccion": "Callejón de Pepita Costa 5 Puerta 7 \nBaleares, 51580",
+    "id_medico": "MED050",
+    "id_paciente": "415-56-9848",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS235",
+    "Fecha": "2023-11-19",
+    "Hora": "9:45",
+    "Direccion": "Via Montserrat Ruano 764\nCiudad, 54376",
+    "id_medico": "MED084",
+    "id_paciente": "608-22-6976",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS236",
+    "Fecha": "2025-04-12",
+    "Hora": "15:30",
+    "Direccion": "Avenida de Áurea Monreal 80 Puerta 6 \nAlicante, 84413",
+    "id_medico": "MED231",
+    "id_paciente": "064-31-3931",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS237",
+    "Fecha": "2025-02-21",
+    "Hora": "15:15",
+    "Direccion": "Urbanización Borja Osuna 45 Piso 0 \nCádiz, 20383",
+    "id_medico": "MED029",
+    "id_paciente": "985-11-1831",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS238",
+    "Fecha": "2024-04-29",
+    "Hora": "15:00",
+    "Direccion": "Cañada Fátima Niño 97\nLa Coruña, 12249",
+    "id_medico": "MED055",
+    "id_paciente": "177-56-5470",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS239",
+    "Fecha": "2024-09-28",
+    "Hora": "10:00",
+    "Direccion": "Rambla Tiburcio Castell 2 Puerta 0 \nCádiz, 87192",
+    "id_medico": "MED166",
+    "id_paciente": "671-26-3582",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS240",
+    "Fecha": "2024-02-12",
+    "Hora": "10:15",
+    "Direccion": "Pasadizo Ximena Castell 14 Piso 9 \nSalamanca, 96124",
+    "id_medico": "MED248",
+    "id_paciente": "108-44-4851",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS241",
+    "Fecha": "2025-05-02",
+    "Hora": "12:00",
+    "Direccion": "Avenida de Lucio Barroso 11\nBarcelona, 03385",
+    "id_medico": "MED243",
+    "id_paciente": "336-86-7941",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS242",
+    "Fecha": "2023-09-28",
+    "Hora": "14:45",
+    "Direccion": "Cañada de Maricruz Franch 70 Puerta 1 \nSanta Cruz de Tenerife, 31986",
+    "id_medico": "MED192",
+    "id_paciente": "336-86-7941",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS243",
+    "Fecha": "2025-06-27",
+    "Hora": "14:15",
+    "Direccion": "Cuesta Manuel Carrera 83 Piso 5 \nCeuta, 47742",
+    "id_medico": "MED144",
+    "id_paciente": "420-76-6168",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS244",
+    "Fecha": "2024-05-25",
+    "Hora": "11:45",
+    "Direccion": "Cuesta Ezequiel Sosa 46 Piso 3 \nLugo, 25420",
+    "id_medico": "MED154",
+    "id_paciente": "715-70-3694",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS245",
+    "Fecha": "2025-06-17",
+    "Hora": "13:45",
+    "Direccion": "Calle Yolanda Murillo 672\nOurense, 64143",
+    "id_medico": "MED204",
+    "id_paciente": "587-12-7704",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS246",
+    "Fecha": "2025-05-07",
+    "Hora": "11:00",
+    "Direccion": "Urbanización Elpidio Rocamora 80 Apt. 12 \nJaén, 58509",
+    "id_medico": "MED030",
+    "id_paciente": "188-09-2699",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS247",
+    "Fecha": "2025-04-04",
+    "Hora": "16:45",
+    "Direccion": "Pasaje Joel Daza 6 Apt. 77 \nZaragoza, 21386",
+    "id_medico": "MED119",
+    "id_paciente": "981-64-8213",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS248",
+    "Fecha": "2024-10-15",
+    "Hora": "16:45",
+    "Direccion": "Calle de Geraldo Pinto 82\nAlmería, 72041",
+    "id_medico": "MED181",
+    "id_paciente": "296-05-6795",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS249",
+    "Fecha": "2025-06-09",
+    "Hora": "9:45",
+    "Direccion": "Cañada de Macaria Manzanares 490 Puerta 7 \nBarcelona, 61972",
+    "id_medico": "MED151",
+    "id_paciente": "509-88-8997",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS250",
+    "Fecha": "2025-06-07",
+    "Hora": "14:30",
+    "Direccion": "Ronda Josué Bustamante 46 Puerta 5 \nNavarra, 99817",
+    "id_medico": "MED031",
+    "id_paciente": "296-05-6795",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS251",
+    "Fecha": "2024-06-14",
+    "Hora": "11:00",
+    "Direccion": "Ronda de Nayara Conde 39\nCáceres, 14379",
+    "id_medico": "MED249",
+    "id_paciente": "361-63-6515",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS252",
+    "Fecha": "2024-02-29",
+    "Hora": "11:30",
+    "Direccion": "Urbanización Omar Castilla 9 Puerta 5 \nMurcia, 38919",
+    "id_medico": "MED030",
+    "id_paciente": "065-99-0287",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS253",
+    "Fecha": "2024-07-23",
+    "Hora": "15:15",
+    "Direccion": "Alameda Aureliano Fernandez 84\nTeruel, 02666",
+    "id_medico": "MED008",
+    "id_paciente": "736-62-9600",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS254",
+    "Fecha": "2025-06-22",
+    "Hora": "9:30",
+    "Direccion": "Cañada Geraldo Falcó 63 Piso 0 \nNavarra, 25048",
+    "id_medico": "MED131",
+    "id_paciente": "226-18-1000",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS255",
+    "Fecha": "2024-12-23",
+    "Hora": "9:30",
+    "Direccion": "Pasaje de Crescencia Rebollo 3\nLa Rioja, 38789",
+    "id_medico": "MED026",
+    "id_paciente": "845-03-7942",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS256",
+    "Fecha": "2024-10-09",
+    "Hora": "9:45",
+    "Direccion": "Avenida de Esteban Castell 83 Puerta 8 \nCuenca, 18364",
+    "id_medico": "MED237",
+    "id_paciente": "163-04-2273",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS257",
+    "Fecha": "2025-02-03",
+    "Hora": "11:45",
+    "Direccion": "Callejón Bárbara Castillo 8 Piso 5 \nMelilla, 88304",
+    "id_medico": "MED180",
+    "id_paciente": "685-60-0819",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS258",
+    "Fecha": "2023-08-17",
+    "Hora": "13:15",
+    "Direccion": "Calle Paloma Torrecilla 15\nCórdoba, 87190",
+    "id_medico": "MED176",
+    "id_paciente": "961-01-9940",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS259",
+    "Fecha": "2025-01-01",
+    "Hora": "10:45",
+    "Direccion": "Plaza Amparo Hoz 23 Puerta 2 \nÁvila, 79117",
+    "id_medico": "MED178",
+    "id_paciente": "868-08-1542",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS260",
+    "Fecha": "2024-11-29",
+    "Hora": "9:45",
+    "Direccion": "Urbanización de José Mari Lastra 78 Piso 4 \nBurgos, 61006",
+    "id_medico": "MED209",
+    "id_paciente": "936-76-3981",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS261",
+    "Fecha": "2024-09-23",
+    "Hora": "13:00",
+    "Direccion": "Cuesta de Feliciano Arellano 27 Puerta 0 \nHuelva, 65286",
+    "id_medico": "MED076",
+    "id_paciente": "525-82-2782",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS262",
+    "Fecha": "2023-09-10",
+    "Hora": "16:30",
+    "Direccion": "Callejón José Murcia 82\nAlmería, 25050",
+    "id_medico": "MED225",
+    "id_paciente": "223-06-3818",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS263",
+    "Fecha": "2025-05-31",
+    "Hora": "16:00",
+    "Direccion": "Vial Octavia Portillo 52 Puerta 8 \nCáceres, 11832",
+    "id_medico": "MED027",
+    "id_paciente": "471-70-2695",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS264",
+    "Fecha": "2024-11-08",
+    "Hora": "13:15",
+    "Direccion": "Camino Aránzazu Morcillo 21 Piso 2 \nTeruel, 10118",
+    "id_medico": "MED075",
+    "id_paciente": "374-30-7831",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS265",
+    "Fecha": "2024-06-17",
+    "Hora": "15:30",
+    "Direccion": "Camino de Ascensión Laguna 563\nLleida, 86171",
+    "id_medico": "MED053",
+    "id_paciente": "037-30-4814",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS266",
+    "Fecha": "2023-09-10",
+    "Hora": "15:00",
+    "Direccion": "C. de Juanito Portillo 11\nMelilla, 11299",
+    "id_medico": "MED006",
+    "id_paciente": "931-36-5647",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS267",
+    "Fecha": "2024-11-10",
+    "Hora": "14:00",
+    "Direccion": "Plaza de Sigfrido Toledo 64 Piso 5 \nTeruel, 10013",
+    "id_medico": "MED242",
+    "id_paciente": "128-47-8353",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS268",
+    "Fecha": "2024-09-18",
+    "Hora": "11:00",
+    "Direccion": "Rambla Aroa Montesinos 59\nBadajoz, 84798",
+    "id_medico": "MED065",
+    "id_paciente": "085-27-2749",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS269",
+    "Fecha": "2025-06-07",
+    "Hora": "16:00",
+    "Direccion": "C. de María Carbó 486\nOurense, 00949",
+    "id_medico": "MED107",
+    "id_paciente": "147-79-4532",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS270",
+    "Fecha": "2025-02-01",
+    "Hora": "12:30",
+    "Direccion": "Via Horacio Jimenez 86 Piso 8 \nÁvila, 13071",
+    "id_medico": "MED233",
+    "id_paciente": "082-29-2735",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS271",
+    "Fecha": "2025-03-23",
+    "Hora": "8:45",
+    "Direccion": "Rambla de Sabina Cuadrado 5 Apt. 94 \nAlmería, 62604",
+    "id_medico": "MED056",
+    "id_paciente": "467-85-2989",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS272",
+    "Fecha": "2024-11-03",
+    "Hora": "12:30",
+    "Direccion": "Pasaje Manuela Fiol 32\nJaén, 87716",
+    "id_medico": "MED188",
+    "id_paciente": "509-88-8997",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS273",
+    "Fecha": "2024-09-14",
+    "Hora": "9:30",
+    "Direccion": "Avenida de Visitación Bermudez 8\nLeón, 12598",
+    "id_medico": "MED008",
+    "id_paciente": "512-50-3939",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS274",
+    "Fecha": "2023-08-15",
+    "Hora": "14:00",
+    "Direccion": "Pasaje Nacho Bauzà 91 Apt. 42 \nCuenca, 32097",
+    "id_medico": "MED108",
+    "id_paciente": "931-36-5647",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS275",
+    "Fecha": "2023-10-24",
+    "Hora": "13:00",
+    "Direccion": "Via Filomena Palacio 194\nBadajoz, 91844",
+    "id_medico": "MED223",
+    "id_paciente": "100-35-0510",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS276",
+    "Fecha": "2024-10-27",
+    "Hora": "10:45",
+    "Direccion": "Cuesta Ulises Moraleda 2 Puerta 8 \nGuadalajara, 70856",
+    "id_medico": "MED234",
+    "id_paciente": "574-35-1877",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS277",
+    "Fecha": "2024-05-10",
+    "Hora": "16:15",
+    "Direccion": "C. de Joaquina Elías 67\nLeón, 33027",
+    "id_medico": "MED232",
+    "id_paciente": "136-84-6587",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS278",
+    "Fecha": "2024-05-01",
+    "Hora": "14:15",
+    "Direccion": "Avenida de Sabas Vizcaíno 88 Apt. 20 \nAsturias, 34253",
+    "id_medico": "MED068",
+    "id_paciente": "851-60-9697",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS279",
+    "Fecha": "2023-09-16",
+    "Hora": "15:30",
+    "Direccion": "Via Plinio Tomas 15\nCuenca, 00953",
+    "id_medico": "MED188",
+    "id_paciente": "981-64-8213",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS280",
+    "Fecha": "2025-01-02",
+    "Hora": "16:30",
+    "Direccion": "Alameda de Gonzalo Ureña 32 Piso 2 \nGuadalajara, 61111",
+    "id_medico": "MED110",
+    "id_paciente": "512-50-3939",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS281",
+    "Fecha": "2024-05-09",
+    "Hora": "8:45",
+    "Direccion": "C. María Belén Cuesta 32\nSegovia, 94049",
+    "id_medico": "MED008",
+    "id_paciente": "756-70-5568",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS282",
+    "Fecha": "2024-02-15",
+    "Hora": "11:00",
+    "Direccion": "Urbanización de Lupe Hernández 98 Piso 0 \nÁlava, 94435",
+    "id_medico": "MED011",
+    "id_paciente": "849-25-7247",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS283",
+    "Fecha": "2024-03-06",
+    "Hora": "17:15",
+    "Direccion": "Calle Miriam Castrillo 71 Puerta 2 \nAlicante, 86795",
+    "id_medico": "MED094",
+    "id_paciente": "129-43-4187",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS284",
+    "Fecha": "2024-01-08",
+    "Hora": "15:30",
+    "Direccion": "Ronda de Fulgencio Marcos 2\nSevilla, 84364",
+    "id_medico": "MED226",
+    "id_paciente": "215-74-8143",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS285",
+    "Fecha": "2023-08-31",
+    "Hora": "14:45",
+    "Direccion": "Calle de Baudelio Hernandez 55 Apt. 05 \nCuenca, 00125",
+    "id_medico": "MED066",
+    "id_paciente": "608-22-6976",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS286",
+    "Fecha": "2025-07-01",
+    "Hora": "16:45",
+    "Direccion": "Pasaje Ambrosio Millán 52 Puerta 5 \nAlicante, 57353",
+    "id_medico": "MED027",
+    "id_paciente": "431-12-2281",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS287",
+    "Fecha": "2023-11-08",
+    "Hora": "14:30",
+    "Direccion": "C. Iván Baena 88 Puerta 4 \nBaleares, 78080",
+    "id_medico": "MED022",
+    "id_paciente": "588-58-2828",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS288",
+    "Fecha": "2025-02-15",
+    "Hora": "15:45",
+    "Direccion": "Glorieta Eustaquio Abellán 21 Puerta 7 \nAsturias, 19542",
+    "id_medico": "MED188",
+    "id_paciente": "515-27-0769",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS289",
+    "Fecha": "2024-09-02",
+    "Hora": "13:30",
+    "Direccion": "Glorieta de Sabas Vega 7 Puerta 8 \nSanta Cruz de Tenerife, 49082",
+    "id_medico": "MED172",
+    "id_paciente": "070-70-9156",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS290",
+    "Fecha": "2023-12-17",
+    "Hora": "9:30",
+    "Direccion": "Rambla Nacio Miralles 47 Puerta 0 \nValladolid, 18111",
+    "id_medico": "MED061",
+    "id_paciente": "099-67-2573",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS291",
+    "Fecha": "2025-04-24",
+    "Hora": "14:30",
+    "Direccion": "Vial Julieta Acosta 9 Apt. 47 \nLleida, 62777",
+    "id_medico": "MED246",
+    "id_paciente": "223-06-3818",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS292",
+    "Fecha": "2025-03-28",
+    "Hora": "11:15",
+    "Direccion": "Cañada de Octavia Manrique 976\nZaragoza, 82298",
+    "id_medico": "MED092",
+    "id_paciente": "422-11-9007",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS293",
+    "Fecha": "2025-05-22",
+    "Hora": "9:45",
+    "Direccion": "Callejón Lilia Conesa 58 Puerta 5 \nBurgos, 40985",
+    "id_medico": "MED219",
+    "id_paciente": "100-35-0510",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS294",
+    "Fecha": "2023-11-08",
+    "Hora": "16:30",
+    "Direccion": "Vial de Joaquina Pinilla 47\nAsturias, 70528",
+    "id_medico": "MED227",
+    "id_paciente": "282-64-1668",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS295",
+    "Fecha": "2023-11-15",
+    "Hora": "10:30",
+    "Direccion": "Acceso Diana Llobet 881 Puerta 6 \nLugo, 30245",
+    "id_medico": "MED218",
+    "id_paciente": "929-18-1270",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS296",
+    "Fecha": "2023-12-18",
+    "Hora": "10:00",
+    "Direccion": "Acceso Gabino Arana 164 Piso 5 \nHuelva, 50952",
+    "id_medico": "MED080",
+    "id_paciente": "195-25-0806",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS297",
+    "Fecha": "2023-11-10",
+    "Hora": "11:45",
+    "Direccion": "Urbanización Ángel Acosta 67 Puerta 1 \nBadajoz, 58709",
+    "id_medico": "MED045",
+    "id_paciente": "406-94-0809",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS298",
+    "Fecha": "2025-05-10",
+    "Hora": "8:00",
+    "Direccion": "Urbanización de Encarnita Gilabert 4\nCiudad, 96361",
+    "id_medico": "MED073",
+    "id_paciente": "658-52-3698",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS299",
+    "Fecha": "2024-02-20",
+    "Hora": "10:30",
+    "Direccion": "Plaza Edmundo Ros 98 Puerta 9 \nGirona, 39449",
+    "id_medico": "MED115",
+    "id_paciente": "985-33-1787",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS300",
+    "Fecha": "2025-02-13",
+    "Hora": "15:45",
+    "Direccion": "Vial de Basilio Huertas 19 Puerta 0 \nZamora, 46346",
+    "id_medico": "MED125",
+    "id_paciente": "922-67-0952",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS301",
+    "Fecha": "2024-03-18",
+    "Hora": "10:45",
+    "Direccion": "Glorieta Elisa Olivé 57\nLeón, 96147",
+    "id_medico": "MED240",
+    "id_paciente": "455-51-6288",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS302",
+    "Fecha": "2024-09-07",
+    "Hora": "13:30",
+    "Direccion": "Callejón Lisandro Saldaña 71\nCiudad, 60904",
+    "id_medico": "MED136",
+    "id_paciente": "471-15-9974",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS303",
+    "Fecha": "2024-06-09",
+    "Hora": "15:15",
+    "Direccion": "Vial de Ofelia Osorio 36\nBaleares, 98028",
+    "id_medico": "MED234",
+    "id_paciente": "128-47-8353",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS304",
+    "Fecha": "2024-11-28",
+    "Hora": "8:00",
+    "Direccion": "Paseo de Edmundo Cisneros 76\nGuadalajara, 68760",
+    "id_medico": "MED083",
+    "id_paciente": "129-43-4187",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS305",
+    "Fecha": "2023-11-19",
+    "Hora": "12:15",
+    "Direccion": "Glorieta de María Luisa Garrido 13 Apt. 39 \nSalamanca, 22382",
+    "id_medico": "MED162",
+    "id_paciente": "219-60-3486",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS306",
+    "Fecha": "2025-01-10",
+    "Hora": "17:30",
+    "Direccion": "Alameda Camilo Peñalver 71\nLa Coruña, 64836",
+    "id_medico": "MED055",
+    "id_paciente": "051-65-6963",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS307",
+    "Fecha": "2024-07-16",
+    "Hora": "17:45",
+    "Direccion": "Alameda de Edmundo Garcia 958 Piso 6 \nGuipúzcoa, 11755",
+    "id_medico": "MED196",
+    "id_paciente": "085-27-2749",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS308",
+    "Fecha": "2025-01-05",
+    "Hora": "13:15",
+    "Direccion": "C. de Jeremías Barroso 32 Apt. 74 \nBurgos, 70964",
+    "id_medico": "MED070",
+    "id_paciente": "129-43-4187",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS309",
+    "Fecha": "2024-04-30",
+    "Hora": "8:15",
+    "Direccion": "Paseo de Elena Gibert 11\nTeruel, 93956",
+    "id_medico": "MED136",
+    "id_paciente": "525-82-2782",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS310",
+    "Fecha": "2024-04-15",
+    "Hora": "8:00",
+    "Direccion": "C. Delia Elías 753 Apt. 34 \nCórdoba, 05550",
+    "id_medico": "MED215",
+    "id_paciente": "195-25-0806",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS311",
+    "Fecha": "2024-05-02",
+    "Hora": "16:45",
+    "Direccion": "Vial de Alonso Alberdi 1 Apt. 39 \nTeruel, 61150",
+    "id_medico": "MED241",
+    "id_paciente": "127-66-4635",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS312",
+    "Fecha": "2023-10-17",
+    "Hora": "9:30",
+    "Direccion": "Camino Isaías Valdés 81 Puerta 3 \nMálaga, 94501",
+    "id_medico": "MED094",
+    "id_paciente": "415-56-9848",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS313",
+    "Fecha": "2024-08-21",
+    "Hora": "13:45",
+    "Direccion": "Acceso de Vinicio Gimenez 45\nJaén, 37307",
+    "id_medico": "MED134",
+    "id_paciente": "936-76-3981",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS314",
+    "Fecha": "2023-12-19",
+    "Hora": "9:00",
+    "Direccion": "Acceso Gertrudis Alba 546 Piso 6 \nGuadalajara, 48929",
+    "id_medico": "MED118",
+    "id_paciente": "687-87-4508",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS315",
+    "Fecha": "2025-04-15",
+    "Hora": "13:00",
+    "Direccion": "C. de Zaida Prada 93\nAlmería, 98884",
+    "id_medico": "MED080",
+    "id_paciente": "139-58-6402",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS316",
+    "Fecha": "2023-08-01",
+    "Hora": "15:00",
+    "Direccion": "Paseo Marcela Cabanillas 84\nTarragona, 33079",
+    "id_medico": "MED235",
+    "id_paciente": "923-83-0523",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS317",
+    "Fecha": "2024-05-01",
+    "Hora": "17:15",
+    "Direccion": "Rambla Fabio Arnau 217 Puerta 0 \nJaén, 59437",
+    "id_medico": "MED114",
+    "id_paciente": "290-59-5095",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS318",
+    "Fecha": "2023-10-29",
+    "Hora": "14:15",
+    "Direccion": "Acceso de José Luis Almeida 33 Apt. 97 \nBurgos, 04502",
+    "id_medico": "MED096",
+    "id_paciente": "687-87-4508",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS319",
+    "Fecha": "2025-03-17",
+    "Hora": "12:15",
+    "Direccion": "Avenida de Lucas Mariscal 22\nBurgos, 38419",
+    "id_medico": "MED181",
+    "id_paciente": "363-50-4355",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS320",
+    "Fecha": "2024-05-15",
+    "Hora": "12:30",
+    "Direccion": "Via Matías Antúnez 862\nHuelva, 47427",
+    "id_medico": "MED020",
+    "id_paciente": "892-27-5223",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS321",
+    "Fecha": "2023-08-14",
+    "Hora": "8:45",
+    "Direccion": "Acceso de Eugenia Pulido 13 Puerta 2 \nBurgos, 36463",
+    "id_medico": "MED054",
+    "id_paciente": "051-65-6963",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS322",
+    "Fecha": "2024-02-26",
+    "Hora": "16:45",
+    "Direccion": "Glorieta Alejandra Nicolás 6 Piso 8 \nAlmería, 27486",
+    "id_medico": "MED108",
+    "id_paciente": "417-30-0887",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS323",
+    "Fecha": "2025-04-15",
+    "Hora": "16:15",
+    "Direccion": "Glorieta de Sandra Manuel 2\nGranada, 04846",
+    "id_medico": "MED088",
+    "id_paciente": "037-42-0369",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS324",
+    "Fecha": "2024-01-24",
+    "Hora": "14:00",
+    "Direccion": "Cañada Ainoa Campos 59 Apt. 41 \nSanta Cruz de Tenerife, 29853",
+    "id_medico": "MED003",
+    "id_paciente": "525-82-2782",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS325",
+    "Fecha": "2023-10-26",
+    "Hora": "9:15",
+    "Direccion": "Camino Pili Huerta 30\nJaén, 20490",
+    "id_medico": "MED181",
+    "id_paciente": "360-96-3824",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS326",
+    "Fecha": "2024-11-09",
+    "Hora": "8:00",
+    "Direccion": "Paseo de Herberto Quirós 706 Puerta 8 \nValladolid, 91870",
+    "id_medico": "MED241",
+    "id_paciente": "543-60-3292",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS327",
+    "Fecha": "2024-12-14",
+    "Hora": "13:30",
+    "Direccion": "Rambla de Nazaret Salamanca 14\nCeuta, 06022",
+    "id_medico": "MED153",
+    "id_paciente": "497-43-9361",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS328",
+    "Fecha": "2025-07-23",
+    "Hora": "15:00",
+    "Direccion": "Urbanización de María Jesús Castillo 6\nCantabria, 13723",
+    "id_medico": "MED172",
+    "id_paciente": "866-22-5654",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS329",
+    "Fecha": "2025-02-01",
+    "Hora": "11:15",
+    "Direccion": "Paseo Armida Montes 4 Piso 5 \nSanta Cruz de Tenerife, 56459",
+    "id_medico": "MED166",
+    "id_paciente": "659-63-2616",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS330",
+    "Fecha": "2024-02-29",
+    "Hora": "17:45",
+    "Direccion": "Cuesta Anunciación Gallart 32 Apt. 07 \nMelilla, 88773",
+    "id_medico": "MED225",
+    "id_paciente": "845-03-7942",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS331",
+    "Fecha": "2024-05-03",
+    "Hora": "11:15",
+    "Direccion": "Ronda María Fernanda Álamo 8\nBaleares, 24351",
+    "id_medico": "MED081",
+    "id_paciente": "939-84-6834",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS332",
+    "Fecha": "2025-02-04",
+    "Hora": "10:15",
+    "Direccion": "Plaza de Lupe Olivares 83 Apt. 54 \nMurcia, 47603",
+    "id_medico": "MED153",
+    "id_paciente": "936-76-3981",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS333",
+    "Fecha": "2024-11-21",
+    "Hora": "16:30",
+    "Direccion": "Plaza Rosalva Pereira 83\nGuipúzcoa, 00044",
+    "id_medico": "MED177",
+    "id_paciente": "325-10-4720",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS334",
+    "Fecha": "2024-06-25",
+    "Hora": "15:00",
+    "Direccion": "Pasaje Teresita Garay 84 Apt. 02 \nTeruel, 15448",
+    "id_medico": "MED128",
+    "id_paciente": "517-61-0763",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS335",
+    "Fecha": "2023-11-10",
+    "Hora": "9:45",
+    "Direccion": "Via Eusebia Gutierrez 8 Apt. 45 \nCáceres, 91920",
+    "id_medico": "MED155",
+    "id_paciente": "581-29-2612",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS336",
+    "Fecha": "2024-07-30",
+    "Hora": "11:45",
+    "Direccion": "Acceso de Rafael Berrocal 35 Apt. 99 \nSalamanca, 88839",
+    "id_medico": "MED181",
+    "id_paciente": "076-49-6105",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS337",
+    "Fecha": "2024-07-21",
+    "Hora": "9:30",
+    "Direccion": "Plaza Emiliano Cruz 83\nLugo, 71976",
+    "id_medico": "MED112",
+    "id_paciente": "091-97-5664",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS338",
+    "Fecha": "2024-11-16",
+    "Hora": "15:45",
+    "Direccion": "Callejón Felipa Ramírez 55\nJaén, 16560",
+    "id_medico": "MED230",
+    "id_paciente": "037-30-4814",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS339",
+    "Fecha": "2025-07-05",
+    "Hora": "9:00",
+    "Direccion": "Pasaje Adán Pascual 47 Piso 0 \nTarragona, 36791",
+    "id_medico": "MED228",
+    "id_paciente": "401-47-7371",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS340",
+    "Fecha": "2024-04-13",
+    "Hora": "9:30",
+    "Direccion": "C. Javiera Vaquero 5\nCórdoba, 95803",
+    "id_medico": "MED090",
+    "id_paciente": "064-31-3931",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS341",
+    "Fecha": "2024-06-09",
+    "Hora": "8:15",
+    "Direccion": "Camino Evita Carranza 55\nCeuta, 38253",
+    "id_medico": "MED171",
+    "id_paciente": "406-94-0809",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS342",
+    "Fecha": "2024-10-25",
+    "Hora": "15:30",
+    "Direccion": "C. de Pancho Rios 5\nLa Coruña, 15198",
+    "id_medico": "MED120",
+    "id_paciente": "414-42-2787",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS343",
+    "Fecha": "2024-08-12",
+    "Hora": "8:15",
+    "Direccion": "Via de Eusebia Molins 77\nLeón, 62920",
+    "id_medico": "MED021",
+    "id_paciente": "099-67-2573",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS344",
+    "Fecha": "2025-06-30",
+    "Hora": "10:00",
+    "Direccion": "Pasaje Juanito Reguera 17 Apt. 37 \nBaleares, 44929",
+    "id_medico": "MED186",
+    "id_paciente": "977-07-2717",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS345",
+    "Fecha": "2024-04-14",
+    "Hora": "9:30",
+    "Direccion": "C. de Paola Batlle 66 Puerta 2 \nCórdoba, 85771",
+    "id_medico": "MED027",
+    "id_paciente": "190-31-2370",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS346",
+    "Fecha": "2024-05-02",
+    "Hora": "17:45",
+    "Direccion": "Alameda de Toribio Falcón 23 Piso 9 \nVizcaya, 67479",
+    "id_medico": "MED189",
+    "id_paciente": "574-35-1877",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS347",
+    "Fecha": "2024-01-04",
+    "Hora": "11:45",
+    "Direccion": "C. de Adoración Pombo 144\nMálaga, 06202",
+    "id_medico": "MED249",
+    "id_paciente": "053-38-8943",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS348",
+    "Fecha": "2024-02-17",
+    "Hora": "8:45",
+    "Direccion": "Pasaje de Nacio Aznar 15 Puerta 8 \nAlbacete, 96495",
+    "id_medico": "MED025",
+    "id_paciente": "909-00-0935",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS349",
+    "Fecha": "2024-05-26",
+    "Hora": "9:45",
+    "Direccion": "Cuesta Dimas Ramirez 87\nAlicante, 95881",
+    "id_medico": "MED117",
+    "id_paciente": "290-59-5095",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS350",
+    "Fecha": "2023-12-06",
+    "Hora": "17:00",
+    "Direccion": "Vial de Maristela Zabala 59 Puerta 8 \nGuadalajara, 80785",
+    "id_medico": "MED154",
+    "id_paciente": "099-76-1591",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS351",
+    "Fecha": "2024-10-22",
+    "Hora": "12:30",
+    "Direccion": "Cañada Fabiana Perales 90\nBadajoz, 66659",
+    "id_medico": "MED223",
+    "id_paciente": "466-43-9329",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS352",
+    "Fecha": "2025-02-21",
+    "Hora": "14:15",
+    "Direccion": "Paseo Marcelino Ropero 77 Apt. 22 \nToledo, 57275",
+    "id_medico": "MED003",
+    "id_paciente": "957-87-8081",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS353",
+    "Fecha": "2023-08-22",
+    "Hora": "12:45",
+    "Direccion": "Rambla Amando Zabaleta 15 Puerta 0 \nSevilla, 64189",
+    "id_medico": "MED216",
+    "id_paciente": "076-49-6105",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS354",
+    "Fecha": "2024-09-26",
+    "Hora": "17:45",
+    "Direccion": "C. Xiomara Machado 91 Piso 0 \nVizcaya, 24800",
+    "id_medico": "MED001",
+    "id_paciente": "400-34-1014",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS355",
+    "Fecha": "2024-10-31",
+    "Hora": "10:30",
+    "Direccion": "Pasadizo Andrés Almazán 22 Puerta 3 \nCiudad, 05427",
+    "id_medico": "MED045",
+    "id_paciente": "997-56-1709",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS356",
+    "Fecha": "2025-05-23",
+    "Hora": "17:00",
+    "Direccion": "C. Pancho Carrión 6\nHuesca, 25883",
+    "id_medico": "MED165",
+    "id_paciente": "360-96-3824",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS357",
+    "Fecha": "2025-07-10",
+    "Hora": "14:00",
+    "Direccion": "Calle de Rolando Perales 11 Piso 6 \nMálaga, 29695",
+    "id_medico": "MED018",
+    "id_paciente": "419-64-0471",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS358",
+    "Fecha": "2023-09-21",
+    "Hora": "12:00",
+    "Direccion": "Urbanización de Benita Gonzalo 784\nPontevedra, 66624",
+    "id_medico": "MED145",
+    "id_paciente": "924-60-3993",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS359",
+    "Fecha": "2024-09-17",
+    "Hora": "10:30",
+    "Direccion": "C. Custodia González 12\nSevilla, 39224",
+    "id_medico": "MED158",
+    "id_paciente": "791-89-6006",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS360",
+    "Fecha": "2023-07-28",
+    "Hora": "13:00",
+    "Direccion": "Cuesta de Fabricio Ángel 97\nTarragona, 95100",
+    "id_medico": "MED181",
+    "id_paciente": "890-72-1541",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS361",
+    "Fecha": "2025-03-16",
+    "Hora": "8:45",
+    "Direccion": "Rambla de Victoria Amo 33 Apt. 14 \nNavarra, 96155",
+    "id_medico": "MED137",
+    "id_paciente": "800-84-4922",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS362",
+    "Fecha": "2023-10-10",
+    "Hora": "8:45",
+    "Direccion": "Pasadizo de Jovita Villena 58\nZaragoza, 86899",
+    "id_medico": "MED046",
+    "id_paciente": "325-10-4720",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS363",
+    "Fecha": "2023-09-17",
+    "Hora": "15:00",
+    "Direccion": "Calle Victorino Guitart 688\nCáceres, 86485",
+    "id_medico": "MED197",
+    "id_paciente": "472-34-9333",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS364",
+    "Fecha": "2024-03-09",
+    "Hora": "15:00",
+    "Direccion": "Callejón de Florinda Barros 35 Piso 9 \nÁlava, 84190",
+    "id_medico": "MED035",
+    "id_paciente": "417-30-0887",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS365",
+    "Fecha": "2025-07-10",
+    "Hora": "10:15",
+    "Direccion": "Pasadizo de Estrella Miró 3 Apt. 55 \nBaleares, 50954",
+    "id_medico": "MED086",
+    "id_paciente": "753-83-9863",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS366",
+    "Fecha": "2023-11-23",
+    "Hora": "12:00",
+    "Direccion": "Urbanización Tecla Arrieta 1 Piso 7 \nValladolid, 60102",
+    "id_medico": "MED091",
+    "id_paciente": "037-42-0369",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS367",
+    "Fecha": "2025-02-18",
+    "Hora": "17:30",
+    "Direccion": "Pasadizo René Palmer 20\nGranada, 43263",
+    "id_medico": "MED194",
+    "id_paciente": "725-44-7850",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS368",
+    "Fecha": "2024-05-02",
+    "Hora": "12:45",
+    "Direccion": "Paseo de Clemente Montesinos 2 Piso 0 \nSalamanca, 38976",
+    "id_medico": "MED122",
+    "id_paciente": "973-45-8061",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS369",
+    "Fecha": "2025-04-23",
+    "Hora": "11:30",
+    "Direccion": "Plaza de Ezequiel Rojas 33\nCuenca, 92781",
+    "id_medico": "MED232",
+    "id_paciente": "109-73-6910",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS370",
+    "Fecha": "2024-07-03",
+    "Hora": "12:30",
+    "Direccion": "Rambla de Renato Sans 6\nAlmería, 69469",
+    "id_medico": "MED033",
+    "id_paciente": "838-37-5719",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS371",
+    "Fecha": "2025-01-09",
+    "Hora": "14:45",
+    "Direccion": "Cuesta de Antonia Salas 89 Puerta 2 \nCádiz, 86514",
+    "id_medico": "MED187",
+    "id_paciente": "422-11-9007",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS372",
+    "Fecha": "2025-03-31",
+    "Hora": "9:15",
+    "Direccion": "Acceso de Roberta Agustí 34\nGuadalajara, 28276",
+    "id_medico": "MED076",
+    "id_paciente": "471-70-2695",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS373",
+    "Fecha": "2025-05-18",
+    "Hora": "14:30",
+    "Direccion": "Urbanización de Pacífica Salvador 1\nGranada, 70740",
+    "id_medico": "MED004",
+    "id_paciente": "709-41-9043",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS374",
+    "Fecha": "2025-01-12",
+    "Hora": "12:00",
+    "Direccion": "Avenida de Viviana Carro 41\nSegovia, 50359",
+    "id_medico": "MED095",
+    "id_paciente": "108-44-4851",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS375",
+    "Fecha": "2023-11-30",
+    "Hora": "9:15",
+    "Direccion": "Plaza Verónica Diez 99\nGranada, 64643",
+    "id_medico": "MED226",
+    "id_paciente": "471-70-2695",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS376",
+    "Fecha": "2024-06-03",
+    "Hora": "12:30",
+    "Direccion": "Cuesta de María Fernanda Sobrino 252\nSevilla, 02296",
+    "id_medico": "MED140",
+    "id_paciente": "404-78-4541",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS377",
+    "Fecha": "2023-10-02",
+    "Hora": "10:45",
+    "Direccion": "Acceso de Aureliano Rebollo 3\nLugo, 49522",
+    "id_medico": "MED112",
+    "id_paciente": "820-88-8815",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS378",
+    "Fecha": "2024-05-15",
+    "Hora": "11:00",
+    "Direccion": "Plaza de Tatiana Villanueva 92 Piso 9 \nValladolid, 51674",
+    "id_medico": "MED107",
+    "id_paciente": "509-88-8997",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS379",
+    "Fecha": "2024-09-21",
+    "Hora": "16:00",
+    "Direccion": "Rambla Verónica Azorin 969 Apt. 71 \nLleida, 00106",
+    "id_medico": "MED140",
+    "id_paciente": "053-38-8943",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS380",
+    "Fecha": "2024-11-17",
+    "Hora": "14:45",
+    "Direccion": "Acceso Ariel Osuna 793 Piso 0 \nÁlava, 25835",
+    "id_medico": "MED232",
+    "id_paciente": "658-52-3698",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS381",
+    "Fecha": "2024-07-30",
+    "Hora": "10:15",
+    "Direccion": "Urbanización Mercedes Jara 90\nOurense, 43682",
+    "id_medico": "MED204",
+    "id_paciente": "583-60-9212",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS382",
+    "Fecha": "2024-04-09",
+    "Hora": "14:15",
+    "Direccion": "Via Lisandro Rios 1\nLas Palmas, 52716",
+    "id_medico": "MED142",
+    "id_paciente": "985-33-1787",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS383",
+    "Fecha": "2023-11-09",
+    "Hora": "9:15",
+    "Direccion": "Urbanización de Azeneth Planas 1\nSoria, 34944",
+    "id_medico": "MED012",
+    "id_paciente": "226-18-1000",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS384",
+    "Fecha": "2025-01-29",
+    "Hora": "8:00",
+    "Direccion": "Callejón Silvestre Barberá 20 Piso 6 \nLleida, 67838",
+    "id_medico": "MED205",
+    "id_paciente": "512-50-3939",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS385",
+    "Fecha": "2024-02-24",
+    "Hora": "16:30",
+    "Direccion": "Paseo de Ángel Carrillo 56 Puerta 6 \nLleida, 06535",
+    "id_medico": "MED008",
+    "id_paciente": "873-44-6417",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS386",
+    "Fecha": "2023-09-18",
+    "Hora": "13:45",
+    "Direccion": "Cañada de Ileana Caro 789 Puerta 9 \nCeuta, 43642",
+    "id_medico": "MED036",
+    "id_paciente": "395-28-1169",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS387",
+    "Fecha": "2025-07-01",
+    "Hora": "17:30",
+    "Direccion": "C. de Nacio Barba 6 Apt. 30 \nCastellón, 47684",
+    "id_medico": "MED139",
+    "id_paciente": "432-73-7069",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS388",
+    "Fecha": "2025-05-06",
+    "Hora": "12:00",
+    "Direccion": "Rambla Marco Expósito 71\nLugo, 79615",
+    "id_medico": "MED181",
+    "id_paciente": "512-50-3939",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS389",
+    "Fecha": "2025-05-18",
+    "Hora": "9:00",
+    "Direccion": "Acceso Gerardo Reina 4\nValencia, 45318",
+    "id_medico": "MED039",
+    "id_paciente": "447-48-1056",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS390",
+    "Fecha": "2024-11-25",
+    "Hora": "16:15",
+    "Direccion": "Pasaje de Jose Francisco Lago 59\nLugo, 93843",
+    "id_medico": "MED068",
+    "id_paciente": "741-35-3760",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS391",
+    "Fecha": "2025-02-14",
+    "Hora": "10:45",
+    "Direccion": "Ronda de Mateo Royo 492 Piso 2 \nSevilla, 46026",
+    "id_medico": "MED122",
+    "id_paciente": "346-59-4703",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS392",
+    "Fecha": "2025-04-21",
+    "Hora": "16:30",
+    "Direccion": "Alameda Cayetana Amaya 6 Puerta 2 \nCádiz, 62571",
+    "id_medico": "MED118",
+    "id_paciente": "755-45-5582",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS393",
+    "Fecha": "2024-03-04",
+    "Hora": "12:30",
+    "Direccion": "Via de Sofía Ricart 98\nToledo, 94094",
+    "id_medico": "MED250",
+    "id_paciente": "919-84-2773",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS394",
+    "Fecha": "2025-01-16",
+    "Hora": "12:30",
+    "Direccion": "Via Rodrigo Naranjo 70\nCastellón, 41118",
+    "id_medico": "MED250",
+    "id_paciente": "791-89-6006",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS395",
+    "Fecha": "2023-08-11",
+    "Hora": "17:00",
+    "Direccion": "Vial de Marina Cervantes 9\nPontevedra, 44018",
+    "id_medico": "MED166",
+    "id_paciente": "183-46-3994",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS396",
+    "Fecha": "2023-10-12",
+    "Hora": "12:15",
+    "Direccion": "Alameda César Benavente 87 Puerta 6 \nBaleares, 63162",
+    "id_medico": "MED160",
+    "id_paciente": "549-81-3040",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS397",
+    "Fecha": "2025-01-17",
+    "Hora": "8:45",
+    "Direccion": "Glorieta Chus Escalona 62 Piso 2 \nCórdoba, 72732",
+    "id_medico": "MED065",
+    "id_paciente": "823-67-6331",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS398",
+    "Fecha": "2024-11-26",
+    "Hora": "9:30",
+    "Direccion": "Plaza Belén Diéguez 926\nBaleares, 42507",
+    "id_medico": "MED069",
+    "id_paciente": "360-96-3824",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS399",
+    "Fecha": "2023-08-20",
+    "Hora": "17:15",
+    "Direccion": "Avenida de Pastora Carballo 7\nLas Palmas, 88032",
+    "id_medico": "MED207",
+    "id_paciente": "834-97-9753",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS400",
+    "Fecha": "2024-07-07",
+    "Hora": "15:30",
+    "Direccion": "Vial de Julián Cabañas 5 Piso 2 \nZamora, 30496",
+    "id_medico": "MED152",
+    "id_paciente": "083-12-0524",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS401",
+    "Fecha": "2023-08-27",
+    "Hora": "11:00",
+    "Direccion": "Avenida Álvaro Saez 11 Apt. 68 \nCáceres, 62812",
+    "id_medico": "MED104",
+    "id_paciente": "173-49-0789",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS402",
+    "Fecha": "2024-06-30",
+    "Hora": "13:45",
+    "Direccion": "Callejón Félix Arco 847\nValladolid, 19406",
+    "id_medico": "MED033",
+    "id_paciente": "444-99-8137",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS403",
+    "Fecha": "2023-09-18",
+    "Hora": "15:15",
+    "Direccion": "Plaza Eufemia Páez 3\nSanta Cruz de Tenerife, 93449",
+    "id_medico": "MED172",
+    "id_paciente": "960-83-5668",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS404",
+    "Fecha": "2023-07-29",
+    "Hora": "13:15",
+    "Direccion": "Callejón de Osvaldo Palacio 5 Apt. 60 \nGirona, 61241",
+    "id_medico": "MED058",
+    "id_paciente": "924-60-3993",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS405",
+    "Fecha": "2025-07-22",
+    "Hora": "9:30",
+    "Direccion": "C. de Alexandra Salas 6\nCádiz, 39398",
+    "id_medico": "MED203",
+    "id_paciente": "083-12-0524",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS406",
+    "Fecha": "2024-11-15",
+    "Hora": "13:00",
+    "Direccion": "Acceso Primitiva Guitart 294 Apt. 61 \nLas Palmas, 41325",
+    "id_medico": "MED040",
+    "id_paciente": "755-45-5582",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS407",
+    "Fecha": "2023-08-07",
+    "Hora": "14:30",
+    "Direccion": "Alameda Fabio Neira 92 Apt. 52 \nGuadalajara, 41314",
+    "id_medico": "MED112",
+    "id_paciente": "472-34-9333",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS408",
+    "Fecha": "2024-01-21",
+    "Hora": "10:15",
+    "Direccion": "Acceso de Julián Sáez 49\nZamora, 66159",
+    "id_medico": "MED069",
+    "id_paciente": "985-11-1831",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS409",
+    "Fecha": "2024-08-12",
+    "Hora": "12:45",
+    "Direccion": "Urbanización de Ani Almansa 98\nOurense, 94327",
+    "id_medico": "MED231",
+    "id_paciente": "279-52-5309",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS410",
+    "Fecha": "2024-09-03",
+    "Hora": "11:15",
+    "Direccion": "Cañada Andrea Cobos 80\nSevilla, 28860",
+    "id_medico": "MED173",
+    "id_paciente": "034-47-0501",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS411",
+    "Fecha": "2025-01-08",
+    "Hora": "17:15",
+    "Direccion": "Camino Isaías Gomila 5\nCantabria, 06703",
+    "id_medico": "MED046",
+    "id_paciente": "977-07-2717",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS412",
+    "Fecha": "2024-01-09",
+    "Hora": "16:30",
+    "Direccion": "Ronda de Luciano Laguna 743 Piso 3 \nPontevedra, 53964",
+    "id_medico": "MED060",
+    "id_paciente": "078-21-0930",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS413",
+    "Fecha": "2025-01-13",
+    "Hora": "11:00",
+    "Direccion": "Alameda Alma Solano 2\nBarcelona, 98464",
+    "id_medico": "MED149",
+    "id_paciente": "361-63-6515",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS414",
+    "Fecha": "2024-05-12",
+    "Hora": "10:00",
+    "Direccion": "Via Eleuterio Pintor 29 Puerta 7 \nCeuta, 51131",
+    "id_medico": "MED007",
+    "id_paciente": "235-67-0502",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS415",
+    "Fecha": "2025-04-29",
+    "Hora": "16:45",
+    "Direccion": "Acceso Ofelia Cuervo 88\nSevilla, 51153",
+    "id_medico": "MED061",
+    "id_paciente": "296-05-6795",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS416",
+    "Fecha": "2025-04-16",
+    "Hora": "8:15",
+    "Direccion": "Alameda Silvio Paredes 54\nCuenca, 37632",
+    "id_medico": "MED121",
+    "id_paciente": "702-64-6630",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS417",
+    "Fecha": "2024-01-20",
+    "Hora": "10:30",
+    "Direccion": "Pasadizo de Chus Abril 97\nSalamanca, 42585",
+    "id_medico": "MED192",
+    "id_paciente": "034-47-0501",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS418",
+    "Fecha": "2024-10-16",
+    "Hora": "17:30",
+    "Direccion": "Ronda Manuelita Cuervo 814 Puerta 8 \nMurcia, 65588",
+    "id_medico": "MED046",
+    "id_paciente": "474-33-4569",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS419",
+    "Fecha": "2024-06-23",
+    "Hora": "16:45",
+    "Direccion": "Plaza de Natalia Serrano 5\nZamora, 37503",
+    "id_medico": "MED250",
+    "id_paciente": "909-00-0935",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS420",
+    "Fecha": "2024-03-04",
+    "Hora": "9:30",
+    "Direccion": "Via Eusebia Páez 44 Piso 0 \nValladolid, 51618",
+    "id_medico": "MED033",
+    "id_paciente": "985-11-1831",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS421",
+    "Fecha": "2024-07-24",
+    "Hora": "15:30",
+    "Direccion": "Calle Olegario Cortés 8\nLa Rioja, 43203",
+    "id_medico": "MED144",
+    "id_paciente": "223-06-3818",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS422",
+    "Fecha": "2023-11-20",
+    "Hora": "13:00",
+    "Direccion": "Camino Elba Villegas 78\nToledo, 58932",
+    "id_medico": "MED153",
+    "id_paciente": "190-31-2370",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS423",
+    "Fecha": "2023-09-20",
+    "Hora": "11:45",
+    "Direccion": "Paseo de Chelo Echeverría 354\nSoria, 52070",
+    "id_medico": "MED165",
+    "id_paciente": "078-21-0930",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS424",
+    "Fecha": "2024-08-23",
+    "Hora": "11:45",
+    "Direccion": "Cañada Espiridión Verdejo 537\nAlicante, 39958",
+    "id_medico": "MED245",
+    "id_paciente": "165-63-8442",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS425",
+    "Fecha": "2024-07-29",
+    "Hora": "8:15",
+    "Direccion": "Glorieta de Urbano Diéguez 9 Piso 7 \nÁlava, 03402",
+    "id_medico": "MED051",
+    "id_paciente": "807-08-2104",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS426",
+    "Fecha": "2025-04-05",
+    "Hora": "17:30",
+    "Direccion": "Avenida Edelmira Sedano 73\nMálaga, 09301",
+    "id_medico": "MED225",
+    "id_paciente": "186-12-0025",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS427",
+    "Fecha": "2023-10-14",
+    "Hora": "17:00",
+    "Direccion": "Paseo Natalio Ferrero 2\nHuelva, 14655",
+    "id_medico": "MED202",
+    "id_paciente": "336-86-7941",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS428",
+    "Fecha": "2023-12-29",
+    "Hora": "13:00",
+    "Direccion": "Glorieta Pascuala Jerez 729\nTarragona, 22670",
+    "id_medico": "MED032",
+    "id_paciente": "062-17-2510",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS429",
+    "Fecha": "2025-03-12",
+    "Hora": "9:45",
+    "Direccion": "Callejón Nazaret Valenciano 50\nHuesca, 97558",
+    "id_medico": "MED219",
+    "id_paciente": "904-67-6013",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS430",
+    "Fecha": "2025-04-23",
+    "Hora": "17:00",
+    "Direccion": "Paseo Fanny Iniesta 6 Puerta 2 \nLeón, 52200",
+    "id_medico": "MED217",
+    "id_paciente": "243-39-2961",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS431",
+    "Fecha": "2023-10-25",
+    "Hora": "8:30",
+    "Direccion": "C. Galo Ros 10 Puerta 2 \nLas Palmas, 20478",
+    "id_medico": "MED244",
+    "id_paciente": "548-91-5813",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS432",
+    "Fecha": "2023-12-29",
+    "Hora": "11:00",
+    "Direccion": "Paseo Herminio Núñez 79 Puerta 5 \nSevilla, 19978",
+    "id_medico": "MED239",
+    "id_paciente": "623-10-0373",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS433",
+    "Fecha": "2024-09-19",
+    "Hora": "15:00",
+    "Direccion": "Urbanización Álvaro Cano 52\nBaleares, 10788",
+    "id_medico": "MED076",
+    "id_paciente": "189-88-8509",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS434",
+    "Fecha": "2024-08-27",
+    "Hora": "15:00",
+    "Direccion": "Cuesta Nando Carnero 35\nCádiz, 67109",
+    "id_medico": "MED032",
+    "id_paciente": "054-34-2672",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS435",
+    "Fecha": "2023-12-31",
+    "Hora": "14:45",
+    "Direccion": "Ronda de Maite Ledesma 357 Puerta 9 \nMadrid, 96263",
+    "id_medico": "MED118",
+    "id_paciente": "662-62-3097",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS436",
+    "Fecha": "2024-03-13",
+    "Hora": "16:00",
+    "Direccion": "Urbanización Rómulo Ibañez 41 Apt. 70 \nMelilla, 42111",
+    "id_medico": "MED087",
+    "id_paciente": "608-22-6976",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS437",
+    "Fecha": "2024-07-10",
+    "Hora": "16:15",
+    "Direccion": "Cañada de Evelia Puerta 69\nMelilla, 11571",
+    "id_medico": "MED033",
+    "id_paciente": "188-09-2699",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS438",
+    "Fecha": "2024-06-15",
+    "Hora": "17:15",
+    "Direccion": "Cuesta Matilde Miró 24\nVizcaya, 68774",
+    "id_medico": "MED088",
+    "id_paciente": "196-15-6156",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS439",
+    "Fecha": "2024-05-22",
+    "Hora": "9:45",
+    "Direccion": "Camino Mar Muñoz 1 Puerta 1 \nGranada, 16055",
+    "id_medico": "MED133",
+    "id_paciente": "703-01-0401",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS440",
+    "Fecha": "2025-06-14",
+    "Hora": "13:15",
+    "Direccion": "Urbanización de Alondra Dominguez 15\nSoria, 73106",
+    "id_medico": "MED021",
+    "id_paciente": "363-50-4355",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS441",
+    "Fecha": "2025-06-29",
+    "Hora": "13:00",
+    "Direccion": "Vial de Cruz Vargas 200 Apt. 10 \nLugo, 50685",
+    "id_medico": "MED200",
+    "id_paciente": "085-27-2749",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS442",
+    "Fecha": "2024-01-18",
+    "Hora": "9:45",
+    "Direccion": "Alameda Bernardo Jordán 61 Puerta 0 \nPalencia, 20954",
+    "id_medico": "MED203",
+    "id_paciente": "662-62-3097",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS443",
+    "Fecha": "2024-12-21",
+    "Hora": "12:00",
+    "Direccion": "Ronda de Victor Suárez 9\nMelilla, 28930",
+    "id_medico": "MED069",
+    "id_paciente": "702-64-6630",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS444",
+    "Fecha": "2024-02-29",
+    "Hora": "16:15",
+    "Direccion": "Urbanización de Sancho Cueto 7 Apt. 73 \nÁlava, 46080",
+    "id_medico": "MED247",
+    "id_paciente": "287-24-4738",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS445",
+    "Fecha": "2025-06-30",
+    "Hora": "8:45",
+    "Direccion": "Alameda Florina Sáenz 23 Piso 9 \nZamora, 90716",
+    "id_medico": "MED189",
+    "id_paciente": "685-60-0819",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS446",
+    "Fecha": "2025-02-25",
+    "Hora": "17:45",
+    "Direccion": "Glorieta de José Morell 91\nCádiz, 81732",
+    "id_medico": "MED019",
+    "id_paciente": "065-99-0287",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS447",
+    "Fecha": "2025-05-20",
+    "Hora": "8:15",
+    "Direccion": "Avenida Mariana Cárdenas 73\nHuesca, 19440",
+    "id_medico": "MED151",
+    "id_paciente": "923-83-0523",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS448",
+    "Fecha": "2024-01-21",
+    "Hora": "13:45",
+    "Direccion": "Glorieta de Julia Company 3\nLa Coruña, 35089",
+    "id_medico": "MED185",
+    "id_paciente": "431-61-0961",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS449",
+    "Fecha": "2024-11-03",
+    "Hora": "8:15",
+    "Direccion": "C. Martin Pardo 41\nValladolid, 36402",
+    "id_medico": "MED189",
+    "id_paciente": "196-15-6156",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS450",
+    "Fecha": "2025-03-30",
+    "Hora": "12:30",
+    "Direccion": "Paseo de Paulino Conde 73\nTeruel, 96681",
+    "id_medico": "MED050",
+    "id_paciente": "048-80-8389",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS451",
+    "Fecha": "2025-04-01",
+    "Hora": "14:00",
+    "Direccion": "Urbanización Miguel Ángel Amor 49 Puerta 3 \nLleida, 59588",
+    "id_medico": "MED060",
+    "id_paciente": "807-08-2104",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS452",
+    "Fecha": "2023-08-26",
+    "Hora": "16:30",
+    "Direccion": "Rambla de Gertrudis Bertrán 667\nÁlava, 78985",
+    "id_medico": "MED084",
+    "id_paciente": "471-15-9974",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS453",
+    "Fecha": "2023-10-18",
+    "Hora": "9:00",
+    "Direccion": "Pasaje de Donato Carbonell 73\nZaragoza, 02854",
+    "id_medico": "MED100",
+    "id_paciente": "441-99-3859",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS454",
+    "Fecha": "2023-10-26",
+    "Hora": "10:30",
+    "Direccion": "Cuesta Miriam Montserrat 839\nLleida, 78719",
+    "id_medico": "MED039",
+    "id_paciente": "543-60-3292",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS455",
+    "Fecha": "2024-07-07",
+    "Hora": "9:30",
+    "Direccion": "Rambla Lilia Villalobos 51\nPontevedra, 21809",
+    "id_medico": "MED175",
+    "id_paciente": "188-19-3356",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS456",
+    "Fecha": "2024-10-26",
+    "Hora": "14:30",
+    "Direccion": "Cañada de Epifanio Rueda 555 Apt. 47 \nTeruel, 32874",
+    "id_medico": "MED202",
+    "id_paciente": "267-53-9687",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS457",
+    "Fecha": "2024-07-11",
+    "Hora": "9:45",
+    "Direccion": "C. Jose Antonio Olivares 21 Puerta 8 \nValencia, 40985",
+    "id_medico": "MED113",
+    "id_paciente": "363-50-4355",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS458",
+    "Fecha": "2025-04-10",
+    "Hora": "9:45",
+    "Direccion": "C. Ciro Riba 29 Apt. 35 \nCiudad, 13822",
+    "id_medico": "MED122",
+    "id_paciente": "177-56-5470",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS459",
+    "Fecha": "2025-03-24",
+    "Hora": "17:00",
+    "Direccion": "Via Evangelina Rojas 1 Puerta 9 \nSegovia, 88046",
+    "id_medico": "MED106",
+    "id_paciente": "753-83-9863",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS460",
+    "Fecha": "2024-04-18",
+    "Hora": "10:00",
+    "Direccion": "Plaza de Chus Vives 504\nBarcelona, 63388",
+    "id_medico": "MED007",
+    "id_paciente": "963-16-8982",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS461",
+    "Fecha": "2024-12-09",
+    "Hora": "14:15",
+    "Direccion": "Ronda Julia Cases 49 Piso 0 \nCórdoba, 06401",
+    "id_medico": "MED063",
+    "id_paciente": "431-61-0961",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS462",
+    "Fecha": "2024-08-21",
+    "Hora": "11:15",
+    "Direccion": "Ronda de Juan Manuel Galiano 41 Puerta 2 \nHuesca, 22740",
+    "id_medico": "MED155",
+    "id_paciente": "375-74-6103",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS463",
+    "Fecha": "2024-08-01",
+    "Hora": "13:15",
+    "Direccion": "C. de Joaquina Ferreras 37\nBadajoz, 85971",
+    "id_medico": "MED236",
+    "id_paciente": "165-63-8442",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS464",
+    "Fecha": "2023-08-09",
+    "Hora": "14:30",
+    "Direccion": "Vial Hipólito Prieto 90 Piso 8 \nCádiz, 64706",
+    "id_medico": "MED117",
+    "id_paciente": "725-44-7850",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS465",
+    "Fecha": "2024-04-11",
+    "Hora": "16:45",
+    "Direccion": "Via de Octavio Carreras 32\nLugo, 46791",
+    "id_medico": "MED101",
+    "id_paciente": "808-58-0538",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS466",
+    "Fecha": "2024-03-17",
+    "Hora": "17:15",
+    "Direccion": "Calle Juan Manuel Aller 95\nSoria, 46287",
+    "id_medico": "MED148",
+    "id_paciente": "840-14-2222",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS467",
+    "Fecha": "2024-08-16",
+    "Hora": "8:30",
+    "Direccion": "Glorieta de Lucio Rozas 60 Puerta 0 \nGirona, 62378",
+    "id_medico": "MED096",
+    "id_paciente": "929-18-1270",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS468",
+    "Fecha": "2024-03-28",
+    "Hora": "15:30",
+    "Direccion": "Vial de Ruperta Iriarte 82 Puerta 5 \nPontevedra, 08195",
+    "id_medico": "MED050",
+    "id_paciente": "963-16-8982",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS469",
+    "Fecha": "2024-01-07",
+    "Hora": "13:15",
+    "Direccion": "Cuesta de Graciano Vigil 29 Puerta 2 \nPalencia, 60289",
+    "id_medico": "MED164",
+    "id_paciente": "184-97-5333",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS470",
+    "Fecha": "2024-05-31",
+    "Hora": "16:00",
+    "Direccion": "Camino Daniela Oliva 215 Piso 8 \nLeón, 88388",
+    "id_medico": "MED050",
+    "id_paciente": "143-15-7304",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS471",
+    "Fecha": "2024-02-14",
+    "Hora": "13:15",
+    "Direccion": "C. de Tiburcio Badía 2 Puerta 3 \nValencia, 77453",
+    "id_medico": "MED098",
+    "id_paciente": "326-09-7354",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS472",
+    "Fecha": "2024-01-26",
+    "Hora": "13:30",
+    "Direccion": "Rambla de Calixta Múgica 13 Apt. 38 \nMelilla, 15768",
+    "id_medico": "MED136",
+    "id_paciente": "082-29-2735",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS473",
+    "Fecha": "2024-10-30",
+    "Hora": "12:30",
+    "Direccion": "Cuesta Eligio Rocamora 39 Apt. 92 \nVizcaya, 61838",
+    "id_medico": "MED046",
+    "id_paciente": "919-84-2773",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS474",
+    "Fecha": "2024-03-31",
+    "Hora": "13:00",
+    "Direccion": "Rambla de Germán Juan 6 Apt. 31 \nOurense, 07028",
+    "id_medico": "MED138",
+    "id_paciente": "243-39-2961",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS475",
+    "Fecha": "2023-12-07",
+    "Hora": "9:15",
+    "Direccion": "Via de América Tejero 60\nToledo, 23528",
+    "id_medico": "MED233",
+    "id_paciente": "400-34-1014",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS476",
+    "Fecha": "2023-08-05",
+    "Hora": "10:15",
+    "Direccion": "Vial de Vanesa Campo 56 Puerta 8 \nPalencia, 16480",
+    "id_medico": "MED213",
+    "id_paciente": "062-17-2510",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS477",
+    "Fecha": "2025-02-04",
+    "Hora": "15:30",
+    "Direccion": "Camino Pascuala Chaparro 3\nToledo, 30368",
+    "id_medico": "MED067",
+    "id_paciente": "062-17-2510",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS478",
+    "Fecha": "2023-12-09",
+    "Hora": "17:00",
+    "Direccion": "Plaza Montserrat Soria 71\nLas Palmas, 41487",
+    "id_medico": "MED203",
+    "id_paciente": "725-44-7850",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS479",
+    "Fecha": "2024-12-27",
+    "Hora": "14:15",
+    "Direccion": "Pasadizo de Ana Sofía Suárez 151\nZamora, 29403",
+    "id_medico": "MED149",
+    "id_paciente": "048-80-8389",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS480",
+    "Fecha": "2023-12-03",
+    "Hora": "10:30",
+    "Direccion": "Paseo Gabriel Santamaria 81\nVizcaya, 87980",
+    "id_medico": "MED209",
+    "id_paciente": "583-60-9212",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS481",
+    "Fecha": "2024-02-02",
+    "Hora": "13:45",
+    "Direccion": "Pasaje de Ramiro Hervás 30 Puerta 5 \nÁlava, 86138",
+    "id_medico": "MED176",
+    "id_paciente": "517-61-0763",
+    "id_hospital": "H003"
+  },
+  {
+    "id_visita": "VIS482",
+    "Fecha": "2025-07-25",
+    "Hora": "16:00",
+    "Direccion": "Glorieta de José Busquets 337\nToledo, 14213",
+    "id_medico": "MED218",
+    "id_paciente": "772-24-4150",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS483",
+    "Fecha": "2024-11-30",
+    "Hora": "8:15",
+    "Direccion": "Ronda Edgardo Zorrilla 58\nAlbacete, 30873",
+    "id_medico": "MED101",
+    "id_paciente": "977-07-2717",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS484",
+    "Fecha": "2025-02-05",
+    "Hora": "8:00",
+    "Direccion": "Paseo de Ángela Sevilla 97 Puerta 4 \nPontevedra, 61446",
+    "id_medico": "MED057",
+    "id_paciente": "703-97-4395",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS485",
+    "Fecha": "2024-01-30",
+    "Hora": "15:30",
+    "Direccion": "Cañada de Juan Sacristán 52\nCádiz, 45307",
+    "id_medico": "MED223",
+    "id_paciente": "419-64-0471",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS486",
+    "Fecha": "2025-02-08",
+    "Hora": "9:00",
+    "Direccion": "Cuesta Julio Tejero 53\nSevilla, 68978",
+    "id_medico": "MED064",
+    "id_paciente": "593-88-8066",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS487",
+    "Fecha": "2025-03-11",
+    "Hora": "13:15",
+    "Direccion": "Avenida Estela Castillo 26\nCantabria, 02135",
+    "id_medico": "MED081",
+    "id_paciente": "424-72-8174",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS488",
+    "Fecha": "2024-03-10",
+    "Hora": "13:45",
+    "Direccion": "Calle Paloma González 38\nMelilla, 50819",
+    "id_medico": "MED087",
+    "id_paciente": "314-18-1261",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS489",
+    "Fecha": "2025-02-11",
+    "Hora": "17:45",
+    "Direccion": "Acceso de Luis Miguel Molina 28\nGuadalajara, 37907",
+    "id_medico": "MED123",
+    "id_paciente": "652-59-3922",
+    "id_hospital": "H002"
+  },
+  {
+    "id_visita": "VIS490",
+    "Fecha": "2025-06-30",
+    "Hora": "10:00",
+    "Direccion": "Via de Hernando Moya 21 Puerta 3 \nValencia, 49958",
+    "id_medico": "MED183",
+    "id_paciente": "772-24-4150",
+    "id_hospital": "H004"
+  },
+  {
+    "id_visita": "VIS491",
+    "Fecha": "2024-12-15",
+    "Hora": "13:30",
+    "Direccion": "Glorieta de Emelina Marín 48 Apt. 78 \nCantabria, 75310",
+    "id_medico": "MED014",
+    "id_paciente": "685-60-0819",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS492",
+    "Fecha": "2024-05-10",
+    "Hora": "16:30",
+    "Direccion": "Vial Rosario Nogueira 781\nAlicante, 98031",
+    "id_medico": "MED137",
+    "id_paciente": "005-80-5534",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS493",
+    "Fecha": "2023-11-09",
+    "Hora": "8:00",
+    "Direccion": "Rambla Alba Gutierrez 466 Piso 6 \nSalamanca, 61180",
+    "id_medico": "MED201",
+    "id_paciente": "431-12-2281",
+    "id_hospital": "H005"
+  },
+  {
+    "id_visita": "VIS494",
+    "Fecha": "2025-03-21",
+    "Hora": "9:15",
+    "Direccion": "Urbanización Fernando Haro 73\nVizcaya, 76656",
+    "id_medico": "MED170",
+    "id_paciente": "689-35-9997",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS495",
+    "Fecha": "2025-03-27",
+    "Hora": "12:30",
+    "Direccion": "Rambla de Óscar Anglada 33\nCiudad, 13387",
+    "id_medico": "MED096",
+    "id_paciente": "089-10-2911",
+    "id_hospital": "H001"
+  },
+  {
+    "id_visita": "VIS496",
+    "Fecha": "2024-04-15",
+    "Hora": "11:15",
+    "Direccion": "Avenida Marisela Carpio 188\nLeón, 02336",
+    "id_medico": "MED199",
+    "id_paciente": "997-56-1709",
+    "id_hospital": "H004"
+  }
+]
+);
+
+db.TRATAMIENTOS.insertMany(
+[
+  {
+    "id_tratamiento": "T001",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 6048.89,
+    "id_medico": "MED196",
+    "id_paciente": "471-15-9974"
+  },
+  {
+    "id_tratamiento": "T002",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 7521.69,
+    "id_medico": "MED054",
+    "id_paciente": "509-92-9964"
+  },
+  {
+    "id_tratamiento": "T003",
+    "Tipo": "Fisioterapia",
+    "Duracion": "3 meses",
+    "Valor": 11235.73,
+    "id_medico": "MED121",
+    "id_paciente": "099-67-2573"
+  },
+  {
+    "id_tratamiento": "T004",
+    "Tipo": "Fisioterapia",
+    "Duracion": "6 semanas",
+    "Valor": 6778.95,
+    "id_medico": "MED058",
+    "id_paciente": "085-27-2749"
+  },
+  {
+    "id_tratamiento": "T005",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 14636.18,
+    "id_medico": "MED013",
+    "id_paciente": "517-61-0763"
+  },
+  {
+    "id_tratamiento": "T006",
+    "Tipo": "Cirugía",
+    "Duracion": "1 mes",
+    "Valor": 5718.83,
+    "id_medico": "MED245",
+    "id_paciente": "509-92-9964"
+  },
+  {
+    "id_tratamiento": "T007",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 1103.68,
+    "id_medico": "MED065",
+    "id_paciente": "235-67-0502"
+  },
+  {
+    "id_tratamiento": "T008",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "3 meses",
+    "Valor": 14516.43,
+    "id_medico": "MED099",
+    "id_paciente": "845-03-7942"
+  },
+  {
+    "id_tratamiento": "T009",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 7842.49,
+    "id_medico": "MED106",
+    "id_paciente": "807-08-2104"
+  },
+  {
+    "id_tratamiento": "T010",
+    "Tipo": "Fisioterapia",
+    "Duracion": "3 meses",
+    "Valor": 2796.92,
+    "id_medico": "MED027",
+    "id_paciente": "631-19-9110"
+  },
+  {
+    "id_tratamiento": "T011",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 9226.98,
+    "id_medico": "MED112",
+    "id_paciente": "466-43-9329"
+  },
+  {
+    "id_tratamiento": "T012",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 2381.47,
+    "id_medico": "MED189",
+    "id_paciente": "427-77-0953"
+  },
+  {
+    "id_tratamiento": "T013",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 3721.37,
+    "id_medico": "MED134",
+    "id_paciente": "587-12-7704"
+  },
+  {
+    "id_tratamiento": "T014",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "6 semanas",
+    "Valor": 13726.68,
+    "id_medico": "MED134",
+    "id_paciente": "760-41-8582"
+  },
+  {
+    "id_tratamiento": "T015",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "6 semanas",
+    "Valor": 2441.08,
+    "id_medico": "MED009",
+    "id_paciente": "027-18-8269"
+  },
+  {
+    "id_tratamiento": "T016",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "1 mes",
+    "Valor": 3070.89,
+    "id_medico": "MED036",
+    "id_paciente": "662-62-3097"
+  },
+  {
+    "id_tratamiento": "T017",
+    "Tipo": "Quimioterapia",
+    "Duracion": "6 semanas",
+    "Valor": 10540.93,
+    "id_medico": "MED238",
+    "id_paciente": "091-97-5664"
+  },
+  {
+    "id_tratamiento": "T018",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 3880.77,
+    "id_medico": "MED167",
+    "id_paciente": "755-45-5582"
+  },
+  {
+    "id_tratamiento": "T019",
+    "Tipo": "Fisioterapia",
+    "Duracion": "3 meses",
+    "Valor": 2615.75,
+    "id_medico": "MED237",
+    "id_paciente": "037-30-4814"
+  },
+  {
+    "id_tratamiento": "T020",
+    "Tipo": "Cirugía",
+    "Duracion": "1 mes",
+    "Valor": 5589.28,
+    "id_medico": "MED153",
+    "id_paciente": "517-61-0763"
+  },
+  {
+    "id_tratamiento": "T021",
+    "Tipo": "Fisioterapia",
+    "Duracion": "3 meses",
+    "Valor": 5778.97,
+    "id_medico": "MED051",
+    "id_paciente": "336-86-7941"
+  },
+  {
+    "id_tratamiento": "T022",
+    "Tipo": "Fisioterapia",
+    "Duracion": "3 meses",
+    "Valor": 13067.1,
+    "id_medico": "MED240",
+    "id_paciente": "548-91-5813"
+  },
+  {
+    "id_tratamiento": "T023",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 8260.06,
+    "id_medico": "MED139",
+    "id_paciente": "883-67-4699"
+  },
+  {
+    "id_tratamiento": "T024",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "6 semanas",
+    "Valor": 5022.6,
+    "id_medico": "MED242",
+    "id_paciente": "159-31-6035"
+  },
+  {
+    "id_tratamiento": "T025",
+    "Tipo": "Cirugía",
+    "Duracion": "6 semanas",
+    "Valor": 7690.8,
+    "id_medico": "MED143",
+    "id_paciente": "865-17-1170"
+  },
+  {
+    "id_tratamiento": "T026",
+    "Tipo": "Cirugía",
+    "Duracion": "3 meses",
+    "Valor": 11422.6,
+    "id_medico": "MED213",
+    "id_paciente": "997-56-1709"
+  },
+  {
+    "id_tratamiento": "T027",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 6782.87,
+    "id_medico": "MED198",
+    "id_paciente": "820-88-8815"
+  },
+  {
+    "id_tratamiento": "T028",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 10904.7,
+    "id_medico": "MED164",
+    "id_paciente": "223-06-3818"
+  },
+  {
+    "id_tratamiento": "T029",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "1 mes",
+    "Valor": 14729.55,
+    "id_medico": "MED236",
+    "id_paciente": "474-33-4569"
+  },
+  {
+    "id_tratamiento": "T030",
+    "Tipo": "Cirugía",
+    "Duracion": "3 meses",
+    "Valor": 3636.66,
+    "id_medico": "MED235",
+    "id_paciente": "924-60-3993"
+  },
+  {
+    "id_tratamiento": "T031",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 10801.16,
+    "id_medico": "MED086",
+    "id_paciente": "840-14-2222"
+  },
+  {
+    "id_tratamiento": "T032",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 8809.3,
+    "id_medico": "MED246",
+    "id_paciente": "808-10-0376"
+  },
+  {
+    "id_tratamiento": "T033",
+    "Tipo": "Cirugía",
+    "Duracion": "3 meses",
+    "Valor": 13593.24,
+    "id_medico": "MED163",
+    "id_paciente": "786-47-7970"
+  },
+  {
+    "id_tratamiento": "T034",
+    "Tipo": "Quimioterapia",
+    "Duracion": "6 semanas",
+    "Valor": 9800.88,
+    "id_medico": "MED004",
+    "id_paciente": "892-27-5223"
+  },
+  {
+    "id_tratamiento": "T035",
+    "Tipo": "Fisioterapia",
+    "Duracion": "6 semanas",
+    "Valor": 7414.1,
+    "id_medico": "MED172",
+    "id_paciente": "351-00-0552"
+  },
+  {
+    "id_tratamiento": "T036",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "1 mes",
+    "Valor": 3865.75,
+    "id_medico": "MED167",
+    "id_paciente": "034-47-0501"
+  },
+  {
+    "id_tratamiento": "T037",
+    "Tipo": "Quimioterapia",
+    "Duracion": "3 meses",
+    "Valor": 13776.44,
+    "id_medico": "MED012",
+    "id_paciente": "417-30-0887"
+  },
+  {
+    "id_tratamiento": "T038",
+    "Tipo": "Fisioterapia",
+    "Duracion": "1 mes",
+    "Valor": 2679.92,
+    "id_medico": "MED075",
+    "id_paciente": "830-13-5647"
+  },
+  {
+    "id_tratamiento": "T039",
+    "Tipo": "Fisioterapia",
+    "Duracion": "6 semanas",
+    "Valor": 8267.39,
+    "id_medico": "MED092",
+    "id_paciente": "378-57-1122"
+  },
+  {
+    "id_tratamiento": "T040",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 10560.04,
+    "id_medico": "MED062",
+    "id_paciente": "919-84-2773"
+  },
+  {
+    "id_tratamiento": "T041",
+    "Tipo": "Cirugía",
+    "Duracion": "3 meses",
+    "Valor": 14391.75,
+    "id_medico": "MED001",
+    "id_paciente": "195-25-0806"
+  },
+  {
+    "id_tratamiento": "T042",
+    "Tipo": "Fisioterapia",
+    "Duracion": "3 meses",
+    "Valor": 4912.21,
+    "id_medico": "MED175",
+    "id_paciente": "089-10-2911"
+  },
+  {
+    "id_tratamiento": "T043",
+    "Tipo": "Cirugía",
+    "Duracion": "1 mes",
+    "Valor": 3068.3,
+    "id_medico": "MED162",
+    "id_paciente": "336-86-7941"
+  },
+  {
+    "id_tratamiento": "T044",
+    "Tipo": "Tratamiento hormonal",
+    "Duracion": "6 semanas",
+    "Valor": 4321.56,
+    "id_medico": "MED225",
+    "id_paciente": "703-97-4395"
+  },
+  {
+    "id_tratamiento": "T045",
+    "Tipo": "Quimioterapia",
+    "Duracion": "6 semanas",
+    "Valor": 8182.72,
+    "id_medico": "MED237",
+    "id_paciente": "714-21-6145"
+  },
+  {
+    "id_tratamiento": "T046",
+    "Tipo": "Fisioterapia",
+    "Duracion": "3 meses",
+    "Valor": 8597.82,
+    "id_medico": "MED013",
+    "id_paciente": "005-80-5534"
+  },
+  {
+    "id_tratamiento": "T047",
+    "Tipo": "Cirugía",
+    "Duracion": "6 semanas",
+    "Valor": 9472.46,
+    "id_medico": "MED048",
+    "id_paciente": "300-50-0402"
+  },
+  {
+    "id_tratamiento": "T048",
+    "Tipo": "Cirugía",
+    "Duracion": "3 meses",
+    "Valor": 2140.46,
+    "id_medico": "MED191",
+    "id_paciente": "529-50-5944"
+  },
+  {
+    "id_tratamiento": "T049",
+    "Tipo": "Quimioterapia",
+    "Duracion": "1 mes",
+    "Valor": 14293.64,
+    "id_medico": "MED050",
+    "id_paciente": "588-58-2828"
+  },
+  {
+    "id_tratamiento": "T050",
+    "Tipo": "Fisioterapia",
+    "Duracion": "6 semanas",
+    "Valor": 1515.26,
+    "id_medico": "MED157",
+    "id_paciente": "000-33-8375"
+  }
+]
+);
+
+db.INVENTARIO.insertMany(
+[
+  {
+    "id_inventario": "INV001",
+    "id_medicamento": "M001",
+    "Cantidad": 22
+  },
+  {
+    "id_inventario": "INV002",
+    "id_medicamento": "M002",
+    "Cantidad": 106
+  },
+  {
+    "id_inventario": "INV003",
+    "id_medicamento": "M003",
+    "Cantidad": 478
+  },
+  {
+    "id_inventario": "INV004",
+    "id_medicamento": "M004",
+    "Cantidad": 103
+  },
+  {
+    "id_inventario": "INV005",
+    "id_medicamento": "M005",
+    "Cantidad": 296
+  },
+  {
+    "id_inventario": "INV006",
+    "id_medicamento": "M006",
+    "Cantidad": 377
+  },
+  {
+    "id_inventario": "INV007",
+    "id_medicamento": "M007",
+    "Cantidad": 452
+  },
+  {
+    "id_inventario": "INV008",
+    "id_medicamento": "M008",
+    "Cantidad": 389
+  },
+  {
+    "id_inventario": "INV009",
+    "id_medicamento": "M009",
+    "Cantidad": 36
+  },
+  {
+    "id_inventario": "INV010",
+    "id_medicamento": "M010",
+    "Cantidad": 285
+  },
+  {
+    "id_inventario": "INV011",
+    "id_medicamento": "M011",
+    "Cantidad": 238
+  },
+  {
+    "id_inventario": "INV012",
+    "id_medicamento": "M012",
+    "Cantidad": 44
+  },
+  {
+    "id_inventario": "INV013",
+    "id_medicamento": "M013",
+    "Cantidad": 173
+  },
+  {
+    "id_inventario": "INV014",
+    "id_medicamento": "M014",
+    "Cantidad": 27
+  },
+  {
+    "id_inventario": "INV015",
+    "id_medicamento": "M015",
+    "Cantidad": 484
+  },
+  {
+    "id_inventario": "INV016",
+    "id_medicamento": "M016",
+    "Cantidad": 343
+  },
+  {
+    "id_inventario": "INV017",
+    "id_medicamento": "M017",
+    "Cantidad": 284
+  },
+  {
+    "id_inventario": "INV018",
+    "id_medicamento": "M018",
+    "Cantidad": 463
+  },
+  {
+    "id_inventario": "INV019",
+    "id_medicamento": "M019",
+    "Cantidad": 43
+  },
+  {
+    "id_inventario": "INV020",
+    "id_medicamento": "M020",
+    "Cantidad": 34
+  },
+  {
+    "id_inventario": "INV021",
+    "id_medicamento": "M021",
+    "Cantidad": 217
+  },
+  {
+    "id_inventario": "INV022",
+    "id_medicamento": "M022",
+    "Cantidad": 451
+  },
+  {
+    "id_inventario": "INV023",
+    "id_medicamento": "M023",
+    "Cantidad": 316
+  },
+  {
+    "id_inventario": "INV024",
+    "id_medicamento": "M024",
+    "Cantidad": 301
+  },
+  {
+    "id_inventario": "INV025",
+    "id_medicamento": "M025",
+    "Cantidad": 144
+  },
+  {
+    "id_inventario": "INV026",
+    "id_medicamento": "M026",
+    "Cantidad": 248
+  },
+  {
+    "id_inventario": "INV027",
+    "id_medicamento": "M027",
+    "Cantidad": 118
+  },
+  {
+    "id_inventario": "INV028",
+    "id_medicamento": "M028",
+    "Cantidad": 189
+  },
+  {
+    "id_inventario": "INV029",
+    "id_medicamento": "M029",
+    "Cantidad": 136
+  },
+  {
+    "id_inventario": "INV030",
+    "id_medicamento": "M030",
+    "Cantidad": 155
+  },
+  {
+    "id_inventario": "INV031",
+    "id_medicamento": "M031",
+    "Cantidad": 437
+  },
+  {
+    "id_inventario": "INV032",
+    "id_medicamento": "M032",
+    "Cantidad": 415
+  },
+  {
+    "id_inventario": "INV033",
+    "id_medicamento": "M033",
+    "Cantidad": 142
+  },
+  {
+    "id_inventario": "INV034",
+    "id_medicamento": "M034",
+    "Cantidad": 328
+  },
+  {
+    "id_inventario": "INV035",
+    "id_medicamento": "M035",
+    "Cantidad": 296
+  },
+  {
+    "id_inventario": "INV036",
+    "id_medicamento": "M036",
+    "Cantidad": 379
+  },
+  {
+    "id_inventario": "INV037",
+    "id_medicamento": "M037",
+    "Cantidad": 204
+  },
+  {
+    "id_inventario": "INV038",
+    "id_medicamento": "M038",
+    "Cantidad": 267
+  },
+  {
+    "id_inventario": "INV039",
+    "id_medicamento": "M039",
+    "Cantidad": 376
+  },
+  {
+    "id_inventario": "INV040",
+    "id_medicamento": "M040",
+    "Cantidad": 326
+  },
+  {
+    "id_inventario": "INV041",
+    "id_medicamento": "M041",
+    "Cantidad": 474
+  },
+  {
+    "id_inventario": "INV042",
+    "id_medicamento": "M042",
+    "Cantidad": 232
+  },
+  {
+    "id_inventario": "INV043",
+    "id_medicamento": "M043",
+    "Cantidad": 438
+  },
+  {
+    "id_inventario": "INV044",
+    "id_medicamento": "M044",
+    "Cantidad": 28
+  },
+  {
+    "id_inventario": "INV045",
+    "id_medicamento": "M045",
+    "Cantidad": 75
+  },
+  {
+    "id_inventario": "INV046",
+    "id_medicamento": "M046",
+    "Cantidad": 270
+  },
+  {
+    "id_inventario": "INV047",
+    "id_medicamento": "M047",
+    "Cantidad": 171
+  },
+  {
+    "id_inventario": "INV048",
+    "id_medicamento": "M048",
+    "Cantidad": 330
+  },
+  {
+    "id_inventario": "INV049",
+    "id_medicamento": "M049",
+    "Cantidad": 288
+  },
+  {
+    "id_inventario": "INV050",
+    "id_medicamento": "M050",
+    "Cantidad": 315
+  },
+  {
+    "id_inventario": "INV051",
+    "id_medicamento": "M051",
+    "Cantidad": 277
+  },
+  {
+    "id_inventario": "INV052",
+    "id_medicamento": "M052",
+    "Cantidad": 346
+  },
+  {
+    "id_inventario": "INV053",
+    "id_medicamento": "M053",
+    "Cantidad": 421
+  },
+  {
+    "id_inventario": "INV054",
+    "id_medicamento": "M054",
+    "Cantidad": 396
+  },
+  {
+    "id_inventario": "INV055",
+    "id_medicamento": "M055",
+    "Cantidad": 91
+  },
+  {
+    "id_inventario": "INV056",
+    "id_medicamento": "M056",
+    "Cantidad": 222
+  },
+  {
+    "id_inventario": "INV057",
+    "id_medicamento": "M057",
+    "Cantidad": 154
+  },
+  {
+    "id_inventario": "INV058",
+    "id_medicamento": "M058",
+    "Cantidad": 353
+  },
+  {
+    "id_inventario": "INV059",
+    "id_medicamento": "M059",
+    "Cantidad": 153
+  },
+  {
+    "id_inventario": "INV060",
+    "id_medicamento": "M060",
+    "Cantidad": 22
+  },
+  {
+    "id_inventario": "INV061",
+    "id_medicamento": "M061",
+    "Cantidad": 472
+  },
+  {
+    "id_inventario": "INV062",
+    "id_medicamento": "M062",
+    "Cantidad": 207
+  },
+  {
+    "id_inventario": "INV063",
+    "id_medicamento": "M063",
+    "Cantidad": 10
+  },
+  {
+    "id_inventario": "INV064",
+    "id_medicamento": "M064",
+    "Cantidad": 263
+  },
+  {
+    "id_inventario": "INV065",
+    "id_medicamento": "M065",
+    "Cantidad": 367
+  },
+  {
+    "id_inventario": "INV066",
+    "id_medicamento": "M066",
+    "Cantidad": 339
+  },
+  {
+    "id_inventario": "INV067",
+    "id_medicamento": "M067",
+    "Cantidad": 264
+  },
+  {
+    "id_inventario": "INV068",
+    "id_medicamento": "M068",
+    "Cantidad": 247
+  },
+  {
+    "id_inventario": "INV069",
+    "id_medicamento": "M069",
+    "Cantidad": 37
+  },
+  {
+    "id_inventario": "INV070",
+    "id_medicamento": "M070",
+    "Cantidad": 107
+  },
+  {
+    "id_inventario": "INV071",
+    "id_medicamento": "M071",
+    "Cantidad": 481
+  },
+  {
+    "id_inventario": "INV072",
+    "id_medicamento": "M072",
+    "Cantidad": 231
+  },
+  {
+    "id_inventario": "INV073",
+    "id_medicamento": "M073",
+    "Cantidad": 362
+  },
+  {
+    "id_inventario": "INV074",
+    "id_medicamento": "M074",
+    "Cantidad": 213
+  },
+  {
+    "id_inventario": "INV075",
+    "id_medicamento": "M075",
+    "Cantidad": 362
+  },
+  {
+    "id_inventario": "INV076",
+    "id_medicamento": "M076",
+    "Cantidad": 376
+  },
+  {
+    "id_inventario": "INV077",
+    "id_medicamento": "M077",
+    "Cantidad": 305
+  },
+  {
+    "id_inventario": "INV078",
+    "id_medicamento": "M078",
+    "Cantidad": 384
+  },
+  {
+    "id_inventario": "INV079",
+    "id_medicamento": "M079",
+    "Cantidad": 62
+  },
+  {
+    "id_inventario": "INV080",
+    "id_medicamento": "M080",
+    "Cantidad": 413
+  },
+  {
+    "id_inventario": "INV081",
+    "id_medicamento": "M081",
+    "Cantidad": 412
+  },
+  {
+    "id_inventario": "INV082",
+    "id_medicamento": "M082",
+    "Cantidad": 42
+  },
+  {
+    "id_inventario": "INV083",
+    "id_medicamento": "M083",
+    "Cantidad": 63
+  },
+  {
+    "id_inventario": "INV084",
+    "id_medicamento": "M084",
+    "Cantidad": 333
+  },
+  {
+    "id_inventario": "INV085",
+    "id_medicamento": "M085",
+    "Cantidad": 283
+  },
+  {
+    "id_inventario": "INV086",
+    "id_medicamento": "M086",
+    "Cantidad": 493
+  },
+  {
+    "id_inventario": "INV087",
+    "id_medicamento": "M087",
+    "Cantidad": 91
+  },
+  {
+    "id_inventario": "INV088",
+    "id_medicamento": "M088",
+    "Cantidad": 123
+  },
+  {
+    "id_inventario": "INV089",
+    "id_medicamento": "M089",
+    "Cantidad": 67
+  },
+  {
+    "id_inventario": "INV090",
+    "id_medicamento": "M090",
+    "Cantidad": 233
+  },
+  {
+    "id_inventario": "INV091",
+    "id_medicamento": "M091",
+    "Cantidad": 351
+  },
+  {
+    "id_inventario": "INV092",
+    "id_medicamento": "M092",
+    "Cantidad": 126
+  },
+  {
+    "id_inventario": "INV093",
+    "id_medicamento": "M093",
+    "Cantidad": 285
+  },
+  {
+    "id_inventario": "INV094",
+    "id_medicamento": "M094",
+    "Cantidad": 22
+  },
+  {
+    "id_inventario": "INV095",
+    "id_medicamento": "M095",
+    "Cantidad": 333
+  },
+  {
+    "id_inventario": "INV096",
+    "id_medicamento": "M096",
+    "Cantidad": 275
+  },
+  {
+    "id_inventario": "INV097",
+    "id_medicamento": "M097",
+    "Cantidad": 320
+  },
+  {
+    "id_inventario": "INV098",
+    "id_medicamento": "M098",
+    "Cantidad": 324
+  },
+  {
+    "id_inventario": "INV099",
+    "id_medicamento": "M099",
+    "Cantidad": 12
+  },
+  {
+    "id_inventario": "INV100",
+    "id_medicamento": "M100",
+    "Cantidad": 224
+  }
+]
+);
+
+db.PROVEEDORES.insertMany(
+[
+  {
+    "id_proveedor": "P001",
+    "Nombre": "Guerra and Sons"
+  },
+  {
+    "id_proveedor": "P002",
+    "Nombre": "Reyes-Manso"
+  },
+  {
+    "id_proveedor": "P003",
+    "Nombre": "Vila Inc"
+  },
+  {
+    "id_proveedor": "P004",
+    "Nombre": "Blanco, Ríos and Canet"
+  },
+  {
+    "id_proveedor": "P005",
+    "Nombre": "Carranza-Galvez"
+  },
+  {
+    "id_proveedor": "P006",
+    "Nombre": "Simó-Palomino"
+  },
+  {
+    "id_proveedor": "P007",
+    "Nombre": "Piquer, Hoyos and Arribas"
+  },
+  {
+    "id_proveedor": "P008",
+    "Nombre": "Querol Inc"
+  },
+  {
+    "id_proveedor": "P009",
+    "Nombre": "Montenegro Inc"
+  },
+  {
+    "id_proveedor": "P010",
+    "Nombre": "Bautista, Alberdi and Pavón"
+  }
+]
+);
+
+db.PROVEEDOR_PRODUCTO.insertMany(
+[
+  {
+    "id_proveedor": "P001",
+    "id_medicamento": "M083",
+    "Lote": "L083"
+  },
+  {
+    "id_proveedor": "P001",
+    "id_medicamento": "M016",
+    "Lote": "L016"
+  },
+  {
+    "id_proveedor": "P001",
+    "id_medicamento": "M025",
+    "Lote": "L025"
+  },
+  {
+    "id_proveedor": "P001",
+    "id_medicamento": "M010",
+    "Lote": "L010"
+  },
+  {
+    "id_proveedor": "P001",
+    "id_medicamento": "M051",
+    "Lote": "L051"
+  },
+  {
+    "id_proveedor": "P002",
+    "id_medicamento": "M018",
+    "Lote": "L018"
+  },
+  {
+    "id_proveedor": "P002",
+    "id_medicamento": "M044",
+    "Lote": "L044"
+  },
+  {
+    "id_proveedor": "P002",
+    "id_medicamento": "M017",
+    "Lote": "L017"
+  },
+  {
+    "id_proveedor": "P002",
+    "id_medicamento": "M073",
+    "Lote": "L073"
+  },
+  {
+    "id_proveedor": "P002",
+    "id_medicamento": "M065",
+    "Lote": "L065"
+  },
+  {
+    "id_proveedor": "P003",
+    "id_medicamento": "M084",
+    "Lote": "L084"
+  },
+  {
+    "id_proveedor": "P003",
+    "id_medicamento": "M093",
+    "Lote": "L093"
+  },
+  {
+    "id_proveedor": "P003",
+    "id_medicamento": "M082",
+    "Lote": "L082"
+  },
+  {
+    "id_proveedor": "P003",
+    "id_medicamento": "M049",
+    "Lote": "L049"
+  },
+  {
+    "id_proveedor": "P003",
+    "id_medicamento": "M055",
+    "Lote": "L055"
+  },
+  {
+    "id_proveedor": "P004",
+    "id_medicamento": "M031",
+    "Lote": "L031"
+  },
+  {
+    "id_proveedor": "P004",
+    "id_medicamento": "M030",
+    "Lote": "L030"
+  },
+  {
+    "id_proveedor": "P004",
+    "id_medicamento": "M097",
+    "Lote": "L097"
+  },
+  {
+    "id_proveedor": "P004",
+    "id_medicamento": "M017",
+    "Lote": "L017"
+  },
+  {
+    "id_proveedor": "P004",
+    "id_medicamento": "M036",
+    "Lote": "L036"
+  },
+  {
+    "id_proveedor": "P005",
+    "id_medicamento": "M082",
+    "Lote": "L082"
+  },
+  {
+    "id_proveedor": "P005",
+    "id_medicamento": "M078",
+    "Lote": "L078"
+  },
+  {
+    "id_proveedor": "P005",
+    "id_medicamento": "M079",
+    "Lote": "L079"
+  },
+  {
+    "id_proveedor": "P005",
+    "id_medicamento": "M056",
+    "Lote": "L056"
+  },
+  {
+    "id_proveedor": "P005",
+    "id_medicamento": "M052",
+    "Lote": "L052"
+  },
+  {
+    "id_proveedor": "P006",
+    "id_medicamento": "M035",
+    "Lote": "L035"
+  },
+  {
+    "id_proveedor": "P006",
+    "id_medicamento": "M076",
+    "Lote": "L076"
+  },
+  {
+    "id_proveedor": "P006",
+    "id_medicamento": "M090",
+    "Lote": "L090"
+  },
+  {
+    "id_proveedor": "P006",
+    "id_medicamento": "M019",
+    "Lote": "L019"
+  },
+  {
+    "id_proveedor": "P006",
+    "id_medicamento": "M083",
+    "Lote": "L083"
+  },
+  {
+    "id_proveedor": "P007",
+    "id_medicamento": "M055",
+    "Lote": "L055"
+  },
+  {
+    "id_proveedor": "P007",
+    "id_medicamento": "M026",
+    "Lote": "L026"
+  },
+  {
+    "id_proveedor": "P007",
+    "id_medicamento": "M079",
+    "Lote": "L079"
+  },
+  {
+    "id_proveedor": "P007",
+    "id_medicamento": "M022",
+    "Lote": "L022"
+  },
+  {
+    "id_proveedor": "P007",
+    "id_medicamento": "M010",
+    "Lote": "L010"
+  },
+  {
+    "id_proveedor": "P008",
+    "id_medicamento": "M080",
+    "Lote": "L080"
+  },
+  {
+    "id_proveedor": "P008",
+    "id_medicamento": "M093",
+    "Lote": "L093"
+  },
+  {
+    "id_proveedor": "P008",
+    "id_medicamento": "M059",
+    "Lote": "L059"
+  },
+  {
+    "id_proveedor": "P008",
+    "id_medicamento": "M091",
+    "Lote": "L091"
+  },
+  {
+    "id_proveedor": "P008",
+    "id_medicamento": "M055",
+    "Lote": "L055"
+  },
+  {
+    "id_proveedor": "P009",
+    "id_medicamento": "M011",
+    "Lote": "L011"
+  },
+  {
+    "id_proveedor": "P009",
+    "id_medicamento": "M090",
+    "Lote": "L090"
+  },
+  {
+    "id_proveedor": "P009",
+    "id_medicamento": "M066",
+    "Lote": "L066"
+  },
+  {
+    "id_proveedor": "P009",
+    "id_medicamento": "M031",
+    "Lote": "L031"
+  },
+  {
+    "id_proveedor": "P009",
+    "id_medicamento": "M069",
+    "Lote": "L069"
+  },
+  {
+    "id_proveedor": "P010",
+    "id_medicamento": "M036",
+    "Lote": "L036"
+  },
+  {
+    "id_proveedor": "P010",
+    "id_medicamento": "M042",
+    "Lote": "L042"
+  },
+  {
+    "id_proveedor": "P010",
+    "id_medicamento": "M027",
+    "Lote": "L027"
+  },
+  {
+    "id_proveedor": "P010",
+    "id_medicamento": "M028",
+    "Lote": "L028"
+  },
+  {
+    "id_proveedor": "P010",
+    "id_medicamento": "M033",
+    "Lote": "L033"
+  }
+]
+);
+
+db.AREAS.insertMany(
+[
+  {
+    "id_area": "A001",
+    "Nombre": "Urgencias",
+    "Tipo": "Soporte"
+  },
+  {
+    "id_area": "A002",
+    "Nombre": "Quirófano",
+    "Tipo": "Soporte"
+  },
+  {
+    "id_area": "A003",
+    "Nombre": "Pediatría",
+    "Tipo": "Diagnóstico"
+  },
+  {
+    "id_area": "A004",
+    "Nombre": "Ginecología",
+    "Tipo": "Diagnóstico"
+  },
+  {
+    "id_area": "A005",
+    "Nombre": "Consulta Externa",
+    "Tipo": "Diagnóstico"
+  },
+  {
+    "id_area": "A006",
+    "Nombre": "Hospitalización",
+    "Tipo": "Soporte"
+  },
+  {
+    "id_area": "A007",
+    "Nombre": "UCI",
+    "Tipo": "Soporte"
+  },
+  {
+    "id_area": "A008",
+    "Nombre": "Laboratorio",
+    "Tipo": "Soporte"
+  },
+  {
+    "id_area": "A009",
+    "Nombre": "Imagenología",
+    "Tipo": "Soporte"
+  },
+  {
+    "id_area": "A010",
+    "Nombre": "Farmacia",
+    "Tipo": "Clínica"
+  }
+]
+);
+
+db.CUENTAS.insertMany(
+[
+  {
+    "id_cuenta": "C001",
+    "id_paciente": "310-76-1713",
+    "Fecha": "2024-11-15",
+    "Valor": 4464.44,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C002",
+    "id_paciente": "375-74-6103",
+    "Fecha": "2024-11-15",
+    "Valor": 2955.93,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C003",
+    "id_paciente": "807-08-2104",
+    "Fecha": "2024-12-11",
+    "Valor": 1685.39,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C004",
+    "id_paciente": "091-97-5664",
+    "Fecha": "2024-09-20",
+    "Valor": 4141.84,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C005",
+    "id_paciente": "219-60-3486",
+    "Fecha": "2025-06-14",
+    "Valor": 811.59,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C006",
+    "id_paciente": "438-77-6487",
+    "Fecha": "2025-03-21",
+    "Valor": 8726.81,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C007",
+    "id_paciente": "109-73-6910",
+    "Fecha": "2024-12-05",
+    "Valor": 7437.52,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C008",
+    "id_paciente": "868-08-1542",
+    "Fecha": "2024-08-01",
+    "Valor": 4185.41,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C009",
+    "id_paciente": "019-54-5929",
+    "Fecha": "2025-06-07",
+    "Valor": 5071.79,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C010",
+    "id_paciente": "325-10-4720",
+    "Fecha": "2024-08-01",
+    "Valor": 8354.69,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C011",
+    "id_paciente": "727-25-4635",
+    "Fecha": "2025-06-21",
+    "Valor": 8642.94,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C012",
+    "id_paciente": "019-86-6992",
+    "Fecha": "2024-10-15",
+    "Valor": 415.45,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C013",
+    "id_paciente": "713-37-4913",
+    "Fecha": "2025-05-29",
+    "Valor": 2323.5,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C014",
+    "id_paciente": "892-27-5223",
+    "Fecha": "2025-05-01",
+    "Valor": 3318.47,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C015",
+    "id_paciente": "186-12-0025",
+    "Fecha": "2024-10-14",
+    "Valor": 575.48,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C016",
+    "id_paciente": "331-80-4091",
+    "Fecha": "2025-04-03",
+    "Valor": 2037.49,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C017",
+    "id_paciente": "849-25-7247",
+    "Fecha": "2024-12-04",
+    "Valor": 5046.03,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C018",
+    "id_paciente": "099-67-2573",
+    "Fecha": "2024-09-20",
+    "Valor": 2407.2,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C019",
+    "id_paciente": "282-14-3739",
+    "Fecha": "2025-06-25",
+    "Valor": 2890.21,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C020",
+    "id_paciente": "037-30-4814",
+    "Fecha": "2025-07-01",
+    "Valor": 3185.47,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C021",
+    "id_paciente": "326-09-7354",
+    "Fecha": "2025-06-03",
+    "Valor": 4264.82,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C022",
+    "id_paciente": "515-27-0769",
+    "Fecha": "2025-04-30",
+    "Valor": 5001.5,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C023",
+    "id_paciente": "260-87-9361",
+    "Fecha": "2024-11-17",
+    "Valor": 9201.28,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C024",
+    "id_paciente": "662-62-3097",
+    "Fecha": "2024-10-03",
+    "Valor": 2131.8,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C025",
+    "id_paciente": "524-00-9272",
+    "Fecha": "2024-09-20",
+    "Valor": 6415.47,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C026",
+    "id_paciente": "845-03-7942",
+    "Fecha": "2025-06-21",
+    "Valor": 4580.85,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C027",
+    "id_paciente": "791-89-6006",
+    "Fecha": "2025-02-14",
+    "Valor": 3813.19,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C028",
+    "id_paciente": "431-61-0961",
+    "Fecha": "2025-01-19",
+    "Valor": 5561.25,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C029",
+    "id_paciente": "195-25-0806",
+    "Fecha": "2025-01-11",
+    "Valor": 6175.4,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C030",
+    "id_paciente": "188-09-2699",
+    "Fecha": "2025-01-29",
+    "Valor": 4167.14,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C031",
+    "id_paciente": "936-76-3981",
+    "Fecha": "2024-09-08",
+    "Valor": 3404.31,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C032",
+    "id_paciente": "631-19-9110",
+    "Fecha": "2025-06-21",
+    "Valor": 3434.52,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C033",
+    "id_paciente": "215-77-3556",
+    "Fecha": "2025-05-13",
+    "Valor": 1953.64,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C034",
+    "id_paciente": "830-13-5647",
+    "Fecha": "2024-09-10",
+    "Valor": 7562.07,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C035",
+    "id_paciente": "593-06-6408",
+    "Fecha": "2025-04-01",
+    "Valor": 2208.84,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C036",
+    "id_paciente": "447-48-1056",
+    "Fecha": "2024-10-12",
+    "Valor": 7038.14,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C037",
+    "id_paciente": "583-60-9212",
+    "Fecha": "2025-06-12",
+    "Valor": 2697.91,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C038",
+    "id_paciente": "406-94-0809",
+    "Fecha": "2024-12-31",
+    "Valor": 1855.13,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C039",
+    "id_paciente": "423-75-9069",
+    "Fecha": "2025-05-07",
+    "Valor": 9967.36,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C040",
+    "id_paciente": "931-36-5647",
+    "Fecha": "2025-03-17",
+    "Valor": 3602.71,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C041",
+    "id_paciente": "981-64-8213",
+    "Fecha": "2024-09-24",
+    "Valor": 7882.21,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C042",
+    "id_paciente": "999-17-3094",
+    "Fecha": "2025-06-06",
+    "Valor": 4954.12,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C043",
+    "id_paciente": "800-31-2462",
+    "Fecha": "2024-10-15",
+    "Valor": 2052.85,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C044",
+    "id_paciente": "291-55-7854",
+    "Fecha": "2025-06-23",
+    "Valor": 1816.37,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C045",
+    "id_paciente": "336-86-7941",
+    "Fecha": "2025-04-27",
+    "Valor": 8105.8,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C046",
+    "id_paciente": "909-08-1814",
+    "Fecha": "2024-08-31",
+    "Valor": 2335.36,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C047",
+    "id_paciente": "432-73-7069",
+    "Fecha": "2024-07-28",
+    "Valor": 5794.53,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C048",
+    "id_paciente": "571-77-3486",
+    "Fecha": "2024-08-14",
+    "Valor": 5296.21,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C049",
+    "id_paciente": "517-24-1458",
+    "Fecha": "2025-03-06",
+    "Valor": 2548.43,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C050",
+    "id_paciente": "099-76-1591",
+    "Fecha": "2025-07-12",
+    "Valor": 8617.32,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C051",
+    "id_paciente": "850-38-1061",
+    "Fecha": "2025-04-23",
+    "Valor": 6978.05,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C052",
+    "id_paciente": "808-58-0538",
+    "Fecha": "2024-11-27",
+    "Valor": 9385.47,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C053",
+    "id_paciente": "834-97-9753",
+    "Fecha": "2025-06-21",
+    "Valor": 4144.84,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C054",
+    "id_paciente": "623-10-0373",
+    "Fecha": "2025-03-30",
+    "Valor": 3443.56,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C055",
+    "id_paciente": "772-24-4150",
+    "Fecha": "2025-07-10",
+    "Valor": 6310.17,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C056",
+    "id_paciente": "878-46-2767",
+    "Fecha": "2024-12-27",
+    "Valor": 5835.49,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C057",
+    "id_paciente": "455-51-6288",
+    "Fecha": "2025-03-26",
+    "Valor": 9387.85,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C058",
+    "id_paciente": "581-29-2612",
+    "Fecha": "2025-06-12",
+    "Valor": 5800.84,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C059",
+    "id_paciente": "753-83-9863",
+    "Fecha": "2025-01-30",
+    "Valor": 2563.98,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C060",
+    "id_paciente": "529-50-5944",
+    "Fecha": "2025-02-15",
+    "Valor": 5342.0,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C061",
+    "id_paciente": "963-16-8982",
+    "Fecha": "2025-01-25",
+    "Valor": 8041.74,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C062",
+    "id_paciente": "625-95-8884",
+    "Fecha": "2025-05-18",
+    "Valor": 4865.37,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C063",
+    "id_paciente": "985-11-1831",
+    "Fecha": "2024-09-12",
+    "Valor": 3510.95,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C064",
+    "id_paciente": "702-64-6630",
+    "Fecha": "2025-01-02",
+    "Valor": 4776.04,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C065",
+    "id_paciente": "851-60-9697",
+    "Fecha": "2024-09-25",
+    "Valor": 3440.2,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C066",
+    "id_paciente": "659-63-2616",
+    "Fecha": "2025-06-02",
+    "Valor": 3669.27,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C067",
+    "id_paciente": "676-26-4652",
+    "Fecha": "2025-06-29",
+    "Valor": 7579.97,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C068",
+    "id_paciente": "414-42-2787",
+    "Fecha": "2025-05-30",
+    "Valor": 5502.18,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C069",
+    "id_paciente": "053-38-8943",
+    "Fecha": "2024-08-22",
+    "Valor": 2869.11,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C070",
+    "id_paciente": "651-26-1557",
+    "Fecha": "2025-04-20",
+    "Valor": 2306.12,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C071",
+    "id_paciente": "741-35-3760",
+    "Fecha": "2025-01-08",
+    "Valor": 224.84,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C072",
+    "id_paciente": "173-49-0789",
+    "Fecha": "2025-07-27",
+    "Valor": 1991.17,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C073",
+    "id_paciente": "987-08-2424",
+    "Fecha": "2025-03-10",
+    "Valor": 9888.59,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C074",
+    "id_paciente": "985-33-1787",
+    "Fecha": "2024-09-03",
+    "Valor": 9229.4,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C075",
+    "id_paciente": "089-10-2911",
+    "Fecha": "2024-12-01",
+    "Valor": 7392.56,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C076",
+    "id_paciente": "051-65-6963",
+    "Fecha": "2025-07-11",
+    "Valor": 7062.95,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C077",
+    "id_paciente": "085-27-2749",
+    "Fecha": "2025-07-05",
+    "Valor": 1273.65,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C078",
+    "id_paciente": "755-45-5582",
+    "Fecha": "2025-02-11",
+    "Valor": 9811.28,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C079",
+    "id_paciente": "961-01-9940",
+    "Fecha": "2025-01-02",
+    "Valor": 7387.53,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C080",
+    "id_paciente": "538-03-2808",
+    "Fecha": "2024-11-13",
+    "Valor": 6249.05,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C081",
+    "id_paciente": "714-21-6145",
+    "Fecha": "2025-05-16",
+    "Valor": 5868.15,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C082",
+    "id_paciente": "037-42-0369",
+    "Fecha": "2025-04-18",
+    "Valor": 6513.51,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C083",
+    "id_paciente": "417-30-0887",
+    "Fecha": "2024-09-02",
+    "Valor": 4011.68,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C084",
+    "id_paciente": "128-47-8353",
+    "Fecha": "2024-09-07",
+    "Valor": 9201.69,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C085",
+    "id_paciente": "762-52-5273",
+    "Fecha": "2024-11-01",
+    "Valor": 9190.64,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C086",
+    "id_paciente": "820-88-8815",
+    "Fecha": "2024-08-09",
+    "Valor": 512.5,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C087",
+    "id_paciente": "865-17-1170",
+    "Fecha": "2025-04-06",
+    "Valor": 2849.5,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C088",
+    "id_paciente": "497-43-9361",
+    "Fecha": "2024-08-20",
+    "Valor": 140.32,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C089",
+    "id_paciente": "127-66-4635",
+    "Fecha": "2025-04-27",
+    "Valor": 9336.2,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C090",
+    "id_paciente": "287-24-4738",
+    "Fecha": "2024-11-20",
+    "Valor": 8440.85,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C091",
+    "id_paciente": "351-00-0552",
+    "Fecha": "2025-05-23",
+    "Valor": 5369.71,
+    "Facturacion": "Particular"
+  },
+  {
+    "id_cuenta": "C092",
+    "id_paciente": "054-34-2672",
+    "Fecha": "2024-09-14",
+    "Valor": 8618.49,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C093",
+    "id_paciente": "330-61-8665",
+    "Fecha": "2025-07-08",
+    "Valor": 5857.1,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C094",
+    "id_paciente": "474-33-4569",
+    "Fecha": "2024-09-23",
+    "Valor": 671.47,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C095",
+    "id_paciente": "838-37-5719",
+    "Fecha": "2024-12-26",
+    "Valor": 4310.14,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C096",
+    "id_paciente": "267-53-9687",
+    "Fecha": "2025-06-01",
+    "Valor": 4303.31,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C097",
+    "id_paciente": "400-34-1014",
+    "Fecha": "2024-10-06",
+    "Valor": 2499.53,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C098",
+    "id_paciente": "363-50-4355",
+    "Fecha": "2025-02-21",
+    "Valor": 2191.97,
+    "Facturacion": "Subsidio"
+  },
+  {
+    "id_cuenta": "C099",
+    "id_paciente": "188-19-3356",
+    "Fecha": "2024-11-30",
+    "Valor": 6463.22,
+    "Facturacion": "Aseguradora"
+  },
+  {
+    "id_cuenta": "C100",
+    "id_paciente": "727-35-8277",
+    "Fecha": "2025-07-05",
+    "Valor": 4241.03,
+    "Facturacion": "Particular"
+  }
+]
+);
