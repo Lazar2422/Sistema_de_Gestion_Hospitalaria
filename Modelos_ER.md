@@ -245,6 +245,7 @@ MEDICOS {
   string Especialidad
   string CorreoElectronico
   float Salario
+  string id_hospital
 }
 
 VISITAS_MEDICAS {
@@ -317,6 +318,7 @@ ENFERMERAS {
   string id_enfermera
   string id_area
   float Salario
+  string id_hospital
 }
 
 PERSONAL_MANTENIMIENTO {
@@ -419,6 +421,7 @@ MEDICOS {
   string Especialidad
   string CorreoElectronico
   float Salario
+  string id_hospital
 }
 
 VISITAS_MEDICAS {
@@ -491,6 +494,7 @@ ENFERMERAS {
   string id_enfermera
   string id_area
   float Salario
+  string id_hospital
 }
 
 PERSONAL_MANTENIMIENTO {
@@ -593,6 +597,7 @@ MEDICOS {
   string id_especialidad
   string CorreoElectronico
   float Salario
+  string id_hospital
 }
 
 ESPECIALIDADES {
@@ -687,6 +692,7 @@ ENFERMERAS {
   string id_enfermera
   string id_area
   float Salario
+  string id_hospital
 }
 
 PERSONAL_MANTENIMIENTO {
