@@ -5,7 +5,49 @@
 <br>
 <br>
 
-# 1 Modelo Conceptual Sin normalizar
+
+
+# 1 Modelo conceptual
+
+```mermaid
+erDiagram
+
+  HOSPITALES ||--o{ MEDICOS : tiene
+  HOSPITALES ||--o{ PACIENTES : tiene
+  HOSPITALES ||--o{ ENFERMERAS : tiene
+  HOSPITALES ||--o{ PERSONAL_ADMINISTRATIVO : tiene
+  HOSPITALES ||--o{ PERSONAL_MANTENIMIENTO : tiene
+  HOSPITALES ||--o{ AREAS : gestiona
+
+  PACIENTES ||--o{ HISTORIAL_CLINICO : tiene
+  PACIENTES ||--o{ VISITAS_MEDICAS : tiene
+  PACIENTES ||--o{ TRATAMIENTOS : recibe
+
+  TRATAMIENTOS }o--|| MEDICAMENTOS : usa
+
+  MEDICAMENTOS ||--o{ INVENTARIO : se_almacena_en
+  PROVEEDORES ||--o{ MEDICAMENTOS : suministra
+
+  MEDICOS ||--o{ VISITAS_MEDICAS : atiende
+  MEDICOS ||--o{ HISTORIAL_CLINICO : crea
+  MEDICOS ||--o{ TRATAMIENTOS : administra
+
+  ENFERMERAS }o--|| AREAS : asignada_a
+  PERSONAL_MANTENIMIENTO }o--|| AREAS : trabaja_en
+  PERSONAL_ADMINISTRATIVO ||--o{ GASTOS : registra
+
+  VISITAS_MEDICAS }o--|| MEDICOS : medico_asignado
+  VISITAS_MEDICAS }o--|| PACIENTES : paciente_citado
+
+  HISTORIAL_CLINICO ||--o{ FECHAS : contiene
+
+
+
+```
+
+
+
+# 2 Modelo Logico Sin normalizar
 
 ```mermaid
 erDiagram
@@ -158,7 +200,6 @@ PACIENTES ||--o{ CUENTAS : genera
 <br>
 
 ## modelo primera forma normal
-✅ Objetivo:
 Eliminar repeticiones de datos (campos multivaluados o anidados) → que todo sea atómico.
 
 🛠️ Cambios hechos:
@@ -332,10 +373,8 @@ PACIENTES ||--|| SEGUROS : cubierto_por
 <br>
 
 ## modelo segunda forma normal
-✅ Objetivo:
 Eliminar dependencias parciales: que ningún campo dependa solo de parte de una clave compuesta.
 
-Aplica solo si hay claves primarias compuestas.
 
 🛠️ Cambios hechos:
 En tablas como DETALLE_HISTORIA, si la clave primaria era compuesta (id_historia_clinica + id_visita), y un campo como procedimiento dependía solo de id_visita, se separa esa dependencia.
@@ -477,7 +516,6 @@ CUENTAS {
   string id_administrativo
 }
 
-%% RELACIONES
 
 PACIENTES ||--|| HISTORIA_CLINICA : tiene
 HOSPITALES ||--o{ MEDICAMENTOS: tiene
@@ -508,7 +546,6 @@ PACIENTES ||--|| SEGUROS : cubierto_por
 
 
 #  Modelo tercera forma normal
-✅ Objetivo:
 Eliminar dependencias transitivas: que ningún campo no clave dependa de otro campo no clave.
 
 🛠️ Cambios hechos:
