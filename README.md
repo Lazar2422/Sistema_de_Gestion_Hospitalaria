@@ -1,128 +1,143 @@
-# 🏥 Sistema de Información Hospitalario
+# 📌 Descripción del proyecto
+El proyecto consiste en el diseño de una base de datos de un sistema hospitalario, buscando la mejora y gestión de los pacientes, médicos, tratamientos, medicamentos, inventario, áreas especializadas, personal administrativo, visitas médicas, historiales clínicos y personal general, utilizando bases de datos NoSQL (MongoDB).
 
-## 📌 Descripción del Proyecto
+El proyecto consiste en el diseño de una base de datos de un sistema hospitalario, buscando la mejora y gestión de los pacientes, médicos, tratamientos, medicamentos, inventario, áreas especializadas, personal administrativo, visitas médicas, historiales clínicos y personal general, utilizando bases de datos NoSQL (MongoDB), realizando la documentación respectiva de la base de datos, la implementación de la base de datos en MongoDB y las inserciones de los datos planteadas con base en los requerimientos del sistema y modelos E-R.
 
-El proyecto consiste en el diseño de una base de datos para un sistema hospitalario, con el objetivo de optimizar la gestión de pacientes, médicos, tratamientos, medicamentos, inventario, áreas especializadas, personal administrativo, visitas médicas e historiales clínicos.
+<br><br>
 
-Este sistema está basado en **bases de datos NoSQL** utilizando **MongoDB**, e incluye:
+# 💻 Tecnologías utilizadas
+<p align="center"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="100" alt="MongoDB"/> 
+<br><br><br>
 
-- Modelado entidad-relación (E-R)
-- Documentación detallada
-- Implementación en MongoDB
-- Inserción de datos con base en requerimientos del sistema
+# 📝 Requisitos del sistema
+✅ Poseer un servidor de MongoDB Atlas y la última versión de MongoDB
+🔗 Visitar el siguiente enlace para crear una cuenta y adquirir un servidor de MongoDB Atlas: MongoDB Atlas (en caso de no poseer cuenta)
 
----
+<br><br>
 
-## 💻 Tecnologías Utilizadas
+# ⚙️ Instalación y configuración
+<br>
 
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="100" alt="MongoDB"/>
-</p>
+### 1️⃣ Tener instalado MongoDB Compass y MongoDB en el equipo donde se planean visualizar los datos
+<br><br>
 
+### 2️⃣ Tener instalado Visual Studio Code en el PC para poder previsualizar la información
+<br><br>
 
----
+### 3️⃣ Establecer la conexión en Compass con el servidor de Atlas con la siguiente ruta:
 
-## ⚙️ Requisitos del Sistema
+mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<nombre_base_datos>
 
-- Tener una cuenta y servidor activo en [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-- Última versión de MongoDB instalada
-- MongoDB Compass
-- Visual Studio Code
+### 4️⃣ Descargar o leer el archivo ddl.json para poder leer las instrucciones y abrir la terminal de MongoDB
+### 5️⃣ Descargar el archivo dml.json y hacer la inserción de datos en la terminal del PC:
+📌 Usando primeramente el comando:
 
----
+nginx
+Copiar
+Editar
+mongosh
+E insertar la siguiente información:
 
-## 🛠️ Instalación y Configuración
-
-### 1. Instalar MongoDB y MongoDB Compass
-
-Asegúrate de tener MongoDB y Compass instalados en tu equipo.
-
-### 2. Instalar Visual Studio Code
-
-Será útil para visualizar y editar los archivos JSON de manera clara y estructurada.
-
-### 3. Conexión con MongoDB Atlas
-
-Establece la conexión en Compass usando la siguiente cadena:
-
-```bash
-mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<nombre_base_datos>?retryWrites=true&w=majority&appName=<nombre_app>
-```
-
-### 4. Importar archivos JSON
-
-#### 📥 Importar estructura (`ddl.json`)
-
-Abre la terminal de MongoDB e ingresa el contenido del archivo `ddl.json` para crear las colecciones.
-
-#### 📥 Importar datos (`dml.json`)
-
-Ejecuta en terminal:
-
-```bash
+css
+Copiar
+Editar
 mongoimport --db NOMBRE_DB --collection NOMBRE_COLECCION --file RUTA/archivo.json --jsonArray
+O ingresar el siguiente comando en la terminal de MongoDB para la inserción de los datos.
+
+6️⃣ Visualizar las diferentes consultas que se encuentran en el archivo dql_select.json y ejecutarlas para comprobarlas.
+7️⃣ Revisar la documentación (Documentación.md) para entender mejor la estructura del proyecto.
+
+
+# Estructura de la base de datos
+
+
+El proyecto contiene 21 entidades , las cuales son: Hospital, en el cuál trabaja el personal administrartivo, es dirigido por un director general , el cual, puede manejar , 1 o mas hospitales, los hospitales, tienen especialidades, los hospitales tienen varios pacientes y medicamentos,acceso a las visitas médicas y también, aqui trabaja el personal de mantinimiento, enfermeros/as, el personal administrativo se relaciona con las cuentas y las enfermeras se relacionan con el hospital, las áreas y los pacientes.
+
+
+# Ejemplos de consultas
+
+## Basicas
+
+
+```js
+
+// Aquí lo que hacemos esbuscar todos los pacientes de la base de datos para conocer su información general como: nombre, telefono, direccion, correo electrónico, id del seguro, id del hospital, numero de historia, grupo de edad , idhospital y DNI.
+
+
+
+ db.PACIENTES.find({});
+
+
 ```
 
-> También puedes hacerlo desde `mongosh`.
+```js
 
-#### 📑 Consultas (`dql_select.json`)
 
-Explora y prueba las consultas predefinidas que se encuentran en este archivo.
 
-### 5. Revisar la documentación
 
-Consulta `Documentación.md` para entender la estructura y modelo lógico del sistema.
+// Aqui ,lo que se busca es , mediante el uso de find y regex encontrar los correos de los pacientes que tengan @hospital y terminen con.org para contactarlos
 
----
+  return db.PACIENTES.find({ CorreoElectronico: /@hospital\.org$/ });
 
-## 🗃️ Estructura de Datos
 
-(🔽 Aquí puedes insertar el contenido en formato Markdown que resume las entidades y atributos del sistema)
+```
 
----
 
-## 🧾 Ejemplos de Consultas
+```js
 
-Aquí encontrarás consultas como:
+// Aquilo que busca , es toda la información de los pacientes los cuales sean adultos mayores para conocer sus datos
 
-- Buscar pacientes por nombre
-- Listar medicamentos disponibles
-- Consultar tratamientos asignados a un paciente
-- Ver el historial clínico completo de un paciente
+ db.PACIENTES.find({ GrupoEdad: ""Adulto Mayor"" });
 
-📁 Ver archivo: `dql_select.json`
+```
 
----
+## Avanzadas
 
-## 🔧 Funciones
+``` js
 
-Aquí puedes definir o agregar funciones como:
+// Muestra el detalle de la historia clinica con los mismos ids, en un nuevo campo llamado: Detalles
+ db.HISTORIA_CLINICA.aggregate([
+  { $lookup: {
+    from: ""DETALLE_HISTORIA"",
+    localField: ""id_historia_clinica"",
+    foreignField: ""id_historia_clinica"",
+    as: ""detalles""
+  }}
+]);
 
-- Clasificación de pacientes
-- Cálculo de citas pendientes
-- Verificación de stock en inventario
 
----
+```
 
-## 👤 Roles de Usuario y Permisos
 
-- **Administrador**: Acceso total al sistema, gestión de usuarios y datos.
-- **Médico**: Acceso a pacientes asignados, tratamientos y diagnósticos.
-- **Recepción/Personal administrativo**: Gestión de citas, registros y documentación.
-- **Enfermero**: Visualización de pacientes y tratamientos asignados.
+``` js
 
----
+// Con unwind, quita el array de especialidades , y busca, específicamente, el nombre de la especialidad
 
-## 🤝 Contribuciones
+
+
+ db.ESPECIALIDADES.aggregate([
+  { $unwind: ""$Nombre"" }
+]);
+
+
+
+```
+
+
+
+
+# Funciones
+
+# 🤝 Contribuciones
 
 - 👨‍💻 Juan Fernando Umaña  
 - 👨‍💻 Omar Fernando Granados
 
 ---
 
-## 📬 Licencia y Contacto
+# 📬 Licencia y Contacto
 
-📧 Correo de contacto: [juanferumanaa@gmail.com](mailto:juanferumanaa@gmail.com)
-
----
-
+ 
+📧 Correo de contacto 1: [juanferumanaa@gmail.com](mailto:juanferumanaa@gmail.com)
+ 
+📧 Correo de contacto 2: [ofergrapa@gmail.com](mailto:juanferumanaa@gmail.com)
