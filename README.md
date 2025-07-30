@@ -75,9 +75,10 @@ El proyecto contiene 21 entidades , las cuales son: Hospital, en el cuál trabaj
 
 
 
-// Aqui ,lo que se busca es , mediante el uso de find y regex encontrar los correos de los pacientes que tengan @hospital y terminen con.org para contactarlos
-
-  return db.PACIENTES.find({ CorreoElectronico: /@hospital\.org$/ });
+// Filtra los médicos cuyo correo contiene "yahoo"
+db.MEDICOS.find({
+  CorreoElectronico: { $regex: /yahoo/i }
+})
 
 
 ```
@@ -85,9 +86,9 @@ El proyecto contiene 21 entidades , las cuales son: Hospital, en el cuál trabaj
 
 ```js
 
-// Aquilo que busca , es toda la información de los pacientes los cuales sean adultos mayores para conocer sus datos
+// Aqui lo que busca , es toda la información de los pacientes los cuales sean adultos mayores para conocer sus datos
 
- db.PACIENTES.find({ GrupoEdad: ""Adulto Mayor"" });
+ db.PACIENTES.find({ GrupoEdad: "Adulto Mayor" });
 
 ```
 
@@ -98,10 +99,10 @@ El proyecto contiene 21 entidades , las cuales son: Hospital, en el cuál trabaj
 // Muestra el detalle de la historia clinica con los mismos ids, en un nuevo campo llamado: Detalles
  db.HISTORIA_CLINICA.aggregate([
   { $lookup: {
-    from: ""DETALLE_HISTORIA"",
-    localField: ""id_historia_clinica"",
-    foreignField: ""id_historia_clinica"",
-    as: ""detalles""
+    from: "DETALLE_HISTORIA",
+    localField: "id_historia_clinica",
+    foreignField: "id_historia_clinica",
+    as: "detalles"
   }}
 ]);
 
@@ -111,13 +112,11 @@ El proyecto contiene 21 entidades , las cuales son: Hospital, en el cuál trabaj
 
 ``` js
 
-// Con unwind, quita el array de especialidades , y busca, específicamente, el nombre de la especialidad
+// nos va a filtrar los datos de la coleccion ESPECIALIDADES cuyo nombre sea Cardiologia
 
 
 
- db.ESPECIALIDADES.aggregate([
-  { $unwind: ""$Nombre"" }
-]);
+db.ESPECIALIDADES.find({ Nombre: "Cardiología" })
 
 
 
@@ -127,6 +126,66 @@ El proyecto contiene 21 entidades , las cuales son: Hospital, en el cuál trabaj
 
 
 # Funciones
+``` js
+//  Busca todas las visitas médicas realizadas por un médico en especifico
+function visitasPorMedico(idMedico) {
+  return db.VISITAS_MEDICAS.find({ id_medico: idMedico }).toArray();
+};
+```
+<br>
+
+``` js
+//  Agrupa y cuenta documentos según el valor de un campo.
+function contarPorCampo(coleccion, campo) {
+  return db[coleccion].aggregate([
+    { $group: { _id: `$${campo}`, total: { $sum: 1 } } }
+  ]).toArray();
+};
+```
+<br>
+
+``` js
+//  Cuenta cuántos hospitales hay por especialidad médica, para ello reutilizamos una funcion creada previamente
+function hospitalesPorEspecialidad() {
+  return contarPorCampo("HOSPITALES", "id_especialidad");
+}
+```
+<br>
+
+```js 
+//  Devuelve todos los medicamentos disponibles (en stock).
+function medicamentosDisponibles() {
+  return db.MEDICAMENTOS.find({ Disponible: true }).toArray();
+}
+```
+
+<br>
+
+```js
+// Obtiene los últimos N documentos ordenados por fecha descendente
+function ultimosNDocumentosPorFechaString(coleccion, campoFecha, n) {
+  return db[coleccion].find().sort({ [campoFecha]: -1 }).limit(n).toArray();
+}
+```
+
+<br>
+
+```js
+//  Devuelve los N documentos con mayor valor en un campo específico.
+function topNPorValor(coleccion, campo, n) {
+  return db[coleccion].find().sort({ [campo]: -1 }).limit(n).toArray();
+}
+```
+
+<br>
+
+```js
+//  Busca documentos donde el valor de un campo esté dentro de una lista de valores.
+function buscarPorLista(coleccion, campo, valores) {
+  return db[coleccion].find({ [campo]: { $in: valores } }).toArray();
+}
+```
+
 
 # 🤝 Contribuciones
 
