@@ -283,6 +283,12 @@ Los archivos relacionados con la BBDD del Sistema Hospitalario,   se encuentran 
 #### ❖ README.md :En este archivo se encuentra la documentación e información general sobre cómo está estructurado el proyecto , como se instala , etc.
 
 
+#### ❖ insert_code.js :En este archivo se encuentran los datos a insertar .
+
+
+
+#### usuarios.js ❖  :En este archivo se encuentra el codigo para la creacion de usuarios en mongo.
+
 <br>
 <br>
 
@@ -302,19 +308,6 @@ Un modelo conceptual en bases de datos es una representación, que describe las 
 
 Además, el modelo conceptual actúa como un puente entre los requerimientos del negocio y el diseño lógico y físico de la base de datos, sirviendo como punto de partida para construir modelos más detallados que ya consideren el tipo de base de datos a utilizar, la normalización y otros aspectos tecnológicos.
 
-
-
-Finalmente , hay que tener en cuenta que para la creación de un modelo conceptual, se necesita la siguiente estructura:
-
-## Imagen
-
-
-## Cardinalidades 
-
-En el modelo conceptual se pueden encontrar el siguiente tipo de cardinalidades que se pueden relacionar con flechas, o de la siguiente manera:
-
-
-## Imagen
 
 
 
@@ -492,13 +485,9 @@ inicial y general del proyecto.
 Un modelo lógico de base de datos es una representación más detallada y estructurada del modelo conceptual, en la que se definen de manera precisa las entidades, sus atributos, y las relaciones entre ellas, así como aspectos técnicos como los identificadores únicos , para este modelo con MongoDB no se usaron llaves primareas o foraneas, se hizo referencia a esto mediante ids repetidos de referencia a llaves entre colecciones. A diferencia del modelo conceptual, el modelo lógico ya toma en cuenta cómo los datos serán organizados y estructurados dentro de un sistema de gestión de bases de datos.
 
 
-Finalmente, hay que tener en cuenta que para realizar el modelo lógico, se necesita la siguiente estructura, En la cuál desaparecen los verbos, las entidades se vuelven tablas y los atributos, columnas:
+Finalmente, hay que tener en cuenta que para realizar el modelo lógico, se necesita la siguiente estructura, En la cuál desaparecen los verbos, las entidades se vuelven tablas y los atributos, columnas
 
 
-## Imagen 
-
-### Cardinalidades
-### Img cardinalidades
 
 
 ## Gráfica
@@ -1384,7 +1373,6 @@ El modelo físico en una base de datos es una representación detallada de cómo
 
 Finalmente, hay que tener en cuenta que para desarrollar el modelo físico, se deben realizar funciones, usuarios json schema, inserciones de datos y consultas dentro de MongoDB ( En este caso con Atlas) y en base a esto ejecutar comandos con los datos que se vana a incluir , de la siguiente manera:
 
-## imagen insercion de datos
 
 
 ## Codigo para las inserciones

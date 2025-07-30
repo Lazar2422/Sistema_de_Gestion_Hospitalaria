@@ -1,3 +1,5 @@
+use SISTEMAHOSPITALARIO
+
 db.createCollection("PACIENTES", {
     validator: {
     "$jsonSchema": {
