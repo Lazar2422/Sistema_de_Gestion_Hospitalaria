@@ -97,7 +97,7 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Fecha": {
-          "bsonType": "date"
+          "bsonType": ["date","string"]
         },
         "Condicion": {
           "bsonType": "string"
@@ -142,7 +142,8 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Salario": {
-          "bsonType": "double"
+          "bsonType": ["double", "int"],
+          "minimum":0
         },
         "id_hospital": {
           "bsonType": "string"
@@ -194,7 +195,7 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Fecha": {
-          "bsonType": "date"
+          "bsonType": ["date","string"]
         },
         "Hora": {
           "bsonType": "string"
@@ -357,7 +358,8 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Valor": {
-          "bsonType": "double"
+          "bsonType": ["double", "int"],
+          "minimum":0
         },
         "id_medico": {
           "bsonType": "string"
@@ -550,7 +552,8 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Salario": {
-          "bsonType": "double"
+          "bsonType": ["double", "int"],
+          "minimum":0
         },
         "id_hospital": {
           "bsonType": "string"
@@ -583,7 +586,8 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Salario": {
-          "bsonType": "double"
+          "bsonType": ["double", "int"],
+          "minimum":0
         }
       }
     }
@@ -613,7 +617,8 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Salario": {
-          "bsonType": "double"
+          "bsonType": ["double", "int"],
+          "minimum":0
         }
       }
     }
@@ -641,10 +646,11 @@ db.createCollection("PACIENTES", {
           "bsonType": "string"
         },
         "Fecha": {
-          "bsonType": "date"
+          "bsonType": ["date","string"]
         },
         "Valor": {
-          "bsonType": "double"
+          "bsonType": ["double", "int"],
+          "minimum":0
         },
         "Facturacion": {
           "bsonType": "string"

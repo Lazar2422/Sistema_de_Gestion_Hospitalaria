@@ -1,4 +1,6 @@
-use SISTEMA_HOSPITALARIO;
+// use SISTEMA_HOSPITALARIO;
+
+// load("ruta+nombrearchivo");
 
 db.HOSPITALES.insertMany(
 [
