@@ -199,4 +199,4 @@ function buscarPorLista(coleccion, campo, valores) {
  
 📧 Correo de contacto 1: [juanferumanaa@gmail.com](mailto:juanferumanaa@gmail.com)
  
-📧 Correo de contacto 2: [ofergrapa@gmail.com](mailto:juanferumanaa@gmail.com)
+📧 Correo de contacto 2: [ofergrapa@gmail.com](mailto:ofergrapa@gmail.com)
