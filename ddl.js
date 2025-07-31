@@ -1,4 +1,4 @@
-use SISTEMAHOSPITALARIO
+// use SISTEMA_HOSPITALARIO;
 
 db.createCollection("PACIENTES", {
     validator: {
@@ -34,7 +34,7 @@ db.createCollection("PACIENTES", {
         "id_seguro": {
           "bsonType": "string"
         },
-        "id_hospital": {
+        "id_hospital": {  
           "bsonType": "string"
         },
         "NumeroHistoria": {

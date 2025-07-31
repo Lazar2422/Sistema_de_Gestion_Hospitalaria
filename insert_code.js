@@ -1,6 +1,6 @@
 // use SISTEMA_HOSPITALARIO;
-
-// load("ruta+nombrearchivo");
+// mongosh mongodb+srv://zhoriel:fernan2208@cluster0.gax1aso.mongodb.net/
+// load("D:/proyectomongo/insert_code.js");
 
 db.HOSPITALES.insertMany(
 [

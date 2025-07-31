@@ -185,6 +185,9 @@ function buscarPorLista(coleccion, campo, valores) {
   return db[coleccion].find({ [campo]: { $in: valores } }).toArray();
 }
 ```
+# Video explicativo
+
+[Video](https://drive.google.com/drive/folders/1oF8H-CyNOaUUgq0Nxj0b2_zDLbRcSg0i?usp=sharing)
 
 
 # 🤝 Contribuciones

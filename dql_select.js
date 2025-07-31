@@ -8,6 +8,7 @@
   // 3. Pacientes sin seguro médico
   buscarCamposVacios("PACIENTES", "id_seguro");
 
+  
   // 4. Pacientes por grupo de edad
   pacientesPorGrupoEdad();
 
@@ -25,6 +26,7 @@
 
   // 9. Cantidad de pacientes por hospital
   contarPorCampo("PACIENTES", "id_hospital");
+
 
   // 10. Pacientes con seguro específico
   buscarPorCampo("PACIENTES", "id_seguro", "SEG001");
@@ -117,7 +119,7 @@
     },
     {
       $match: {
-        "director.Profesion": "Médico"
+        "director.Profesion": "Medico"
       }
     }
   ]);
@@ -202,6 +204,7 @@
 
   // 56. Cantidad de historias por paciente
   contarPorCampo("HISTORIA_CLINICA", "id_paciente");
+
 
   // 57. Historias con fecha y hora de visita
   db.DETALLE_HISTORIA.aggregate([

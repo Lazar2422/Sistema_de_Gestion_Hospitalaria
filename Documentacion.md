@@ -136,7 +136,7 @@ En conjunto, este documento busca ofrecer una visión integral, lógica y compre
 En el caso de estudio se tiene la implementación de Mongodb (Bases de datos NOSQL), para darle una correcta gestión a las operaciones que tengan que ver con la administración de un sistema hospitalario, y todos sus elementos como: hospitales, pacientes, médicos, tratamientos, medicamentos, visitas médicas, historiales clínicos, áreas especializadas y personal administrativo.
 
 ##### Estructura del Sistema
-
+  
 - Un hospital puede tener múltiples áreas especializadas (Cardiología, Neurología, etc.).
 - Cada hospital tiene un director general, pero un director puede supervisar varios hospitales.
 - Cada hospital tiene un conjunto de médicos, enfermeras y personal administrativo.
